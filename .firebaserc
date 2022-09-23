@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ecf-future-hub"
+  },
+  "targets": {
+    "ecf-future-hub": {
+      "hosting": {
+        "ecf-cms-test": [
+          "ecf-cms-test"
+        ]
+      }
+    }
+  }
+}
