@@ -1,18 +1,23 @@
 import React from 'react'
 import "./ArticleListCards.scss";
+import iconArrow from '../../assets/Iconarrow.png';
 
 
 //props with names that need to be passed down
 const ArticleListCards = () => {
   return (
     <div className='card'>
-        <img className='card__image' src="https://media.istockphoto.com/vectors/for-hire-sign-vector-id1344062014?k=20&m=1344062014&s=612x612&w=0&h=EdoPvdJC8-AanKwvNgMt2feZbuE9mdA5nBMGoUxJoRg=" alt="" />
+        <img className='card__image' src="https://images.unsplash.com/photo-1487528278747-ba99ed528ebc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9yJTIwaGlyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
         <p className='card__date'>27/09/2022</p>
-        <h2 className='card__title'>Lorem</h2>
-        <p className='card__info'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores odit ratione fugiat esse repudiandae maxime optio, necessitatibus nisi aperiam eum, nobis magni, quas blanditiis aut magnam sunt perferendis qui at.</p>
+        <div className='card_container'>
+          <h2 className='card__title'>Want a winning CV? Try these 5 tips</h2>
+          <img className='card__icon' src={iconArrow} alt="Arrow Icon" />
+        </div>
+        
+        <p className='card__info'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores odit ratione fugiat esse repudiandae maxime optio</p>
         <ul className='card__links'>
-            <li className='card__link'>Tag 1</li>
-            <li className='card__link'>Tag 2</li>
+            <li className='card__link'>Professional Development</li>
+            <li className='card__link'>Career</li>
         </ul>
     </div>
   )

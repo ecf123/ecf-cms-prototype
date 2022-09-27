@@ -7,12 +7,40 @@
 }
 
 .card {
-    border: solid 1px black;
+    margin: 10px;
     width: 350px;
+    padding: 10px;
 
     &__image {
         width: 100%;
         height: auto;
 
+    }
+
+    &__date {
+        opacity: 0.8;
+        font-size: 14px;
+    }
+
+    &__title {
+        margin: 6px 0px;
+        font-size: 20px;
+    }
+
+    &__info {
+        opacity: 0.8;
+    }
+
+    &__links {
+        list-style: none;
+    }
+
+    &__link {
+        display: inline;
+        margin: 0 10px;
+        padding: 0 10px;
+        opacity: 0.9;
+        background-color: #ececec;
+        border-radius: 10px;
     }
 }
