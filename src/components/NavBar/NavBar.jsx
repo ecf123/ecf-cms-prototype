@@ -1,8 +1,13 @@
 import React from 'react'
+import {useState} from 'react'
 import NavBarItem from '../NavBarItem/NavBarItem';
 import './NavBar.scss';
 
  const NavBar = () => {
+  const [getStyle,setStyle]=useState["navBarItem_off"]
+  const currentPage=()=>{
+    
+  }
   return (
     <div className='navBar'>
       <div className='navBar__container'>

@@ -1,3 +1,4 @@
+import NavBar from "../NavBar/NavBar";
 import "./Layout.scss";
 
 const Layout = ({ children }) => {
