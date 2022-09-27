@@ -1,0 +1,29 @@
+.header-profile {
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+
+    &__image {
+        border-radius: 50%;
+        border: none;
+        height: 2rem;
+    }
+    &__text{
+        height: fit-content;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid red;
+    }
+    &__name {
+        font-size: 1rem;
+        text-align: left;
+    }
+    &__role{
+        text-align: left;
+    }
+}
