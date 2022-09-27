@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+    box-sizing: border-box;
+
+}
+
+.card {
+    border: solid 1px black;
+    width: 350px;
+
+    &__image {
+        width: 100%;
+        height: auto;
+
+    }
+}
