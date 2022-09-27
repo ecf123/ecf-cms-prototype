@@ -1,14 +1,24 @@
 @use "./variables" as *;
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap');
+
 
 // here we use rem for font-size
 // rem is relative to the :root element in the dom (html tag)
 // we can manipulate the :root element's font-size at different breakpoints to scale up the font-size application-wide
 
 * {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
   color: $text-color;
 }
+
+// Splash screen = 2.5rem, 400fw 
+// page headers = 2rem, 400fw
+// course and pathway tiles = 1.75rem, 700fw
+// lesson and challenge headers = 1.5rem, 700fw
+// section headers = 0.8rem, 400fw
+// current email body/context = 1rem, 400fw, letter spacing of 160%
+// inbox email body/content overview = 0.8rem, 400fw, letter spacing of 160%
+// filters checkbox label = 0.8rem, 400fw.
 
 h1,
 h2,
