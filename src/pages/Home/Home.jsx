@@ -1,7 +1,9 @@
 import Layout from "../../components/Layout/Layout";
+import LoginContainer from "../../loginContainers/LoginContainer";
 
 const Home = () => {
   return (
+    <>
     <Layout>
       <h1>Page Heading</h1>
       <h2>Section Heading</h2>
@@ -13,6 +15,8 @@ const Home = () => {
         necessitatibus.
       </p>
     </Layout>
+    <LoginContainer></LoginContainer>
+    </>
   );
 };
 
