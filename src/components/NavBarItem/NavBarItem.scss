@@ -2,11 +2,8 @@
 
 .navBarItem{
   display: flex;
-  &_on{
-    background-color: aqua;
-  }
-  &_off{
-    background-color: yellow;
-  }
-  
+}
+
+.selected {
+  background-color: aqua;
 }

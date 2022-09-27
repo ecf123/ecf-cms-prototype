@@ -1,12 +1,11 @@
-import React from 'react'
-import {useState} from 'react'
+import React, { useState } from 'react'
 import NavBarItem from '../NavBarItem/NavBarItem';
 import './NavBar.scss';
 
  const NavBar = () => {
-  const [getStyle,setStyle]=useState["navBarItem_off"]
-  const currentPage=()=>{
-    
+  const [ selected, setSelected ] = useState("Dashboard");
+  const getCurrentPage = (page) => {
+    setSelected(page);
   }
   return (
     <div className='navBar'>
@@ -19,14 +18,14 @@ import './NavBar.scss';
         </div>
         
         <ul className='navBar__linkList'>
-          <li className='navBar__listItem'><NavBarItem imageSrc="" text="Dashboard" /></li>
-          <li className='navBar__listItem'><NavBarItem imageSrc="" text="Pathways" /></li>
-          <li className='navBar__listItem'><NavBarItem imageSrc="" text="Articles" /></li>
-          <li className='navBar__listItem'><NavBarItem imageSrc="" text="Marketplace" /></li>
-          <li className='navBar__listItem'><NavBarItem imageSrc="" text="Users" /></li>
+          <li className='navBar__listItem'><NavBarItem imageSrc="" text="Dashboard" selected={selected} getCurrentPage={getCurrentPage} /></li>
+          <li className='navBar__listItem'><NavBarItem imageSrc="" text="Pathways" selected={selected} getCurrentPage={getCurrentPage} /></li>
+          <li className='navBar__listItem'><NavBarItem imageSrc="" text="Articles" selected={selected} getCurrentPage={getCurrentPage} /></li>
+          <li className='navBar__listItem'><NavBarItem imageSrc="" text="Marketplace" selected={selected} getCurrentPage={getCurrentPage} /></li>
+          <li className='navBar__listItem'><NavBarItem imageSrc="" text="Users" selected={selected} getCurrentPage={getCurrentPage} /></li>
         </ul>
 
-        <NavBarItem imageSrc="" text="Settings" />
+        <NavBarItem imageSrc="" text="Settings" selected={selected} getCurrentPage={getCurrentPage} />
       </div>
     </div>
   )
