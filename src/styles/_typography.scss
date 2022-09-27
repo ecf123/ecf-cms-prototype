@@ -1,4 +1,4 @@
-@use "./variables" as *;
+@use "./variables"as *;
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap');
 
 
@@ -20,6 +20,22 @@
 // inbox email body/content overview = 0.8rem, 400fw, letter spacing of 160%
 // filters checkbox label = 0.8rem, 400fw.
 
+
+
+//font size:
+// $font-size-splash-screen: 2.5rem;
+// $font-size-page-headers: 2rem;
+// $font-size-course-pathway-tiles: 1.75rem;
+// $font-size-lesson-challenge-headers: 1.5rem;
+// $font-size-section-headers: 0.8rem;
+// $font-size-email-body-context: 1rem; 
+// $font-size-inbox-overview: 0.8rem;
+// $font-size-filters-checkbox-label: 0.8rem;
+
+
+
+
+
 h1,
 h2,
 h3,
@@ -38,18 +54,37 @@ button {
 }
 
 h1 {
-  font-size: 2.1rem;
+  font-size: 2.5rem;
+  font-weight: $font-weight-regular;
 }
 
 h2 {
-  font-size: 1.65rem;
+  font-size: 2rem;
+  font-weight: $font-weight-bold;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
+  font-weight: $font-weight-bold;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: $font-weight-regular;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: $font-weight-regular;
+}
+
+h6 {
+  font-size: 0.8rem;
+  font-weight: $font-weight-regular;
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
+
   // increases font-size of all items by 10%
   :root {
     font-size: 110%;
@@ -57,6 +92,7 @@ h3 {
 }
 
 @media screen and (min-width: $desktop-breakpoint) {
+
   // increases font-size of all items by 20%
   :root {
     font-size: 120%;
