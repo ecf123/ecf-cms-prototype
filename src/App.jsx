@@ -6,16 +6,9 @@ import ArticleListCards from "./components/ArticleListCards/ArticleListCards";
 
 const App = () => {
   return (
-    <>
-    <div>
-      <ArticleListCards/>
-    </div>
-    <div>
-    {/* <Routes>
+    <Routes>
       <Route path="*" element={<Home />} />
-    </Routes> */}
-    </div>
-    </>
+    </Routes>
   );
 };
 
