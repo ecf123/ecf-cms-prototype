@@ -22,3 +22,13 @@ it("Should render the FreeType textarea", () => {
   
   });
 
+  it("Should render the FreeType div", () => {
+
+    render(<FreeType/>);
+    
+    const div = screen.getByTestId("div");
+    
+    expect(div).toBeInTheDocument();
+  
+  });
+

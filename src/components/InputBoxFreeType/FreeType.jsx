@@ -6,7 +6,7 @@ const FreeType = ({
   handleFreeTypeValue,
 }) => {
   return (
-    <div className="freetype">
+    <div className="freetype" data-testid="div">
       <label className="freetype__label" data-testid="label">{labelText}</label>
       <textarea
         className="freetype__input"
