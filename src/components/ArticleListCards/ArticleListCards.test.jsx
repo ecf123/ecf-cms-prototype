@@ -1,5 +1,6 @@
 import { render, screen} from "@testing-library/react";
 import ArticleListCards from "./ArticleListCards";
+import ""
 
 it ( "should render the card image", () => {
     //Arrange
