@@ -1,7 +1,7 @@
 import React from 'react'
 import "./ArticleListCards.scss";
 import iconArrow from '../../assets/Iconarrow.png';
-import "../../styles"
+import "../../styles/_reset.scss";
 
 
 //added placeholder content for the information on the card and image. 
