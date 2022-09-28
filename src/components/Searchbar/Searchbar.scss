@@ -3,12 +3,24 @@
 
 .search-bar {
     display: flex;
-    width: 2.6rem;
+    width: 26.56rem;
     height: 3rem;
-    background-color: #FFFF;
+    align-items: center;
+
+    &__input {
+        height: 0.94rem;
+        width: 7.12rem;
+        border-radius: 2.7rem;
+        border: 0.063rem;
+        border-color: #f2f2f2;
+    }
+
+    &__image {
+        height: 0.75rem;
+        width: 0.75rem;
+    }
 }
-// width of searchbar = 26.6rem
-// height of searchbar = 3rem
+
 // border radius = 2.7rem
 // border = 0.063rem
 
@@ -16,9 +28,7 @@
 // background colour = #FFFFFF
 
 // input font = inter
-// input height = 15px
 
-// input width = 114
 // 16px above input and 17px below
 
 // 16px between magnifying glass and input

@@ -6,7 +6,7 @@ const Searchbar = ({ placeholderText, searchWord, handleSearchInput }) => {
   return (
     <div className="search-bar">
       {/* magnifying glass icon to the left of input */}
-      <img src={magnifyGlass} alt="" />
+      <img src={magnifyGlass} alt="Search Icon" className="search-bar__image"/>
       <form className="search-bar__form">
         <input type="text" placeholder={placeholderText} value={searchWord} onChange={handleSearchInput} className="search-bar__input" />
       </form>
