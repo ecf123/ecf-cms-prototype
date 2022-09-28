@@ -7,7 +7,7 @@ const FreeType = ({
 }) => {
   return (
     <div className="freetype">
-      <label className="freetype__label">{labelText}</label>
+      <label className="freetype__label" data-testid="label">{labelText}</label>
       <textarea
         className="freetype__input"
         type="text"
