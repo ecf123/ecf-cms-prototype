@@ -1,0 +1,58 @@
+@use "../../styles/variables" as *;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.round-border {
+    border-radius: 50%;
+
+}
+
+.square-border{
+    border-radius: 0.28rem;
+}
+
+.green {
+    background-color: $color-green;
+    color: $background-color;
+}
+
+.black {
+    background-color: $background-color;
+    color: $text-color;
+}
+
+.grey {
+    background-color: $color-grey-light;
+    color: $background-color;
+}
+
+.red {
+    background-color: #DE3B1F;
+    color: $text-color;
+}
+
+.small {
+    font-size: 0.6rem;
+    padding: 0.365 0.5;
+}
+
+.medium{
+    font-size: $font-size-extra-small;
+    padding: 0.;
+}
+.large{
+    font-size: $font-size-extra-large;
+}
+//CANCEL: colour is color-grey-light, font
