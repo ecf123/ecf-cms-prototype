@@ -8,11 +8,11 @@ const Logo = ({getCurrentPage}) => {
     getCurrentPage("Dashboard");
   }
   return (
-    <Link to="*">
+    <Link to="*" className='link'>
       <div className='logo' onClick={handleClick}>
-        <img src="" alt="The Future Hub Logo" className='logo__image' />
+        <img src="" alt="The Future Hub Logo" className='logo__image'/>
         <p className='logo__topTitle'>THE</p>
-        <h2 className='logo__title'>FUTURE HUB</h2>
+        <h3 className='logo__title'>FUTURE HUB</h3>
       </div>
     </Link>
   )

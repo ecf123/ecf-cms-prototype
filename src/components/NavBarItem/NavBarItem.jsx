@@ -16,7 +16,7 @@ const NavBarItem = (props) => {
   }
   
   return (
-    <Link to={link}>
+    <Link to={link} className="link">
       <div className={classes} onClick={handleClick}>
         <img src={imageSrc} alt={text} className="navBarItem__image" />
         <p className='navBarItem__text'>{text}</p>

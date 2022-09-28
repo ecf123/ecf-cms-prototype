@@ -9,10 +9,15 @@
   }
   &__text{
     padding:5px;
+    color: $color-grey;
   }
 }
 
+
 .selected {
-  border-left: 3px solid green;
-  background-color: gray;
+  border-left: 3px solid $color-green;
+  background-color: rgba($color-grey-light, 0.3);
+  > *{
+    color: $color-blue-navy;
+  }
 }

@@ -6,6 +6,16 @@
     padding:5px;
   }
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 2fr;
+  text-decoration: none;
+  
+  &__topTitle {
+    font-size: $font-size-extra-small;
+    color: $color-blue-navy;
+  }
+
+  &__title{
+    color: $color-blue-navy;
+  }
 }

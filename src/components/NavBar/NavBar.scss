@@ -2,8 +2,14 @@
 @use '../../styles/_typography' as *;
 .navBar{
 
+  background-color: $color-white-smoke;
   &__container{
     display: grid;
     grid-template-rows: 1fr 4fr 2fr;
   }
+}
+
+
+.link{
+  text-decoration: none;
 }
