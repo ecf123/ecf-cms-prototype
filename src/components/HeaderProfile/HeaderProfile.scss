@@ -1,6 +1,9 @@
+@use "../../styles/variables" as *;
+
 * {
     margin: 0;
     padding: 0;
+    font-family: $font-primary;
 }
 
 .header-profile {
@@ -10,16 +13,14 @@
     padding-top: 0.563rem;
     padding-bottom: 0.563rem;
     display: flex;
-    // justify-content: center;
     align-items: center;
-    border: 1px solid red;
     border-radius: 4.375rem;
+    background-color: $color-white;
 
     &__image {
         height: 3.125rem;
         width: 3.125rem;
         margin-right: 8px;
-        border: 1px solid red;
         border-radius: 50%;       
     }
     &__text{
@@ -27,29 +28,30 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border: 1px solid red;
     }
     &__name {
         height: 1.063;
-        width: 4.813rem;
+        min-width: fit-content;
+        max-width: 8.5rem;
         margin: 0;
-        font-size: 0.875rem;
-        font-weight: 400;
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
         text-align: left;
+        color: $color-blue-navy;
     }
     &__role{
         height: 0.75rem;
         width: 1.875rem;
         margin: 0;
-        font-size: 0.625rem;
+        font-size: $font-size-extra-small;
         font-weight: 400;
-        border: 1px solid red;
         text-align: left;
+        color: $color-grey; 
     }
     &__arrow{
         height: 0.688rem;
         width: 0.41rem;
-        border: 1px solid red;
-        margin-left: 2.781rem;
+        margin-left: 1.5rem;
+        margin-right: 2.094rem;
     }
 }
