@@ -1,3 +1,9 @@
+import { customRender } from "../../utils/testUtils";
+import NavBar from "./NavBar";
 
-
-///links should render
+it("renders the NavBar" ,()=>{
+    const {container} = customRender(
+        <NavBar />
+    )
+    expect(container).toMatchSnapshot();
+});

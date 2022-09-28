@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the NavBarItem 1`] = `
+<div>
+  <a
+    class="link"
+    href="/"
+  >
+    <div
+      class="navBarItem"
+    >
+      <img
+        alt="Dashboard"
+        class="navBarItem__image"
+        src=""
+      />
+      <p
+        class="navBarItem__text"
+      >
+        Dashboard
+      </p>
+    </div>
+  </a>
+</div>
+`;
