@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap');
+
 // breakpoints
 $mobile-breakpoint: 320px;
 $tablet-breakpoint: 768px;
@@ -8,7 +10,34 @@ $extra-large-desktop-breakpoint: 2560px;
 //colors
 $text-color: #f3f2e8;
 $background-color: #1f1b1b;
-$color-black: #000000;
-$color-grey: #7B7B7B;
-$button-color:#25312F;
 
+//Primary colors
+$color-green: #B4DDC0;
+$color-grey: #7D92A5;
+$color-blue-navy:#3B5165;
+$color-blue-light: #B1B8CF;
+
+//secondary colors
+$color-green-light: #EFFEFB;
+$color-white: #FFFFFF;
+$color-white-smoke: #FBFBFB;
+$color-grey-light: #BCC6CC;
+
+// font weight:
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// letter-spacing:
+$letter-spacing: 160%;
+
+//font size:
+$font-size-largest: 2.5rem;
+$font-size-extra-large: 2rem;
+$font-size-large: 1.75rem;
+$font-size-medium: 1.5rem;
+$font-size-small: 1rem;
+$font-size-extra-small: 0.8rem;
+
+// font-family
+$font-primary: 'Lexend Deca',
+sans-serif;

@@ -15,20 +15,28 @@ const Home = () => {
   })
 
   const handleLogin = event => {
-    const char = "@";
+    const atSign = "@";
+    const ampersand = "&";
+    const asterisk = "*";
+    const comma = ",";
+    const frontSlash = "/";
+
     event.preventDefault();
     let emailAddress = event.target[0].value;
     let password = event.target[1].value;
 
 
-    if(!emailAddress.includes(char)) {
+    if(!emailAddress.includes(atSign)) {
       alert("Please input valid email address.")
     } 
-    else if(password.length <= 10) {
-      alert("The password length should be longer than 10.")
+    else if (emailAddress.includes(ampersand) || emailAddress.includes(asterisk) || emailAddress.includes(comma) || emailAddress.includes(frontSlash)) {
+      alert("Email address should not contain & * , / ")
+    }
+    else if(password.length <= 8) {
+      alert("The password length should be longer than 8.")
     } 
-    else if(emailAddress.length > 10 && password.length < 10) {
-      alert("The password length should be longer than 10.")
+    else if(emailAddress.includes(atSign) && password.length < 8) {
+      alert("The password length should be longer than 8.")
     }
     else {
       alert("Wlecome!")

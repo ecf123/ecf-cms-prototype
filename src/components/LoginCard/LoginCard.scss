@@ -4,7 +4,7 @@
 .login {
 
     &__header {
-        color: $color-black;
+        color: #000000;
         font-size: 12px;
         font-weight: 500;
         line-height: 19.2px;
@@ -15,7 +15,7 @@
         width: 354px;
         border: 1px solid #E8E8E8;
         border-radius: 4px;
-        color: $color-black;
+        color: #000000;
         margin-top: 5px;
         margin-bottom: 10px;
         
@@ -23,7 +23,7 @@
 
 
     &__button {
-        background-color: $button-color;
+        background-color: #25312F;
         width: 354px;
         height: 46px;
         border-radius: 4px;
