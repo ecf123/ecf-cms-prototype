@@ -1,2 +1,21 @@
-@use "../../styles/_variables" as *;
-@use "../../styles/typography" as *;
+@use "../../styles/_variables.scss" as *;
+@use "../../styles/typography.scss" as *;
+
+.title {
+    margin-bottom: 26px;
+
+    &__heading {
+        color: $color-black;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 38.73px;
+    }
+
+    &__text {
+        color: $color-grey;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 22.4px;
+    }
+    
+}

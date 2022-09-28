@@ -1,0 +1,36 @@
+@use "../../styles/_variables.scss" as *;
+@use "../../styles/typography.scss" as *;
+
+.login {
+
+    &__header {
+        color: $color-black;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 19.2px;
+    }
+
+    &__inputBox{
+        height: 45px;
+        width: 354px;
+        border: 1px solid #E8E8E8;
+        border-radius: 4px;
+        color: $color-black;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        
+    }
+
+
+    &__button {
+        background-color: $button-color;
+        width: 354px;
+        height: 46px;
+        border-radius: 4px;
+        gap: 10px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 19.2px;
+        margin-top: 30px;
+    }
+}

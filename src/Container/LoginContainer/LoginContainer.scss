@@ -1,0 +1,11 @@
+@use "../../styles/variables.scss" as *;
+@use "../../styles/typography.scss" as *;
+
+.container {
+    width:360px;
+    height:min-content;
+    position: absolute;
+    left: 257px;
+    top: 351px;
+
+}
