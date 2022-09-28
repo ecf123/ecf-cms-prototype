@@ -1,7 +1,7 @@
 import { render, screen} from "@testing-library/react";
 import ArticleListCards from "./ArticleListCards";
 
-it ( "should render the card", () => {
+it ( "should render the card image", () => {
     //Arrange
     render(<ArticleListCards />);
     //Act
@@ -40,4 +40,21 @@ it ("should display the links on the screen", () => {
 })
 
 
+it ("should display the article paragraph on the screen", () => {
+    //Arrange
+    render(<ArticleListCards />);
+    //Act
+    const paragraph = screen.getByText("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores odit ratione fugiat esse repudiandae maxime optio");
+    //Assert
+    expect(paragraph).toBeInTheDocument();
+})
+
+it ( "should render the arrow icon", () => {
+    //Arrange
+    render(<ArticleListCards />);
+    //Act
+    const image = screen.getByAltText("Arrow Icon");
+    //Assert
+    expect(image).toBeInTheDocument();
+})
 
