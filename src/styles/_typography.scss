@@ -1,23 +1,12 @@
-@use "./variables" as *;
+@use "./variables"as *;
 
-// here we use rem for font-size
-// rem is relative to the :root element in the dom (html tag)
-// we can manipulate the :root element's font-size at different breakpoints to scale up the font-size application-wide
 
 * {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: $font-primary;
   color: $text-color;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 p {
-  // adding display and width prevents margin collapse on these semantic text elements
   margin: 0.5rem 0;
   display: inline-block;
   width: 100%;
@@ -28,26 +17,42 @@ button {
 }
 
 h1 {
-  font-size: 2.1rem;
+  font-size: $font-size-largest;
+  font-weight: $font-weight-regular;
 }
 
 h2 {
-  font-size: 1.65rem;
+  font-size: $font-size-extra-large;
+  font-weight: $font-weight-bold;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+}
+
+h4 {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-regular;
+}
+
+h5 {
+  font-size: $font-size-small;
+  font-weight: $font-weight-regular;
+}
+
+h6 {
+  font-size: $font-size-extra-small;
+  font-weight: $font-weight-regular;
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
-  // increases font-size of all items by 10%
   :root {
     font-size: 110%;
   }
 }
 
 @media screen and (min-width: $desktop-breakpoint) {
-  // increases font-size of all items by 20%
   :root {
     font-size: 120%;
   }
