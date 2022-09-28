@@ -11,17 +11,36 @@ $extra-large-desktop-breakpoint: 2560px;
 $text-color: #f3f2e8;
 $background-color: #1f1b1b;
 
-//Primary colors
-$color-green: #B4DDC0;
-$color-grey: #7D92A5;
-$color-blue-navy:#3B5165;
-$color-blue-light: #B1B8CF;
+//Red colors
+$color-red-light:#EB4444;
+$color-red-normal:#DE3B1F;
+$color-red-dark:#D92D20;
 
-//secondary colors
-$color-green-light: #EFFEFB;
+//Grey colors
+$color-grey-dark: #7B7B7B;
+$color-grey-normal: #70788A;
+$color-grey-light:#B0B7C8;
+
+//Blue colors
+$color-blue-dark:#101828;
+$color-blue-navy: #344054;
+$color-blue-navy-dark: #2D303A;
+
+//Purple colors
+$color-purple-dark:#363F72;
+$color-purple:#6941C6;
+
+//Green colors
+$color-green:#25312F;
+$color-teal: #5D7582;
+
+//White colors
 $color-white: #FFFFFF;
-$color-white-smoke: #FBFBFB;
-$color-grey-light: #BCC6CC;
+$color-white-blue: #B1B8CF;
+$color-white-smoke: #F5F5F5;
+
+//Black colors
+$color-black: #000000;
 
 // font weight:
 $font-weight-regular: 400;
