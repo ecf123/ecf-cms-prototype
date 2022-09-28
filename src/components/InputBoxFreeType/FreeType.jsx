@@ -11,6 +11,7 @@ const FreeType = ({
       <textarea
         className="freetype__input"
         type="text"
+        data-testid="textarea"
         // Will apply spellcheck to inputed text
         spellCheck="true"
         placeholder={placeHolderText}
