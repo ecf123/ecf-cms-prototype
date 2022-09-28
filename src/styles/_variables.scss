@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lexend+Deca:wght@400;700&display=swap');
 
 // breakpoints
 $mobile-breakpoint: 320px;
@@ -58,5 +58,5 @@ $font-size-small: 1rem;
 $font-size-extra-small: 0.8rem;
 
 // font-family
-$font-primary: 'Lexend Deca',
-sans-serif;
+$font-primary: 'Lexend Deca',sans-serif;
+$font-secondary: 'Inter', sans-serif;
