@@ -1,8 +1,10 @@
 import React from 'react'
 import "./NavBarItem.scss"
+import { Link } from 'react-router-dom'
+
 
 const NavBarItem = (props) => {
-  const { imageSrc, text, selected, getCurrentPage} = props;
+  const { imageSrc, text, selected, getCurrentPage, link} = props;
   let classes = 'navBarItem';
 
   if(selected == text){
@@ -14,10 +16,12 @@ const NavBarItem = (props) => {
   }
   
   return (
-    <div className={classes} onClick={handleClick}>
-      <img src={imageSrc} alt={text} className="navBarItem__image" />
-      <p className='navBarItem__text'>{text}</p>
-    </div>
+    <Link to={link}>
+      <div className={classes} onClick={handleClick}>
+        <img src={imageSrc} alt={text} className="navBarItem__image" />
+        <p className='navBarItem__text'>{text}</p>
+      </div>
+    </Link>
   )
 }
 

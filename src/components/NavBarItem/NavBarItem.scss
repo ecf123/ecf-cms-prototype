@@ -2,8 +2,10 @@
 
 .navBarItem{
   display: flex;
+  height: min-content;
 }
 
 .selected {
-  background-color: aqua;
+  border-left: 3px solid green;
+  background-color: gray;
 }
