@@ -3,26 +3,24 @@
 @use "../../styles/_reset.scss" as *;
 
 .freetype {
+  &__label {
+    width: 7.813rem;
+    height: 1.25rem;
 
-    &__label {
-        width: 7.813rem;
-        height: 1.25rem;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 0.875rem;
-        line-height: 1.25rem;
+    color: #344054;
 
-        color: #344054;
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-        }
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
 
   &__input {
-
     box-sizing: border-box;
 
     display: flex;
@@ -49,15 +47,15 @@
     flex-grow: 0;
 
     ::placeholder {
-        color: #667085;
+      color: #667085;
     }
   }
 
-textarea {
+  textarea {
     width: 30rem;
     height: 7.188rem;
 
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
@@ -68,5 +66,5 @@ textarea {
     flex: none;
     order: 0;
     flex-grow: 0;
-    }
+  }
 }

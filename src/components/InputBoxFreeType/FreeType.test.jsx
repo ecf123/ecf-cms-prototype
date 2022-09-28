@@ -12,23 +12,14 @@ it("Should render the FreeType textarea", () => {
     //comment
   });
 
-  it("Should render the FreeType label", () => {
+it("Should render the FreeType label", () => {
+  render(<FreeType />);
+  const label = screen.getByTestId("label");
+  expect(label).toBeInTheDocument();
+});
 
-    render(<FreeType/>);
-    
-    const label = screen.getByTestId("label");
-    
-    expect(label).toBeInTheDocument();
-  
-  });
-
-  it("Should render the FreeType div", () => {
-
-    render(<FreeType/>);
-    
-    const div = screen.getByTestId("div");
-    
-    expect(div).toBeInTheDocument();
-  
-  });
-
+it("Should render the FreeType div", () => {
+  render(<FreeType />);
+  const div = screen.getByTestId("div");
+  expect(div).toBeInTheDocument();
+});
