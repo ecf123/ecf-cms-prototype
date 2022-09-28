@@ -1,8 +1,15 @@
-
+@use '../../styles/_variables' as *;
+@use '../../styles/_typography' as *;
 
 .navBarItem{
   display: flex;
   height: min-content;
+  &__image{
+    padding:5px;
+  }
+  &__text{
+    padding:5px;
+  }
 }
 
 .selected {

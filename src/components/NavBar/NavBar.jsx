@@ -3,6 +3,7 @@ import Logo from '../Logo/Logo';
 import NavBarItem from '../NavBarItem/NavBarItem';
 import './NavBar.scss';
 
+
  const NavBar = () => {
   const [ selected, setSelected ] = useState("Dashboard");
   const getCurrentPage = (page) => {
