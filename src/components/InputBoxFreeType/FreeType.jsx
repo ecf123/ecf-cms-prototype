@@ -1,19 +1,19 @@
 import "./FreeType.scss";
 
 const FreeType = ({
-  labelText,
-  placeHolderText,
+  freeTypelabelText,
+  freeTypeplaceHolderText,
   handleFreeTypeValue,
 }) => {
   return (
     <div className="freetype" data-testid="div">
-      <label className="freetype__label" data-testid="label">{labelText}</label>
+      <label className="freetype__label" data-testid="label">{freeTypelabelText}</label>
       <textarea
         className="freetype__input"
         type="text"
         // Will apply spellcheck to inputed text
         spellCheck="true"
-        placeholder={placeHolderText}
+        placeholder={freeTypeplaceHolderText}
         // Value of input will update as text is typed
         onChange={handleFreeTypeValue}
       ></textarea>
