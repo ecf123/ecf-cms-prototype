@@ -9,4 +9,5 @@ it("Should render the FreeType textarea", () => {
     const textArea = screen.getAllByRole("textbox");
     // 3. Assert
     expect(textArea).toBeInTheDocument();
+    //comment
   });
