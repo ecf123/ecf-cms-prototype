@@ -1,11 +1,13 @@
 // Import all the BEM files
 @use "../../styles/main.scss" as *;
+@use "../../styles/_variables.scss" as *;
 
 .search-bar {
     display: flex;
     width: 26.56rem;
     height: 3rem;
     align-items: center;
+    background-color: $color-white;
 
     &__input {
         height: 0.94rem;
