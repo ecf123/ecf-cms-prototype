@@ -36,7 +36,7 @@ it("should submit the form when all credentials are valid and display success me
     const passwordInput = screen.getByRole("textbox", {name: /Password/i});
     userEvent.type(passwordInput, "nology2022");
 
-    const button = screen.getByRole("textbox", {name: /Login/i});
+    const button = screen.getByRole("button", {name: /Login/i});
     userEvent.click(button);
 
     const errorMessage = screen.getByText("Please input valid email address.")

@@ -6,13 +6,17 @@ const LoginButton = (props) => {
 
   return (
     <div className='login'>
-        <form className='login__form' onSubmit={handleLogin}>
+        <form className='login__form' onSubmit={handleLogin} name="form">
 
-            <label htmlFor='emailAddress' className='login__header'>Email Address</label>
-            <input type='text' className='login__inputBox'></input>
+          <div>
+            <label htmlFor='emailAddress' className='login__header' >Email Address</label>
+            <input type='text' className='login__inputBox' role='form'/>
+          </div>
 
+          <div>
             <label htmlFor='password' className='login__header'>Password</label>
             <input type='text' className='login__inputBox'></input>
+          </div>
 
             <button className='login__button' onSubmit={handleLogin}>Login</button>
         </form>
