@@ -1,6 +1,6 @@
 import "./Short.scss";
 
-const Short = ({ shortlabelText, shortplaceHolderText, handleShortValue }) => {
+const Short = ({ shortlabelText, shortType, shortplaceHolderText, handleShortValue }) => {
   return (
     <div className="short" data-testid="div">
       <label 
@@ -10,7 +10,7 @@ const Short = ({ shortlabelText, shortplaceHolderText, handleShortValue }) => {
       </label>
       <textbox
         className="short__input"
-        type="text"
+        type={shortType}
         // Will apply spellcheck to inputed text
         spellCheck="true"
         data-testid="textbox"
