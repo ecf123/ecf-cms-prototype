@@ -3,6 +3,7 @@ import "./Searchbar.scss";
 import magnifyGlass from "../../assets/magnifying-glass-grey.svg";
 
 const Searchbar = ({ searchWord, handleSearchInput }) => {
+  
   return (
     <div className="search-bar">
       {/* magnifying glass icon to the left of input */}
