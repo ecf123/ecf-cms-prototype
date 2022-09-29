@@ -1,7 +1,7 @@
 import React from 'react'
 import "./ArticleListCards.scss";
 import iconArrow from '../../assets/Iconarrow.png';
-import "../../styles"
+import "../../styles/_reset.scss";
 
 
 //added placeholder content for the information on the card and image. 
@@ -18,7 +18,7 @@ const ArticleListCards = () => {
         <p className='card__info'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores odit ratione fugiat esse repudiandae maxime optio</p>
         <ul className='card__links'>
             <li className='card__link card__link--purple'>Professional Development</li>
-            <li className='card__link card__link--darkblue'>Career</li>
+            <li className='card__link card__link--darkpurple'>Career</li>
         </ul>
     </div>
   )

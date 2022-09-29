@@ -1,81 +1,68 @@
-* {
-    margin: 0;
-    padding: 0;
-    color: black;
-    box-sizing: border-box;
-
-}
+@use "../../styles/variables" as *;
 
 .card {
-    
+    font-family:$font-secondary;
     width: 26.724rem;
     height: 16.703rem;
+    font-style: normal;
 
     &__image {
         width: 100%;
         height: auto;
-
     }
 
     &__date {
-        font-family:'Courier New', Courier, monospace;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
+        font-weight: $font-weight-regular;
+        font-size: $font-size-extra-small;
         line-height: 20px;
-        color: #5D7582;
+        color: $color-teal;
     }
 
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+
+        .card__icon {
+            margin-top: 10px;
+        }
+    
+        .card__title {
+            font-weight: $font-weight-regular;
+            font-size: $font-size-medium;
+            line-height: 32px;
+            color: $color-black;
+        }
+
     }
 
-    &__icon {
-        margin-top: 10px;
-    }
-
-    &__title {
-        font-family:'Courier New', Courier, monospace;        
-        font-style: normal;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 32px;
-        color: #101828;
-    }
 
     &__info {
-        font-family:'Courier New', Courier, monospace;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
+        font-weight: $font-weight-regular;
+        font-size: $font-size-small;
         line-height: 24px;
+        color: $color-teal;
     }
 
     &__links {
-        font-family:'Courier New', Courier, monospace;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
+        font-weight: $font-weight-regular;
+        font-size: $font-size-extra-small;
         line-height: 20px;
     }
 
 
     &__link {
-        font-family:'Courier New', Courier, monospace;
         display: inline;
         margin: 0 10px;
-        opacity: 0.9;
-        background-color: #ececec;
+        background-color: #F8F9FC;
         border-radius: 10px;
+        padding: 0 5px;
 
         &--purple{
-            color: #6941C6;
-
+            color: $color-purple;
         }
-        &--darkblue{
-            color: #363F72;
+        &--darkpurple{
+            color: $color-purple-dark;
         }
     }
 }
