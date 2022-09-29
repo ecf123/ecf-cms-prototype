@@ -41,7 +41,8 @@
     }
     &__role{
         height: 0.75rem;
-        width: 1.875rem;
+        min-width: fit-content;
+        max-width: 2rem;
         margin: 0;
         font-size: $font-size-extra-small;
         font-weight: 400;
@@ -49,8 +50,8 @@
         color: $color-grey; 
     }
     &__arrow{
-        height: 0.688rem;
-        width: 0.41rem;
+        height: 0.41375rem;
+        width: 0.6875rem;
         margin-left: 1.5rem;
         margin-right: 2.094rem;
     }
