@@ -30,13 +30,13 @@ it("should render the success message on load" , () => {
 it("should submit the form when all credentials are valid and display success message", () => {
     render (<LoginCard />)
 
-    const emailInput = screen.getByRole("textbox", {name: /Email Address/i});
+    const emailInput = screen.getByText("Email Address");
     userEvent.type(emailInput,"ChenLiangamelia@163.com");
 
-    const passwordInput = screen.getByRole("textbox", {name: /Password/i});
+    const passwordInput = screen.getByText("Password");
     userEvent.type(passwordInput, "nology2022");
 
-    const button = screen.getByRole("button", {name: /Login/i});
+    const button = screen.getByText("Login");
     userEvent.click(button);
 
     const errorMessage = screen.getByText("Please input valid email address.")
