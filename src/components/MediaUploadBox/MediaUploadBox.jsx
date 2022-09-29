@@ -29,7 +29,12 @@ const MediaUploadBox = ({
             <button className="thumbnail__btn">
               <span className="thumbnail__btn--text">{uploadButtonText}</span>
             </button>
-            <input id="file-input" type="file" onChange={handleFileChange} />
+            <input
+              className="thumbnail__btn--input"
+              id="file-input"
+              type="file"
+              onChange={handleFileChange}
+            />
           </div>
         )}
         {file && (
