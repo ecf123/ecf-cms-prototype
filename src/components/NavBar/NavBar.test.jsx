@@ -7,3 +7,10 @@ it("renders the NavBar" ,()=>{
     )
     expect(container).toMatchSnapshot();
 });
+
+it("shows Dashboard as selected on load", () => {
+    const {container} = customRender(
+        <NavBar />
+    )
+    
+})

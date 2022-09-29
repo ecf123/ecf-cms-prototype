@@ -5,19 +5,19 @@
   display: flex;
   height: min-content;
   &__image{
-    padding:5px;
+    padding:7px;
   }
   &__text{
     padding:5px;
-    color: $color-grey;
+    color: $color-grey-dark;
   }
 }
 
 
 .selected {
-  border-left: 3px solid $color-green;
+  border-left: 3px solid $color-teal;
   background-color: rgba($color-grey-light, 0.3);
   > *{
-    color: $color-blue-navy;
+    color: $color-blue-navy-dark;
   }
 }

@@ -11,7 +11,9 @@ const Logo = ({getCurrentPage}) => {
   return (
     <Link to="*" className='link'>
       <div className='logo' onClick={handleClick}>
-        <img src={logo} alt="The Future Hub Logo" className='logo__image'/>
+        <div className='logo__box'>
+          <img src={logo} alt="The Future Hub Logo" className='logo__image'/>
+        </div>
         <p className='logo__topTitle'>THE</p>
         <h3 className='logo__title'>FUTURE HUB</h3>
       </div>
