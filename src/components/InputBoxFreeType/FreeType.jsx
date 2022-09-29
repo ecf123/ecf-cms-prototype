@@ -22,4 +22,5 @@ const FreeType = ({
   );
 };
 
+
 export default FreeType;
