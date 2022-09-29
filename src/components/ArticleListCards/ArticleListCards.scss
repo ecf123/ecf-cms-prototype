@@ -2,8 +2,8 @@
 
 .card {
     font-family:$font-secondary;
-    width: 26.724rem;
-    height: 16.703rem;
+    width: 26.7rem;
+    height: 16.7rem;
     font-style: normal;
 
     &__image {
@@ -18,7 +18,7 @@
         color: $color-teal;
     }
 
-    &__container {
+    &__header {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
