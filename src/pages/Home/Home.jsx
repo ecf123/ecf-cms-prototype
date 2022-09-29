@@ -1,8 +1,11 @@
+import Button from "../../components/Button/Button";
 import Layout from "../../components/Layout/Layout";
+import bin from "../../assets/bin-icon.svg";
 
 const Home = () => {
   return (
     <Layout>
+      < Button style={"button red square small"} buttonIcon={bin} buttonText={"Delete"}/>
       <h1>Page Heading</h1>
       <h2>Section Heading</h2>
       <h3>Panel Heading</h3>

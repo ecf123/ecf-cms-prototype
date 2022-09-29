@@ -20,8 +20,13 @@
 }
 
 .square-border{
-    border-radius: 0.28rem;
+    border-radius: 0.26rem;
 }
+
+.rounded-square-border{
+    border-radius: 0.5rem;
+}
+
 
 .green {
     background-color: $color-green;
@@ -45,18 +50,27 @@
 
 .small {
     font-size: 0.6rem;
-    padding: 0.365 0.5;
+    padding: 0.365rem 0.5rem;
 }
 
 .medium{
     font-size: $font-size-extra-small;
-    padding: 0.;
+    padding: 0.6875rem 1.25rem;
 }
 .large{
     font-size: $font-size-extra-large;
+    padding: 0.9375rem 2.5rem;
 }
 .login-black{
     background-color: $background-color;
-    padding: 0.844 10.063 ;
+    padding: 0.844rem 10.063rem ;
 }
-//CANCEL: colour is color-grey-light, font
+.login-green {
+    background-color: #B6DDC2;
+    padding: 1.0625rem 12.6875rem;
+}
+.modal{
+    padding: 0.625rem;
+    min-width: 10.625rem;
+    text-align: center;
+}
