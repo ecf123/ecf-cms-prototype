@@ -7,3 +7,9 @@ it("renders the NavBarItem" ,()=>{
     )
     expect(container).toMatchSnapshot();
 });
+it("Selected NavBarItem has additional className",()=>{
+    const{container }=customRender(
+        <NavBarItem  imageSrc="" text="Dashboard" link="" selected="Dashboard"/>
+    )
+    expect(container).toMatchSnapshot();
+})

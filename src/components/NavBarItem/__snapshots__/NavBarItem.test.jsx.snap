@@ -1,5 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Selected NavBarItem has additional className 1`] = `
+<div>
+  <a
+    class="link"
+    href="/"
+  >
+    <div
+      class="navBarItem selected"
+    >
+      <img
+        alt="Dashboard"
+        class="navBarItem__image"
+        src=""
+      />
+      <p
+        class="navBarItem__text"
+      >
+        Dashboard
+      </p>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Selected NavBarItem has alternate styling 1`] = `
+<div>
+  <a
+    class="link"
+    href="/"
+  >
+    <div
+      class="navBarItem selected"
+    >
+      <img
+        alt="Dashboard"
+        class="navBarItem__image"
+        src=""
+      />
+      <p
+        class="navBarItem__text"
+      >
+        Dashboard
+      </p>
+    </div>
+  </a>
+</div>
+`;
+
 exports[`renders the NavBarItem 1`] = `
 <div>
   <a
