@@ -57,7 +57,7 @@ exports[`renders the NavBar 1`] = `
                 class="navBarItem__image"
               >
                 <svg>
-                  dashboard-windows-sqare.svg
+                  dashboard-windows-square.svg
                 </svg>
               </div>
               <p

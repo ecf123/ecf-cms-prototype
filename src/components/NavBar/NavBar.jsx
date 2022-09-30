@@ -4,7 +4,7 @@ import NavBarItem from '../NavBarItem/NavBarItem';
 import './NavBar.scss';
 import {ReactComponent as CogIcon} from '../../assets/cog-icon.svg'
 import {ReactComponent as ArticleIcon} from '../../assets/article-book-icon.svg';
-import {ReactComponent as DashboardIcon} from '../../assets/dashboard-windows-sqare.svg';
+import {ReactComponent as DashboardIcon} from '../../assets/dashboard-windows-square.svg';
 import {ReactComponent as PathwaysIcon} from '../../assets/pathways-chain-icon.svg';
 import {ReactComponent as MarketplaceIcon} from '../../assets/marketplace-shopping-trolley-icon.svg';
 import {ReactComponent as UsersIcon} from '../../assets/users-people-icon.svg';

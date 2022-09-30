@@ -17,7 +17,7 @@ it("shows Dashboard as selected on load", () => {
 
     const dashboardItem = getByText(container,"Dashboard").parentElement;
 
-    expect(dashboardItem).toHaveStyle("border-left: 3px solid $color-teal;");
+    expect(dashboardItem).toHaveStyle("border-left: 3px solid $color-green-light;");
     
 })
 
