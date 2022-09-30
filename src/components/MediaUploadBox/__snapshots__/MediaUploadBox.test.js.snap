@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MediaUploadBox component matches the snapshot taken with the file 1`] = `
+<div>
+  <div
+    class="thumbnail"
+  >
+    <label
+      class="thumbnail__label"
+      for="file-input"
+    >
+      Pathway Thumbnail
+    </label>
+    <div
+      class="thumbnail__container"
+    >
+      <img
+        class="thumbnail__picture"
+        src="rollercoaster-image.svg"
+      />
+    </div>
+    <div
+      class="thumbnail__remove"
+    >
+      <img
+        alt="bin icon"
+        class="thumbnail__remove--bin"
+        src="bin-icon.svg"
+      />
+      <p
+        class="thumbnail__remove--text"
+      >
+        Remove
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MediaUploadBox component matches the snapshot taken without the file 1`] = `
+<div>
+  <div
+    class="thumbnail"
+  >
+    <label
+      class="thumbnail__label"
+      for="file-input"
+    >
+      Pathway Thumbnail
+    </label>
+    <div
+      class="thumbnail__container"
+    >
+      <div
+        class="thumbnail__btn--wrapper"
+      >
+        <button
+          class="thumbnail__btn"
+        >
+          <span
+            class="thumbnail__btn--text"
+          >
+            Upload Image
+          </span>
+        </button>
+        <input
+          class="thumbnail__btn--input"
+          id="file-input"
+          type="file"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

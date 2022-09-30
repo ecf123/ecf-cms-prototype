@@ -2,101 +2,100 @@
 @use "../../styles/main.scss" as *;
 
 .thumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.375rem;
+
+  width: 19.5rem;
+  height: 16.25rem;
+
+  font-family: $font-secondary;
+
+  &__container {
+    box-sizing: border-box;
+
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.375rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 
     width: 19.5rem;
-    height: 16.25rem;
+    height: 12.5rem;
 
-    font-family: $font-secondary;
+    background: $color-white;
+    border: 1px dashed #d0d5dd;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+  }
 
-    &__container {
-        box-sizing: border-box;
+  &__picture {
+    max-width: 90%;
+    max-height: 90%;
+  }
 
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
+  &__label {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: $color-blue-navy;
+  }
 
-        width: 19.5rem;
-        height: 12.5rem;
+  &__remove {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
 
-        background: $color-white;
-        border: 1px dashed #D0D5DD;
-        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-        border-radius: 8px;
+    &--bin {
+      margin: 0 0.5rem;
+      filter: invert(71%) sepia(88%) saturate(6543%) hue-rotate(336deg) brightness(98%) contrast(86%);
     }
 
-    &__picture {
-        max-width: 90%;
-        max-height: 90%;
+    &--text {
+      font-weight: 300;
+      font-size: $font-size-smallest;
+      line-height: 0.75rem;
+      color: $color-red-light;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+
+    width: 6rem;
+    height: 1.625rem;
+
+    background: $color-white-smoke;
+    border: none;
+    border-radius: 37px;
+
+    &--text {
+      width: 4.125rem;
+      height: 1.25rem;
+
+      font-size: 0.625rem;
+      line-height: 1.25rem;
+      color: #2d303a;
     }
 
-    &__label {
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        color: $color-blue-navy;
+    &--wrapper {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
     }
 
-    &__remove {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        cursor: pointer;
-
-        &--bin {
-            margin: 0 0.5rem;
-        }
-
-        &--text {
-            font-weight: 300;
-            font-size: $font-size-smallest;
-            line-height: 0.75rem;
-            color: $color-red-light;
-        }
+    &--input {
+      font-size: $font-size-extra-large;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      cursor: pointer;
     }
-
-    &__btn {
-
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 0.625rem;
-
-        width: 6rem;
-        height: 1.625rem;
-
-        background: $color-white-smoke;
-        border: none;
-        border-radius: 37px;
-    
-        &--text {
-            width: 4.125rem;
-            height: 1.25rem;
-        
-            font-size: 0.625rem;
-            line-height: 1.25rem;
-            color: #2D303A;
-        }
-
-        &--wrapper {
-            position: relative;
-            overflow: hidden;
-            display: inline-block;
-        }
-    
-        &--input {
-            font-size: $font-size-extra-large;
-            position: absolute;
-            left: 0;
-            top: 0;
-            opacity: 0;
-            cursor: pointer;
-        }
-    }
+  }
 }
-
