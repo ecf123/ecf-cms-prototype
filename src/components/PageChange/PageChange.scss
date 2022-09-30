@@ -11,12 +11,17 @@ section {
     display: flex;
     justify-content: flex-start;
 
-    .pageChange_button {
-        height: 32px;
-        width: 32px;
+    .pageChange {
+        display: flex;
+        justify-content: space-between;
+        height: 2rem;
+        width: 15.5rem;
+
+    &_button {
+        height: 2rem;
+        width: 2rem;
         border: solid 1px $color-grey-normal;
         border-radius: 4px;
-        margin: 2px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -37,3 +42,7 @@ section {
     }
 
 }
+
+}
+
+
