@@ -1,6 +1,20 @@
 // FreeType.test.jsx
 import { render, screen } from "@testing-library/react";
 import FreeType from "./FreeType.jsx";
+import {customRender} from "../../utils/testUtils";
+
+it("Should match the snapshot, without the props", () => {
+  const {container} = customRender(<FreeType/>);
+  expect(container).toMatchSnapshot();
+})
+
+it("Should match the snapshot, with the props", () => {
+  const {container} = customRender(<FreeType freeTypelabelText={"label"}
+    freeTypeplaceHolderText={"placeholder"}/>);
+
+  expect(container).toMatchSnapshot();
+})
+
 
 it("Should render the FreeType textarea", () => {
     // 1. Arrange

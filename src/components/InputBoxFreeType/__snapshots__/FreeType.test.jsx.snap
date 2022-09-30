@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should match the snapshot, with the props 1`] = `
+<div>
+  <div
+    class="freetype"
+    data-testid="div"
+  >
+    <label
+      class="freetype__label"
+      data-testid="label"
+    >
+      label
+    </label>
+    <textarea
+      class="freetype__input"
+      data-testid="textarea"
+      placeholder="placeholder"
+      spellcheck="true"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Should match the snapshot, without the props 1`] = `
+<div>
+  <div
+    class="freetype"
+    data-testid="div"
+  >
+    <label
+      class="freetype__label"
+      data-testid="label"
+    />
+    <textarea
+      class="freetype__input"
+      data-testid="textarea"
+      spellcheck="true"
+      type="text"
+    />
+  </div>
+</div>
+`;
