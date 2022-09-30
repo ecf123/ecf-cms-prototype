@@ -10,20 +10,15 @@ it("Should render the HeaderProfile", () => {
 })
 
 it("Should render the images (svgs) in the HeaderProfile", () => {
-    const { container } = customRender(
-        <HeaderProfile />
-      );
+    render(<HeaderProfile />)
     const images = screen.getAllByRole("img");
     images.forEach(image => {
         expect(image).toBeInTheDocument();
     });  
-
 })
 
 it("Should display the Name and Role in the HeaderProfile", () => {
-    const { container } = customRender(
-        <HeaderProfile />
-      );
+    render(<HeaderProfile />)
     const name = screen.getByText("Brett Zieme");
     const role = screen.getByText("Admin");
 
@@ -32,9 +27,8 @@ it("Should display the Name and Role in the HeaderProfile", () => {
 })
 
 it("Should display the alt text for the image if the image doesn't load", () => {
-    const { container } = customRender(
-        <HeaderProfile />
-      );
+      render(<HeaderProfile />)
+  
       const profileAlt = screen.getByAltText("Profile Picture");
       const arrowAlt = screen.getByAltText("Toggle");
 
