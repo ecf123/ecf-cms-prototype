@@ -1,5 +1,4 @@
 import Layout from "../../components/Layout/Layout";
-import Searchbar from "../../components/Searchbar/Searchbar";
 
 const Home = () => {
   return (
@@ -13,7 +12,6 @@ const Home = () => {
         maxime tempora, temporibus beatae voluptas repellat rerum. Dignissimos,
         necessitatibus.
       </p>
-      <Searchbar />
     </Layout>
   );
 };
