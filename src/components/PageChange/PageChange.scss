@@ -1,0 +1,39 @@
+@use "../../styles/variables"as *;
+@use "../../styles/typography"as *;
+
+
+section {
+    position: absolute;
+    width: 83.8rem;
+    height: 3.75rem;
+    left: 20.8rem;
+    top: 50.3rem;
+    display: flex;
+    justify-content: flex-start;
+
+    .pageChange_button {
+        height: 32px;
+        width: 32px;
+        border: solid 1px $color-grey-normal;
+        border-radius: 4px;
+        margin: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-white-smoke;
+        color: $color-grey-dark;
+        font-size: $font-size-extra-small;
+        font-weight: $font-weight-regular;
+
+
+        &-active {
+            background-color: $color-black;
+            color: $color-white;
+        }
+
+        &-inactive {
+            opacity: 0.5;
+        }
+    }
+
+}
