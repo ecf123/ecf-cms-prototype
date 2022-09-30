@@ -1,1 +1,43 @@
 @use "../../styles/main.scss" as *;
+@use "../../styles/variables.scss" as *;
+
+
+.delete-prompt{
+    background-color: $color-white;
+    width: 25rem;
+    height: 16.75rem;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 2rem;
+    &__image-conatiner{
+        display: grid;
+        height: 2.25rem;
+        width: 2.25rem;
+        background-color: #FEF3F2;
+        border-radius: 1.75rem;
+    }
+    &__image{
+        margin: 10.5%;
+        background-color: #FEE4E2;;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 1.75rem;
+        padding: 0.5rem;
+    }
+    &__title{
+        font-size: 1.13rem;
+        color: $color-black;
+        font-family: $font-secondary;
+    }
+    &__content{
+        font-size: 0.88rem;
+        color: $color-grey-dark;
+        font-family: $font-secondary;
+    }
+    &__button-holder{
+        display: flex;
+        justify-content: space-between;
+    }
+}
