@@ -2,24 +2,17 @@
 @use "../../styles/_variables.scss" as *;
 
 .short {
-
   font-family: $font-secondary;
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-small;
 
   &__label {
-
-    row-gap: 100rem;
-
-    font-style: normal;
-    font-weight: 500;
-    font-size: $font-size-small;
     line-height: 1.25rem;
-
     color: $color-blue-navy;
-    
   }
 
   &__input {
-
     box-sizing: border-box;
     appearance: none;
 
@@ -34,9 +27,6 @@
     width: 32rem;
     height: 3rem;
 
-    font-style: normal;
-    font-weight: $font-weight-regular;
-    font-size: $font-size-small;
     line-height: 1.5rem;
 
     color: $color-blue-navy;
