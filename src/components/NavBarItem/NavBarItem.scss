@@ -4,8 +4,19 @@
 .navBarItem{
   display: flex;
   height: min-content;
+  align-items: center;
   &__image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding:7px;
+    svg{
+      height: 16px;
+      width: 16px;
+    }
+    path{
+      stroke: $color-grey-dark;
+    }
   }
   &__text{
     padding:5px;
@@ -16,8 +27,13 @@
 
 .selected {
   border-left: 3px solid $color-teal;
-  background-color: rgba($color-grey-light, 0.3);
+  background-color: rgba($color-grey-light, 0.2);
   > *{
     color: $color-blue-navy-dark;
   }
+  path{
+    stroke: $color-blue-navy-dark;
+  }
 }
+
+

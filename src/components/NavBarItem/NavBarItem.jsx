@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 const NavBarItem = (props) => {
-  const { imageSrc, text, selected, getCurrentPage, link} = props;
+  const { text, selected, getCurrentPage, link, children} = props;
   let classes = 'navBarItem';
 
   if(selected == text){
@@ -18,7 +18,9 @@ const NavBarItem = (props) => {
   return (
     <Link to={link} className="link">
       <div className={classes} onClick={handleClick}>
-        <img src={imageSrc} alt={text} className="navBarItem__image" />
+        <div className='navBarItem__image'>
+          {children}
+        </div>
         <p className='navBarItem__text'>{text}</p>
       </div>
     </Link>

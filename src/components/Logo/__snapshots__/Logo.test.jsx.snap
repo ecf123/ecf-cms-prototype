@@ -9,11 +9,15 @@ exports[`renders the Logo 1`] = `
     <div
       class="logo"
     >
-      <img
-        alt="The Future Hub Logo"
-        class="logo__image"
-        src=""
-      />
+      <div
+        class="logo__box"
+      >
+        <img
+          alt="The Future Hub Logo"
+          class="logo__image"
+          src="ECFP-company-logo.svg"
+        />
+      </div>
       <p
         class="logo__topTitle"
       >

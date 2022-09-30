@@ -18,11 +18,15 @@ exports[`renders the NavBar 1`] = `
           <div
             class="logo"
           >
-            <img
-              alt="The Future Hub Logo"
-              class="logo__image"
-              src=""
-            />
+            <div
+              class="logo__box"
+            >
+              <img
+                alt="The Future Hub Logo"
+                class="logo__image"
+                src="ECFP-company-logo.svg"
+              />
+            </div>
             <p
               class="logo__topTitle"
             >
@@ -49,11 +53,13 @@ exports[`renders the NavBar 1`] = `
             <div
               class="navBarItem selected"
             >
-              <img
-                alt="Dashboard"
+              <div
                 class="navBarItem__image"
-                src=""
-              />
+              >
+                <svg>
+                  dashboard-windows-sqare.svg
+                </svg>
+              </div>
               <p
                 class="navBarItem__text"
               >
@@ -72,11 +78,13 @@ exports[`renders the NavBar 1`] = `
             <div
               class="navBarItem"
             >
-              <img
-                alt="Pathways"
+              <div
                 class="navBarItem__image"
-                src=""
-              />
+              >
+                <svg>
+                  pathways-chain-icon.svg
+                </svg>
+              </div>
               <p
                 class="navBarItem__text"
               >
@@ -95,11 +103,13 @@ exports[`renders the NavBar 1`] = `
             <div
               class="navBarItem"
             >
-              <img
-                alt="Articles"
+              <div
                 class="navBarItem__image"
-                src=""
-              />
+              >
+                <svg>
+                  article-book-icon.svg
+                </svg>
+              </div>
               <p
                 class="navBarItem__text"
               >
@@ -118,11 +128,13 @@ exports[`renders the NavBar 1`] = `
             <div
               class="navBarItem"
             >
-              <img
-                alt="Marketplace"
+              <div
                 class="navBarItem__image"
-                src=""
-              />
+              >
+                <svg>
+                  marketplace-shopping-trolley-icon.svg
+                </svg>
+              </div>
               <p
                 class="navBarItem__text"
               >
@@ -141,11 +153,13 @@ exports[`renders the NavBar 1`] = `
             <div
               class="navBarItem"
             >
-              <img
-                alt="Users"
+              <div
                 class="navBarItem__image"
-                src=""
-              />
+              >
+                <svg>
+                  users-people-icon.svg
+                </svg>
+              </div>
               <p
                 class="navBarItem__text"
               >
@@ -162,11 +176,13 @@ exports[`renders the NavBar 1`] = `
         <div
           class="navBarItem"
         >
-          <img
-            alt="Settings"
+          <div
             class="navBarItem__image"
-            src=""
-          />
+          >
+            <svg>
+              cog-icon.svg
+            </svg>
+          </div>
           <p
             class="navBarItem__text"
           >

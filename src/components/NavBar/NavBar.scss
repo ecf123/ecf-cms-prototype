@@ -1,11 +1,13 @@
 @use '../../styles/_variables' as *;
 @use '../../styles/_typography' as *;
 .navBar{
-
+  height: 100%;
+  
   background-color: $color-white-smoke;
   &__container{
     display: grid;
     grid-template-rows: 1fr 4fr 2fr;
+    height: 100%;
   }
 }
 
