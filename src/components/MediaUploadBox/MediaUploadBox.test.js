@@ -1,45 +1,50 @@
 import MediaUploadBox from "./MediaUploadBox";
-import {render, screen} from "@testing-library/react";
-import rollercoasterimg from "../../assets/rollercoaster-image.svg";
-import userEvent from '@testing-library/user-event';
+import { render, screen } from "@testing-library/react";
+import { customRender } from "../../utils/testUtils";
+import rollercoasterImg from "../../assets/rollercoaster-image.svg";
 
-const fileImage = rollercoasterimg;
-describe(MediaUploadBox, () => {
-    // it("should display the picture chosen by the user on the screen", () => {
-    //     render(<MediaUploadBox file={fileImage}/>) 
-    //     // const inputImg = getByRole("input", {type: "file"});
-    //     // userEvent.click(inputImg);
-    //     const paragraph = screen.getByRole("paragraph");
+describe("MediaUploadBox component", () => {
+  it("matches the snapshot taken without the file", () => {
+    const { container } = customRender(<MediaUploadBox />);
+    expect(container).toMatchSnapshot();
+  });
 
-    //     expect(paragraph).toBeInTheDocument();
-    // });
+  it("matches the snapshot taken with the file", () => {
+    const { container } = customRender(
+      <MediaUploadBox file={rollercoasterImg} />
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-    it("should display thumbnail on render", () => {
-        render(<MediaUploadBox/>);
-        const label = screen.getByLabelText("Pathway Thumbnail");
+  it("should display remove button when there is a file", () => {
+    render(<MediaUploadBox file={rollercoasterImg} />);
+    const paragraph = screen.getByText("Remove");
+    expect(paragraph).toBeInTheDocument();
+  });
 
-        expect(label).toBeTruthy();
-    })
-    it("should display the upload button on render", () => {
-        render(<MediaUploadBox/>);
-        const button = screen.getByRole("button");
+  it("should not render the upload button when there is a file added", () => {
+    render(<MediaUploadBox file={rollercoasterImg} />);
+    const uploadButton = screen.queryByRole("button");
+    expect(uploadButton).toBeFalsy();
+  });
 
-        expect(button).toBeInTheDocument()
-    })
-    // it("should contain input in the document", () => {
-    //     render(<MediaUploadBox/>);
-    //     const input = screen.getByText("Remove");
+  it("should render the alt text if the file isn't a picture", () => {
+    render(
+      <MediaUploadBox file={"../../../README.md"} fileName={"README.md"} />
+    );
+    const altText = screen.getByAltText("README.md");
+    expect(altText).toBeTruthy();
+  });
 
-    //     expect(input).not.toBeVisible();
-    // })
+  it("should display thumbnail label on render", () => {
+    render(<MediaUploadBox uploadLabelName={"Pathway Thumbnail"} />);
+    const label = screen.getByLabelText("Pathway Thumbnail");
+    expect(label).toBeTruthy();
+  });
 
-})
-
-// test(MediaUploadBox, () => {
-//     it("should remove the selected image if remove button is clicked", () => {
-//         const {} = render(<MediaUploadBox/>)
-
-//         expect().toBe();
-//     });
-
-// })
+  it("should display the upload button on render", () => {
+    render(<MediaUploadBox />);
+    const button = screen.getByRole("button");
+    expect(button).toBeInTheDocument();
+  });
+});
