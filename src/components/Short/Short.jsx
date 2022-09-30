@@ -8,16 +8,16 @@ const Short = ({ shortlabelText, shortType, shortplaceHolderText, handleShortVal
         data-testid="label">
         {shortlabelText}
       </label>
-      <textbox
+      <input
         className="short__input"
         type={shortType}
         // Will apply spellcheck to inputed text
         spellCheck="true"
-        data-testid="textbox"
+        data-testid="input"
         placeholder={shortplaceHolderText}
         // Value of input will update as text is typed
         onChange={handleShortValue}
-      ></textbox>
+      ></input>
     </div>
   );
 };
