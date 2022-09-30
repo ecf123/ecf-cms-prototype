@@ -3,12 +3,12 @@ import './Button.scss'
 
 const Button = (props) => {
 
-    const {style, buttonText, buttonIcon} = props;
+    const {style, imgStyle, textStyle, buttonText, buttonIcon} = props;
 
   return (
     <button className={style}>
-        <img className={style} src={buttonIcon} alt="" />
-        <p className={style}> {buttonText}</p>
+        <img className={imgStyle} src={buttonIcon} alt="" />
+        <p className={textStyle}> {buttonText}</p>
     </button>
   )
 }
