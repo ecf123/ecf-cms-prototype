@@ -1,5 +1,4 @@
 import "./MediaUploadBox.scss";
-// import { useState } from "react";
 import bin from "../../assets/bin-icon.svg";
 
 const MediaUploadBox = ({
@@ -9,15 +8,6 @@ const MediaUploadBox = ({
   uploadButtonText = "Upload Image",
   fileName,
 }) => {
-  // const MediaUploadBox = () => {
-  //   // it has to be taken out to the container, once the container is made
-  // const [file, setFile] = useState();
-  // const [fileName, setFileName] = useState();
-  // const handleFileChange = (e) => {
-  //   if (!file) setFileName(e.target.files[0].name);
-  //   file ? setFile(null) : setFile(URL.createObjectURL(e.target.files[0]));
-  // };
-
   return (
     <div className="thumbnail">
       <label htmlFor="file-input" className="thumbnail__label">
@@ -35,6 +25,12 @@ const MediaUploadBox = ({
               type="file"
               onChange={handleFileChange}
             />
+            {/* <input
+              id="file-input"
+              type="file"
+              onChange={handleFileChange}
+              accept="image/*,video/*,audio/*,application/pdf"
+            /> */}
           </div>
         )}
         {file && (
