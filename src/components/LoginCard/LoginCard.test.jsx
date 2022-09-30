@@ -61,6 +61,6 @@ it("should submit the form when all credentials are valid and display success me
     expect (errorMessage).toBeFalsy();
     expect (errorMessage1).toBeFalsy();
     expect (errorMessage2).toBeFalsy();
-    expect (successMessage).toBeFalsy(); ///this should not be passing 
+    expect (successMessage).toBeTruthy(); ///this should not be passing 
 
 });

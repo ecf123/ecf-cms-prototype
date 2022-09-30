@@ -8,6 +8,7 @@ import { useState } from "react";
 
 
 const Home = () => {
+  const [hasError, setHasError] = useState (false);
 
   const [info, setInfo] = useState({
     emailAddress: "",
@@ -21,18 +22,23 @@ const Home = () => {
     let emailAddress = event.target[0].value;
     let password = event.target[1].value;
 
+    setHasError(true)
 
     if(!emailAddress.includes("@")) {
-      alert("Please input valid email address.")
+      {hasError && alert("Please input valid email address.")}
+      
     } 
     else if (emailAddress.includes("&") || emailAddress.includes("*") || emailAddress.includes(",") || emailAddress.includes("/")) {
-      alert("Email address should not contain & * , / ")
+      {hasError && alert("Email address should not contain & * , / ")}
+    
     }
     else if(password.length <= 8) {
-      alert("The password length should be longer than 8.")
+     {hasError && alert("The password length should be longer than 8.")}
+  
     } 
     else if(emailAddress.includes("@") && password.length < 8) {
-      alert("The password length should be longer than 8.")
+     {hasError && alert("The password length should be longer than 8.")}
+     
     }
     else {
       alert("Welcome!")
