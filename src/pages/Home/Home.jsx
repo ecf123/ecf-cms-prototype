@@ -1,5 +1,4 @@
 import Layout from "../../components/Layout/Layout";
-import Searchbar from "../../components/Searchbar/Searchbar";
 
 const Home = () => {
   return (
