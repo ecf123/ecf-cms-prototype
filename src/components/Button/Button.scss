@@ -9,13 +9,22 @@
     height: fit-content;
     width: fit-content;
     text-align: center;
+    border: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+.img {
+
+}
+
+.no-img {
+    justify-content: center;
+}
+
 .round-border {
-    border-radius: 50%;
+    border-radius: 2.5rem;
 
 }
 
