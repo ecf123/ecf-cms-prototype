@@ -1,36 +1,36 @@
 // Import all the BEM files
 @use "../../styles/main.scss" as *;
+@use "../../styles/_variables.scss" as *;
+
 
 .search-bar {
     display: flex;
-    width: 26.56rem;
-    height: 3rem;
+    width: 22.16rem;
+    height: 2.49rem;
     align-items: center;
-
+    background-color: $color-white;
+    border-radius: 3.31rem;
+    border: 0.063rem;
+    border-color: $color-white;
     &__input {
         height: 0.94rem;
-        width: 7.12rem;
-        border-radius: 2.7rem;
-        border: 0.063rem;
-        border-color: #f2f2f2;
+        width: 17.12rem;
+        color: $color-grey-light;
+        line-height: 0.91rem;
+        border: none;
+        font-size: 0.75rem;
+        font-weight: 400;
+        margin-bottom: 0.05rem;
+        font-family: $font-secondary;
     }
-
+    &__input:focus{
+        outline: none;
+        color: $color-black;
+    }
     &__image {
-        height: 0.75rem;
-        width: 0.75rem;
+        margin-left: 1.5rem;
+        margin-right: 0.85rem;
+        height: 0.65rem;
+        width: 0.65rem;
     }
 }
-
-// border radius = 2.7rem
-// border = 0.063rem
-
-// border colour = #F2F2F2
-// background colour = #FFFFFF
-
-// input font = inter
-
-// 16px above input and 17px below
-
-// 16px between magnifying glass and input
-// 29px to the left of the magnifying glass
-// 254px to the right of the input
