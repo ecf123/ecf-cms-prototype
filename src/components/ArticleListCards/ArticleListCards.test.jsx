@@ -1,4 +1,6 @@
 import { render, screen } from "@testing-library/react";
+import { customRender } from "../../utils/testUtils";
+
 import ArticleListCards from "./ArticleListCards";
 
 it("should render the card image", () => {
@@ -64,7 +66,13 @@ it("should render the arrow icon", () => {
 
 it("Should render layout with children", () => {
   const { card } = customRender(
-    <ArticleListCards articleInfo="Test Article" />
+    <ArticleListCards
+      date="22/09/2022"
+      title="Test Title"
+      articleInfo="Test article"
+      articleLinkOne="test link"
+      articleLinkTwo="test link"
+    />
   );
   expect(card).toMatchSnapshot();
 });
