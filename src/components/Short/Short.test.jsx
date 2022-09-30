@@ -6,9 +6,9 @@ it("Should render the Short textarea", () => {
   // 1. Arrange
   render(<Short />);
   // 2. Act
-  const textBox = screen.getByTestId("textbox");
+  const input = screen.getByTestId("input");
   // 3. Assert
-  expect(textBox).toBeInTheDocument();
+  expect(input).toBeInTheDocument();
   //comment
 });
 
