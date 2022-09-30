@@ -19,7 +19,7 @@ exports[`renders the Logo 1`] = `
         />
       </div>
       <p
-        class="logo__topTitle"
+        class="logo__top-title"
       >
         THE
       </p>

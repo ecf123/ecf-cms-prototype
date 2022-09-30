@@ -7,13 +7,13 @@ exports[`Selected NavBarItem has additional className 1`] = `
     href="/"
   >
     <div
-      class="navBarItem selected"
+      class="nav-bar-item selected"
     >
       <div
-        class="navBarItem__image"
+        class="nav-bar-item__image"
       />
       <p
-        class="navBarItem__text"
+        class="nav-bar-item__text"
       >
         Dashboard
       </p>
@@ -29,13 +29,13 @@ exports[`renders the NavBarItem 1`] = `
     href="/"
   >
     <div
-      class="navBarItem"
+      class="nav-bar-item"
     >
       <div
-        class="navBarItem__image"
+        class="nav-bar-item__image"
       />
       <p
-        class="navBarItem__text"
+        class="nav-bar-item__text"
       >
         Dashboard
       </p>

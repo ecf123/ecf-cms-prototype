@@ -3,13 +3,13 @@
 exports[`renders the NavBar 1`] = `
 <div>
   <div
-    class="navBar"
+    class="nav-bar"
   >
     <div
-      class="navBar__container"
+      class="nav-bar__container"
     >
       <div
-        class="navBar__logo"
+        class="nav-bar__logo"
       >
         <a
           class="link"
@@ -28,7 +28,7 @@ exports[`renders the NavBar 1`] = `
               />
             </div>
             <p
-              class="logo__topTitle"
+              class="logo__top-title"
             >
               THE
             </p>
@@ -41,150 +41,130 @@ exports[`renders the NavBar 1`] = `
         </a>
       </div>
       <ul
-        class="navBar__linkList"
+        class="nav-bar__link-list"
       >
-        <li
-          class="navBar__listItem"
+        <a
+          class="link"
+          href="/"
         >
-          <a
-            class="link"
-            href="/"
+          <div
+            class="nav-bar-item selected"
           >
             <div
-              class="navBarItem selected"
+              class="nav-bar-item__image"
             >
-              <div
-                class="navBarItem__image"
-              >
-                <svg>
-                  dashboard-windows-square.svg
-                </svg>
-              </div>
-              <p
-                class="navBarItem__text"
-              >
-                Dashboard
-              </p>
+              <svg>
+                dashboard-windows-square.svg
+              </svg>
             </div>
-          </a>
-        </li>
-        <li
-          class="navBar__listItem"
+            <p
+              class="nav-bar-item__text"
+            >
+              Dashboard
+            </p>
+          </div>
+        </a>
+        <a
+          class="link"
+          href="/"
         >
-          <a
-            class="link"
-            href="/"
+          <div
+            class="nav-bar-item"
           >
             <div
-              class="navBarItem"
+              class="nav-bar-item__image"
             >
-              <div
-                class="navBarItem__image"
-              >
-                <svg>
-                  pathways-chain-icon.svg
-                </svg>
-              </div>
-              <p
-                class="navBarItem__text"
-              >
-                Pathways
-              </p>
+              <svg>
+                pathways-chain-icon.svg
+              </svg>
             </div>
-          </a>
-        </li>
-        <li
-          class="navBar__listItem"
+            <p
+              class="nav-bar-item__text"
+            >
+              Pathways
+            </p>
+          </div>
+        </a>
+        <a
+          class="link"
+          href="/"
         >
-          <a
-            class="link"
-            href="/"
+          <div
+            class="nav-bar-item"
           >
             <div
-              class="navBarItem"
+              class="nav-bar-item__image"
             >
-              <div
-                class="navBarItem__image"
-              >
-                <svg>
-                  article-book-icon.svg
-                </svg>
-              </div>
-              <p
-                class="navBarItem__text"
-              >
-                Articles
-              </p>
+              <svg>
+                article-book-icon.svg
+              </svg>
             </div>
-          </a>
-        </li>
-        <li
-          class="navBar__listItem"
+            <p
+              class="nav-bar-item__text"
+            >
+              Articles
+            </p>
+          </div>
+        </a>
+        <a
+          class="link"
+          href="/"
         >
-          <a
-            class="link"
-            href="/"
+          <div
+            class="nav-bar-item"
           >
             <div
-              class="navBarItem"
+              class="nav-bar-item__image"
             >
-              <div
-                class="navBarItem__image"
-              >
-                <svg>
-                  marketplace-shopping-trolley-icon.svg
-                </svg>
-              </div>
-              <p
-                class="navBarItem__text"
-              >
-                Marketplace
-              </p>
+              <svg>
+                marketplace-shopping-trolley-icon.svg
+              </svg>
             </div>
-          </a>
-        </li>
-        <li
-          class="navBar__listItem"
+            <p
+              class="nav-bar-item__text"
+            >
+              Marketplace
+            </p>
+          </div>
+        </a>
+        <a
+          class="link"
+          href="/"
         >
-          <a
-            class="link"
-            href="/"
+          <div
+            class="nav-bar-item"
           >
             <div
-              class="navBarItem"
+              class="nav-bar-item__image"
             >
-              <div
-                class="navBarItem__image"
-              >
-                <svg>
-                  users-people-icon.svg
-                </svg>
-              </div>
-              <p
-                class="navBarItem__text"
-              >
-                Users
-              </p>
+              <svg>
+                users-people-icon.svg
+              </svg>
             </div>
-          </a>
-        </li>
+            <p
+              class="nav-bar-item__text"
+            >
+              Users
+            </p>
+          </div>
+        </a>
       </ul>
       <a
         class="link"
         href="/"
       >
         <div
-          class="navBarItem"
+          class="nav-bar-item"
         >
           <div
-            class="navBarItem__image"
+            class="nav-bar-item__image"
           >
             <svg>
               cog-icon.svg
             </svg>
           </div>
           <p
-            class="navBarItem__text"
+            class="nav-bar-item__text"
           >
             Settings
           </p>
