@@ -14,7 +14,7 @@ const Logo = ({getCurrentPage}) => {
         <div className='logo__box'>
           <img src={logo} alt="The Future Hub Logo" className='logo__image'/>
         </div>
-        <p className='logo__topTitle'>THE</p>
+        <p className='logo__top-title'>THE</p>
         <h3 className='logo__title'>FUTURE HUB</h3>
       </div>
     </Link>

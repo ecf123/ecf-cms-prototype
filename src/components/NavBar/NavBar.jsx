@@ -15,19 +15,19 @@ import {ReactComponent as UsersIcon} from '../../assets/users-people-icon.svg';
     setSelected(page);
   }
   return (
-    <div className='navBar'>
-      <div className='navBar__container'>
+    <div className='nav-bar'>
+      <div className='nav-bar__container'>
 
-        <div className='navBar__logo'>
+        <div className='nav-bar__logo'>
           <Logo getCurrentPage={getCurrentPage} />
         </div>
         
-        <ul className='navBar__linkList'>
-          <li className='navBar__listItem'><NavBarItem text="Dashboard" selected={selected} getCurrentPage={getCurrentPage} link="" ><DashboardIcon /></NavBarItem></li>
-          <li className='navBar__listItem'><NavBarItem text="Pathways" selected={selected} getCurrentPage={getCurrentPage} link="" ><PathwaysIcon /></NavBarItem></li>
-          <li className='navBar__listItem'><NavBarItem text="Articles" selected={selected} getCurrentPage={getCurrentPage} link="" ><ArticleIcon /></NavBarItem></li>
-          <li className='navBar__listItem'><NavBarItem text="Marketplace" selected={selected} getCurrentPage={getCurrentPage} link="" ><MarketplaceIcon /></NavBarItem></li>
-          <li className='navBar__listItem'><NavBarItem text="Users" selected={selected} getCurrentPage={getCurrentPage} link="" ><UsersIcon /></NavBarItem></li>
+        <ul className='nav-bar__link-list'>
+          <NavBarItem text="Dashboard" selected={selected} getCurrentPage={getCurrentPage} link="" ><DashboardIcon /></NavBarItem>
+          <NavBarItem text="Pathways" selected={selected} getCurrentPage={getCurrentPage} link="" ><PathwaysIcon /></NavBarItem>
+          <NavBarItem text="Articles" selected={selected} getCurrentPage={getCurrentPage} link="" ><ArticleIcon /></NavBarItem>
+          <NavBarItem text="Marketplace" selected={selected} getCurrentPage={getCurrentPage} link="" ><MarketplaceIcon /></NavBarItem>
+          <NavBarItem text="Users" selected={selected} getCurrentPage={getCurrentPage} link="" ><UsersIcon /></NavBarItem>
         </ul>
 
         <NavBarItem text="Settings" selected={selected} getCurrentPage={getCurrentPage} link=""><CogIcon /></NavBarItem>

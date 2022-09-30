@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const NavBarItem = (props) => {
   const { text, selected, getCurrentPage, link, children} = props;
-  let classes = 'navBarItem';
+  let classes = 'nav-bar-item';
 
   if(selected == text){
     classes += ' selected'
@@ -18,10 +18,10 @@ const NavBarItem = (props) => {
   return (
     <Link to={link} className="link">
       <div className={classes} onClick={handleClick}>
-        <div className='navBarItem__image'>
+        <div className='nav-bar-item__image'>
           {children}
         </div>
-        <p className='navBarItem__text'>{text}</p>
+        <p className='nav-bar-item__text'>{text}</p>
       </div>
     </Link>
   )
