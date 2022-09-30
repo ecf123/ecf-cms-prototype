@@ -1,23 +1,14 @@
-@use "../../styles/_variables.scss" as *;
-@use "../../styles/_typography.scss" as *;
 @use "../../styles/_reset.scss" as *;
+@use "../../styles/_variables.scss" as *;
 
 .freetype {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-small;
   &__label {
-    width: 7.813rem;
-    height: 1.25rem;
-
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 0.875rem;
     line-height: 1.25rem;
-
-    color: #344054;
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    color: $color-blue-navy;
   }
 
   &__input {
@@ -26,6 +17,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    margin-top: 0.4rem;
     padding: 0.75rem 1rem;
     gap: 0.5rem;
 
@@ -34,37 +26,17 @@
     width: 32rem;
     height: 9.25rem;
 
-    background: #ffffff;
-
-    border: 0.063rem solid #d0d5dd;
-
-    box-shadow: 0rem 0.063rem 0.125rem rgba(16, 24, 40, 0.05);
-    border-radius: 0.5rem;
-
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-
-    ::placeholder {
-      color: #667085;
-    }
-  }
-
-  textarea {
-    width: 30rem;
-    height: 7.188rem;
-
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1rem;
     line-height: 160%;
 
-    color: #667085;
+    color: $color-grey-dark; //#667085;
+    background: $color-white;
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    border: 0.063rem solid $color-grey-light; //#d0d5dd;
+    box-shadow: 0rem 0.063rem 0.125rem $color-blue-dark;
+    border-radius: 0.5rem;
+
+    ::placeholder {
+      color: $color-grey-dark; //#667085;
+    }
   }
 }
