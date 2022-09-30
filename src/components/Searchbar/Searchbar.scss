@@ -5,8 +5,8 @@
 
 .search-bar {
     display: flex;
-    width: 22.16rem;
-    height: 2.49rem;
+    width: 26.56rem;
+    height: 3rem;
     align-items: center;
     background-color: $color-white;
     border-radius: 3.31rem;
@@ -16,11 +16,10 @@
         height: 0.94rem;
         width: 17.12rem;
         color: $color-grey-light;
-        line-height: 0.91rem;
+        line-height: 0.97rem;
         border: none;
         font-size: 0.75rem;
         font-weight: 400;
-        margin-bottom: 0.05rem;
         font-family: $font-secondary;
     }
     &__input:focus{
