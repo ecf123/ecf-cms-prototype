@@ -1,11 +1,10 @@
 import React from 'react'
-import "../../assets/"
+import "./ComponentHeader.scss";
 
-const ComponentHeader = () => {
+const ComponentHeader = ({title}) => {
   return (
-    <div>
-        <h1>Pathways</h1>
-        <img src="" alt="" />
+    <div className='component-header'>
+        <h1 className='component-header__title'>{title}</h1>
     </div>
   )
 }
