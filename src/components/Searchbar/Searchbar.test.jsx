@@ -2,6 +2,18 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Searchbar from "./Searchbar";
 
+import { customRender } from "../../utils/testUtils";
+
+it("Should render searchbar with children", () => {
+  const { container } = customRender(
+    <Searchbar>
+      <p>some content</p>
+    </Searchbar>
+  );
+  expect(container).toMatchSnapshot();
+});
+
+
 it("Should update input box with each key press", () => {
   render(<Searchbar />)
 

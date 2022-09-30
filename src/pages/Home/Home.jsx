@@ -13,7 +13,6 @@ const Home = () => {
         maxime tempora, temporibus beatae voluptas repellat rerum. Dignissimos,
         necessitatibus.
       </p>
-      <Searchbar />
     </Layout>
   );
 };
