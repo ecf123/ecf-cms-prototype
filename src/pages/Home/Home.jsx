@@ -1,5 +1,4 @@
 import Layout from "../../components/Layout/Layout";
-import MediaUploadBox from "../../components/MediaUploadBox/MediaUploadBox";
 
 const Home = () => {
   return (
@@ -13,7 +12,6 @@ const Home = () => {
         maxime tempora, temporibus beatae voluptas repellat rerum. Dignissimos,
         necessitatibus.
       </p>
-      <MediaUploadBox/>
     </Layout>
   );
 };
