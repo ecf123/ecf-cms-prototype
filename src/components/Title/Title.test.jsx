@@ -1,10 +1,15 @@
 import {render, screen} from "@testing-library/react";
+import { customRender } from "../../utils/testUtils";
 import Title from "./Title";
 
 it("should render the title", () => {
-    render(<Title />)
-    const title = screen.queryByText("Welcome Back");
-    expect(title).toBeInTheDocument();
+    const { container } = customRender(
+    <Title>
+        <h1>Welcome Back</h1>
+        <p>Feugiat magna viverra pellentesque habitant. Libero id amet nisl, tellus cras eleifend et in. </p>
+    </Title>
+    )
+    expect (container).toMatchSnapshot();
 }
 )
 

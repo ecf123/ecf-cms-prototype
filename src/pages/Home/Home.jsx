@@ -35,7 +35,7 @@ const Home = () => {
       alert("The password length should be longer than 8.")
     }
     else {
-      alert("Wlecome!")
+      alert("Welcome!")
       setInfo({emailAddress, password})
     }
   }
