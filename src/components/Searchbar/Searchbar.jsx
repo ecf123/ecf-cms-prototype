@@ -6,11 +6,9 @@ const Searchbar = ({placeholderText, searchWord, handleSearchInput }) => {
   
   return (
     <div className="search-bar">
-      {/* magnifying glass icon to the left of input */}
+      //Props being used to change the placeholder text, as well as store search word and handle the logic of the search bar. 
       <img src={magnifyGlass} alt="Search Icon" className="search-bar__image"/>
       <input type="text" placeholder={placeholderText} value={searchWord} onChange={handleSearchInput} className="search-bar__input" data-testid="search-input"/>
-      {/* input containing a placeholder that says Search for articles... */}
-      {/* create an onChange that is non functional that takes in the function as a prop */}
     </div>
   );
 };
