@@ -27,7 +27,7 @@ it("should display the article paragraph on the screen", () => {
 });
 
 it("Should render layout with children", () => {
-  const { card } = customRender(
+  const { container } = customRender(
     <MarketPlaceMainCard
       date="22/09/2022"
       imgDescription="Test Description"
@@ -35,5 +35,5 @@ it("Should render layout with children", () => {
       articleInfo="Test article"
     />
   );
-  expect(card).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
