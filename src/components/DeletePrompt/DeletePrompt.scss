@@ -1,6 +1,8 @@
 @use "../../styles/main.scss" as *;
 @use "../../styles/variables.scss" as *;
 
+//Container will need an opacity for when the modal pops up on screen.
+
 .delete-prompt {
   display: flex;
   flex-direction: column;
