@@ -4,7 +4,6 @@ exports[`Should match the snapshot, with the props 1`] = `
 <div>
   <div
     class="short"
-    data-testid="div"
   >
     <label
       class="short__label"
@@ -21,5 +20,3 @@ exports[`Should match the snapshot, with the props 1`] = `
   </div>
 </div>
 `;
-
-

@@ -5,7 +5,7 @@ import {customRender} from "../../utils/testUtils";
 
 
 it("Should match the snapshot, with the props", () => {
-  const {container} = customRender(<Short shortlabelText={"label"} shortplaceHolderText={"placeholder"}/>);
+  const {container} = customRender(<Short shortLabelText={"label"} shortPlaceHolderText={"placeholder"}/>);
   expect(container).toMatchSnapshot();
 });
 
