@@ -1,38 +1,28 @@
 import "./PageChange.scss";
+import ReactPaginate from "react-paginate";
+
+
 
 import React from "react";
 
+
+// Make props: what to do on page change, page count, current page, ho
+
 const PageChange = ({
-  squareOne,
-  squareTwo,
-  squareThree,
-  squareFour,
-  squareFive,
-  handlePageChange,
+  totalPages, handlePageChange,
 }) => {
   return (
-    <section>
-      <div className="pageChange">
-        {/* add this to handlePageChange function - pageChange_button.classList.add("-active") */}
-        <div className="pageChange_button">&lt;</div>
-        <div className="pageChange_button" onClick={handlePageChange}>
-          1{squareOne}
-        </div>
-        <div className="pageChange_button" onClick={handlePageChange}>
-          2{squareTwo}
-        </div>
-        <div className="pageChange_button" onClick={handlePageChange}>
-          3{squareThree}
-        </div>
-        <div className="pageChange_button" onClick={handlePageChange}>
-          ...{squareFour}
-        </div>
-        <div className="pageChange_button" onClick={handlePageChange}>
-          25{squareFive}
-        </div>
-        <div className="pageChange_button">&gt;</div>
-      </div>
-    </section>
+    <ReactPaginate
+  previousLabel={"<"}
+  nextLabel={">"}
+  pageCount={totalPages}
+  onPageChange={handlePageChange}
+  containerClassName={"pagination"}
+  //previousLinkClassName={"previousButton"}
+  //nextLinkClassName={"nextButton"}
+  disabledClassName={"inactive"}
+  activeClassName={"active"}
+/>
   );
 };
 

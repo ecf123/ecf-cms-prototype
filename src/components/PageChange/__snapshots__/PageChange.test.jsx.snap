@@ -2,93 +2,143 @@
 
 exports[`Should render PageChange 1`] = `
 <div>
-  <section>
-    <div
-      class="pageChange"
+  <ul
+    class="pagination"
+  >
+    <li
+      class="previous inactive"
     >
-      <div
-        class="pageChange_button"
+      <a
+        aria-disabled="true"
+        aria-label="Previous page"
+        class=" "
+        rel="prev"
+        role="button"
+        tabindex="-1"
       >
         &lt;
-      </div>
-      <div
-        class="pageChange_button"
-      >
-        1
-      </div>
-      <div
-        class="pageChange_button"
-      >
-        2
-      </div>
-      <div
-        class="pageChange_button"
-      >
-        3
-      </div>
-      <div
-        class="pageChange_button"
-      >
-        ...
-      </div>
-      <div
-        class="pageChange_button"
-      >
-        25
-      </div>
-      <div
-        class="pageChange_button"
+      </a>
+    </li>
+    <li
+      class="next"
+    >
+      <a
+        aria-disabled="false"
+        aria-label="Next page"
+        class=""
+        rel="next"
+        role="button"
+        tabindex="0"
       >
         &gt;
-      </div>
-    </div>
-  </section>
+      </a>
+    </li>
+  </ul>
 </div>
 `;
 
 exports[`Should render PageChange with props 1`] = `
 <div>
-  <section>
-    <div
-      class="pageChange"
+  <ul
+    class="pagination"
+  >
+    <li
+      class="previous inactive"
     >
-      <div
-        class="pageChange_button"
+      <a
+        aria-disabled="true"
+        aria-label="Previous page"
+        class=" "
+        rel="prev"
+        role="button"
+        tabindex="-1"
       >
         &lt;
-      </div>
-      <div
-        class="pageChange_button"
+      </a>
+    </li>
+    <li
+      class="active"
+    >
+      <a
+        aria-current="page"
+        aria-label="Page 1 is your current page"
+        rel="canonical"
+        role="button"
+        tabindex="-1"
       >
         1
-        250
-      </div>
-      <div
-        class="pageChange_button"
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Page 2"
+        rel="next"
+        role="button"
+        tabindex="0"
       >
         2
-      </div>
-      <div
-        class="pageChange_button"
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Page 3"
+        role="button"
+        tabindex="0"
       >
         3
-      </div>
-      <div
-        class="pageChange_button"
+      </a>
+    </li>
+    <li
+      class="break"
+    >
+      <a
+        role="button"
+        tabindex="0"
       >
         ...
-      </div>
-      <div
-        class="pageChange_button"
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Page 18"
+        role="button"
+        tabindex="0"
       >
-        25
-      </div>
-      <div
-        class="pageChange_button"
+        18
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Page 19"
+        role="button"
+        tabindex="0"
+      >
+        19
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Page 20"
+        role="button"
+        tabindex="0"
+      >
+        20
+      </a>
+    </li>
+    <li
+      class="next"
+    >
+      <a
+        aria-disabled="false"
+        aria-label="Next page"
+        class=""
+        rel="next"
+        role="button"
+        tabindex="0"
       >
         &gt;
-      </div>
-    </div>
-  </section>
+      </a>
+    </li>
+  </ul>
 </div>
 `;

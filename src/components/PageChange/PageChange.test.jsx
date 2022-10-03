@@ -4,13 +4,11 @@ import PageChange from "./PageChange";
 
 it("should show the page number on screen", () => {
     //.1 Arrange
-    render(<PageChange/>)
+    render(<PageChange totalPages={20}/>)
 
     //.2 Act
     const pageNumber = screen.findByText(/2/i);
     const PageRight = screen.findByDisplayValue(">");
-
-
 
     //3. Assert
     expect(pageNumber).toBeTruthy();
@@ -19,17 +17,17 @@ it("should show the page number on screen", () => {
 
 it("Should render PageChange", () => {
     const { container } = customRender(
-      <PageChange/>
+    <PageChange/>
     );
-  
+
     expect(container).toMatchSnapshot();
-  });
+});
 
 
-  it("Should render PageChange with props", () => {
+it("Should render PageChange with props", () => {
     const { container } = customRender(
-      <PageChange squareOne={250}/>
+    <PageChange totalPages={20}/>
     );
-  
+
     expect(container).toMatchSnapshot();
-  });
+});
