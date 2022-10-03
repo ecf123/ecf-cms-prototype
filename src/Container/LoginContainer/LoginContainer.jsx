@@ -3,7 +3,7 @@ import { useState } from 'react';
 import "./LoginContainer.scss";
 
 const LoginContainer = () => {
-    //const { handleLogin } = props;
+    //const { handleLogin } = props
     const [hasSubmitted, setHasSubmitted] = useState(false);
     const [hasError, setHasError] = useState(false);
 
