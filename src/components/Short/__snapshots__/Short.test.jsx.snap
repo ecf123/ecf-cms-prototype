@@ -22,21 +22,4 @@ exports[`Should match the snapshot, with the props 1`] = `
 </div>
 `;
 
-exports[`Should match the snapshot, without the props 1`] = `
-<div>
-  <div
-    class="short"
-    data-testid="div"
-  >
-    <label
-      class="short__label"
-      data-testid="label"
-    />
-    <input
-      class="short__input"
-      data-testid="input"
-      spellcheck="true"
-    />
-  </div>
-</div>
-`;
+
