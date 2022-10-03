@@ -1,0 +1,11 @@
+.more-options{
+    padding: 10px;
+    &__buttons{
+        display: flex;
+        flex-direction: row;
+    } 
+    &__button{
+        padding:10px;
+        margin:10px;
+    }
+}
