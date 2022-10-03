@@ -1,11 +1,38 @@
 @use "../../styles/variables.scss" as *;
 @use "../../styles/typography.scss" as *;
 
-.container {
-    width:360px;
-    height:min-content;
-    position: absolute;
-    left: 257px;
-    top: 351px;
+    .alert{
+        color: red;
+    }
 
-}
+    label {
+        font-family: $font-primary;
+        color: $color-black;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 19.2px;
+    }
+
+    #password-input, #email-input{
+        height: 45px;
+        width: 354px;
+        border: 1px solid #E8E8E8;
+        border-radius: 4px;
+        color: #000000;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        
+    }
+
+
+    #form-submit{
+        background-color: $color-green;
+        width: 354px;
+        height: 46px;
+        border-radius: 4px;
+        gap: 10px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 19.2px;
+        margin-top: 30px;
+    }

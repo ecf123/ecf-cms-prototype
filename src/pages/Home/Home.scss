@@ -1,10 +1,11 @@
 @use "../../styles/variables.scss" as *;
 @use "../../styles/typography.scss" as *;
 
-.home {
-    position: relative;
-    width: 1728px;
-    height: 1117px;
-    background-color:$color-white;
+.container {
+    width:360px;
+    height:min-content;
+    position: absolute;
+    left: 257px;
+    top: 351px;
 
 }
