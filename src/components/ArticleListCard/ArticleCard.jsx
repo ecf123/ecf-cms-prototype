@@ -1,9 +1,9 @@
 import React from "react";
-import "./ArticleListCards.scss";
+import "./ArticleCard.scss";
 import iconArrow from "../../assets/arrow-upper-right-black.svg";
 import "../../styles/_reset.scss";
 
-const ArticleListCards = ({
+const ArticleCard = ({
   img,
   date,
   title,
@@ -28,4 +28,4 @@ const ArticleListCards = ({
   );
 };
 
-export default ArticleListCards;
+export default ArticleCard;
