@@ -1,21 +1,21 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import Searchbar from "./Searchbar";
+import SearchBar from "./SearchBar";
 
 import { customRender } from "../../utils/testUtils";
 
 it("Should render searchbar with children", () => {
   const { container } = customRender(
-    <Searchbar>
+    <SearchBar>
       <p>some content</p>
-    </Searchbar>
+    </SearchBar>
   );
   expect(container).toMatchSnapshot();
 });
 
 
 it("Should update input box with each key press", () => {
-  render(<Searchbar />)
+  render(<SearchBar />)
 
   const input = screen.getByTestId("search-input");
   userEvent.type(input, "financial forrest")
@@ -26,7 +26,7 @@ it("Should update input box with each key press", () => {
 
 
 it("Should not display the wrong order of characters based on what was typed", () => {
-    render(<Searchbar />)
+    render(<SearchBar />)
   
     const input = screen.getByTestId("search-input");
     userEvent.type(input, "financial forrest")
@@ -36,7 +36,7 @@ it("Should not display the wrong order of characters based on what was typed", (
   });
 
   it("Should render in the search bubble", () => {
-    render(<Searchbar />)
+    render(<SearchBar />)
   
     const input = screen.getByTestId("search-input");
   

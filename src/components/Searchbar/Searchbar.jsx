@@ -1,4 +1,4 @@
-import "./Searchbar.scss";
+import "./SearchBar.scss";
 
 import magnifyGlass from "../../assets/magnifying-glass-grey.svg";
 
