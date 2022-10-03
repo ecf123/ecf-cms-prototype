@@ -16,10 +16,10 @@ const PageChange = ({
         {/* add this to handlePageChange function - pageChange_button.classList.add("-active") */}
         <div className="pageChange_button">&lt;</div>
         <div className="pageChange_button" onClick={handlePageChange}>
-          1{squareTwo}
+          1{squareOne}
         </div>
         <div className="pageChange_button" onClick={handlePageChange}>
-          2{squareOne}
+          2{squareTwo}
         </div>
         <div className="pageChange_button" onClick={handlePageChange}>
           3{squareThree}

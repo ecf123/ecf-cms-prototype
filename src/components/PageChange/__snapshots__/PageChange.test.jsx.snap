@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render PageChange 1`] = `
+<div>
+  <section>
+    <div
+      class="pageChange"
+    >
+      <div
+        class="pageChange_button"
+      >
+        &lt;
+      </div>
+      <div
+        class="pageChange_button"
+      >
+        1
+      </div>
+      <div
+        class="pageChange_button"
+      >
+        2
+      </div>
+      <div
+        class="pageChange_button"
+      >
+        3
+      </div>
+      <div
+        class="pageChange_button"
+      >
+        ...
+      </div>
+      <div
+        class="pageChange_button"
+      >
+        25
+      </div>
+      <div
+        class="pageChange_button"
+      >
+        &gt;
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Should render PageChange with props 1`] = `
+<div>
+  <section>
+    <div
+      class="pageChange"
+    >
+      <div
+        class="pageChange_button"
+      >
+        &lt;
+      </div>
+      <div
+        class="pageChange_button"
+      >
+        1
+        250
+      </div>
+      <div
+        class="pageChange_button"
+      >
+        2
+      </div>
+      <div
+        class="pageChange_button"
+      >
+        3
+      </div>
+      <div
+        class="pageChange_button"
+      >
+        ...
+      </div>
+      <div
+        class="pageChange_button"
+      >
+        25
+      </div>
+      <div
+        class="pageChange_button"
+      >
+        &gt;
+      </div>
+    </div>
+  </section>
+</div>
+`;
