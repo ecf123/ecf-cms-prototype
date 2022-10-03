@@ -65,7 +65,7 @@ it("should render the arrow icon", () => {
 });
 
 it("Should render layout with children", () => {
-  const { card } = customRender(
+  const { container } = customRender(
     <ArticleListCards
       date="22/09/2022"
       title="Test Title"
@@ -74,5 +74,5 @@ it("Should render layout with children", () => {
       articleLinkTwo="test link"
     />
   );
-  expect(card).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
