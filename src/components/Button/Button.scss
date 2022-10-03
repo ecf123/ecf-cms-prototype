@@ -8,7 +8,7 @@
 .button {
     width: fit-content;
     text-align: center;
-    border: 1px solid white;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,6 +82,8 @@ width:auto;
     background-color: $color-red-normal;
     color: $color-white;
 }
+
+
 
 .small {
     height: 1.375rem;
