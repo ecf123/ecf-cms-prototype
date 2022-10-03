@@ -24,18 +24,18 @@
 
   &__image-conatiner {
     display: grid;
-    height: 2.25rem;
-    width: 2.25rem;
-    background: $color-white;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: #fef3f2;
     border-radius: 1.75rem;
   }
   &__image {
-    margin: 10.5%;
+    margin: 14.8%;
     height: 1.75rem;
     width: 1.75rem;
     border-radius: 1.75rem;
     padding: 0.5rem;
-    background-color: #fee4e2; //This is used because the image is downloading with no circles.
+    background-color: #fee4e2;
   }
   &__title {
     font-size: $font-size-medium;
@@ -49,4 +49,9 @@
     display: flex;
     justify-content: space-evenly;
   }
+}
+
+
+@media screen and(width=$mobile-break ) {
+  
 }
