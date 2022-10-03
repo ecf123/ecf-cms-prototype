@@ -3,38 +3,14 @@
 exports[`Should match the snapshot, with the props 1`] = `
 <div>
   <div
-    class="freetype"
-    data-testid="div"
+    class="free-type"
   >
     <label
-      class="freetype__label"
-      data-testid="label"
-    >
-      label
-    </label>
-    <textarea
-      class="freetype__input"
-      data-testid="textarea"
-      placeholder="placeholder"
-      spellcheck="true"
-      type="text"
-    />
-  </div>
-</div>
-`;
-
-exports[`Should match the snapshot, without the props 1`] = `
-<div>
-  <div
-    class="freetype"
-    data-testid="div"
-  >
-    <label
-      class="freetype__label"
+      class="free-type__label"
       data-testid="label"
     />
     <textarea
-      class="freetype__input"
+      class="free-type__input"
       data-testid="textarea"
       spellcheck="true"
       type="text"

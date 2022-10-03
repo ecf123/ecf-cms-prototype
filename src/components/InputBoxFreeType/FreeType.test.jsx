@@ -3,10 +3,6 @@ import { render, screen } from "@testing-library/react";
 import FreeType from "./FreeType.jsx";
 import {customRender} from "../../utils/testUtils";
 
-it("Should match the snapshot, without the props", () => {
-  const {container} = customRender(<FreeType/>);
-  expect(container).toMatchSnapshot();
-})
 
 it("Should match the snapshot, with the props", () => {
   const {container} = customRender(<FreeType freeTypelabelText={"label"}
@@ -32,8 +28,4 @@ it("Should render the FreeType label", () => {
   expect(label).toBeInTheDocument();
 });
 
-it("Should render the FreeType div", () => {
-  render(<FreeType />);
-  const div = screen.getByTestId("div");
-  expect(div).toBeInTheDocument();
-});
+
