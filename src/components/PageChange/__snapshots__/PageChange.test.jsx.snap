@@ -20,6 +20,75 @@ exports[`Should render PageChange 1`] = `
       </a>
     </li>
     <li
+      class="active"
+    >
+      <a
+        aria-current="page"
+        aria-label="Page 1 is your current page"
+        rel="canonical"
+        role="button"
+        tabindex="-1"
+      >
+        1
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Page 2"
+        rel="next"
+        role="button"
+        tabindex="0"
+      >
+        2
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Page 3"
+        role="button"
+        tabindex="0"
+      >
+        3
+      </a>
+    </li>
+    <li
+      class="break"
+    >
+      <a
+        role="button"
+        tabindex="0"
+      >
+        ...
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Page 23"
+        role="button"
+        tabindex="0"
+      >
+        23
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Page 24"
+        role="button"
+        tabindex="0"
+      >
+        24
+      </a>
+    </li>
+    <li>
+      <a
+        aria-label="Page 25"
+        role="button"
+        tabindex="0"
+      >
+        25
+      </a>
+    </li>
+    <li
       class="next"
     >
       <a

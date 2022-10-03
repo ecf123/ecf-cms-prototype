@@ -9,7 +9,7 @@ import React from "react";
 // Make props: what to do on page change, page count, current page, ho
 
 const PageChange = ({
-  totalPages, handlePageChange,
+  totalPages = 25, handlePageChange,
 }) => {
   return (
     <ReactPaginate
