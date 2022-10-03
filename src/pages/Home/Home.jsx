@@ -1,9 +1,7 @@
 import Layout from "../../components/Layout/Layout";
-import SearchBar from "../../components/SearchBar/SearchBar";
 
 const Home = () => {
   return (
-    <>
     <Layout>
       <h1>Page Heading</h1>
       <h2>Section Heading</h2>
@@ -14,9 +12,7 @@ const Home = () => {
         maxime tempora, temporibus beatae voluptas repellat rerum. Dignissimos,
         necessitatibus.
       </p>
-      <SearchBar />
     </Layout>
-    </>
   );
 };
 
