@@ -2,7 +2,7 @@ import "./SearchBar.scss";
 
 import magnifyGlass from "../../assets/magnifying-glass-grey.svg";
 
-const Searchbar = ({placeholderText, searchWord, handleSearchInput }) => {
+const SearchBar = ({placeholderText, searchWord, handleSearchInput }) => {
   
   return (
     <div className="search-bar">
@@ -13,4 +13,4 @@ const Searchbar = ({placeholderText, searchWord, handleSearchInput }) => {
   );
 };
 
-export default Searchbar;
+export default SearchBar;
