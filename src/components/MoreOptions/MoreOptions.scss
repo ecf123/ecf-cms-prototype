@@ -1,11 +1,51 @@
+@use "../../styles/variables" as *;
+
 .more-options{
-    padding: 10px;
+    background-color: $color-white;
+    padding: 20px;
+    padding-right: 40px;
+    border-radius: 10px;
+    border: 1px solid $color-grey-light;
     &__buttons{
         display: flex;
         flex-direction: row;
     } 
     &__button{
-        padding:10px;
-        margin:10px;
+        padding:10px 20px;
+        margin:5px;
+        border-radius: 200px;
+        border: none;
+        color: $color-blue-navy-dark;
+        font-size: $font-size-extra-small;
+        font-family: $font-secondary;
+        font-weight: 600;
+        svg{
+            margin-right: 5px;
+            path{
+                stroke: $color-blue-navy-dark;
+            }
+        }
+        &--delete{
+            background-color: $color-red-normal;
+            color: $color-white;
+            svg{
+                path{
+                    stroke: $color-white;
+                }
+            }
+        }
+    }
+    &__title{
+        color: $color-blue-navy-dark;
+        font-size: $font-size-small;
+        margin: 10px;
+        font-family: $font-secondary;
+    }
+    &__description{
+        color: $color-teal;
+        font-size: $font-size-extra-small;
+        margin: 10px;
+        font-family: $font-secondary;
+
     }
 }
