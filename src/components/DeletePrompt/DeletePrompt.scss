@@ -52,6 +52,52 @@
 }
 
 
-@media screen and(width=$mobile-break ) {
+@media screen and (max-width: $mobile-breakpoint) { 
+  .delete-prompt {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    width: 20rem;
+    height: 16.75rem;
+    border-radius: 0.75rem;
+    background: $color-white;
+    padding: 1.5rem;
+    gap: 2rem;
+    font-family: $font-secondary;
+    letter-spacing: $letter-spacing;
   
+    &__image-conatiner {
+      display: grid;
+      height: 2.5rem;
+      width: 2.5rem;
+      background: #fef3f2;
+      border-radius: 1.75rem;
+    }
+    &__image {
+      margin: 14.8%;
+      height: 1.75rem;
+      width: 1.75rem;
+      border-radius: 1.75rem;
+      padding: 0.5rem;
+      background-color: #fee4e2;
+    }
+    &__title {
+      font-size: $font-size-medium;
+      color: $color-black;
+    }
+    &__content {
+      font-size: $font-size-extra-small;
+      color: $color-grey-dark;
+    }
+    &__button-holder {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
 }
