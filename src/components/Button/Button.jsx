@@ -1,16 +1,15 @@
-import React from 'react'
-import './Button.scss'
+import React from "react";
+import "./Button.scss";
 
 const Button = (props) => {
-
-    const {style, imgStyle, textStyle, buttonText, buttonIcon} = props;
+  const { style, textStyle, buttonText, children, imgStyle } = props;
 
   return (
     <button className={style}>
-        <img className={imgStyle} src={buttonIcon} alt="" />
-        <p className={textStyle}> {buttonText}</p>
+      <div className={imgStyle}>{children}</div>
+      <p className={textStyle}> {buttonText}</p>
     </button>
-  )
-}
+  );
+};
 
 export default Button;
