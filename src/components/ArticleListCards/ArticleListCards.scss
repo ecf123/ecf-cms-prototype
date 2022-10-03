@@ -1,65 +1,64 @@
 @use "../../styles/variables" as *;
 
 .card {
-    font-family:$font-secondary;
-    width: 26.7rem;
-    height: 16.7rem;
-    font-style: normal;
+  font-family: $font-secondary;
+  width: 26.7rem;
+  height: 16.7rem;
+  font-style: normal;
 
-    &__image {
-        width: 100%;
-        height: auto;
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__date {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-extra-small;
+    line-height: 20px;
+    color: $color-teal;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .card__icon {
+      margin-top: 10px;
     }
-
-    &__date {
-        font-weight: $font-weight-regular;
-        font-size: $font-size-extra-small;
-        line-height: 20px;
-        color: $color-teal;
+    .card__title {
+      font-weight: $font-weight-regular;
+      font-size: $font-size-medium;
+      line-height: 32px;
+      color: $color-black;
     }
+  }
 
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+  &__info {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-small;
+    line-height: 24px;
+    color: $color-teal;
+  }
 
-        .card__icon {
-            margin-top: 10px;
-        }
-        .card__title {
-            font-weight: $font-weight-regular;
-            font-size: $font-size-medium;
-            line-height: 32px;
-            color: $color-black;
-        }
+  &__links {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-extra-small;
+    line-height: 20px;
+  }
 
+  &__link {
+    display: inline;
+    margin: 0 10px;
+    background-color: #f8f9fc;
+    border-radius: 10px;
+    padding: 0 5px;
+
+    &--purple {
+      color: $color-purple;
     }
-
-    &__info {
-        font-weight: $font-weight-regular;
-        font-size: $font-size-small;
-        line-height: 24px;
-        color: $color-teal;
+    &--darkpurple {
+      color: $color-purple-dark;
     }
-
-    &__links {
-        font-weight: $font-weight-regular;
-        font-size: $font-size-extra-small;
-        line-height: 20px;
-    }
-
-    &__link {
-        display: inline;
-        margin: 0 10px;
-        background-color: #F8F9FC;
-        border-radius: 10px;
-        padding: 0 5px;
-
-        &--purple{
-            color: $color-purple;
-        }
-        &--darkpurple{
-            color: $color-purple-dark;
-        }
-    }
+  }
 }
