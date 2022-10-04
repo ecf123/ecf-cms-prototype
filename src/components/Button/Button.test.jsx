@@ -10,10 +10,10 @@ it("Should render the Button", () => {
 it("Should render the svg in the Button", () => {
   render(
     <Button>
-      <div title="svg">svg</div>
+      <p>This is an svg image</p>
     </Button>
   );
-  const svg = screen.getByTitle("svg");
+  const svg = screen.getByText("This is an svg image");
   expect(svg).toBeInTheDocument();
 });
 
