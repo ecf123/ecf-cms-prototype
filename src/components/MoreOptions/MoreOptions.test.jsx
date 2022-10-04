@@ -1,7 +1,7 @@
 import { customRender } from "../../utils/testUtils";
 import MoreOption from "./MoreOption";
 
-it("Should render layout with children", () => {
+it("Should render MoreOption component", () => {
   const { container } = customRender(
     <MoreOption />
   );
