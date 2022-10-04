@@ -1,5 +1,6 @@
 import "./DeletePrompt.scss";
 import warning from "../../assets/exclamation-mark-icon.svg";
+import Button from "../Button/Button";
 
 const DeletePrompt = ({ title, handleCancel, handleDelete }) => {
   {/*This is the component for the delete prompt box, it will need props for the handling of each click
@@ -12,8 +13,16 @@ const DeletePrompt = ({ title, handleCancel, handleDelete }) => {
       <h2 className="delete-prompt__title">Delete {title}</h2>
       <p className="delete-prompt__content">Are you sure you want to delete this {title}? This action cannot be undone.</p>
       <div className="delete-prompt__button-holder">
-        <button onClick={handleCancel}>Cancel</button>
-        <button onClick={handleDelete}>Delete</button>
+        <Button 
+        style={"button white rounded-square-border border modal"} 
+        textStyle={"text modal-text white"} buttonText={"Cancel"} 
+        onClick={handleCancel}
+        />
+        <Button 
+        style={"button red rounded-square-border modal"} 
+        textStyle={"text modal-text red"} buttonText={"Delete"} 
+        onClick={handleDelete}
+        />
       </div>
     </div>
   );
