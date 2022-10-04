@@ -8,7 +8,7 @@ const Short = ({
 }) => {
   return (
     <div className="short">
-      <label className="short__label" data-testid="label">
+      <label className="short__label">
         {shortLabelText}
       </label>
       <input
@@ -16,7 +16,6 @@ const Short = ({
         type={shortType}
         // Will apply spellcheck to inputed text
         spellCheck="true"
-        data-testid="input"
         placeholder={shortPlaceHolderText}
         // Value of input will update as text is typed
         onChange={handleShortValue}
