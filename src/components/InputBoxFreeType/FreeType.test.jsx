@@ -1,27 +1,31 @@
-// Short.test.jsx
+// FreeType.test.jsx
 import { render, screen } from "@testing-library/react";
-import Short from "./Short.jsx";
+import FreeType from "./FreeType.jsx";
 import { customRender } from "../../utils/testUtils";
 
 it("Should match the snapshot, with the props", () => {
   const { container } = customRender(
-    <Short shortLabelText={"label"} shortPlaceHolderText={"placeholder"} />
+    <FreeType
+      freeTypelabelText={"label"}
+      freeTypeplaceHolderText={"placeholder"}
+    />
   );
+
   expect(container).toMatchSnapshot();
 });
 
-it("Should render the Short textarea", () => {
+it("Should render the FreeType textarea", () => {
   // 1. Arrange
-  render(<Short />);
+  render(<FreeType />);
   // 2. Act
-  const input = screen.getByTestId("input");
+  const textArea = screen.getByTestId("textarea");
   // 3. Assert
-  expect(input).toBeInTheDocument();
+  expect(textArea).toBeInTheDocument();
   //comment
 });
 
-it("Should render the Short label", () => {
-  render(<Short />);
+it("Should render the FreeType label", () => {
+  render(<FreeType />);
   const label = screen.getByTestId("label");
   expect(label).toBeInTheDocument();
 });

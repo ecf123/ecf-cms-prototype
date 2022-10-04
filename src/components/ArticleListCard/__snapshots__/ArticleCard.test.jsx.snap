@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render layout with children 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="Article Image"
+      class="card__image"
+    />
+    <p
+      class="card__date"
+    >
+      22/09/2022
+    </p>
+    <div
+      class="card__header"
+    >
+      <h2
+        class="card__title"
+      >
+        Test Title
+      </h2>
+      <img
+        alt="Arrow Icon"
+        class="card__icon"
+        src="arrow-upper-right-black.svg"
+      />
+    </div>
+    <p
+      class="card__info"
+    >
+      Test article
+    </p>
+    <ul
+      class="card__links"
+    >
+      <li
+        class="card__link card__link--purple"
+      >
+        test link
+      </li>
+      <li
+        class="card__link card__link--darkpurple"
+      >
+        test link
+      </li>
+    </ul>
+  </div>
+</div>
+`;
