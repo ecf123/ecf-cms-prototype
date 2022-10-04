@@ -12,7 +12,6 @@ exports[`Should render searchbar with children 1`] = `
     />
     <input
       class="search-bar__input"
-      data-testid="search-input"
       type="text"
       value=""
     />
