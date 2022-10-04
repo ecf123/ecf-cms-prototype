@@ -7,13 +7,11 @@ exports[`Should match the snapshot, with the props 1`] = `
   >
     <label
       class="short__label"
-      data-testid="label"
     >
       label
     </label>
     <input
       class="short__input"
-      data-testid="input"
       placeholder="placeholder"
       spellcheck="true"
     />
