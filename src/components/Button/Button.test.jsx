@@ -8,7 +8,7 @@ it("Should render the Button", () => {
 });
 
 it("Should render the svg in the Button", () => {
-  const { container } = customRender(
+  render(
     <Button>
       <div title="svg">svg</div>
     </Button>
