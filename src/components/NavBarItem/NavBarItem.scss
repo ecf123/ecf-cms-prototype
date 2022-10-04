@@ -1,39 +1,36 @@
-@use '../../styles/_variables' as *;
-@use '../../styles/_typography' as *;
+@use "../../styles/_variables" as *;
+@use "../../styles/_typography" as *;
 
-.nav-bar-item{
+.nav-bar-item {
   display: flex;
   height: min-content;
   align-items: center;
-  &__image{
+  &__image {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding:7px;
-    svg{
+    padding: 7px;
+    svg {
       height: 16px;
       width: 16px;
     }
-    path{
+    path {
       stroke: $color-grey-dark;
     }
   }
-  &__text{
-    padding:5px;
+  &__text {
+    padding: 5px;
     color: $color-grey-dark;
   }
 }
 
-
 .selected {
   border-left: 3px solid $color-green-light;
   background-color: rgba($color-grey-light, 0.2);
-  > *{
+  > * {
     color: $color-blue-navy-dark;
   }
-  path{
+  path {
     stroke: $color-blue-navy-dark;
   }
 }
-
-
