@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Selected NavBarItem has additional className 1`] = `
+<div>
+  <a
+    class="link"
+    href="/"
+  >
+    <div
+      class="nav-bar-item selected"
+    >
+      <div
+        class="nav-bar-item__image"
+      />
+      <p
+        class="nav-bar-item__text"
+      >
+        Dashboard
+      </p>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`renders the NavBarItem 1`] = `
+<div>
+  <a
+    class="link"
+    href="/"
+  >
+    <div
+      class="nav-bar-item"
+    >
+      <div
+        class="nav-bar-item__image"
+      />
+      <p
+        class="nav-bar-item__text"
+      >
+        Dashboard
+      </p>
+    </div>
+  </a>
+</div>
+`;
