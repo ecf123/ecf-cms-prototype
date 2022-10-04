@@ -15,7 +15,7 @@ it("Should render searchbar with children", () => {
 
 
 it("Should update input box with each key press", () => {
-  render(<SearchBar placeholderText={"placeHolderText"}/>)
+  render(<SearchBar placeHolderText={"placeHolderText"}/>)
 
   const input = screen.getByPlaceholderText("placeHolderText");
   userEvent.type(input, "financial forrest")
@@ -26,7 +26,7 @@ it("Should update input box with each key press", () => {
 
 
 it("Should not display the wrong order of characters based on what was typed", () => {
-    render(<SearchBar placeholderText={"placeHolderText"}/>)
+    render(<SearchBar placeHolderText={"placeHolderText"}/>)
   
     const input = screen.getByPlaceholderText("placeHolderText");
     userEvent.type(input, "financial forrest")
@@ -36,7 +36,7 @@ it("Should not display the wrong order of characters based on what was typed", (
   });
 
   it("Should render in the search bubble", () => {
-    render(<SearchBar placeholderText={"placeHolderText"}/>)
+    render(<SearchBar placeHolderText={"placeHolderText"}/>)
   
     const input = screen.getByPlaceholderText("placeHolderText");
   

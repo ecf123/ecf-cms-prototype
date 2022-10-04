@@ -17,9 +17,8 @@
         color: $color-grey-light;
         line-height: 0.97rem;
         border: none;
-        //These will need to be changed to new variables
-        // font-size: 0.75rem;
-        // font-weight: 400;
+        font-size: $font-size-extra-small;
+        font-weight: $font-weight-regular;
         font-family: $font-secondary;
     }
     &__input:focus{
