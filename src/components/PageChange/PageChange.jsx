@@ -1,28 +1,23 @@
 import "./PageChange.scss";
 import ReactPaginate from "react-paginate";
 
-
-
 import React from "react";
-
 
 // Make props: what to do on page change, page count, current page, ho
 
-const PageChange = ({
-  totalPages = 25, handlePageChange,
-}) => {
+const PageChange = ({ totalPages, handlePageChange }) => {
   return (
     <ReactPaginate
-  previousLabel={"<"}
-  nextLabel={">"}
-  pageCount={totalPages}
-  onPageChange={handlePageChange}
-  containerClassName={"pagination"}
-  //previousLinkClassName={"previousButton"}
-  //nextLinkClassName={"nextButton"}
-  disabledClassName={"inactive"}
-  activeClassName={"active"}
-/>
+      previousLabel={"<"}
+      nextLabel={">"}
+      pageCount={totalPages}
+      onPageChange={handlePageChange}
+      containerClassName={"pagination"}
+      //previousLinkClassName={"previousButton"}
+      //nextLinkClassName={"nextButton"}
+      disabledClassName={"inactive"}
+      activeClassName={"active"}
+    />
   );
 };
 
