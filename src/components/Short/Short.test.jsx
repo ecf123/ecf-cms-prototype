@@ -1,11 +1,12 @@
 // Short.test.jsx
 import { render, screen } from "@testing-library/react";
 import Short from "./Short.jsx";
-import {customRender} from "../../utils/testUtils";
-
+import { customRender } from "../../utils/testUtils";
 
 it("Should match the snapshot, with the props", () => {
-  const {container} = customRender(<Short shortLabelText={"label"} shortPlaceHolderText={"placeholder"}/>);
+  const { container } = customRender(
+    <Short shortLabelText={"label"} shortPlaceHolderText={"placeholder"} />
+  );
   expect(container).toMatchSnapshot();
 });
 
@@ -24,5 +25,3 @@ it("Should render the Short label", () => {
   const label = screen.getByTestId("label");
   expect(label).toBeInTheDocument();
 });
-
-

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Logo 1`] = `
+<div>
+  <a
+    class="link"
+    href="/*"
+  >
+    <div
+      class="logo"
+    >
+      <div
+        class="logo__box"
+      >
+        <img
+          alt="The Future Hub Logo"
+          class="logo__image"
+          src="ECFP-company-logo.svg"
+        />
+      </div>
+      <p
+        class="logo__top-title"
+      >
+        THE
+      </p>
+      <h3
+        class="logo__title"
+      >
+        FUTURE HUB
+      </h3>
+    </div>
+  </a>
+</div>
+`;
