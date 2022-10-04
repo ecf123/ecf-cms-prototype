@@ -2,7 +2,7 @@ import React from "react";
 import { ReactComponent as BinIcon }from "../../assets/bin-icon.svg";
 import { ReactComponent as PenIcon }from "../../assets/pen-icon.svg";
 import './MoreOptions.scss';
-const MoreOption = (props) => {
+const MoreOptions = (props) => {
     const {item,description} = props;
   return (
     <div className="more-options">
@@ -16,4 +16,4 @@ const MoreOption = (props) => {
   );
 };
 
-export default MoreOption;
+export default MoreOptions;

@@ -1,9 +1,9 @@
 import { customRender } from "../../utils/testUtils";
-import MoreOption from "./MoreOption";
+import MoreOptions from "./MoreOptions";
 
 it("Should render MoreOption component", () => {
   const { container } = customRender(
-    <MoreOption />
+    <MoreOptions />
   );
 
   expect(container).toMatchSnapshot();
