@@ -7,11 +7,9 @@ exports[`Should match the snapshot, with the props 1`] = `
   >
     <label
       class="free-type__label"
-      data-testid="label"
     />
     <textarea
       class="free-type__input"
-      data-testid="textarea"
       spellcheck="true"
       type="text"
     />
