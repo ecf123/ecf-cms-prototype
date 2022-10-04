@@ -1,11 +1,14 @@
 import "./Short.scss";
 
-const Short = ({ shortLabelText, shortType, shortPlaceHolderText, handleShortValue }) => {
+const Short = ({
+  shortLabelText,
+  shortType,
+  shortPlaceHolderText,
+  handleShortValue,
+}) => {
   return (
     <div className="short">
-      <label 
-        className="short__label" 
-        data-testid="label">
+      <label className="short__label" data-testid="label">
         {shortLabelText}
       </label>
       <input
