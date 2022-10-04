@@ -50,3 +50,9 @@
     justify-content: space-evenly;
   }
 }
+@media screen and (max-width: $mobile-breakpoint) {
+  .delete-prompt {
+    width: 20rem;
+    height: 16.75rem;
+  }
+}
