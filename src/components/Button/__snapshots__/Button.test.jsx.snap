@@ -3,13 +3,10 @@
 exports[`Should render the Button 1`] = `
 <div>
   <button>
-    <img
-      alt=""
-    />
+    <div />
     <p>
        
     </p>
   </button>
 </div>
 `;
-

@@ -7,10 +7,14 @@ it("Should render the Button", () => {
   expect(container).toMatchSnapshot();
 });
 
-it("Should render the image in the Button", () => {
-  render(<Button />);
-  const image = screen.getByRole("img");
-  expect(image).toBeInTheDocument();
+it("Should render the svg in the Button", () => {
+  const { container } = customRender(
+    <Button>
+      <div title="svg">svg</div>
+    </Button>
+  );
+  const svg = screen.getByTitle("svg");
+  expect(svg).toBeInTheDocument();
 });
 
 it("Should display the text in the button", () => {
