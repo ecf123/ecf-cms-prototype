@@ -6,7 +6,8 @@ const Button = ({ style, textStyle, buttonText, children, imgStyle, buttonFuncti
   return (
     <button className={style} onClick={buttonFunction}>
       <div className={imgStyle}>{children}</div>
-      <p className={textStyle}> {buttonText}</p>
+      {/* <div className="darken-onclick"></div> */}
+      <p className={textStyle}>{buttonText}</p>
     </button>
   );
 };

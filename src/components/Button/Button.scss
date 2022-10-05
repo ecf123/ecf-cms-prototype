@@ -15,6 +15,17 @@
   cursor: pointer;
 }
 
+.button:active {
+  width: fit-content;
+  text-align: center;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgba($color: #000000, $alpha: 0.2);
+}
+
 .black-svg {
   svg {
     path {
@@ -91,9 +102,9 @@
   color: $background-color;
 }
 
-.black {
-  background-color: $color-blue-navy-dark;
-  color: $color-white;
+.green:active {
+  background-color: $color-green-light;
+  color: $background-color;
 }
 
 .grey {
@@ -140,6 +151,7 @@
   font-size: $font-size-extra-small;
   margin-left: 0.45rem;
 }
+
 .large {
   height: 3.1rem;
   padding: 0.9375rem 2.5rem;
@@ -155,16 +167,29 @@
   font-size: $font-size-small;
   font-weight: $font-weight-regular;
 }
+
 .login-black {
   background-color: $color-green;
   padding: 0.844rem 10.063rem;
 }
+
 .login-green {
   background-color: #b6ddc2;
   padding: 1.0625rem 12.6875rem;
 }
+
 .modal {
   height: 2.75rem;
   padding: 0.625rem;
   width: 10.625rem;
 }
+
+// .darken-onclick{
+//   height: auto;
+//   width: auto;
+//   background-color: rgba($color: #000000, $alpha: 0);  
+// }
+
+// .darken-onclick:active{
+
+// }
