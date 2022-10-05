@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should match the snapshot, with the props 1`] = `
+<div>
+  <div
+    class="short"
+  >
+    <label
+      class="short__label"
+    >
+      label
+    </label>
+    <input
+      class="short__input"
+      placeholder="placeholder"
+      spellcheck="true"
+    />
+  </div>
+</div>
+`;

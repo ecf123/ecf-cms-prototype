@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render searchbar with children 1`] = `
+<div>
+  <div
+    class="search-bar"
+  >
+    <img
+      alt="Search Icon"
+      class="search-bar__image"
+      src="magnifying-glass-grey.svg"
+    />
+    <input
+      class="search-bar__input"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
