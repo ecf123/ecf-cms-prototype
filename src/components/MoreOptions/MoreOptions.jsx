@@ -24,7 +24,7 @@ const MoreOptions = (props) => {
           style={"button red round-border small more-options__button"}
           imgStyle={"small-img white-svg"}
           textStyle={"text small-text red"}
-          buttonText={"Delete"}
+          buttonText={"Delete"}   
         >
           <Bin />
         </Button>
