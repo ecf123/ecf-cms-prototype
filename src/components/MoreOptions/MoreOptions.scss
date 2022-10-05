@@ -1,31 +1,30 @@
 @use "../../styles/variables" as *;
+@use "../../styles/main.scss" as *;
 
 .more-options{
     background-color: $color-white;
-    padding: 20px;
-    padding-right: 40px;
-    border-radius: 10px;
-    border: 1px solid $color-grey-light;
+    padding: 1.25rem;
+    padding-right: 2.5rem;
+    border-radius: 0.63rem;
+    border: 0.06rem solid $color-grey-light;
     &__buttons{
         display: flex;
         flex-direction: row;
     } 
     &__button{
-        padding:10px 20px;
-        margin:5px;
-        border-radius: 200px;
-        border: none;
+        padding:0.63rem 1.25rem;
+        margin:0.32rem;
     }
     &__title{
         color: $color-blue-navy-dark;
         font-size: $font-size-small;
-        margin: 10px;
+        margin: 0.63rem;
         font-family: $font-secondary;
     }
     &__description{
         color: $color-teal;
         font-size: $font-size-extra-small;
-        margin: 10px;
+        margin: 0.63rem;
         font-family: $font-secondary;
 
     }

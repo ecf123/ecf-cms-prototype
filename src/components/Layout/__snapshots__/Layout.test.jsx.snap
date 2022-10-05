@@ -5,6 +5,56 @@ exports[`Should render layout with children 1`] = `
   <div
     class="layout"
   >
+    <div
+      class="more-options"
+    >
+      <h3
+        class="more-options__title"
+      >
+         Options
+      </h3>
+      <p
+        class="more-options__description"
+      />
+      <div
+        class="more-options__buttons"
+      >
+        <button
+          class="button grey round-border small more-options__button"
+        >
+          <div
+            class="small-img black-svg"
+          >
+            <svg>
+              pen-icon.svg
+            </svg>
+          </div>
+          <p
+            class="text small-text grey"
+          >
+             
+            Edit
+          </p>
+        </button>
+        <button
+          class="button red round-border small more-options__button"
+        >
+          <div
+            class="small-img white-svg"
+          >
+            <svg>
+              bin-icon.svg
+            </svg>
+          </div>
+          <p
+            class="text small-text red"
+          >
+             
+            Delete
+          </p>
+        </button>
+      </div>
+    </div>
     <p>
       some content
     </p>

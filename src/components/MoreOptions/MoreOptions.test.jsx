@@ -3,7 +3,9 @@ import MoreOptions from "./MoreOptions";
 
 it("Should render MoreOption component", () => {
   const { container } = customRender(
-    <MoreOptions />
+    <MoreOptions >
+        <p>Some content</p>
+        </MoreOptions>
   );
 
   expect(container).toMatchSnapshot();
