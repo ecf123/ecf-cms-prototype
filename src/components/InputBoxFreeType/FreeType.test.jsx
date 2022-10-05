@@ -18,14 +18,14 @@ it("Should render the FreeType textarea", () => {
   // 1. Arrange
   render(<FreeType />);
   // 2. Act
-  const textArea = screen.getByTestId("textarea");
+  const textArea = screen.getByRole("textbox");
   // 3. Assert
   expect(textArea).toBeInTheDocument();
   //comment
 });
 
 it("Should render the FreeType label", () => {
-  render(<FreeType />);
-  const label = screen.getByTestId("label");
+  render(<FreeType freeTypeLabelText="Label Text!"/>);
+  const label = screen.getByText("Label Text!");
   expect(label).toBeInTheDocument();
 });
