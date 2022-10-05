@@ -55,15 +55,18 @@ exports[`MediaUploadBox component matches the snapshot taken without the file 1`
         class="thumbnail__btn--wrapper"
       >
         <button
-          class="thumbnail__btn"
+          class="button light-grey round-border small"
         >
-          <span
-            class="thumbnail__btn--text"
+          <div />
+          <p
+            class="text small-text light-grey"
           >
+             
             Upload Image
-          </span>
+          </p>
         </button>
         <input
+          accept="image/*,video/*,audio/*"
           class="thumbnail__btn--input"
           id="file-input"
           type="file"

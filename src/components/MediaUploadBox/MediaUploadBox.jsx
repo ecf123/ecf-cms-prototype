@@ -1,5 +1,6 @@
 import "./MediaUploadBox.scss";
 import bin from "../../assets/bin-icon.svg";
+import Button from "../Button/Button";
 
 const MediaUploadBox = ({
   file,
@@ -16,21 +17,14 @@ const MediaUploadBox = ({
       <div className="thumbnail__container">
         {!file && (
           <div className="thumbnail__btn--wrapper">
-            <button className="thumbnail__btn">
-              <span className="thumbnail__btn--text">{uploadButtonText}</span>
-            </button>
+            < Button style={"button light-grey round-border small"}  textStyle={"text small-text light-grey"}  buttonText={uploadButtonText}/>
             <input
               className="thumbnail__btn--input"
               id="file-input"
               type="file"
               onChange={handleFileChange}
+              accept="image/*,video/*,audio/*"
             />
-            {/* <input
-              id="file-input"
-              type="file"
-              onChange={handleFileChange}
-              accept="image/*,video/*,audio/*,application/pdf"
-            /> */}
           </div>
         )}
         {file && (
