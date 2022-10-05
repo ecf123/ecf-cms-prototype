@@ -17,7 +17,11 @@ const MediaUploadBox = ({
       <div className="thumbnail__container">
         {!file && (
           <div className="thumbnail__btn--wrapper">
-            < Button style={"button light-grey round-border small"}  textStyle={"text small-text light-grey"}  buttonText={uploadButtonText}/>
+            <Button
+              style={"button light-grey round-border small"}
+              textStyle={"text small-text light-grey"}
+              buttonText={uploadButtonText}
+            />
             <input
               className="thumbnail__btn--input"
               id="file-input"
