@@ -1,6 +1,7 @@
 import React from 'react'
+import './LoginParagraph.scss'
 
-const Paragraph = () => {
+const LoginParagraph = () => {
   return (
     <div>
         <p className='title__text'>Feugiat magna viverra pellentesque habitant. Libero id amet nisl, tellus cras eleifend et in. </p>
@@ -8,4 +9,4 @@ const Paragraph = () => {
   )
 }
 
-export default Paragraph
+export default LoginParagraph

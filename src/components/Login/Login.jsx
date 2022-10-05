@@ -2,9 +2,9 @@ import React from 'react';
 import { useState } from 'react';
 import Button from '../Button/Button';
 import LoginInputBox from '../LoginInputBox/LoginInputBox';
-import "./LoginContainer.scss";
+import "./Login.scss";
 
-const LoginContainer = () => {
+const Login = () => {
     //const { handleLogin } = props
     const [hasSubmitted, setHasSubmitted] = useState(false);
     const [hasError, setHasError] = useState(false);
@@ -46,4 +46,4 @@ const LoginContainer = () => {
     );
   };
   
-export default LoginContainer
+export default Login

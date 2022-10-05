@@ -1,7 +1,7 @@
 import React from 'react';
-import "./Title.scss";
+import "./LoginTitle.scss";
 
-const Title = () => {
+const LoginTitle = () => {
   return (
     <div className='title'>
 
@@ -11,4 +11,4 @@ const Title = () => {
   )
 }
 
-export default Title
+export default LoginTitle
