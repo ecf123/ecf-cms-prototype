@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render DeletePromt with children 1`] = `
+<div>
+  <div
+    class="delete-prompt"
+  >
+    <div
+      class="delete-prompt__image-conatiner"
+    >
+      <img
+        alt="Warning Image"
+        class="delete-prompt__image"
+        src="exclamation-mark-icon.svg"
+      />
+    </div>
+    <h2
+      class="delete-prompt__title"
+    >
+      Delete 
+    </h2>
+    <p
+      class="delete-prompt__content"
+    >
+      Are you sure you want to delete this 
+      ? This action cannot be undone.
+    </p>
+    <div
+      class="delete-prompt__button-holder"
+    >
+      <button>
+        Cancel
+      </button>
+      <button>
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
+`;
