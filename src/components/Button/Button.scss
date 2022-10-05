@@ -32,6 +32,9 @@
 }
 .small-img {
   svg {
+    display: flex;
+    align-items: center;
+    margin-right: 5.53px;
     path {
       height: 0.47rem;
       width: auto;
@@ -41,6 +44,8 @@
 
 .medium-img {
   svg {
+    display: flex;
+    align-items: center;
     path {
       height: 0.75rem;
       width: auto;
@@ -49,7 +54,13 @@
 }
 
 .large-img {
+<<<<<<< HEAD
   margin-right: 0.44rem;
+=======
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+>>>>>>> fc42ef6726755e2bcbb7ff3451aae2e0708cc121
   svg {
     path {
       height: 1.06rem;
@@ -94,6 +105,11 @@
   color: $background-color;
 }
 
+.light-grey {
+  background-color: $color-white-smoke;
+  color: $background-color;
+}
+
 .white {
   background-color: $color-white;
   color: $background-color;
@@ -115,7 +131,10 @@
 
 .small-text {
   margin: 0;
+<<<<<<< HEAD
   margin-left: 0.35rem;
+=======
+>>>>>>> fc42ef6726755e2bcbb7ff3451aae2e0708cc121
   font-size: 0.6rem;
 }
 
