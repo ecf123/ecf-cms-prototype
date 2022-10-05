@@ -12,6 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .black-svg {
@@ -32,7 +33,7 @@
 .small-img {
   svg {
     path {
-      height: 7.5px;
+      height: 0.47rem;
       width: auto;
     }
   }
@@ -41,17 +42,17 @@
 .medium-img {
   svg {
     path {
-      height: 12px;
+      height: 0.75rem;
       width: auto;
     }
   }
 }
 
 .large-img {
-  margin-right: 7px;
+  margin-right: 0.44rem;
   svg {
     path {
-      height: 17px;
+      height: 1.06rem;
       width: auto;
     }
   }
@@ -114,7 +115,7 @@
 
 .small-text {
   margin: 0;
-  margin-left: 5.53px;
+  margin-left: 0.35rem;
   font-size: 0.6rem;
 }
 
@@ -126,7 +127,7 @@
 .medium-text {
   margin: 0;
   font-size: $font-size-extra-small;
-  margin-left: 7.14px;
+  margin-left: 0.45rem;
 }
 .large {
   height: 3.1rem;
