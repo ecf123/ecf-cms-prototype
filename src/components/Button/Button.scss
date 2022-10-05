@@ -31,6 +31,9 @@
 }
 .small-img {
   svg {
+    display: flex;
+    align-items: center;
+    margin-right: 5.53px;
     path {
       height: 7.5px;
       width: auto;
@@ -40,6 +43,8 @@
 
 .medium-img {
   svg {
+    display: flex;
+    align-items: center;
     path {
       height: 12px;
       width: auto;
@@ -49,6 +54,8 @@
 
 .large-img {
   margin-right: 7px;
+  display: flex;
+  align-items: center;
   svg {
     path {
       height: 17px;
@@ -93,6 +100,11 @@
   color: $background-color;
 }
 
+.light-grey {
+  background-color: $color-white-smoke;
+  color: $background-color;
+}
+
 .white {
   background-color: $color-white;
   color: $background-color;
@@ -114,7 +126,6 @@
 
 .small-text {
   margin: 0;
-  margin-left: 5.53px;
   font-size: 0.6rem;
 }
 
