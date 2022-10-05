@@ -34,9 +34,9 @@
   svg {
     display: flex;
     align-items: center;
-    margin-right: 5.53px;
+    margin-right: 0.35rem;
     path {
-      height: 7.5px;
+      height: 0.47rem;
       width: auto;
     }
   }
@@ -47,19 +47,19 @@
     display: flex;
     align-items: center;
     path {
-      height: 12px;
+      height: 0.75rem;
       width: auto;
     }
   }
 }
 
 .large-img {
-  margin-right: 7px;
+  margin-right: 0.44rem;
   display: flex;
   align-items: center;
   svg {
     path {
-      height: 17px;
+      height: 1.06rem;
       width: auto;
     }
   }
@@ -138,7 +138,7 @@
 .medium-text {
   margin: 0;
   font-size: $font-size-extra-small;
-  margin-left: 7.14px;
+  margin-left: 0.45rem;
 }
 .large {
   height: 3.1rem;
