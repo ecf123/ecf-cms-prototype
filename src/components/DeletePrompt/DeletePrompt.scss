@@ -1,8 +1,6 @@
 @use "../../styles/main.scss" as *;
 @use "../../styles/variables.scss" as *;
 
-//Container will need an opacity for when the modal pops up on screen.
-
 .delete-prompt {
   display: flex;
   flex-direction: column;
@@ -52,17 +50,8 @@
     justify-content: space-evenly;
   }
 }
-<<<<<<< HEAD
+
 @media screen and (max-width: $mobile-breakpoint) {
-  .delete-prompt {
-    width: 20rem;
-    height: 16.75rem;
-  }
-}
-=======
-
-
-@media screen and (max-width: $mobile-breakpoint) { 
   .delete-prompt {
     display: flex;
     flex-direction: column;
@@ -81,7 +70,7 @@
     gap: 2rem;
     font-family: $font-secondary;
     letter-spacing: $letter-spacing;
-  
+
     &__image-conatiner {
       display: grid;
       height: 2.5rem;
@@ -111,4 +100,3 @@
     }
   }
 }
->>>>>>> e738f9ea47ae8977c60d8bd92247d414804afa38
