@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+import Button from '../../components/Button/Button';
+import Short from '../../components/Short/Short'
 import "./LoginContainer.scss";
 
 const LoginContainer = () => {
@@ -31,12 +33,14 @@ const LoginContainer = () => {
             <div>
               <label htmlFor="email-input">Email Address</label>
               <input id="email-input" type="text" />
+      
             </div>
             <div>
               <label htmlFor="password-input">Password</label>
               <input id="password-input" type="text"/>
+
             </div>
-            <button id="form-submit">Login</button>
+            < Button style={"button login-black square-border"}  textStyle={"text small-text black"} buttonText={"Login"}/>
             {hasError && <div className="alert">Sorry something went wrong</div>}
           </form>
         ) : (
