@@ -1,20 +1,20 @@
 import { render, screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
 
-import ArticleCard from "./ArticleCard";
+import Card from "./Card";
 
 it("should render the card image", () => {
   //Arrange
-  render(<ArticleCard />);
+  render(<Card />);
   //Act
-  const image = screen.getByAltText("Article Image");
+  const image = screen.getByAltText("Card Image");
   //Assert
   expect(image).toBeInTheDocument();
 });
 
 it("should display the date of the card on the screen", () => {
   //Arrange
-  render(<ArticleCard date="22/01/2022" />);
+  render(<Card date="22/01/2022" />);
   //Act
   const date = screen.queryByText("22/01/2022");
   //Assert
@@ -23,7 +23,7 @@ it("should display the date of the card on the screen", () => {
 
 it("should display the header of the card on the screen", () => {
   //Arrange
-  render(<ArticleCard title="Test Title" />);
+  render(<Card title="Test Title" />);
   //Act
   const header = screen.queryByText("Test Title");
   //Assert
@@ -33,9 +33,9 @@ it("should display the header of the card on the screen", () => {
 it("should display the links on the screen", () => {
   //Arrange
   render(
-    <ArticleCard
-      articleLinkOne="Test Link One"
-      articleLinkTwo="Test Link Two"
+    <Card
+      cardLinkOne="Test Link One"
+      cardLinkTwo="Test Link Two"
     />
   );
   //Act
@@ -48,16 +48,16 @@ it("should display the links on the screen", () => {
 
 it("should display the article paragraph on the screen", () => {
   //Arrange
-  render(<ArticleCard articleInfo="Test article" />);
+  render(<Card cardInfo="Test card" />);
   //Act
-  const paragraph = screen.getByText("Test article");
+  const paragraph = screen.getByText("Test card");
   //Assert
   expect(paragraph).toBeInTheDocument();
 });
 
 it("should render the arrow icon", () => {
   //Arrange
-  render(<ArticleCard />);
+  render(<Card />);
   //Act
   const image = screen.getByAltText("Arrow Icon");
   //Assert
@@ -66,12 +66,12 @@ it("should render the arrow icon", () => {
 
 it("Should render layout with children", () => {
   const { container } = customRender(
-    <ArticleCard
+    <Card
       date="22/09/2022"
       title="Test Title"
-      articleInfo="Test article"
-      articleLinkOne="test link"
-      articleLinkTwo="test link"
+      cardInfo="Test card"
+      cardLinkOne="test link"
+      cardLinkTwo="test link"
     />
   );
   expect(container).toMatchSnapshot();
