@@ -1,14 +1,12 @@
 import React from 'react';
-import "./Home.scss";
-import LoginContainer from '../../Container/LoginContainer/LoginContainer';
-import Title from '../../components/Title/Title';
+import LoginContainer from '../../components/Login/Login';
+import Layout from '../../components/Layout/Layout'
 
 const Home = () => {
  return(
-  <section className='container'>
-  <Title />
-  <LoginContainer />
-  </section>
+   <Layout>
+    <LoginContainer/>
+   </Layout>
  )
 }
 

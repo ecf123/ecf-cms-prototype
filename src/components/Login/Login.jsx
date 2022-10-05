@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import Button from '../../components/Button/Button';
-import Short from '../../components/Short/Short'
+import Button from '../Button/Button';
+import LoginInputBox from '../LoginInputBox/LoginInputBox';
 import "./LoginContainer.scss";
 
 const LoginContainer = () => {
@@ -31,14 +31,8 @@ const LoginContainer = () => {
         {!hasSubmitted ? (
           <form onSubmit={handleSubmit} name="form">
             <div>
-              <label htmlFor="email-input">Email Address</label>
-              <input id="email-input" type="text" />
-      
-            </div>
-            <div>
-              <label htmlFor="password-input">Password</label>
-              <input id="password-input" type="text"/>
-
+              <LoginInputBox labelText={"Email Address"}/>
+              <LoginInputBox labelText={"Password"}/>
             </div>
             < Button style={"button login-black square-border"}  textStyle={"text small-text black"} buttonText={"Login"}/>
             {hasError && <div className="alert">Sorry something went wrong</div>}

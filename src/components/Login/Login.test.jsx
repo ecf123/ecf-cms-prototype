@@ -1,5 +1,5 @@
 import {render, screen, waitFor} from "@testing-library/react";
-import LoginContainer from "./LoginContainer";
+import LoginContainer from "./Login";
 import userEvent from "@testing-library/user-event";
 import { customRender } from "../../utils/testUtils";
 
