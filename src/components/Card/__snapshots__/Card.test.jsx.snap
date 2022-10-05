@@ -6,7 +6,7 @@ exports[`Should render layout with children 1`] = `
     class="card"
   >
     <img
-      alt="Article Image"
+      alt="Card Image"
       class="card__image"
     />
     <p
@@ -31,7 +31,7 @@ exports[`Should render layout with children 1`] = `
     <p
       class="card__info"
     >
-      Test article
+      Test card
     </p>
     <ul
       class="card__links"
