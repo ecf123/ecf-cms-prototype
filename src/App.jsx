@@ -3,6 +3,7 @@ import ListComponentUniversal from "./components/ListComponentUniversal/ListComp
 // import Home from "./pages/Home/Home";
 import "./styles/main.scss";
 
+
 const App = () => {
   return (
     <ListComponentUniversal />

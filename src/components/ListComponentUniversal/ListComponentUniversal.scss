@@ -1,5 +1,21 @@
 @use "../../styles/variables" as *;
 
 *{
-    color: black;
+ color: $color-grey-dark;
+}
+.ant-pagination {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.ant-table-tbody > tr > td {
+    color: $color-grey-dark;
+}
+
+// .ant-table-thead > tr > th {
+//     color: $color-grey-light;
+// }
+
+.ant-checkbox-input{
+    border-radius: 4px;
 }
