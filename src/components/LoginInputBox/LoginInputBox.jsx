@@ -1,4 +1,4 @@
-import React from "react";
+import "./LoginInputBox.scss";
 
 const LoginInputBox = ({ labelText }) => {
   return (
