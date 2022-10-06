@@ -1,0 +1,41 @@
+@use "../../styles/_typography" as *;
+@use "../../styles/_variables.scss" as *;
+@use "../../styles/_reset" as *;
+
+.career{
+    padding: 1rem;
+    width: 23.063rem;
+    height: fit-content;
+
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 20px 40px rgba(208, 209, 216, 0.24);
+    border-radius: 10px;
+
+    &__heading{
+        margin-bottom: 1rem;
+        color: $color-blue-navy-dark;
+    }
+
+    &__List {
+        margin-left: 0.6rem;
+        display: flex;
+        flex-direction: column;
+
+        &--item{
+            margin: 0.15rem;
+            color: $color-teal;
+            font-size: $font-size-extra-small;
+
+        }
+        
+    }
+}
+
+
+.career__List--item::marker{
+    width: 7px;
+    height: 7px;
+    color: $color-green-light;
+}
