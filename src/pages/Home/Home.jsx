@@ -1,5 +1,7 @@
 import Layout from "../../components/Layout/Layout";
 
+
+
 const Home = () => {
   return (
     <Layout>
@@ -12,7 +14,11 @@ const Home = () => {
         maxime tempora, temporibus beatae voluptas repellat rerum. Dignissimos,
         necessitatibus.
       </p>
+      
+
     </Layout>
+
+    
   );
 };
 
