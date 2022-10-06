@@ -31,8 +31,7 @@ const Login = () => {
         {!hasSubmitted ? (
           <form onSubmit={handleSubmit} name="form">
             <div>
-              <LoginInputBox labelText={"Email Address"}/>
-              <LoginInputBox labelText={"Password"}/>
+             {/* for input boxes!! */}
             </div>
             < Button style={"button login-black square-border"}  textStyle={"text small-text black"} buttonText={"Login"}/>
             {hasError && <div className="alert">Sorry something went wrong</div>}
