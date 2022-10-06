@@ -1,15 +1,17 @@
 @use "../../styles/variables" as *;
 
-*{
- color: $color-grey-dark;
+* {
+    color: $color-grey-light !important;
 }
+
+
 .ant-pagination {
     display: flex;
     flex-direction: row-reverse;
 }
 
 .ant-table-tbody > tr > td {
-    color: $color-grey-dark;
+    color: $color-grey-dark !important;
 }
 
 // .ant-table-thead > tr > th {
@@ -18,4 +20,8 @@
 
 .ant-checkbox-input{
     border-radius: 4px;
+}
+
+.anticon-delete {
+    color: black !important;
 }
