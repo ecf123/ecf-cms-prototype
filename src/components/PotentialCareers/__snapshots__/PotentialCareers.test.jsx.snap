@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should match the snapshot 1`] = `
+<div>
+  <div
+    class="career"
+  >
+    <h5
+      class="career__heading"
+    >
+      Potential Careers
+    </h5>
+    <ul
+      class="career__List"
+    >
+      <li
+        class="career__List--item"
+      >
+        Career1
+      </li>
+      <li
+        class="career__List--item"
+      >
+        Career2
+      </li>
+      <li
+        class="career__List--item"
+      >
+        Career3
+      </li>
+      <li
+        class="career__List--item"
+      >
+        Career4
+      </li>
+    </ul>
+  </div>
+</div>
+`;
