@@ -109,6 +109,11 @@
   color: $background-color;
 }
 
+.black {
+  background-color: $color-blue-navy-dark;
+  color: $color-white;
+}
+
 .border {
   border: 1px solid $color-grey-light;
 }
