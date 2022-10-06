@@ -2,16 +2,17 @@
 // import Home from "./pages/Home/Home";
 import "./styles/main.scss";
 import Card from './components/Card/Card.jsx';
+import image from "./assets/for-hire-image.svg"
 
 const App = () => {
 
-  const arr = [1, 2, 3, 4]
+  const arr = ["Developer", "Developer"]
 
   return (
     // <Routes>
     //   <Route path="*" element={<Home />} />
     // </Routes>
-    <Card dateOrTime = "12:02" title ="Test" cardInfo ="Hello" links={arr} />
+    <Card img = {image} dateOrTime = "12:02" title ="Test" cardInfo ="lorafffffffff fffffffffffff ffffffffffsdfgdgsdfgsdfgsdfgsdfgsdfgsdfgs dfgsdfgsdfgsdfg sdfdfgsdfssdfgfffffffem" links={arr} />
   );
 };
 
