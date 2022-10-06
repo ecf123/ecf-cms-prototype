@@ -10,11 +10,6 @@ exports[`should render the title 1`] = `
     >
       Welcome Back
     </h1>
-    <p
-      class="title__text"
-    >
-      Feugiat magna viverra pellentesque habitant. Libero id amet nisl, tellus cras eleifend et in. 
-    </p>
   </div>
 </div>
 `;
