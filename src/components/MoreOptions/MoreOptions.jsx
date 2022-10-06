@@ -1,7 +1,8 @@
 import "./MoreOptions.scss";
+import Button from "../Button/Button";
 import { ReactComponent as Bin } from "../../assets/bin-icon.svg";
 import { ReactComponent as Pencil } from "../../assets/pen-icon.svg";
-import Button from "../Button/Button";
+
 
 const MoreOptions = (props) => {
   const { title, description, handleDelete, handleEdit } = props;
