@@ -3,9 +3,7 @@ import Button from "../Button/Button";
 import { ReactComponent as Bin } from "../../assets/bin-icon.svg";
 import { ReactComponent as Pencil } from "../../assets/pen-icon.svg";
 
-
-const MoreOptions = (props) => {
-  const { title, description, handleDelete, handleEdit } = props;
+const MoreOptions = ({ title, description, handleDelete, handleEdit }) => {
   return (
     <div className="more-options">
       <h3 className="more-options__title">{title} Options</h3>
@@ -25,7 +23,7 @@ const MoreOptions = (props) => {
           style={"button red round-border small more-options__button"}
           imgStyle={"small-img white-svg"}
           textStyle={"text small-text red"}
-          buttonText={"Delete"}   
+          buttonText={"Delete"}
         >
           <Bin />
         </Button>

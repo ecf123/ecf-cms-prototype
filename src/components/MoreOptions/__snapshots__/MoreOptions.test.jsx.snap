@@ -8,6 +8,7 @@ exports[`Should render MoreOption component 1`] = `
     <h3
       class="more-options__title"
     >
+      More
        Options
     </h3>
     <p
