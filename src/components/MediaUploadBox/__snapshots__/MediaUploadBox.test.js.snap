@@ -19,7 +19,7 @@ exports[`MediaUploadBox component matches the snapshot taken with the file 1`] =
         src="rollercoaster-image.svg"
       />
     </div>
-    <div
+    <button
       class="thumbnail__remove"
     >
       <img
@@ -32,7 +32,7 @@ exports[`MediaUploadBox component matches the snapshot taken with the file 1`] =
       >
         Remove
       </p>
-    </div>
+    </button>
   </div>
 </div>
 `;
