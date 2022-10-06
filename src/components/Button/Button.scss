@@ -13,17 +13,9 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
-
-.button:active {
-  width: fit-content;
-  text-align: center;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: rgba($color: #000000, $alpha: 0.2);
+  &:active{
+    opacity: 0.8;
+  }
 }
 
 .black-svg {
@@ -98,11 +90,6 @@
 }
 
 .green {
-  background-color: $color-green-light;
-  color: $background-color;
-}
-
-.green:active {
   background-color: $color-green-light;
   color: $background-color;
 }
@@ -183,13 +170,3 @@
   padding: 0.625rem;
   width: 10.625rem;
 }
-
-// .darken-onclick{
-//   height: auto;
-//   width: auto;
-//   background-color: rgba($color: #000000, $alpha: 0);  
-// }
-
-// .darken-onclick:active{
-
-// }
