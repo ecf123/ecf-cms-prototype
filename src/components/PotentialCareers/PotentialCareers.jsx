@@ -7,10 +7,10 @@ const PotentialCareers = ({PotentialCareer1, PotentialCareer2, PotentialCareer3,
     <div className="career">
         <h5 className="career__heading">Potential Careers</h5>
         <ul className="career__List">
-            <li className="career__List--item">P1{PotentialCareer1}</li>
-            <li className="career__List--item">P2{PotentialCareer2}</li>
-            <li className="career__List--item">P3{PotentialCareer3}</li>
-            <li className="career__List--item">P4{PotentialCareer4}</li>
+            <li className="career__List--item">Career1{PotentialCareer1}</li>
+            <li className="career__List--item">Career2{PotentialCareer2}</li>
+            <li className="career__List--item">Career3{PotentialCareer3}</li>
+            <li className="career__List--item">Career4{PotentialCareer4}</li>
         </ul>
     </div>
   )
