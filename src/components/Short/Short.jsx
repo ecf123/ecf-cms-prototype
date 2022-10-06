@@ -8,9 +8,7 @@ const Short = ({
 }) => {
   return (
     <div className="short">
-      <label className="short__label">
-        {shortLabelText}
-      </label>
+      <label className="short__label">{shortLabelText}</label>
       <input
         className="short__input"
         type={shortType}

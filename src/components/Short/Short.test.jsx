@@ -21,7 +21,7 @@ it("Should render in the Short input box", () => {
 });
 
 it("Should render the Short label", () => {
-  render(<Short shortLabelText="Label Text!"/>);
+  render(<Short shortLabelText="Label Text!" />);
   const label = screen.getByText("Label Text!");
   expect(label).toBeInTheDocument();
 });
