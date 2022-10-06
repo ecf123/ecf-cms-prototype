@@ -13,32 +13,30 @@ it("Should render searchbar with children", () => {
   expect(container).toMatchSnapshot();
 });
 
-
 it("Should update input box with each key press", () => {
-  render(<SearchBar placeHolderText={"placeHolderText"}/>)
+  render(<SearchBar placeHolderText={"placeHolderText"} />);
 
   const input = screen.getByPlaceholderText("placeHolderText");
-  userEvent.type(input, "financial forrest")
+  userEvent.type(input, "financial forrest");
 
   const updatedInput = screen.findByText("financial forrest");
   expect(updatedInput).toBeTruthy();
 });
 
-
 it("Should not display the wrong order of characters based on what was typed", () => {
-    render(<SearchBar placeHolderText={"placeHolderText"}/>)
-  
-    const input = screen.getByPlaceholderText("placeHolderText");
-    userEvent.type(input, "financial forrest")
-  
-    const updatedInput = screen.queryByText("forrest financial");
-    expect(updatedInput).toBeFalsy();
-  });
+  render(<SearchBar placeHolderText={"placeHolderText"} />);
 
-  it("Should render in the search bubble", () => {
-    render(<SearchBar placeHolderText={"placeHolderText"}/>)
-  
-    const input = screen.getByPlaceholderText("placeHolderText");
-  
-    expect(input).toBeInTheDocument();
-  });
+  const input = screen.getByPlaceholderText("placeHolderText");
+  userEvent.type(input, "financial forrest");
+
+  const updatedInput = screen.queryByText("forrest financial");
+  expect(updatedInput).toBeFalsy();
+});
+
+it("Should render in the search bubble", () => {
+  render(<SearchBar placeHolderText={"placeHolderText"} />);
+
+  const input = screen.getByPlaceholderText("placeHolderText");
+
+  expect(input).toBeInTheDocument();
+});
