@@ -17,21 +17,13 @@ exports[`Should render MoreOption component 1`] = `
       class="more-options__buttons"
     >
       <button
-<<<<<<< HEAD
         class="button grey round-border small more-options__button"
-=======
-        class="button grey square-border small more-options__button"
->>>>>>> 3feff53b1ebc0e2f4b83976c6b2bd11e2167986d
       >
         <div
           class="small-img black-svg"
         >
           <svg>
-<<<<<<< HEAD
             pen-icon.svg
-=======
-            notepad-and-pencil-grey.svg
->>>>>>> 3feff53b1ebc0e2f4b83976c6b2bd11e2167986d
           </svg>
         </div>
         <p
@@ -42,11 +34,7 @@ exports[`Should render MoreOption component 1`] = `
         </p>
       </button>
       <button
-<<<<<<< HEAD
         class="button red round-border small more-options__button"
-=======
-        class="button red square-border small more-options__button"
->>>>>>> 3feff53b1ebc0e2f4b83976c6b2bd11e2167986d
       >
         <div
           class="small-img white-svg"
