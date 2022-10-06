@@ -27,7 +27,7 @@ const MediaUploadBox = ({
               id="file-input"
               type="file"
               onChange={handleFileChange}
-              accept="image/*,video/*,audio/*"
+              accept="image/*,video/*,audio/*,.txt"
             />
           </div>
         )}
