@@ -1,4 +1,3 @@
-import MoreOptions from "../MoreOptions/MoreOptions";
 import "./Layout.scss";
 
 
