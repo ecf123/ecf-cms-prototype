@@ -1,16 +1,30 @@
-@use "../../styles/variables" as *;
+@use "../../styles/variables"as *;
 
 * {
     color: $color-grey-light !important;
+    font-family: $font-secondary;
 }
 
 
-.ant-pagination {
-    display: flex;
-    flex-direction: row-reverse;
+body {
+    width: 1334px;
+    height: 100%;
 }
 
-.ant-table-tbody > tr > td {
+.ant-table-pagination-right {
+    justify-content: flex-start;
+}
+
+.ant-table-thead>tr>th {
+    color: $color-grey-dark;
+}
+
+.ant-table-tbody>tr> :nth-child(2) {
+    font-weight: $font-weight-bold;
+    color: $color-black !important;
+}
+
+.ant-table-tbody>tr>td {
     color: $color-grey-dark !important;
 }
 
@@ -18,10 +32,21 @@
 //     color: $color-grey-light;
 // }
 
-.ant-checkbox-input{
+.ant-checkbox-input {
     border-radius: 4px;
 }
 
-.anticon-delete {
-    color: black !important;
+// .anticon-delete {
+//     color: black !important;
+// }
+
+.anticon-delete svg {
+
+    filter: invert(71%) sepia(88%) saturate(6543%) hue-rotate(336deg) brightness(98%) contrast(86%);
+
+}
+
+.anticon-edit svg {
+    filter: invert(71%);
+
 }
