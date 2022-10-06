@@ -25,7 +25,7 @@ it("Should render the FreeType textarea", () => {
 });
 
 it("Should render the FreeType label", () => {
-  render(<FreeType freeTypeLabelText="Label Text!"/>);
+  render(<FreeType freeTypeLabelText="Label Text!" />);
   const label = screen.getByText("Label Text!");
   expect(label).toBeInTheDocument();
 });
