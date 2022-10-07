@@ -7,6 +7,7 @@ const MarketPlaceMainCard = ({img, imgDescription, date, title, articleInfo}) =>
         <img className='main-card__image' src={img} alt={imgDescription} />
         <p className='main-card__date'>{date}</p>
         <h2 className='main-card__title'>{title}</h2>
+        {/* categories will be displayed here later... */}
         <p className='main-card__info'>{articleInfo}</p>
     </div>
   )
