@@ -2,8 +2,8 @@
 
 .card {
   font-family: $font-secondary;
-  width: 26.7rem;
-  height: 16.7rem;
+  max-width: 26.7rem;
+  height: 33rem;
   font-style: normal;
 
   &__image {
@@ -14,7 +14,7 @@
   &__date {
     font-weight: $font-weight-regular;
     font-size: $font-size-extra-small;
-    line-height: 20px;
+    line-height: 1.2rem;
     color: $color-teal;
   }
 
@@ -24,12 +24,12 @@
     align-items: flex-start;
 
     .card__icon {
-      margin-top: 10px;
+      margin-top: 0.6rem;
     }
     .card__title {
       font-weight: $font-weight-regular;
       font-size: $font-size-medium;
-      line-height: 32px;
+      line-height: 2rem;
       color: $color-black;
     }
   }
@@ -37,28 +37,33 @@
   &__info {
     font-weight: $font-weight-regular;
     font-size: $font-size-small;
-    line-height: 24px;
+    line-height: 1.5rem;
+    margin-bottom: 1.6rem;
     color: $color-teal;
   }
 
   &__links {
     font-weight: $font-weight-regular;
     font-size: $font-size-extra-small;
-    line-height: 20px;
+    line-height: 1.2rem;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   &__link {
-    display: inline;
-    margin: 0 10px;
-    background-color: #f8f9fc;
-    border-radius: 10px;
-    padding: 0 5px;
+    margin: 0 0.6rem;
+    border-radius: 0.6rem;
+    padding: 0 0.6rem;
 
     &--purple {
       color: $color-purple;
+      background-color: #f9f5ff;
     }
+    
     &--darkpurple {
       color: $color-purple-dark;
+      background-color: #f8f9fc;
     }
   }
 }
