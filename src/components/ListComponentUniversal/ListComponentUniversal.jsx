@@ -17,19 +17,17 @@ const columns = [
     render: () => {
       return (
         <>
-       <Barclays
-       style={{ width: 21, height:21,marginRight: -5}}
-
+       <Barclays 
+        className="providers"
         />
         <Airbnb 
-        style={{ width: 21, height:21, marginRight: -5}}
+        className="providers"
        />
        <Barclays
-       style={{ width: 21, height:21,marginRight: -5}}
-
+        className="providers"
         />
        <Airbnb 
-        style={{ width: 21, height:21,marginRight: -5}}
+        className="providers"
        />
        </>
       );
