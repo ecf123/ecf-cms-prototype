@@ -2,8 +2,7 @@ import "./Card.scss";
 import iconArrow from "../../assets/arrow-upper-right-black.svg";
 
 const Card = ({ img, dateOrTime, title, cardInfo, links }) => {
-  
-  typeof links === "string" ? links = [links] : links;
+  typeof links === "string" ? (links = [links]) : links;
 
   const linksArr = links?.map((link, index) => {
     if (index % 2 == 0) {
