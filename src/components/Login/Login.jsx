@@ -26,25 +26,25 @@ const Login = () => {
   return (
     <>
       {!hasSubmitted ? (
-        <form onSubmit={handleSubmit} name="form">
-          <div className="title">
-            <h1 className="title__heading">Welcome Back</h1>
-            <p className='title__text'>Feugiat magna viverra pellentesque habitant. Libero id amet nisl, tellus cras eleifend et in. </p>
+        <form onSubmit={handleSubmit} name="form" className="login">
+          <div className="login__title">
+            <h1 className="login__title--heading">Welcome Back</h1>
+            <p className='login__title--text'>Feugiat magna viverra pellentesque habitant. Libero id amet nisl, tellus cras eleifend et in. </p>
           </div>
-          <div className="input">
-            <LoginInputBox className="input__email" labelText={"Email Address"} />
-            <LoginInputBox className="input__password" labelText={"Password"}/>
+          <div >
+            <LoginInputBox labelText="Email Address" />
+            <LoginInputBox labelText="Password"/>
           </div>
           <Button
             style={"button login-black square-border"}
-            textStyle={"text small-text black"}
+            textStyle={"text medium-text black"}
             buttonText={"Login"}
           />
-          {hasError && <div className="alert">Sorry something went wrong</div>}
+          {hasError && <div className="login__alert">Sorry something went wrong</div>}
         </form>
       ) : (
         <div>
-          <p className="success">
+          <p className="login__success">
             Thank you for submitting! We will be in touch
           </p>
         </div>

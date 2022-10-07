@@ -2,6 +2,7 @@ import {render, screen, waitFor} from "@testing-library/react";
 import Login from "./Login";
 import userEvent from "@testing-library/user-event";
 import { customRender } from "../../utils/testUtils";
+import Button from "../Button/Button";
 
 
 
@@ -42,23 +43,44 @@ it("shouldn't render the success message on load" , () => {
     expect (successMessage).toBeFalsy();
 });
 
+it("should not submit the form when all credentials are valid and display success message", () => {
+    render (<Login />)
+
+    const emailInput = screen.getByLabelText("Email Address");
+    userEvent.type(emailInput,"cheniangam63.com");
+
+    const passwordInput = screen.getByLabelText("Password");
+    userEvent.type(passwordInput, "");
+
+    const button = screen.queryByText("Login");
+    userEvent.click(button);
+
+    const errorMessage = screen.getByText("Sorry something went wrong")
+    const successMessage = screen.queryByText("Thank you for submitting! We will be in touch");
+    
+
+    expect (errorMessage).toBeTruthy();
+    expect (successMessage).toBeFalsy();
+
+});
+
 it("should submit the form when all credentials are valid and display success message", () => {
     render (<Login />)
 
-    const emailInput = screen.getByText("Email Address");
-    userEvent.type(emailInput,"ChenLiangamelia@163.com");
+    const emailInput = screen.getByAltText("Email Address");
+    userEvent.type(emailInput,"@");
 
-    const passwordInput = screen.getByText("Password");
+    const passwordInput = screen.getByAltText("Password");
     userEvent.type(passwordInput, "nology2022");
 
-    const button = screen.getByText("Login");
+    const button = screen.queryByText("Login");
     userEvent.click(button);
 
-    const errorMessage = screen.queryByText(/Sorry something went wrong/i)
-    const successMessage = screen.queryByText(/Thank you for submitting! We will be in touch/i);
+    const errorMessage = screen.queryByText("Sorry something went wrong")
+    const successMessage = screen.getByText("Thank you for submitting! We will be in touch");
     
 
     expect (errorMessage).toBeFalsy();
-    expect (successMessage).toBeTruthy(); ///this should not be passing 
+    expect (successMessage).toBeTruthy();
 
 });

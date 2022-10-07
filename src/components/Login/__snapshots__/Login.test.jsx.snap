@@ -3,44 +3,53 @@
 exports[`should render the form 1`] = `
 <div>
   <form
+    class="login"
     name="form"
   >
     <div
-      class="title"
+      class="login__title"
     >
       <h1
-        class="title__heading"
+        class="login__title--heading"
       >
         Welcome Back
       </h1>
       <p
-        class="title__text"
+        class="login__title--text"
       >
         Feugiat magna viverra pellentesque habitant. Libero id amet nisl, tellus cras eleifend et in. 
       </p>
     </div>
     <div>
-      <div>
+      <div
+        class="input-box"
+      >
         <label
-          for="inputBox"
+          class="input-box__label"
+          for="input-box"
         >
           Email Address
         </label>
         <input
-          alt="inputbox"
-          class="inputBox"
+          alt="input box"
+          class="input-box__input"
+          id="input-box"
           type="text"
         />
       </div>
-      <div>
+      <div
+        class="input-box"
+      >
         <label
-          for="inputBox"
+          class="input-box__label"
+          for="input-box"
         >
           Password
         </label>
         <input
-          alt="inputbox"
-          class="inputBox"
+          alt="input box"
+          class="input-box__input"
+          id="input-box"
           type="text"
         />
       </div>
@@ -50,9 +59,8 @@ exports[`should render the form 1`] = `
     >
       <div />
       <p
-        class="text small-text black"
+        class="text medium-text black"
       >
-         
         Login
       </p>
     </button>

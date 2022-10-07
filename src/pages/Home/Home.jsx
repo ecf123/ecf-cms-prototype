@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-import Login from '../../components/Login/Login';
-import Layout from '../../components/Layout/Layout'
-
-=======
 import Layout from "../../components/Layout/Layout";
->>>>>>> main
+import Login from "../../components/Login/Login";
 const Home = () => {
  return(
    <Layout>
-    <Login/>
+    <Login />
    </Layout>
  )
 }
