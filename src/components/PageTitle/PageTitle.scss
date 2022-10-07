@@ -1,0 +1,18 @@
+@use "../../styles/variables" as *;
+
+.page-title {
+    font-family: $font-secondary;
+    font-weight: $font-weight-regular;
+    color: $color-blue-navy-dark;
+
+    &--small{
+        font-size: $font-size-extra-large;
+    }
+
+    &--large {
+        font-size: 4rem;
+    }
+}
+
+
+
