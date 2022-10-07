@@ -1,7 +1,3 @@
-import React from 'react'
-import "./MarketPlaceMainCard.scss";
-import "../../styles/_reset.scss";
-
 const MarketPlaceMainCard = ({img, imgDescription, date, title, articleInfo}) => {
   return (
     <div className='main-card'>

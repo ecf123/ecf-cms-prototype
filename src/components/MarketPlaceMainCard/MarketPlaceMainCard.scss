@@ -1,5 +1,3 @@
-@use "../../styles/variables" as *;
-
 .main-card {
     width: 34rem;
     font-family: $font-secondary;
@@ -7,7 +5,7 @@
     &__image{
         width: 100%;
         height: 21.2rem;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
     }
     &__date{
         color: $color-teal;
@@ -17,7 +15,7 @@
         color: $color-blue-dark;
         font-size: $font-size-large;
         font-weight: $font-weight-regular;
-        margin: 15px 0;
+        margin: 0.938;
     }
     &__info{
         color: $color-teal;
