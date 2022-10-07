@@ -1,5 +1,5 @@
 // import Layout from "../../components/Layout/Layout";
-   import AddPathway from "../../containers/AddPathway/AddPathway";
+   import AddPathway from "../../containers/AddPage/AddPage";
 
 const Home = () => {
   return (
@@ -19,7 +19,22 @@ const Home = () => {
 
     // </Layout>
 
-    <AddPathway />
+    // shortLabelTextOne, 
+    // shortLabelTextTwo, 
+    // shortPlaceHolderTextOne, 
+    // shortPlaceHolderTextTwo, 
+    // freeTypeLabelTextOne, 
+    // freeTypeLabelTextTwo, 
+    // uploadLabelName
+
+    <AddPathway 
+      shortLabelTextOne="Article Name" 
+      shortLabelTextTwo="Additional Subtitle(s) (optional)" 
+      shortPlaceHolderTextOne="e.g. Financial Forest" 
+      shortPlaceHolderTextTwo="e.g. Fund Manager" 
+      freeTypeLabelTextOne="Article Overview"
+      freeTypeLabelTextTwo="Additional Content (optional)"
+    />
 
 
 
