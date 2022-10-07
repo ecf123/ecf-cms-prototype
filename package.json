@@ -16,7 +16,7 @@
     "eslint-plugin-react": "^7.27.1",
     "prettier": "^2.5.1",
     "react-scripts": "5.0.0",
-    "sass": "^1.46.0"
+    "sass": "^1.55.0"
   },
   "scripts": {
     "start": "react-scripts start",
