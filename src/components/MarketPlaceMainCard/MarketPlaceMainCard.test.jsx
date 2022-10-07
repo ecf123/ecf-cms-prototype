@@ -1,27 +1,34 @@
 import { render, screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
 import MarketPlaceMainCard from "./MarketPlaceMainCard";
+import rollercoaster from "../../assets/rollercoaster-image.svg";
 
-it("should render marketPlace main card and display the card image, date, header and info paragraph", () => {
+it("should render every marketPlace main card prop", () => {
+  render(
+    <MarketPlaceMainCard
+      imgDescription="Test alt text"
+      date="22/01/2022"
+      title="Test Title"
+      articleInfo="Test article"
+    />
+  );
   
-  render(<MarketPlaceMainCard imgDescription="Test alt text" />);
-  const image = screen.getByAltText("Test alt text");
-  expect(image).toBeInTheDocument();
-
-  render(<MarketPlaceMainCard date="22/01/2022" />);
+  const imgDescription = screen.getByAltText("Test alt text");
   const date = screen.queryByText("22/01/2022");
-  expect(date).toBeInTheDocument();
-
-  render(<MarketPlaceMainCard title="Test Title" />);
   const header = screen.queryByText("Test Title");
-  expect(header).toBeInTheDocument();
-
-  render(<MarketPlaceMainCard articleInfo="Test article" />);
   const paragraph = screen.getByText("Test article");
+
+  expect(imgDescription).toBeInTheDocument();
+  expect(date).toBeInTheDocument();
+  expect(header).toBeInTheDocument();
   expect(paragraph).toBeInTheDocument();
-
-
 });
+
+it("should render an image in the marketplace main card", () => {
+  render(<MarketPlaceMainCard image={rollercoaster} imgDescription="Test alt text"/>);
+  const imgDescription = screen.getByAltText("Test alt text")
+  expect(imgDescription).toBeFalsy
+})
 
 it("should render marketPlace main card with children", () => {
   const { container } = customRender(
