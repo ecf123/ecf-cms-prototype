@@ -5,28 +5,22 @@ import {ReactComponent as Profile} from "../../assets/profile-picture.svg"
 
 it("Should render the HeaderProfile", () => {
   const { container } = customRender(
-    <HeaderProfile>
-      <Profile/>
-    </HeaderProfile>
+    <HeaderProfile profileImg={Profile}/>
   );
   expect(container).toMatchSnapshot();
 });
 
 it("Should render the svg in the Header Profile", () => {
   render(
-    <HeaderProfile>
-      <Profile/>
-    </HeaderProfile>
+    <HeaderProfile profileImg={Profile}/>
   );
-  const svg = screen.getByRole("child");
-    expect(svg).toBeInTheDocument();
+  const svg = screen.getByAltText("profile picture");
+    !expect(svg).toBeInTheDocument();
 });
 
 it("Should display the Name and Role in the HeaderProfile", () => {
   render(
-    <HeaderProfile name="Brett Zieme" role="Admin">
-      <Profile/>
-    </HeaderProfile>
+    <HeaderProfile name="Brett Zieme" role="Admin" profileImg={Profile}/>
   );
   const name = screen.getByText("Brett Zieme");
   const role = screen.getByText("Admin");
@@ -37,9 +31,7 @@ it("Should display the Name and Role in the HeaderProfile", () => {
 
 it("Should display the image alt text if needed", () => {
   render(
-    <HeaderProfile name="Brett Zieme" role="Admin">
-      <Profile/>
-    </HeaderProfile>
+    <HeaderProfile profileImg={Profile}/>
   );
   const alt = screen.getByAltText("toggle");
   expect(alt).toBeInTheDocument();

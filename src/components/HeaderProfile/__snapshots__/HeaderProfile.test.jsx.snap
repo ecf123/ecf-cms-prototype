@@ -5,13 +5,11 @@ exports[`Should render the HeaderProfile 1`] = `
   <div
     class="header-profile"
   >
-    <div
+    <img
+      alt="profile picture"
       class="header-profile__image"
-    >
-      <svg>
-        profile-picture.svg
-      </svg>
-    </div>
+      src="[object Object]"
+    />
     <div
       class="header-profile__text"
     >
