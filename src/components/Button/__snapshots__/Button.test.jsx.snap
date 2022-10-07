@@ -4,9 +4,7 @@ exports[`Should render the Button 1`] = `
 <div>
   <button>
     <div />
-    <p>
-       
-    </p>
+    <p />
   </button>
 </div>
 `;

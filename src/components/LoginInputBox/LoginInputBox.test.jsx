@@ -17,6 +17,6 @@ it("should render the correct label", () => {
 
 it("should render the input box", () => {
   render(<LoginInputBox />);
-  const inputBox = screen.getByAltText("inputbox");
+  const inputBox = screen.getByAltText("input box");
   expect(inputBox).toBeInTheDocument();
 });
