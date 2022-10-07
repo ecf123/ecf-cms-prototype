@@ -5,8 +5,8 @@ import Button from "../Button/Button";
 const MediaUploadBox = ({
   file,
   handleFileChange,
-  uploadLabelName = "Pathway Thumbnail",
-  uploadButtonText = "Upload Image",
+  uploadLabelName,
+  uploadButtonText,
   fileName,
 }) => {
   return (
@@ -27,7 +27,7 @@ const MediaUploadBox = ({
               id="file-input"
               type="file"
               onChange={handleFileChange}
-              accept="image/*,video/*,audio/*"
+              accept="image/*,video/*,audio/*,.txt"
             />
           </div>
         )}
@@ -36,10 +36,10 @@ const MediaUploadBox = ({
         )}
       </div>
       {file && (
-        <div className="thumbnail__remove" onClick={handleFileChange}>
+        <button className="thumbnail__remove" onClick={handleFileChange}>
           <img className="thumbnail__remove--bin" src={bin} alt="bin icon" />
           <p className="thumbnail__remove--text">Remove</p>
-        </div>
+        </button>
       )}
     </div>
   );

@@ -24,7 +24,7 @@ describe("MediaUploadBox component", () => {
 
   it("should not render the upload button when there is a file added", () => {
     render(<MediaUploadBox file={rollercoasterImg} />);
-    const uploadButton = screen.queryByRole("button");
+    const uploadButton = screen.queryByText("Upload Image");
     expect(uploadButton).toBeFalsy();
   });
 

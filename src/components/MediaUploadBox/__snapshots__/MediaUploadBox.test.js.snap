@@ -8,9 +8,7 @@ exports[`MediaUploadBox component matches the snapshot taken with the file 1`] =
     <label
       class="thumbnail__label"
       for="file-input"
-    >
-      Pathway Thumbnail
-    </label>
+    />
     <div
       class="thumbnail__container"
     >
@@ -19,7 +17,7 @@ exports[`MediaUploadBox component matches the snapshot taken with the file 1`] =
         src="rollercoaster-image.svg"
       />
     </div>
-    <div
+    <button
       class="thumbnail__remove"
     >
       <img
@@ -32,7 +30,7 @@ exports[`MediaUploadBox component matches the snapshot taken with the file 1`] =
       >
         Remove
       </p>
-    </div>
+    </button>
   </div>
 </div>
 `;
@@ -45,9 +43,7 @@ exports[`MediaUploadBox component matches the snapshot taken without the file 1`
     <label
       class="thumbnail__label"
       for="file-input"
-    >
-      Pathway Thumbnail
-    </label>
+    />
     <div
       class="thumbnail__container"
     >
@@ -60,13 +56,10 @@ exports[`MediaUploadBox component matches the snapshot taken without the file 1`
           <div />
           <p
             class="text small-text light-grey"
-          >
-             
-            Upload Image
-          </p>
+          />
         </button>
         <input
-          accept="image/*,video/*,audio/*"
+          accept="image/*,video/*,audio/*,.txt"
           class="thumbnail__btn--input"
           id="file-input"
           type="file"
