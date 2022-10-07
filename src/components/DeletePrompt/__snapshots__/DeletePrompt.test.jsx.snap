@@ -37,7 +37,6 @@ exports[`Should render DeletePrompt with children 1`] = `
         <p
           class="text modal-text white"
         >
-           
           Cancel
         </p>
       </button>
@@ -48,7 +47,6 @@ exports[`Should render DeletePrompt with children 1`] = `
         <p
           class="text modal-text red"
         >
-           
           Delete
         </p>
       </button>
