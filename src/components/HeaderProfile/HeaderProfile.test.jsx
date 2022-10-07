@@ -1,12 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
 import HeaderProfile from "./HeaderProfile";
+import {ReactComponent as Profile} from "../../assets/profile-picture.svg"
 
 it("Should render the HeaderProfile", () => {
   const { container } = customRender(
     <HeaderProfile>
-      <p>This is an svg image</p>
-      <p>This is an svg image</p>
+      <Profile/>
     </HeaderProfile>
   );
   expect(container).toMatchSnapshot();
@@ -15,21 +15,17 @@ it("Should render the HeaderProfile", () => {
 it("Should render the svg in the Header Profile", () => {
   render(
     <HeaderProfile>
-      <p>This is an svg image</p>
-      <p>This is an svg image</p>
+      <Profile/>
     </HeaderProfile>
   );
-  const svgs = screen.getAllByText("This is an svg image");
-  svgs.forEach((svg) => {
+  const svg = screen.getByRole("child");
     expect(svg).toBeInTheDocument();
-  });
 });
 
 it("Should display the Name and Role in the HeaderProfile", () => {
   render(
     <HeaderProfile name="Brett Zieme" role="Admin">
-      <p>This is an svg image</p>
-      <p>This is an svg image</p>
+      <Profile/>
     </HeaderProfile>
   );
   const name = screen.getByText("Brett Zieme");
@@ -38,3 +34,13 @@ it("Should display the Name and Role in the HeaderProfile", () => {
   expect(name).toBeInTheDocument();
   expect(role).toBeInTheDocument();
 });
+
+it("Should display the image alt text if needed", () => {
+  render(
+    <HeaderProfile name="Brett Zieme" role="Admin">
+      <Profile/>
+    </HeaderProfile>
+  );
+  const alt = screen.getByAltText("toggle");
+  expect(alt).toBeInTheDocument();
+})

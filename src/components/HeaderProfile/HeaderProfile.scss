@@ -19,7 +19,7 @@
   &__image {
     height: 3.125rem;
     width: 3.125rem;
-    margin-right: 0.5;
+    margin-right: 0.5rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -58,5 +58,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    background: none;
   }
 }

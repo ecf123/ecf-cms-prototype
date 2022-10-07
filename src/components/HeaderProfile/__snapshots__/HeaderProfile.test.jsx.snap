@@ -4,14 +4,13 @@ exports[`Should render the HeaderProfile 1`] = `
 <div>
   <div
     class="header-profile"
-    data-testid="header-profile"
   >
     <div
       class="header-profile__image"
     >
-      <p>
-        This is an svg image
-      </p>
+      <svg>
+        profile-picture.svg
+      </svg>
     </div>
     <div
       class="header-profile__text"
@@ -23,13 +22,14 @@ exports[`Should render the HeaderProfile 1`] = `
         class="header-profile__role"
       />
     </div>
-    <div
+    <button
       class="header-profile__arrow"
     >
-      <p>
-        This is an svg image
-      </p>
-    </div>
+      <img
+        alt="toggle"
+        src="upside-down-arrow-grey.svg"
+      />
+    </button>
   </div>
 </div>
 `;
