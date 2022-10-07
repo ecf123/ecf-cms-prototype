@@ -3,6 +3,8 @@ import "./ListComponentUniversal.scss";
 import {  Table } from "antd";
 import { useState } from "react";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
+import { ReactComponent as Barclays } from "../../assets/barclays-icon-white-background.svg";
+import { ReactComponent as Airbnb } from "../../assets/airbnb-logo.svg";
 
 const columns = [
   {
@@ -12,6 +14,26 @@ const columns = [
   {
     title: "PROVIDERS",
     dataIndex: "providers",
+    render: () => {
+      return (
+        <>
+       <Barclays
+       style={{ width: 21, height:21,marginRight: -5}}
+
+        />
+        <Airbnb 
+        style={{ width: 21, height:21, marginRight: -5}}
+       />
+       <Barclays
+       style={{ width: 21, height:21,marginRight: -5}}
+
+        />
+       <Airbnb 
+        style={{ width: 21, height:21,marginRight: -5}}
+       />
+       </>
+      );
+    }
   },
   {
     title: "NO OF COURSES",

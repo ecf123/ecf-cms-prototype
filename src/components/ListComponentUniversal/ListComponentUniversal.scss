@@ -12,6 +12,9 @@ body {
 }
 .ant-table-thead>tr>th {
     color: $color-grey-dark;
+    height: 60px !important;
+    font-size: $font-size-extra-small;
+    background-color: $color-white-smoke;
 }
 .ant-table-tbody>tr> :nth-child(2) {
     font-weight: $font-weight-bold;
@@ -19,6 +22,8 @@ body {
 }
 .ant-table-tbody>tr>td {
     color: $color-grey-dark !important;
+    height: 64px !important;
+    font-size: $font-size-smallest;
 }
 // .ant-table-thead > tr > th {
 //     color: $color-grey-light;
@@ -29,10 +34,30 @@ body {
 // .anticon-delete {
 //     color: black !important;
 // }
+.ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    display: none !important;
+}
 .anticon-delete svg {
     filter: invert(71%) sepia(88%) saturate(6543%) hue-rotate(336deg) brightness(98%) contrast(86%);
+    width: 15px !important;
+    height: 16px !important;
+    opacity: 0.7;
 }
 .anticon-edit svg {
     filter: invert(71%);
+    width: 15px !important;
+    height: 16px !important;
+    opacity: 0.7;
 }
-
+.anticon svg:hover {
+    opacity: 1;
+}
+.ant-pagination-item-active {
+    color: $color-white;
+    background-color: $color-black;
+    border-color: $color-grey-normal;
+}
+.ant-pagination-disabled .ant-pagination-item-link,
+.ant-pagination-disabled:hover .ant-pagination-item-link {
+    opacity: 0.5;
+}
