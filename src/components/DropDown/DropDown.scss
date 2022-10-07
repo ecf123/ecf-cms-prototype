@@ -2,6 +2,7 @@
 @use '../../styles/main.scss' as *;
 
 .drop-down{
+    max-width: 53.5rem;
     display: flex;
     flex-direction: column;
     &__topic{
@@ -10,11 +11,17 @@
         justify-content: space-between;
 
     }
-    &__lessons{
+    &__list{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        clear: both;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height .4s ease;
     }
+    &__lesson{}
     &__img{
         margin: auto 0;
         width: 0.64rem;
@@ -24,4 +31,23 @@
         font-size:$font-size-small;
     }
 
+}
+#click{
+    position: absolute;
+    opacity: 0;
+    height: 0;
+}
+#click:checked + .drop-down__list{
+    height: 18.75rem;
+
+}
+span{
+    padding: 1.88rem;
+    cursor: pointer;
+    display: block;
+    }
+span::after{
+    float:right;
+    right:10%;
+    content: "+";
 }
