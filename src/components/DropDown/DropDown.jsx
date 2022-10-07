@@ -1,25 +1,29 @@
 import "./DropDown.scss";
 import topicArrow from "../../assets/upside-down-arrow-grey.svg";
 
-const DropDown = ({topicTitle,lessonType,lessonTitle, lessonLink}) => {
+const DropDown = ({ topicTitle, lessonTitle }) => {
   return (
-    <div className="drop-down">
-        <div className="drop-down__topic" >
-          <label htmlFor="#click"><span>{topicTitle}</span></label>
-          <input type="checkbox" id="click" />
-           {/* <h3 className="drop-down__topic-title">{topicTitle}</h3> */}
-            <img src={topicArrow} alt={topicArrow} className="drop-down__img"/>
-        </div>
-        <ul className="drop-down__list">
-              <li className="drop-down__lesson">
-                <a href={lessonLink}>
-                <img src={lessonType} alt={lessonType} className="drop-down__img"/>
-                <p>{lessonTitle}</p>
-                </a>
-              </li>
-        </ul>
-    </div>
-  )
-}
+    <nav className="drop-down">
+      <label htmlFor="click">
+        <span className="drop-down__title">
+          {topicTitle}
+          <img src={topicArrow} alt="" />
+        </span>
+      </label>
+      <input type="checkbox" id="click" />
 
-export default DropDown
+      <ul className="drop-down__list">
+        <li>
+          <a href="#">
+            <p className="drop-down__content">
+              <img src={topicArrow} alt="" className="drop-down__image" />
+              {lessonTitle}
+            </p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default DropDown;

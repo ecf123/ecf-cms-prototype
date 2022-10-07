@@ -1,53 +1,60 @@
-@use '../../styles/variables.scss' as *;
-@use '../../styles/main.scss' as *;
+@use "../../styles/variables.scss" as *;
+@use "../../styles/main.scss" as *;
 
-.drop-down{
-    max-width: 53.5rem;
+li a {
+  text-decoration: none;
+  color: #2d2f31;
+}
+
+.drop-down {
+  font-family: $font-secondary;
+  letter-spacing: $letter-spacing;
+  &__title {
     display: flex;
-    flex-direction: column;
-    &__topic{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-    }
-    &__list{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        clear: both;
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-        transition: height .4s ease;
-    }
-    &__lesson{}
-    &__img{
-        margin: auto 0;
-        width: 0.64rem;
-        height: 0.41rem;
-    }
-    &__topic-title{
-        font-size:$font-size-small;
-    }
-
-}
-#click{
-    position: absolute;
-    opacity: 0;
-    height: 0;
-}
-#click:checked + .drop-down__list{
-    height: 18.75rem;
-
-}
-span{
-    padding: 1.88rem;
+    justify-content: space-between;
+    padding: 30px;
     cursor: pointer;
-    display: block;
-    }
-span::after{
-    float:right;
-    right:10%;
-    content: "+";
+    background: $color-white-smoke;
+    font-size: $font-size-small;
+    color: $color-blue-navy-dark;
+  }
+
+  &__title::after {
+    float: right;
+    right: 10%;
+  }
+
+  &__list {
+    display: flex;
+    clear: both;
+    width: 100%;
+    background-color: $color-white;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.4s ease;
+    
+  }
+
+  &__list li {
+    padding: 30px;
+    
+  }
+
+  &__content {
+    color: $color-teal;
+  }
+
+  &__image {
+    margin-right: 20px;
+  }
+}
+
+#click {
+  position: absolute;
+  opacity: 0;
+  height: 0px;
+}
+
+#click:checked + .drop-down__list {
+  height: auto;
 }
