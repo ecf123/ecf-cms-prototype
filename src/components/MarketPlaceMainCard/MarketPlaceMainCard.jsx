@@ -1,3 +1,5 @@
+import "./MarketPlaceMainCard.scss";
+
 const MarketPlaceMainCard = ({img, imgDescription, date, title, articleInfo}) => {
   
   return (
