@@ -8,12 +8,6 @@ it("Should render the HeaderProfile", () => {
   expect(container).toMatchSnapshot();
 });
 
-it("Should render the svg in the Header Profile", () => {
-  render(<HeaderProfile profileImg={Profile} />);
-  const svg = screen.getByAltText("user avatar");
-  !expect(svg).toBeInTheDocument();
-});
-
 it("Should display the Name and Role in the HeaderProfile", () => {
   render(
     <HeaderProfile name="Brett Zieme" role="Admin" profileImg={Profile} />
