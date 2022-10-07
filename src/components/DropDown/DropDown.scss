@@ -1,22 +1,18 @@
 @use "../../styles/variables.scss" as *;
 @use "../../styles/main.scss" as *;
 
-li a {
-  text-decoration: none;
-  color: #2d2f31;
-}
-
 .drop-down {
   font-family: $font-secondary;
   letter-spacing: $letter-spacing;
+  font-size: $font-size-small;
   &__title {
     display: flex;
     justify-content: space-between;
     padding: 30px;
     cursor: pointer;
     background: $color-white-smoke;
-    font-size: $font-size-small;
     color: $color-blue-navy-dark;
+    font-weight: $font-weight-regular;
   }
 
   &__title::after {
@@ -39,13 +35,19 @@ li a {
     padding: 30px;
     
   }
-
+  &__list li a {
+    text-decoration: none;
+  }
+  
   &__content {
-    color: $color-teal;
+    color: $color-grey-light;
+    font-style: $font-secondary;
+    font-weight: $font-weight-regular;
   }
 
   &__image {
     margin-right: 20px;
+    
   }
 }
 
@@ -58,3 +60,4 @@ li a {
 #click:checked + .drop-down__list {
   height: auto;
 }
+
