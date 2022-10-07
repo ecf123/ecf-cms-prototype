@@ -1,62 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render layout with children 1`] = `
-<div>
-  <div
-    class="main-card"
-  >
-    <img
-      alt="Test Description"
-      class="main-card__image"
-    />
-    <p
-      class="main-card__date"
-    >
-      22/09/2022
-    </p>
-    <h2
-      class="main-card__title"
-    >
-      Test Title
-    </h2>
-    <p
-      class="main-card__info"
-    >
-      Test article
-    </p>
-  </div>
-</div>
-`;
-
 exports[`should render marketPlace main card with children 1`] = `
-<div>
-  <div
-    class="main-card"
-  >
-    <img
-      alt="Test Description"
-      class="main-card__image"
-    />
-    <p
-      class="main-card__date"
-    >
-      22/09/2022
-    </p>
-    <h2
-      class="main-card__title"
-    >
-      Test Title
-    </h2>
-    <p
-      class="main-card__info"
-    >
-      Test article
-    </p>
-  </div>
-</div>
-`;
-
-exports[`should render marketPlace main card with props 1`] = `
 <div>
   <div
     class="main-card"
