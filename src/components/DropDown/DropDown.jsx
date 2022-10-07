@@ -7,7 +7,7 @@ const DropDown = ({ topicTitle, lessonTitle }) => {
       <label htmlFor="click">
         <span className="drop-down__title">
           {topicTitle}
-          <img src={topicArrow} alt="" />
+          <img src={topicArrow} alt="" className="drop-down__arrow"/>
         </span>
       </label>
       <input type="checkbox" id="click" />
