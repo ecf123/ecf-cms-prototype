@@ -1,0 +1,27 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/main.scss' as *;
+
+.drop-down{
+    display: flex;
+    flex-direction: column;
+    &__topic{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    &__lessons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    &__img{
+        margin: auto 0;
+        width: 0.64rem;
+        height: 0.41rem;
+    }
+    &__topic-title{
+        font-size:$font-size-small;
+    }
+
+}
