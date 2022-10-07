@@ -5,8 +5,8 @@ import Button from "../Button/Button";
 const MediaUploadBox = ({
   file,
   handleFileChange,
-  uploadLabelName = "Pathway Thumbnail",
-  uploadButtonText = "Upload Image",
+  uploadLabelName,
+  uploadButtonText,
   fileName,
 }) => {
   return (
