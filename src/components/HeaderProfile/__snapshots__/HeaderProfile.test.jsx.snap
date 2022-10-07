@@ -6,7 +6,7 @@ exports[`Should render the HeaderProfile 1`] = `
     class="header-profile"
   >
     <img
-      alt="profile picture"
+      alt="user avatar"
       class="header-profile__image"
       src="[object Object]"
     />

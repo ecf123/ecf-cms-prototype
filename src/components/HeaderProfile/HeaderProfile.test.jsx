@@ -1,26 +1,22 @@
 import { render, screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
 import HeaderProfile from "./HeaderProfile";
-import {ReactComponent as Profile} from "../../assets/profile-picture.svg"
+import { ReactComponent as Profile } from "../../assets/profile-picture.svg";
 
 it("Should render the HeaderProfile", () => {
-  const { container } = customRender(
-    <HeaderProfile profileImg={Profile}/>
-  );
+  const { container } = customRender(<HeaderProfile profileImg={Profile} />);
   expect(container).toMatchSnapshot();
 });
 
 it("Should render the svg in the Header Profile", () => {
-  render(
-    <HeaderProfile profileImg={Profile}/>
-  );
-  const svg = screen.getByAltText("profile picture");
-    !expect(svg).toBeInTheDocument();
+  render(<HeaderProfile profileImg={Profile} />);
+  const svg = screen.getByAltText("user avatar");
+  !expect(svg).toBeInTheDocument();
 });
 
 it("Should display the Name and Role in the HeaderProfile", () => {
   render(
-    <HeaderProfile name="Brett Zieme" role="Admin" profileImg={Profile}/>
+    <HeaderProfile name="Brett Zieme" role="Admin" profileImg={Profile} />
   );
   const name = screen.getByText("Brett Zieme");
   const role = screen.getByText("Admin");
@@ -29,10 +25,8 @@ it("Should display the Name and Role in the HeaderProfile", () => {
   expect(role).toBeInTheDocument();
 });
 
-it("Should display the image alt text if needed", () => {
-  render(
-    <HeaderProfile profileImg={Profile}/>
-  );
-  const alt = screen.getByAltText("toggle");
-  expect(alt).toBeInTheDocument();
-})
+it("Should not display the alt text if the image is present", () => {
+  render(<HeaderProfile profileImg={Profile} />);
+  const svgAltText = screen.queryByText("user avatar");
+  expect(svgAltText).toBeFalsy();
+});
