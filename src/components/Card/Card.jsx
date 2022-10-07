@@ -4,16 +4,17 @@ import iconArrow from "../../assets/arrow-upper-right-black.svg";
 import "../../styles/_reset.scss";
 
 const Card = ({ img, dateOrTime, title, cardInfo, links }) => {
-  const linksArr = links.map((link, index) => {
+
+  const linksArr = links?.map((link, index) => {
     if (index % 2 == 0) {
       return (
-        <li key={index + 1} className="card__link card__link--purple">
+        <li key={index} className="card__link card__link--purple">
           {link}
         </li>
       );
     } else {
       return (
-        <li key={index + 1} className="card__link card__link--darkpurple">
+        <li key={index} className="card__link card__link--darkpurple">
           {link}
         </li>
       );

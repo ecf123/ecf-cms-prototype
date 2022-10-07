@@ -12,9 +12,9 @@ it("should render the card image", () => {
   expect(image).toBeInTheDocument();
 });
 
-it("should display the date of the card on the screen", () => {
+it("should display the date or time on the screen", () => {
   //Arrange
-  render(<Card date="22/01/2022" />);
+  render(<Card dateOrTime="22/01/2022" />);
   //Act
   const date = screen.queryByText("22/01/2022");
   //Assert
@@ -34,16 +34,13 @@ it("should display the links on the screen", () => {
   //Arrange
   render(
     <Card
-      cardLinkOne="Test Link One"
-      cardLinkTwo="Test Link Two"
+      links={["linkOne"]}
     />
   );
   //Act
-  const link1 = screen.getByText("Test Link One");
-  const link2 = screen.getByText("Test Link Two");
+  const link = screen.getByText("linkOne");
   //Assert
-  expect(link1).toBeInTheDocument();
-  expect(link2).toBeInTheDocument();
+  expect(link).toBeInTheDocument();
 });
 
 it("should display the article paragraph on the screen", () => {
@@ -66,13 +63,7 @@ it("should render the arrow icon", () => {
 
 it("Should render layout with children", () => {
   const { container } = customRender(
-    <Card
-      date="22/09/2022"
-      title="Test Title"
-      cardInfo="Test card"
-      cardLinkOne="test link"
-      cardLinkTwo="test link"
-    />
+    <Card />
   );
   expect(container).toMatchSnapshot();
 });
