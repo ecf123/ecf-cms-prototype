@@ -1,21 +1,23 @@
 @use "../../styles/variables" as *;
 
 .pathway-introduction {
-    border: 2px solid red;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  padding: 2rem;
 
-    &__img {
-        grid-area: 1/1/3/2;
-    }
+  &__image {
+    grid-area: 1 / 1 / 3 / 2;
+  }
 
-    &__title {
-        color: $color-blue-navy-dark;
-    }
+  &__title {
+    color: $color-blue-navy-dark;
+    font-size: $font-size-medium;
+  }
 
-    &__description {
-        border: 2px solid white;
-        color: $color-teal;
-    }
+  &__description {
+    color: $color-teal;
+    font-size: $font-size-extra-small;
+  }
 }
