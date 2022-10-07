@@ -1,17 +1,10 @@
 @use '../../styles/variables.scss' as *;
 
 .card-container {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(26.7rem, 1fr));
-    border: 1px black solid;
-    gap: 25px;
-    justify-content: end;
-
-    &__box {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        justify-items: center;
-        align-items: center;
-    }
+    grid-template-columns: repeat(auto-fit, 26.7rem);
+    gap: 1.6rem;
+    justify-content: center;
+    padding: 3.8rem;
 }
