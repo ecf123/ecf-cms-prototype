@@ -57,7 +57,15 @@
   height: 0px;
 }
 
-#click:checked + .drop-down__list {
+#click ~ label span .drop-down__arrow {
+    transition: all ease-in-out .3s;
+  }
+
+#click:checked ~ label span .drop-down__arrow {
+    transform: rotate(180deg);
+  }
+
+#click:checked ~ .drop-down__list {
   height: auto;
 }
 

@@ -4,13 +4,13 @@ import topicArrow from "../../assets/upside-down-arrow-grey.svg";
 const DropDown = ({ topicTitle, lessonTitle }) => {
   return (
     <nav className="drop-down">
+      <input type="checkbox" id="click" />
       <label htmlFor="click">
         <span className="drop-down__title">
           {topicTitle}
           <img src={topicArrow} alt="" className="drop-down__arrow"/>
         </span>
       </label>
-      <input type="checkbox" id="click" />
 
       <ul className="drop-down__list">
         <li>
