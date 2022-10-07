@@ -25,9 +25,9 @@ it("should render every marketPlace main card prop", () => {
 });
 
 it("should render an image in the marketplace main card", () => {
-  render(<MarketPlaceMainCard image={rollercoaster} imgDescription="Test alt text"/>);
-  const imgDescription = screen.getByAltText("Test alt text")
-  expect(imgDescription).toBeFalsy
+  render(<MarketPlaceMainCard img={rollercoaster} imgDescription="Test alt text"/>);
+  const imgDescription = screen.queryByText("Test alt text")
+  expect(imgDescription).toBeFalsy();
 })
 
 it("should render marketPlace main card with children", () => {
