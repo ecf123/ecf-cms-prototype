@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should match the snapshot, with the props 1`] = `
+<div>
+  <div
+    class="salary"
+  >
+    <h5
+      class="salary__heading"
+    >
+      Average Salaries
+    </h5>
+    <h2
+      class="salary__number"
+    >
+      £99,999
+    </h2>
+    <span
+      class="salary__line"
+    />
+    <div
+      class="salary__jobs"
+    >
+      <div
+        class="salary__titles"
+      >
+        <h6
+          class="salary__title"
+        >
+          Advisor
+        </h6>
+        <h6
+          class="salary__title"
+        >
+          Analyst
+        </h6>
+        <h6
+          class="salary__title"
+        >
+          Audit
+        </h6>
+        <h6
+          class="salary__title"
+        >
+          Consultant
+        </h6>
+      </div>
+      <div
+        class="salary__pays"
+      >
+        <h6
+          class="salary__pay"
+        >
+          £25,000
+        </h6>
+        <h6
+          class="salary__pay"
+        >
+          £5,000
+        </h6>
+        <h6
+          class="salary__pay"
+        >
+          £30,000
+        </h6>
+        <h6
+          class="salary__pay"
+        >
+          £100,000
+        </h6>
+      </div>
+    </div>
+  </div>
+</div>
+`;
