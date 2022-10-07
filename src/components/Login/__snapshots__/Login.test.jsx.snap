@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the form 1`] = `
+<div>
+  <form
+    name="form"
+  >
+    <div
+      class="title"
+    >
+      <h1
+        class="title__heading"
+      >
+        Welcome Back
+      </h1>
+      <p
+        class="title__text"
+      >
+        Feugiat magna viverra pellentesque habitant. Libero id amet nisl, tellus cras eleifend et in. 
+      </p>
+    </div>
+    <div>
+      <div>
+        <label
+          for="inputBox"
+        >
+          Email Address
+        </label>
+        <input
+          alt="inputbox"
+          class="inputBox"
+          type="text"
+        />
+      </div>
+      <div>
+        <label
+          for="inputBox"
+        >
+          Password
+        </label>
+        <input
+          alt="inputbox"
+          class="inputBox"
+          type="text"
+        />
+      </div>
+    </div>
+    <button
+      class="button login-black square-border"
+    >
+      <div />
+      <p
+        class="text small-text black"
+      >
+         
+        Login
+      </p>
+    </button>
+  </form>
+</div>
+`;

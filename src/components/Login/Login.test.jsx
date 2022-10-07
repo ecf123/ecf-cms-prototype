@@ -1,5 +1,5 @@
 import {render, screen, waitFor} from "@testing-library/react";
-import LoginContainer from "./Login";
+import Login from "./Login";
 import userEvent from "@testing-library/user-event";
 import { customRender } from "../../utils/testUtils";
 
@@ -7,8 +7,11 @@ import { customRender } from "../../utils/testUtils";
 
 it("should render the form", () => {
     const { container } = customRender(
-        <LoginContainer>
-    
+        <Login>
+            <div>
+            <h1>Welcome Back</h1>
+            <p>Feugiat magna viverra pellentesque habitant. Libero id amet nisl, tellus cras eleifend et in. </p>
+          </div>
           <div>
             <label>Email Address</label>
             <input/>
@@ -16,31 +19,31 @@ it("should render the form", () => {
 
           <div>
             <label>Password</label>
-            <input ></input>
+            <input/>
           </div>
 
             <button>Login</button>
 
-        </LoginContainer>
+        </Login>
     )
         expect(container).toMatchSnapshot();
     })
 
 it("should not render the error message on load", () => {
-    render (<LoginContainer />)
+    render (<Login />)
     const errorMessage = screen.queryByText("Sorry something went wrong")
     
     expect (errorMessage).toBeFalsy();
 })
 
 it("shouldn't render the success message on load" , () => {
-    render (<LoginContainer />)
+    render (<Login />)
     const successMessage = screen.queryByText('Thank you for submitting! We will be in touch');
     expect (successMessage).toBeFalsy();
 });
 
 it("should submit the form when all credentials are valid and display success message", () => {
-    render (<LoginContainer />)
+    render (<Login />)
 
     const emailInput = screen.getByText("Email Address");
     userEvent.type(emailInput,"ChenLiangamelia@163.com");
