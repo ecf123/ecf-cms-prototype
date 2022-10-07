@@ -6,30 +6,30 @@ exports[`Should render the HeaderProfile 1`] = `
     class="header-profile"
     data-testid="header-profile"
   >
-    <img
-      alt="Profile Picture"
+    <div
       class="header-profile__image"
-      src="profile-picture.svg"
-    />
+    >
+      <p>
+        This is an svg image
+      </p>
+    </div>
     <div
       class="header-profile__text"
     >
       <h2
         class="header-profile__name"
-      >
-        Brett Zieme
-      </h2>
+      />
       <p
         class="header-profile__role"
-      >
-        Admin
+      />
+    </div>
+    <div
+      class="header-profile__arrow"
+    >
+      <p>
+        This is an svg image
       </p>
     </div>
-    <img
-      alt="Toggle"
-      class="header-profile__arrow"
-      src="upside-down-arrow-grey.svg"
-    />
   </div>
 </div>
 `;

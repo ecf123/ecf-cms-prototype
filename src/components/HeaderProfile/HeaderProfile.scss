@@ -1,56 +1,62 @@
 @use "../../styles/variables" as *;
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .header-profile {
-    height: 4.25rem;
-    width: 14.625rem;
-    padding-left: 0.625rem;
-    padding-top: 0.563rem;
-    padding-bottom: 0.563rem;
-    display: flex;
-    align-items: center;
-    border-radius: 4.375rem;
-    background-color: $color-white;
+  height: 4.25rem;
+  width: 14.625rem;
+  padding-left: 0.625rem;
+  padding-top: 0.563rem;
+  padding-bottom: 0.563rem;
+  display: flex;
+  align-items: center;
+  border-radius: 4.375rem;
+  background-color: $color-white;
 
-    &__image {
-        height: 3.125rem;
-        width: 3.125rem;
-        margin-right: 8px;
-        border-radius: 50%;       
-    }
-    &__text{
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    &__name {
-        height: 1.063;
-        min-width: fit-content;
-        margin: 0;
-        font-size: $font-size-extra-small;
-        font-weight: $font-weight-regular;
-        text-align: left;
-        color: $color-blue-navy;
-        font-family: $font-secondary;
-    }
-    &__role{
-        height: 0.75rem;
-        min-width: fit-content;
-        margin: 0;
-        font-size: $font-size-smallest;
-        font-weight: 400;
-        text-align: left;
-        color: $color-grey-light; 
-        font-family: $font-secondary;
-    }
-    &__arrow{
-        height: 0.41375rem;
-        width: 0.6875rem;
-        margin-left: 2.781rem;
-    }
+  &__image {
+    height: 3.125rem;
+    width: 3.125rem;
+    margin-right: 0.5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__text {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__name {
+    height: 1.063rem;
+    min-width: fit-content;
+    margin: 0;
+    font-size: $font-size-extra-small;
+    font-weight: $font-weight-regular;
+    text-align: left;
+    color: $color-blue-navy;
+    font-family: $font-secondary;
+  }
+  &__role {
+    height: 0.75rem;
+    min-width: fit-content;
+    margin: 0;
+    font-size: $font-size-smallest;
+    font-weight: 400;
+    text-align: left;
+    color: $color-grey-light;
+    font-family: $font-secondary;
+  }
+  &__arrow {
+    height: 0.41375rem;
+    width: 0.6875rem;
+    margin-left: 2.781rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
