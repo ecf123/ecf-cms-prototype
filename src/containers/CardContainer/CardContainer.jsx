@@ -7,8 +7,15 @@ const CardContainer = () => {
 
   return (
 
-    <div><Card img = {image} 
-    dateOrTime, title, cardInfo, links/></div>
+    <div className="card-container">
+      <div className="card-container__box">
+      <Card img = {image} dateOrTime="18:25" title="Test" cardInfo ="Test info" links ={["one", "two", "three"]} />
+      </div>
+      <Card img = {image} dateOrTime="18:25" title="Test" cardInfo ="Test info" links ={["one", "two", "three"]} />
+      <Card img = {image} dateOrTime="18:25" title="Test" cardInfo ="Test info" links ={["one", "two", "three"]} />
+      <Card img = {image} dateOrTime="18:25" title="Test" cardInfo ="Test info" links ={["one", "two", "three"]} />
+      <Card img = {image} dateOrTime="18:25" title="Test" cardInfo ="Test info" links ={["one", "two", "three"]} />
+    </div>
   )
 }
 
