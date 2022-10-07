@@ -1,20 +1,20 @@
 import { render, screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
 
-import ArticleCard from "./ArticleCard";
+import Card from "./Card";
 
 it("should render the card image", () => {
   //Arrange
-  render(<ArticleCard />);
+  render(<Card />);
   //Act
-  const image = screen.getByAltText("Article Image");
+  const image = screen.getByAltText("Card Image");
   //Assert
   expect(image).toBeInTheDocument();
 });
 
-it("should display the date of the card on the screen", () => {
+it("should display the date or time on the screen", () => {
   //Arrange
-  render(<ArticleCard date="22/01/2022" />);
+  render(<Card dateOrTime="22/01/2022" />);
   //Act
   const date = screen.queryByText("22/01/2022");
   //Assert
@@ -23,7 +23,7 @@ it("should display the date of the card on the screen", () => {
 
 it("should display the header of the card on the screen", () => {
   //Arrange
-  render(<ArticleCard title="Test Title" />);
+  render(<Card title="Test Title" />);
   //Act
   const header = screen.queryByText("Test Title");
   //Assert
@@ -33,45 +33,49 @@ it("should display the header of the card on the screen", () => {
 it("should display the links on the screen", () => {
   //Arrange
   render(
-    <ArticleCard
-      articleLinkOne="Test Link One"
-      articleLinkTwo="Test Link Two"
+    <Card
+      links={["linkOne"]}
     />
   );
   //Act
-  const link1 = screen.getByText("Test Link One");
-  const link2 = screen.getByText("Test Link Two");
+  const link = screen.getByText("linkOne");
   //Assert
-  expect(link1).toBeInTheDocument();
-  expect(link2).toBeInTheDocument();
+  expect(link).toBeInTheDocument();
 });
 
 it("should display the article paragraph on the screen", () => {
   //Arrange
-  render(<ArticleCard articleInfo="Test article" />);
+  render(<Card cardInfo="Test card" />);
   //Act
-  const paragraph = screen.getByText("Test article");
+  const paragraph = screen.getByText("Test card");
   //Assert
   expect(paragraph).toBeInTheDocument();
 });
 
 it("should render the arrow icon", () => {
   //Arrange
-  render(<ArticleCard />);
+  render(<Card />);
   //Act
   const image = screen.getByAltText("Arrow Icon");
   //Assert
   expect(image).toBeInTheDocument();
 });
 
-it("Should render layout with children", () => {
+it("Should render the card with no props", () => {
   const { container } = customRender(
-    <ArticleCard
-      date="22/09/2022"
-      title="Test Title"
-      articleInfo="Test article"
-      articleLinkOne="test link"
-      articleLinkTwo="test link"
+    <Card />
+  );
+  expect(container).toMatchSnapshot();
+});
+
+it("Should render the card with props", () => {
+  const { container } = customRender(
+    <Card 
+      img = "../../assets/for-hire-image.svg" 
+      dateOrTime = "18:25"
+      title = "Card"
+      cardInfo = "lorem ipsum" 
+      links = {["one", "two", "three"]}
     />
   );
   expect(container).toMatchSnapshot();
