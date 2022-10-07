@@ -2,16 +2,16 @@ import { render, screen } from "@testing-library/react";
 import Careers from "./PotentialCareers.jsx";
 import { customRender } from "../../utils/testUtils";
 
-it("it should match the snapshot", () => {
-    const { container } = customRender(
-      <Careers/>
-    );
-    expect(container).toMatchSnapshot();
-  });
+it("it should match the snapshot with props", () => {
+  const { container } = customRender(
+    <Careers potentialCareers={["job1", "job2", "bigjob"]} />
+  );
+  expect(container).toMatchSnapshot();
+});
 
 it("Should render in the potential careers heading", () => {
   // 1. Arrange
-  render(<Careers />);
+  render(<Careers potentialCareers={["job1", "job2", "bossman", "Career"]} />);
   // 2. Act
   const heading = screen.getByText("Potential Careers");
   // 3. Assert
@@ -20,10 +20,13 @@ it("Should render in the potential careers heading", () => {
 });
 
 it("Should render in the potential careers list", () => {
-
-  render(<Careers />);
+  render(
+    <Careers
+      potentialCareers={["lxcguic", "wcowev", "iavubwair", "CWc", "Career"]}
+    />
+  );
 
   const listItems = screen.queryAllByText("Career");
-  
+
   expect(listItems).toBeTruthy();
 });

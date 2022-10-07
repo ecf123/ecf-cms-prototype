@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`it should match the snapshot 1`] = `
+exports[`it should match the snapshot with props 1`] = `
 <div>
   <div
     class="career"
@@ -11,27 +11,22 @@ exports[`it should match the snapshot 1`] = `
       Potential Careers
     </h5>
     <ul
-      class="career__List"
+      class="career__list"
     >
       <li
-        class="career__List--item"
+        class="career__item"
       >
-        Career1
+        job1
       </li>
       <li
-        class="career__List--item"
+        class="career__item"
       >
-        Career2
+        job2
       </li>
       <li
-        class="career__List--item"
+        class="career__item"
       >
-        Career3
-      </li>
-      <li
-        class="career__List--item"
-      >
-        Career4
+        bigjob
       </li>
     </ul>
   </div>
