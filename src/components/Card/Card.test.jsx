@@ -61,9 +61,22 @@ it("should render the arrow icon", () => {
   expect(image).toBeInTheDocument();
 });
 
-it("Should render layout with children", () => {
+it("Should render the card with no props", () => {
   const { container } = customRender(
     <Card />
+  );
+  expect(container).toMatchSnapshot();
+});
+
+it("Should render the card with props", () => {
+  const { container } = customRender(
+    <Card 
+      img = "../../assets/for-hire-image.svg" 
+      dateOrTime = "18:25"
+      title = "Card"
+      cardInfo = "lorem ipsum" 
+      links = {["one", "two", "three"]}
+    />
   );
   expect(container).toMatchSnapshot();
 });

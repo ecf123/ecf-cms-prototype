@@ -1,9 +1,9 @@
-import React from "react";
 import "./Card.scss";
 import iconArrow from "../../assets/arrow-upper-right-black.svg";
-import "../../styles/_reset.scss";
 
 const Card = ({ img, dateOrTime, title, cardInfo, links }) => {
+  
+  typeof links === "string" ? links = [links] : links;
 
   const linksArr = links?.map((link, index) => {
     if (index % 2 == 0) {
