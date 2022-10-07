@@ -1,4 +1,5 @@
 const MarketPlaceMainCard = ({img, imgDescription, date, title, articleInfo}) => {
+  
   return (
     <div className='main-card'>
         <img className='main-card__image' src={img} alt={imgDescription} />
