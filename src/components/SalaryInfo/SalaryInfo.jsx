@@ -1,30 +1,37 @@
 import "./SalaryInfo.scss";
 
-const SalaryInfo = ({
-  salaryNumber,
-  salaryTitle1,
-  salaryTitle2,
-  salaryTitle3,
-  salaryPay1,
-  salaryPay2,
-  salaryPay3,
-}) => {
+const SalaryInfo = ({ avgSalaryNumber }) => {
+  const jobsArr = {
+    Advisor: "£25,000",
+    Analyst: "£5,000",
+    Audit: "£30,000",
+    Consultant: "£100,000",
+  };
+
+  const titleJSX = Object.keys(jobsArr).map((job) => {
+    return (
+      <h6 key={job} className="salary__title">
+        {job}
+      </h6>
+    );
+  });
+
+  const payJSX = Object.values(jobsArr).map((job) => {
+    return (
+      <h6 key={job} className="salary__pay">
+        {job}
+      </h6>
+    );
+  });
+
   return (
     <div className="salary">
       <h5 className="salary__heading">Average Salaries</h5>
-      <h2 className="salary__number">£99,999{salaryNumber}</h2>
+      <h2 className="salary__number">£999,999{avgSalaryNumber}</h2>
       <span className="salary__line"></span>
       <div className="salary__jobs">
-        <div className="salary__titles">
-          <h6 className="salary__title">abcde{salaryTitle1}</h6>
-          <h6 className="salary__title">abcde{salaryTitle2}</h6>
-          <h6 className="salary__title">abcde{salaryTitle3}</h6>
-        </div>
-        <div className="salary__pays">
-          <h6 className="salary__pay">abcde{salaryPay1}</h6>
-          <h6 className="salary__pay">abcdfe{salaryPay2}</h6>
-          <h6 className="salary__pay">abcddfdfe{salaryPay3}</h6>
-        </div>
+        <div className="salary__titles">{titleJSX}</div>
+        <div className="salary__pays">{payJSX}</div>
       </div>
     </div>
   );
