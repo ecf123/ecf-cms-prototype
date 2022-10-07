@@ -30,7 +30,6 @@ exports[`Should render MoreOption component 1`] = `
         <p
           class="text small-text grey"
         >
-           
           Edit
         </p>
       </button>
@@ -47,7 +46,6 @@ exports[`Should render MoreOption component 1`] = `
         <p
           class="text small-text red"
         >
-           
           Delete
         </p>
       </button>
