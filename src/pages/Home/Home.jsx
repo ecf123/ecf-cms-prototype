@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import PathwayHeader from "../../components/PathwayHeader/PathwayHeader";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         maxime tempora, temporibus beatae voluptas repellat rerum. Dignissimos,
         necessitatibus.
       </p>
+      <PathwayHeader/>
     </Layout>
   );
 };
