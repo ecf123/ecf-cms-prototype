@@ -1,4 +1,3 @@
-@use "../../styles/variables.scss" as *;
 @use "../../styles/main.scss" as *;
 
 .drop-down {
@@ -11,7 +10,7 @@
   &__title {
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    padding: 1.9rem;
     cursor: pointer;
     background: $color-white-smoke;
     color: $color-blue-navy-dark;
@@ -27,13 +26,13 @@
     clear: both;
     width: 100%;
     background-color: $color-white;
-    height: 0px;
+    height: 0;
     overflow: hidden;
     transition: height 0.4s ease;
   }
 
   &__list li {
-    padding: 30px;
+    padding: 1.9rem;
   }
   &__list li a {
     text-decoration: none;
@@ -44,14 +43,14 @@
   }
 
   &__image {
-    margin-right: 20px;
+    margin-right: 1.25rem;
   }
 }
 
 #click {
   position: absolute;
   opacity: 0;
-  height: 0px;
+  height: 0;
 }
 
 #click ~ label span .drop-down__arrow {

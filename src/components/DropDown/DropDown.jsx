@@ -1,7 +1,7 @@
 import "./DropDown.scss";
 import topicArrow from "../../assets/upside-down-arrow-grey.svg";
 
-const DropDown = ({ topicTitle, lessonTitle }) => {
+const DropDown = ({ topicTitle, lessonTitle, lessonType }) => {
   return (
     <nav className="drop-down">
       <input type="checkbox" id="click" />
@@ -16,7 +16,7 @@ const DropDown = ({ topicTitle, lessonTitle }) => {
         <li>
           <a href="#">
             <p className="drop-down__content">
-              <img src={topicArrow} alt="" className="drop-down__image" />
+              <img src={lessonType} alt="" className="drop-down__image" />
               {lessonTitle}
             </p>
           </a>
