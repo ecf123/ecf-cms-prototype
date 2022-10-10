@@ -2,7 +2,7 @@ import "./Card.scss";
 import iconArrow from "../../assets/arrow-upper-right-black.svg";
 import CategoriesMenu from "../CategoriesMenu/CategoriesMenu";
 
-const Card = ({ img, dateOrTime, title, cardInfo, links }) => {
+const Card = ({ img, dateOrTime, title, cardInfo, links, condition }) => {
   // typeof links === "string" ? (links = [links]) : links;
 
   // const linksArr = links?.map((link, index) => {
@@ -30,7 +30,7 @@ const Card = ({ img, dateOrTime, title, cardInfo, links }) => {
         <img className="card__icon" src={iconArrow} alt="Arrow Icon" />
       </div>
       <p className="card__info">{cardInfo}</p>
-      <CategoriesMenu links = {links}/>
+      <CategoriesMenu links = {links} condition={condition}/>
     </div>
   );
 };

@@ -12,6 +12,7 @@ const CardContainer = ({cards}) => {
                 title = {card.title} 
                 cardInfo = {card.cardInfo}
                 links = {card.links}
+                condition={true}
             />
         )
     })
