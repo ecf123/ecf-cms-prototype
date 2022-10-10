@@ -3,87 +3,8 @@ import "./ListComponentUniversal.scss";
 import {  Table } from "antd";
 import { useState } from "react";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
-import { ReactComponent as Barclays } from "../../assets/barclays-icon-white-background.svg";
-import { ReactComponent as Airbnb } from "../../assets/airbnb-logo.svg";
 
-const columns = [
-  {
-    title: "PATCHWAY NAME",
-    dataIndex: "patchway_name",
-  },
-  {
-    title: "PROVIDERS",
-    dataIndex: "providers",
-    render: () => {
-      return (
-        <>
-       <Barclays 
-        className="providers"
-        />
-        <Airbnb 
-        className="providers"
-       />
-       <Barclays
-        className="providers"
-        />
-       <Airbnb 
-        className="providers"
-       />
-       </>
-      );
-    }
-  },
-  {
-    title: "NO OF COURSES",
-    dataIndex: "no_of_courses",
-  },
-  {
-    title: "NO OF LESSONS",
-    dataIndex: "no_of_lessons",
-  },
-  {
-    title: "EST. COMPLETION TIME",
-    dataIndex: "est_completion_time",
-  },
-  {
-    title: "NO ENROLLED",
-    dataIndex: "no_enrolled",
-  },
-  {
-    title: "CATEGORY(S)",
-    dataIndex: "category",
-  },
-  {
-    title: " ",
-    dataIndex: "edit",
-    render: () => {
-      return (
-        <>
-          <DeleteOutlined
-            onClick={`clic`}
-            style={{ color: "red", marginRight: 12 }}
-          />
-          <EditOutlined onClick={`clic`} />
-        </>
-      );
-    },
-  },
-];
-const data = [];
-for (let i = 0; i < 2; i++) {
-  data.push({
-    key: i,
-    patchway_name: `Financial Forest`,
-    providers: `src`,
-    no_of_courses: `8`,
-    no_of_lessons: `8`,
-    est_completion_time: `20hrs`,
-    no_enrolled: 32,
-    category: `src`,
-    action: "",
-  });
-}
-const ListComponentUniversal = () => {
+const ListComponentUniversal = ({columnHeader, data, handleDelete, handleEdit}) => {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const onSelectChange = (newSelectedRowKeys) => {
     console.log("selectedRowKeys changed: ", selectedRowKeys);
@@ -126,6 +47,25 @@ const ListComponentUniversal = () => {
       },
     ],
   };
+
+  const columnLastItem = {
+    title: " ",
+    dataIndex: "edit",
+    render: () => {
+      return (
+        <>
+          <DeleteOutlined
+            onClick={handleDelete}
+            style={{ color: "red", marginRight: 12 }}
+          />
+          <EditOutlined onClick={handleEdit} />
+        </>
+      );
+    },
+  }
+
+const columns = columnHeader.push(columnLastItem);
+
   return (
     <>
       <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
