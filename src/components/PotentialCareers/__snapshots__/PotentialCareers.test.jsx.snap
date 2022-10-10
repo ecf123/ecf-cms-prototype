@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should match the snapshot with props 1`] = `
+<div>
+  <div
+    class="career"
+  >
+    <h5
+      class="career__heading"
+    >
+      Potential Careers
+    </h5>
+    <ul
+      class="career__list"
+    >
+      <li
+        class="career__item"
+      >
+        job1
+      </li>
+      <li
+        class="career__item"
+      >
+        job2
+      </li>
+      <li
+        class="career__item"
+      >
+        bigjob
+      </li>
+    </ul>
+  </div>
+</div>
+`;

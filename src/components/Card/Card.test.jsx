@@ -32,11 +32,7 @@ it("should display the header of the card on the screen", () => {
 
 it("should display the links on the screen", () => {
   //Arrange
-  render(
-    <Card
-      links={["linkOne"]}
-    />
-  );
+  render(<Card links={["linkOne"]} />);
   //Act
   const link = screen.getByText("linkOne");
   //Assert
@@ -62,20 +58,18 @@ it("should render the arrow icon", () => {
 });
 
 it("Should render the card with no props", () => {
-  const { container } = customRender(
-    <Card />
-  );
+  const { container } = customRender(<Card />);
   expect(container).toMatchSnapshot();
 });
 
 it("Should render the card with props", () => {
   const { container } = customRender(
-    <Card 
-      img = "../../assets/for-hire-image.svg" 
-      dateOrTime = "18:25"
-      title = "Card"
-      cardInfo = "lorem ipsum" 
-      links = {["one", "two", "three"]}
+    <Card
+      img="../../assets/for-hire-image.svg"
+      dateOrTime="18:25"
+      title="Card"
+      cardInfo="lorem ipsum"
+      links={["one", "two", "three"]}
     />
   );
   expect(container).toMatchSnapshot();
