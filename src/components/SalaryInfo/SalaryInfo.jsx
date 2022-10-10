@@ -1,12 +1,7 @@
 import "./SalaryInfo.scss";
 
-const SalaryInfo = ({ avgSalaryNumber }) => {
-  const jobsObject = {
-    Advisor: "£25,000",
-    Analyst: "£5,000",
-    Audit: "£30,000",
-    Consultant: "£100,000",
-  };
+const SalaryInfo = ({ avgSalaryNumber, jobsObject }) => {
+
 
   const titleJSX = Object.keys(jobsObject).map((job) => {
     return (
