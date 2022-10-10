@@ -1,0 +1,39 @@
+@use "../../styles/_typography" as *;
+@use "../../styles/_variables.scss" as *;
+@use "../../styles/_reset" as *;
+
+.career {
+  padding: 1rem;
+  width: 23.063rem;
+  height: fit-content;
+
+  background: #ffffff;
+
+  box-shadow: 0rem 1.25rem 2.5rem rgba(208, 209, 216, 0.24);
+  border-radius: 0.625rem;
+
+  &__heading {
+    margin-bottom: 1rem;
+    color: $color-blue-navy-dark;
+  }
+
+  &__list {
+    margin-left: 0.6rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    margin: 0.27rem;
+    color: $color-teal;
+    font-size: $font-size-extra-small;
+
+    &::marker {
+      width: 0.438rem;
+      height: 0.438rem;
+      color: $color-green-light;
+    }
+  }
+}
+
+
