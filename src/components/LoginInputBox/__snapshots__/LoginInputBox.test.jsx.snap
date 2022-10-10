@@ -10,7 +10,10 @@ exports[`Should render the login input box component 1`] = `
     />
     <input
       alt="input box"
+<<<<<<< HEAD
       class="input-box__input"
+=======
+>>>>>>> main
       type="text"
     />
   </div>
