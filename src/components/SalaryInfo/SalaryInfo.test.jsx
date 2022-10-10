@@ -10,7 +10,7 @@ it("Should match the snapshot, with the props", () => {
     Consultant: "£100,000",
   };
   const { container } = customRender(
-    <SalaryInfo avgSalaryNumber={"£99,999"} jobsObject={obj} />
+    <SalaryInfo avgSalaryNumber={"£99,999"} salariesObj={obj} />
   );
   expect(container).toMatchSnapshot();
 });
@@ -22,7 +22,7 @@ it("Should render in the SalaryInfo heading", () => {
     Audit: "£30,000",
     Consultant: "£100,000",
   };
-  render(<SalaryInfo avgSalaryNumber={"£99,999"} jobsObject={obj} />);
+  render(<SalaryInfo avgSalaryNumber={"£99,999"} salariesObj={obj} />);
   const heading = screen.getByText("Average Salaries");
   expect(heading).toBeInTheDocument();
 });
@@ -34,7 +34,7 @@ it("Should render the SalaryInfo titles and pay", () => {
     Audit: "£30,000",
     Consultant: "£100,000",
   };
-  render(<SalaryInfo avgSalaryNumber={"£99,999"} jobsObject={obj} />);
+  render(<SalaryInfo avgSalaryNumber={"£99,999"} salariesObj={obj} />);
   const title = screen.getByRole("heading", { name: /Consultant/i });
   const pay = screen.getByRole("heading", { name: /£25,000/i });
   expect(title).toBeInTheDocument();
