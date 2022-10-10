@@ -16,46 +16,41 @@ const AddPathway = ({
     freeTypeLabelTextTwo, 
     uploadLabelName}) => {
 
-    const [file, setFile] = useState();
-    const [fileName, setFileName] = useState();
-    const [shortInputOne, setShortInputOne] = useState("");
-    const [shortInputTwo, setShortInputTwo] = useState("");
-    const [freeTypeInputOne, setFreeTypeInputOne] = useState("");
-    const [freeTypeInputTwo, setFreeTypeInputTwo] = useState("");
+    const [pageInfo, setPageInfo] = useState({file: null, fileName: "", shortInputOne: "", shortInputTwo: "", freeTypeInputOne: "", freeTypeInputTwo: ""});
     const [errorMessage, setErrorMessage] = useState("");
 
     const handleFileChange = (e) => {
-      if (!file) setFileName(e.target.files[0].name);
-      file ? setFile(null) : setFile(URL.createObjectURL(e.target.files[0]));
+      if (!pageInfo.file) setPageInfo({fileName: e.target.files[0].name});
+      pageInfo.file ? setPageInfo({file: null}) : setPageInfo({file: URL.createObjectURL(e.target.files[0])});
     }
 
     const handleShortValueOne = (e) => {
-        setShortInputOne(e.target.value);
+        setPageInfo({ ...pageInfo, shortInputOne: e.target.value});
     }
 
     const handleShortValueTwo = (e) => {
-        setShortInputTwo(e.target.value);
+        setPageInfo({ ...pageInfo, shortInputTwo: e.target.value});
     }
 
     const handleFreeTypeValueOne = (e) => {
-        setFreeTypeInputOne(e.target.value);
+        setPageInfo({ ...pageInfo, freeTypeInputOne: e.target.value});
     }
 
     const handleFreeTypeValueTwo = (e) => {
-        setFreeTypeInputTwo(e.target.value);
+        setPageInfo({ ...pageInfo, freeTypeInputTwo: e.target.value});
     }
 
     const storeInputs = () => {
-        if(shortInputOne == "" && !shortLabelTextOne.includes("optional")){
+        if(pageInfo.shortInputOne == "" && !shortLabelTextOne.includes("optional")){
             setErrorMessage("Please enter the info needed for " + shortLabelTextOne);
         }
-        else if (shortInputTwo == "" && !shortLabelTextTwo.includes("optional")){
-            setErrorMessage("Please enter the info needed for " + shortLabelTextTwo);
-        }
-        else if (freeTypeInputOne == "" && !freeTypeLabelTextOne.includes("optional")){
+        else if (pageInfo.freeTypeInputOne == "" && !freeTypeLabelTextOne.includes("optional")){
             setErrorMessage("Please enter the info needed for " + freeTypeLabelTextOne);
         }
-        else if (freeTypeInputTwo == "" && !freeTypeLabelTextTwo.includes("optional")) {
+        else if (pageInfo.shortInputTwo == "" && !shortLabelTextTwo.includes("optional")){
+            setErrorMessage("Please enter the info needed for " + shortLabelTextTwo);
+        }
+        else if (pageInfo.freeTypeInputTwo == "" && !freeTypeLabelTextTwo.includes("optional")) {
             setErrorMessage("Please enter the info needed for " + freeTypeLabelTextTwo);
         }
         else {
@@ -107,11 +102,11 @@ const AddPathway = ({
 
         <div className='add-pathway__media-upload'>
             <MediaUploadBox 
-                file={file} 
+                file={pageInfo.file} 
                 handleFileChange={handleFileChange} 
                 uploadLabelName={uploadLabelName} 
                 uploadButtonText="Upload Image" 
-                fileName={fileName} 
+                fileName={pageInfo.fileName} 
             />
         </div>
     </div>
