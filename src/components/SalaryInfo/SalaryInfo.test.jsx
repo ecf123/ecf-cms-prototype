@@ -6,7 +6,7 @@ it("Should match the snapshot, with the props", () => {
   const { container } = customRender(
     <SalaryInfo
       avgSalaryNumber={"£99,999"}
-      jobsArr={
+      jobsObject={
         "Advisor: '£25,000', Analyst: '£5,000', Audit: '£30,000', Consultant: '£100,000'"
       }
     />
@@ -18,7 +18,7 @@ it("Should render in the SalaryInfo heading", () => {
   render(
     <SalaryInfo
       avgSalaryNumber={"£99,999"}
-      jobsArr={"Advisor: '£25,000', Analyst: '£5,000'"}
+      jobsObject={"Advisor: '£25,000', Analyst: '£5,000'"}
     />
   );
   const heading = screen.getByText("Average Salaries");
@@ -29,7 +29,7 @@ it("Should render the SalaryInfo titles and pay", () => {
   render(
     <SalaryInfo
       avgSalaryNumber={"£99,999"}
-      jobsArr={"Advisor: '£25,000', Analyst: '£5,000'"}
+      jobsObject={"Advisor: '£25,000', Analyst: '£5,000'"}
     />
   );
   const title = screen.getByRole("heading", { name: /Consultant/i });

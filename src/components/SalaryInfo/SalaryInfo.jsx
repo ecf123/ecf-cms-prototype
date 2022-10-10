@@ -1,14 +1,14 @@
 import "./SalaryInfo.scss";
 
 const SalaryInfo = ({ avgSalaryNumber }) => {
-  const jobsArr = {
+  const jobsObject = {
     Advisor: "£25,000",
     Analyst: "£5,000",
     Audit: "£30,000",
     Consultant: "£100,000",
   };
 
-  const titleJSX = Object.keys(jobsArr).map((job) => {
+  const titleJSX = Object.keys(jobsObject).map((job) => {
     return (
       <h6 key={job} className="salary__title">
         {job}
@@ -16,7 +16,7 @@ const SalaryInfo = ({ avgSalaryNumber }) => {
     );
   });
 
-  const payJSX = Object.values(jobsArr).map((job) => {
+  const payJSX = Object.values(jobsObject).map((job) => {
     return (
       <h6 key={job} className="salary__pay">
         {job}
