@@ -19,18 +19,15 @@ it("Should check if the checkbox has been checked", () => {
 });
 
 it("Should display lesson list if checkbox is checked", () => {
-
   const { container } = customRender(<DropDown title={"Business"} lessonTitle="Financial Planning with Barclays" />);
 
-  let contentDiv = document.getElementsByClassName("drop-down__list");
-let style = window.getComputedStyle(contentDiv[0]);
-  expect(style.height).toBe("0px");
+  const list = screen.getByRole("listitem");
+
+  expect(list).toHaveStyle({ height: " 0px" });
 
   fireEvent.click(screen.getByRole("checkbox"));
 
-  contentDiv = document.getElementsByClassName("drop-down__list");
-  style = window.getComputedStyle(contentDiv[0]);
-  expect(style.height).toBe("auto");
+  const listAfter = screen.getByRole("listitem");
 
-  
+  expect(listAfter).toHaveStyle({ height: " auto" });
 });
