@@ -46,11 +46,25 @@ const AddPathway = ({
     }
 
     const storeInputs = () => {
-        if(shortInputOne == "" || shortInputTwo == "" || freeTypeInputOne == "" || freeTypeInputTwo == "") {
-            setErrorMessage("Please enter the necessary message!")
+        if(!shortLabelTextOne.contains("optional") && shortInputOne == "") {
+            setErrorMessage("Please enter the information for " + shortLabelTextOne)
+        } else if (!shortLabelTextTwo.contains("optional") && shortInputTwo == "") {
+            setErrorMessage("Please enter the information for " + shortLabelTextTwo)
+        } else if (!freeTypeLabelTextOne.contains("optional") && freeTypeInputOne == "") {
+            setErrorMessage("Please enter the information for " + freeTypeInputOne)
+        } else if(!freeTypeLabelTextTwo.contains("optional") && freeTypeInputTwo == "") {
+            setErrorMessage("Please enter the information for " + freeTypeInputTwo)
         }
+
+    }
+
+    // const storeInputs1 = () => {
+    //     if((!shortLabelTextOne.contains("optional") && shortInputOne == "") || (!shortLabelTextTwo.contains("optional") && shortInputTwo == "") || (!freeTypeLabelTextOne.contains("optional") && freeTypeInputOne == "") || (!freeTypeLabelTextTwo.contains("optional") && freeTypeInputTwo == "")
+    //     ) {
+    //         setErrorMessage("Please enter the necessary message!")
+    //     }
         
-    } 
+    // } 
 
   return (
     <div className='add-pathway'>

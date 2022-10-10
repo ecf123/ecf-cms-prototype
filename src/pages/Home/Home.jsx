@@ -1,5 +1,5 @@
 // import Layout from "../../components/Layout/Layout";
-   import AddPathway from "../../containers/AddPage/AddPage";
+import AddPathway from "../../containers/AddPage/AddPage";
 
 const Home = () => {
   return (
