@@ -13,11 +13,18 @@
 
   &__input {
     height: 2.813rem;
-    width: 22.125rem;
     border: 0.063rem solid #e8e8e8;
     border-radius: 0.25rem;
     color: #000000;
     margin-top: 0.313rem;
     margin-bottom: 0.625rem;
   }
+}
+
+.short {
+  width: 22.125rem;
+}
+
+.long {
+  width: 28.063rem;
 }
