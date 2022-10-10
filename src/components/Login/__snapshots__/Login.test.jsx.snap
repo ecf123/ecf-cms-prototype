@@ -33,7 +33,7 @@ exports[`should render the form 1`] = `
         </label>
         <input
           alt="input box"
-          class="input-box__input"
+          class="input-box__input short"
           id="Email Address"
           type="text"
         />
@@ -49,7 +49,7 @@ exports[`should render the form 1`] = `
         </label>
         <input
           alt="input box"
-          class="input-box__input"
+          class="input-box__input short"
           id="Password"
           type="text"
         />

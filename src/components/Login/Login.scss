@@ -1,40 +1,40 @@
-@use "../../styles/variables.scss"as *;
-@use "../../styles/typography.scss"as *;
+@use "../../styles/variables.scss" as *;
+@use "../../styles/typography.scss" as *;
 
 .login {
-    height: 500px;
-    width: 450px;
-    border: 1px solid red;
-    background-color: $color-white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 10px;
+  height: 500px;
+  width: 450px;
+  border: 1px solid red;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
 
-    &__title {
-        &--heading {
-            color: $color-black;
-            font-family: $font-secondary;
-            font-size: 32px;
-            font-weight: 600;
-            line-height: 39px;
-        }
-
-        &--text {
-            color: $color-grey-dark;
-            font-family: $font-secondary;
-            font-style: normal;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 160%;
-        }
+  &__title {
+    &--heading {
+      color: $color-black;
+      font-family: $font-secondary;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 39px;
     }
 
-    &__alert {
-        color: red;
+    &--text {
+      color: $color-grey-dark;
+      font-family: $font-secondary;
+      font-style: normal;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 160%;
     }
+  }
 
-    &__success {
-        color: #000000;
-    }
+  &__alert {
+    color: red;
+  }
+
+  &__success {
+    color: #000000;
+  }
 }
