@@ -1,5 +1,5 @@
 // import Layout from "../../components/Layout/Layout";
-import AddPathway from "../../containers/AddPage/AddPage";
+import AddPage from "../../containers/AddPage/AddPage";
 
 const Home = () => {
   return (
@@ -27,7 +27,7 @@ const Home = () => {
     // freeTypeLabelTextTwo, 
     // uploadLabelName
 
-    <AddPathway 
+    <AddPage 
       shortLabelTextOne="Article Name" 
       shortLabelTextTwo="Additional Subtitle(s) (optional)" 
       shortPlaceHolderTextOne="e.g. Financial Forest" 
