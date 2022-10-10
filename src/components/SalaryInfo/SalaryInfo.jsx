@@ -1,7 +1,6 @@
 import "./SalaryInfo.scss";
 
 const SalaryInfo = ({ avgSalaryNumber, jobsObject }) => {
-
   const titleJSX = Object.keys(jobsObject).map((job) => {
     return (
       <h6 key={job} className="salary__title">
