@@ -5,23 +5,13 @@ import userEvent from "@testing-library/user-event";
 import DropDown from "./DropDown";
 
 it("Should render DropDown component", () => {
-  const { container } = customRender(
-    <DropDown
-      title={"Business"}
-      lessonTitle="Financial Planning with Barclays"
-    />
-  );
+  const { container } = customRender(<DropDown title={"Business"} lessonTitle="Financial Planning with Barclays" />);
 
   expect(container).toMatchSnapshot();
 });
 
 it("Should check if the checkbox has been checked", () => {
-  render(
-    <DropDown
-      title={"Business"}
-      lessonTitle="Financial Planning with Barclays"
-    />
-  );
+  render(<DropDown title={"Business"} lessonTitle="Financial Planning with Barclays" />);
 
   userEvent.click(screen.getByRole("checkbox"));
 
@@ -29,12 +19,7 @@ it("Should check if the checkbox has been checked", () => {
 });
 
 it("Should display lesson list if checkbox is checked", () => {
-  const { container } = customRender(
-    <DropDown
-      title={"Business"}
-      lessonTitle="Financial Planning with Barclays"
-    />
-  );
+  render(<DropDown title={"Business"} lessonTitle="Financial Planning with Barclays" />);
 
   const list = screen.getByRole("listitem");
 
