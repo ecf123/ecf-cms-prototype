@@ -4,6 +4,7 @@ exports[`should render the form 1`] = `
 <div>
   <form
     class="login"
+    data-testid="form"
     name="form"
   >
     <div
@@ -26,14 +27,14 @@ exports[`should render the form 1`] = `
       >
         <label
           class="input-box__label"
-          for="input-box"
+          for="Email Address"
         >
           Email Address
         </label>
         <input
           alt="input box"
           class="input-box__input"
-          id="input-box"
+          id="Email Address"
           type="text"
         />
       </div>
@@ -42,14 +43,14 @@ exports[`should render the form 1`] = `
       >
         <label
           class="input-box__label"
-          for="input-box"
+          for="Password"
         >
           Password
         </label>
         <input
           alt="input box"
           class="input-box__input"
-          id="input-box"
+          id="Password"
           type="text"
         />
       </div>

@@ -1,8 +1,7 @@
-import {render, screen, waitFor} from "@testing-library/react";
+import {render, screen, waitFor, fireEvent, getByRole, getByTestId} from "@testing-library/react";
 import Login from "./Login";
 import userEvent from "@testing-library/user-event";
 import { customRender } from "../../utils/testUtils";
-import Button from "../Button/Button";
 
 
 
@@ -65,22 +64,22 @@ it("should not submit the form when all credentials are valid and display succes
 });
 
 it("should submit the form when all credentials are valid and display success message", () => {
-    render (<Login />)
+    const { container } = render (<Login />)
 
-    const emailInput = screen.getByAltText("Email Address");
-    userEvent.type(emailInput,"@");
+    const emailInput = screen.getByLabelText("Email Address");
+    userEvent.type(emailInput,"lucy@gmail.com");
 
-    const passwordInput = screen.getByAltText("Password");
+    const passwordInput = screen.getByLabelText("Password");
     userEvent.type(passwordInput, "nology2022");
 
-    const button = screen.queryByText("Login");
-    userEvent.click(button);
-
-    const errorMessage = screen.queryByText("Sorry something went wrong")
-    const successMessage = screen.getByText("Thank you for submitting! We will be in touch");
+    fireEvent.submit(screen.getByTestId("form"))
     
-
+    const successMessage = screen.getByTestId("success");
+    const errorMessage = screen.queryByText("Sorry something went wrong")
+   
+     
+    expect (successMessage).toBeInTheDocument();
     expect (errorMessage).toBeFalsy();
-    expect (successMessage).toBeTruthy();
+    
 
 });
