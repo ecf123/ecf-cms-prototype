@@ -1,0 +1,15 @@
+@use "../../styles/_variables" as *;
+@use "../../styles/_typography" as *;
+
+.overview {
+
+    &__header {
+        color: $color-blue-navy-dark;
+        font-family: $font-secondary;
+    }
+
+    &__text {
+        color: $color-teal;
+        font-family: $font-secondary;
+    }
+}
