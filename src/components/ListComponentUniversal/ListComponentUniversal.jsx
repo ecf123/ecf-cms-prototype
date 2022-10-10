@@ -64,11 +64,11 @@ const ListComponentUniversal = ({columnHeader, data, handleDelete, handleEdit}) 
     },
   }
 
-const columns = columnHeader.push(columnLastItem);
+// const columns = columnHeader.push(columnLastItem);
 
   return (
     <>
-      <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
+      <Table rowSelection={rowSelection} columns={columnHeader} dataSource={data} />
     </>
   );
 };
