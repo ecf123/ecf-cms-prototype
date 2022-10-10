@@ -45,18 +45,25 @@ const AddPathway = ({
         setFreeTypeInputTwo(e.target.value);
     }
 
-    const storeInputs = () => {
-        if(!shortLabelTextOne.contains("optional") && shortInputOne == "") {
-            setErrorMessage("Please enter the information for " + shortLabelTextOne)
-        } else if (!shortLabelTextTwo.contains("optional") && shortInputTwo == "") {
-            setErrorMessage("Please enter the information for " + shortLabelTextTwo)
-        } else if (!freeTypeLabelTextOne.contains("optional") && freeTypeInputOne == "") {
-            setErrorMessage("Please enter the information for " + freeTypeInputOne)
-        } else if(!freeTypeLabelTextTwo.contains("optional") && freeTypeInputTwo == "") {
-            setErrorMessage("Please enter the information for " + freeTypeInputTwo)
-        }
+    // const storeInputs = () => {
+    //     if(!shortLabelTextOne.contains("optional") && shortInputOne == "") {
+    //         setErrorMessage("Please enter the information for " + shortLabelTextOne)
+    //     } else if (!shortLabelTextTwo.contains("optional") && shortInputTwo == "") {
+    //         setErrorMessage("Please enter the information for " + shortLabelTextTwo)
+    //     } else if (!freeTypeLabelTextOne.contains("optional") && freeTypeInputOne == "") {
+    //         setErrorMessage("Please enter the information for " + freeTypeInputOne)
+    //     } else if(!freeTypeLabelTextTwo.contains("optional") && freeTypeInputTwo == "") {
+    //         setErrorMessage("Please enter the information for " + freeTypeInputTwo)
+    //     }
 
+    // }
+
+    const storeInputs = () => {
+        if(shortInputOne == "" && !shortLabelTextOne.contains("optional") || shortInputTwo == "" && !shortLabelTextTwo.contains("optional") || freeTypeInputOne == "" && !freeTypeLabelTextOne.conatins("optional") || freeTypeInputTwo == "" && !freeTypeLabelTextTwo.contains("optional")) {
+        setErrorMessage("Please enter the necessary message!")
+      }
     }
+
 
     // const storeInputs1 = () => {
     //     if((!shortLabelTextOne.contains("optional") && shortInputOne == "") || (!shortLabelTextTwo.contains("optional") && shortInputTwo == "") || (!freeTypeLabelTextOne.contains("optional") && freeTypeInputOne == "") || (!freeTypeLabelTextTwo.contains("optional") && freeTypeInputTwo == "")
@@ -90,9 +97,8 @@ const AddPathway = ({
                 handleFreeTypeValue={handleFreeTypeValueTwo}
             />
 
-            <div className='add-pathway__error-message'>
-                <p>{errorMessage}</p>
-            </div>
+            <p className='add-pathway__error-message'>{errorMessage}</p>
+           
 
             <div className="add-pathway__buttons">
                 <Button 

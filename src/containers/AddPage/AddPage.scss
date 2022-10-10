@@ -49,6 +49,10 @@
         grid-area: media-upload;
    }
 
+   &__error-message {
+    color: $color-blue-navy-dark;
+   }
+
 }
 
 
