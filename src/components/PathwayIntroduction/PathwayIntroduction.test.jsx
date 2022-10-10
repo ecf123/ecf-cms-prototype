@@ -14,6 +14,14 @@ describe("PathwayIntroduction component", () => {
     expect(image).toBeInTheDocument();
   });
 
+  it("renders the image correctly", () => {
+    render(
+      <PathwayIntroduction image="../../assets/money-growing-on-tree.svg" />
+    );
+    const image = screen.queryByText("pathway thumbnail");
+    expect(image).toBeFalsy();
+  });
+
   it("renders the description", () => {
     render(<PathwayIntroduction description={"Description"} />);
     const description = screen.getByText("Description");

@@ -1,8 +1,5 @@
 import "./PathwayIntroduction.scss";
-import React from "react";
-
-const PathwayIntroduction = (props) => {
-  const { image, description } = props;
+const PathwayIntroduction = ({ image, description }) => {
   return (
     <div className="pathway-introduction">
       <img
