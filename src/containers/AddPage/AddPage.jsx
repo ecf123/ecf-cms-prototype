@@ -45,33 +45,23 @@ const AddPathway = ({
         setFreeTypeInputTwo(e.target.value);
     }
 
-    // const storeInputs = () => {
-    //     if(!shortLabelTextOne.contains("optional") && shortInputOne == "") {
-    //         setErrorMessage("Please enter the information for " + shortLabelTextOne)
-    //     } else if (!shortLabelTextTwo.contains("optional") && shortInputTwo == "") {
-    //         setErrorMessage("Please enter the information for " + shortLabelTextTwo)
-    //     } else if (!freeTypeLabelTextOne.contains("optional") && freeTypeInputOne == "") {
-    //         setErrorMessage("Please enter the information for " + freeTypeInputOne)
-    //     } else if(!freeTypeLabelTextTwo.contains("optional") && freeTypeInputTwo == "") {
-    //         setErrorMessage("Please enter the information for " + freeTypeInputTwo)
-    //     }
-
-    // }
-
     const storeInputs = () => {
-        if(shortInputOne == "" && !shortLabelTextOne.contains("optional") || shortInputTwo == "" && !shortLabelTextTwo.contains("optional") || freeTypeInputOne == "" && !freeTypeLabelTextOne.conatins("optional") || freeTypeInputTwo == "" && !freeTypeLabelTextTwo.contains("optional")) {
-        setErrorMessage("Please enter the necessary message!")
-      }
+        if(shortInputOne == "" && !shortLabelTextOne.includes("optional")){
+            setErrorMessage("Please enter the info needed for " + shortLabelTextOne);
+        }
+        else if (shortInputTwo == "" && !shortLabelTextTwo.includes("optional")){
+            setErrorMessage("Please enter the info needed for " + shortLabelTextTwo);
+        }
+        else if (freeTypeInputOne == "" && !freeTypeLabelTextOne.includes("optional")){
+            setErrorMessage("Please enter the info needed for " + freeTypeLabelTextOne);
+        }
+        else if (freeTypeInputTwo == "" && !freeTypeLabelTextTwo.includes("optional")) {
+            setErrorMessage("Please enter the info needed for " + freeTypeLabelTextTwo);
+        }
+        else {
+            setErrorMessage("");
+        }
     }
-
-
-    // const storeInputs1 = () => {
-    //     if((!shortLabelTextOne.contains("optional") && shortInputOne == "") || (!shortLabelTextTwo.contains("optional") && shortInputTwo == "") || (!freeTypeLabelTextOne.contains("optional") && freeTypeInputOne == "") || (!freeTypeLabelTextTwo.contains("optional") && freeTypeInputTwo == "")
-    //     ) {
-    //         setErrorMessage("Please enter the necessary message!")
-    //     }
-        
-    // } 
 
   return (
     <div className='add-pathway'>
