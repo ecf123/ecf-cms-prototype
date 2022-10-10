@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the card with no props 1`] = `
+<div>
+  <div
+    class="card-container"
+  />
+</div>
+`;
+
+exports[`it should match the snapshot with props 1`] = `
+<div>
+  <div
+    class="card-container"
+  >
+    <div
+      class="card"
+    >
+      <img
+        alt="Card Image"
+        class="card__image"
+        src="for-hire-image.svg"
+      />
+      <p
+        class="card__date"
+      >
+        12:24
+      </p>
+      <div
+        class="card__header"
+      >
+        <h2
+          class="card__title"
+        >
+          no
+        </h2>
+        <img
+          alt="Arrow Icon"
+          class="card__icon"
+          src="arrow-upper-right-black.svg"
+        />
+      </div>
+      <p
+        class="card__info"
+      >
+        why
+      </p>
+      <ul
+        class="card__links"
+      >
+        <li
+          class="card__link card__link--purple"
+        >
+          one
+        </li>
+        <li
+          class="card__link card__link--darkpurple"
+        >
+          asdf
+        </li>
+        <li
+          class="card__link card__link--purple"
+        >
+          454
+        </li>
+      </ul>
+    </div>
+    <div
+      class="card"
+    >
+      <img
+        alt="Card Image"
+        class="card__image"
+        src="for-hire-image.svg"
+      />
+      <p
+        class="card__date"
+      >
+        12:23
+      </p>
+      <div
+        class="card__header"
+      >
+        <h2
+          class="card__title"
+        >
+          yes
+        </h2>
+        <img
+          alt="Arrow Icon"
+          class="card__icon"
+          src="arrow-upper-right-black.svg"
+        />
+      </div>
+      <p
+        class="card__info"
+      >
+        why not
+      </p>
+      <ul
+        class="card__links"
+      >
+        <li
+          class="card__link card__link--purple"
+        >
+          one
+        </li>
+        <li
+          class="card__link card__link--darkpurple"
+        >
+          asdf
+        </li>
+        <li
+          class="card__link card__link--purple"
+        >
+          454
+        </li>
+      </ul>
+    </div>
+    <div
+      class="card"
+    >
+      <img
+        alt="Card Image"
+        class="card__image"
+        src="for-hire-image.svg"
+      />
+      <p
+        class="card__date"
+      >
+        12:23
+      </p>
+      <div
+        class="card__header"
+      >
+        <h2
+          class="card__title"
+        >
+          yes
+        </h2>
+        <img
+          alt="Arrow Icon"
+          class="card__icon"
+          src="arrow-upper-right-black.svg"
+        />
+      </div>
+      <p
+        class="card__info"
+      >
+        why not
+      </p>
+      <ul
+        class="card__links"
+      >
+        <li
+          class="card__link card__link--purple"
+        >
+          one
+        </li>
+        <li
+          class="card__link card__link--darkpurple"
+        >
+          asdf
+        </li>
+        <li
+          class="card__link card__link--purple"
+        >
+          454
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
