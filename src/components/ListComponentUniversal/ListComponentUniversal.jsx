@@ -1,6 +1,6 @@
 import "antd/dist/antd.css";
 import "./ListComponentUniversal.scss";
-import {  Table } from "antd";
+import { Table } from "antd";
 import { useState } from "react";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 
@@ -72,4 +72,5 @@ const columns = columnHeader.push(columnLastItem);
     </>
   );
 };
+
 export default ListComponentUniversal;
