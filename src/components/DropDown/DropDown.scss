@@ -2,9 +2,12 @@
 @use "../../styles/main.scss" as *;
 
 .drop-down {
+  max-width: 55.5rem;
   font-family: $font-secondary;
   letter-spacing: $letter-spacing;
   font-size: $font-size-small;
+  font-weight: $font-weight-regular;
+
   &__title {
     display: flex;
     justify-content: space-between;
@@ -12,7 +15,6 @@
     cursor: pointer;
     background: $color-white-smoke;
     color: $color-blue-navy-dark;
-    font-weight: $font-weight-regular;
   }
 
   &__title::after {
@@ -28,26 +30,21 @@
     height: 0px;
     overflow: hidden;
     transition: height 0.4s ease;
-    
   }
 
   &__list li {
     padding: 30px;
-    
   }
   &__list li a {
     text-decoration: none;
   }
-  
+
   &__content {
     color: $color-grey-light;
-    font-style: $font-secondary;
-    font-weight: $font-weight-regular;
   }
 
   &__image {
     margin-right: 20px;
-    
   }
 }
 
@@ -58,14 +55,13 @@
 }
 
 #click ~ label span .drop-down__arrow {
-    transition: all ease-in-out .3s;
-  }
+  transition: all ease-in-out 0.3s;
+}
 
 #click:checked ~ label span .drop-down__arrow {
-    transform: rotate(180deg);
-  }
+  transform: rotate(180deg);
+}
 
 #click:checked ~ .drop-down__list {
   height: auto;
 }
-

@@ -8,7 +8,7 @@ const DropDown = ({ topicTitle, lessonTitle }) => {
       <label htmlFor="click">
         <span className="drop-down__title">
           {topicTitle}
-          <img src={topicArrow} alt="" className="drop-down__arrow"/>
+          <img src={topicArrow} alt="" className="drop-down__arrow" />
         </span>
       </label>
 
