@@ -14,9 +14,8 @@ for (let i = 0; i < 5; i++) {
     id: i,
     pathway_name: `Financial Forest + ${i}`,
     providers: [
-      // "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ficons%2Fsantander.svg?alt=media&token=4be9b1c3-9230-4559-89eb-4fc13b219f08",
-      // "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ficons%2Fhsbc.svg?alt=media&token=f568f1fc-ade3-4bbf-9aee-1dc841cce600",
-      // "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ficons%2Fhalifax.svg?alt=media&token=0b431ade-cb19-4cc1-bc7d-b4d4456146a0",
+      "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ficons%2Fhsbc.svg?alt=media&token=f568f1fc-ade3-4bbf-9aee-1dc841cce600",
+      "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ficons%2Fhalifax.svg?alt=media&token=0b431ade-cb19-4cc1-bc7d-b4d4456146a0",
       Barclays,
       Airbnb
     ],
@@ -44,10 +43,10 @@ const Home = () => {
         render: (_, { category }) => (
           <>
             {category.map((tag) => {
-              let color = tag.length > 7 ? 'geekblue' : 'green';
+              let color = tag.length > 7 ? 'processing' : 'success';
     
               if (tag === 'developer') {
-                color = 'volcano';
+                color = 'error';
               }
     
               return (
@@ -67,7 +66,7 @@ const Home = () => {
         render: (_, { providers }) => (
           <>
             {providers.map((tag) => (
-              <img src={tag} key={tag}/>
+              <img src={tag} key={tag} className="providers"/>
             ))}
           </>)
       })

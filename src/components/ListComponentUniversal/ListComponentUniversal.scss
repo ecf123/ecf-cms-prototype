@@ -76,7 +76,15 @@ body {
 
 //classname should be assigned to the providers icons in the table
 .providers {
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding:0.2rem;
     margin-right: -0.3rem;
+    background: $color-white;
+    border-radius: 50%;
+}
+
+.ant-tag {
+    border-radius: 15px;
+    border: none;
 }
