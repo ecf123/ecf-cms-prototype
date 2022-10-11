@@ -5,6 +5,7 @@ const Short = ({
   shortType,
   shortPlaceHolderText,
   handleShortValue,
+  name
 }) => {
   return (
     <div className="short">
@@ -15,6 +16,7 @@ const Short = ({
         // Will apply spellcheck to inputed text
         spellCheck="true"
         placeholder={shortPlaceHolderText}
+        name={name}
         // Value of input will update as text is typed
         onChange={handleShortValue}
       ></input>

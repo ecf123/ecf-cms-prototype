@@ -4,6 +4,7 @@ const FreeType = ({
   freeTypeLabelText,
   freeTypePlaceHolderText,
   handleFreeTypeValue,
+  name
 }) => {
   return (
     <div className="free-type">
@@ -14,6 +15,7 @@ const FreeType = ({
         // Will apply spellcheck to inputed text
         spellCheck="true"
         placeholder={freeTypePlaceHolderText}
+        name={name}
         // Value of input will update as text is typed
         onChange={handleFreeTypeValue}
       ></textarea>
