@@ -15,10 +15,10 @@ const Home = () => {
     //   </p>
     // </Layout>
     <AddPage 
-    shortLabelTextOne="optional"
-    shortLabelTextTwo="num 2" 
-    freeTypeLabelTextOne="num 3"
-    freeTypeLabelTextTwo="free type two"
+    shortLabelTextOne="Input 1 (optional)"
+    shortLabelTextTwo="Input 3" 
+    freeTypeLabelTextOne="Input 2"
+    freeTypeLabelTextTwo="Input 4"
     />
   );
 };
