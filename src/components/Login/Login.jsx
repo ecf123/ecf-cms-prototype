@@ -54,17 +54,18 @@ const Login = () => {
               inputBoxStyle="input-box__input short"
               labelText="Password"
             />
+            {hasError && (
+              <div>
+                <p className="login__alert">Sorry something went wrong </p>{" "}
+              </div>
+            )}
           </div>
+
           <Button
             style={"button login-black square-border"}
             textStyle={"text medium-text black"}
             buttonText={"Login"}
           />
-          {hasError && (
-            <div>
-              <p className="login__alert">Sorry something went wrong </p>{" "}
-            </div>
-          )}
         </form>
       )}
     </>
