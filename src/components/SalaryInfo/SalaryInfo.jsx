@@ -9,9 +9,9 @@ const SalaryInfo = ({ avgSalaryNumber, salariesObj }) => {
     );
   });
 
-  const payJSX = Object.values(salariesObj).map((salary) => {
+  const payJSX = Object.values(salariesObj).map((salary, index) => {
     return (
-      <h6 key={salary} className="salary__pay">
+      <h6 key={index} className="salary__pay">
         {salary}
       </h6>
     );
