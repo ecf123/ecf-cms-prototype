@@ -49,20 +49,20 @@
   }
 }
 
-#click {
+input {
   position: absolute;
   opacity: 0;
   height: 0;
 }
 
-#click ~ label span .drop-down__arrow {
+input ~ label span .drop-down__arrow {
   transition: all ease-in-out 0.3s;
 }
 
-#click:checked ~ label span .drop-down__arrow {
+input:checked ~ label span .drop-down__arrow {
   transform: rotate(180deg);
 }
 
-#click:checked ~ .drop-down__list {
+input:checked ~ .drop-down__list {
   height: auto;
 }
