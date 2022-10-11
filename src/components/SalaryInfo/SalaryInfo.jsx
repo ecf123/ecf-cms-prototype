@@ -1,10 +1,9 @@
 import "./SalaryInfo.scss";
 
-const SalaryInfo = ({salariesObj}) => {
-  
+const SalaryInfo = ({ salariesObj }) => {
   const salariesIntArray = Object.values(salariesObj).map((salary) => {
-    return (salary.toLocaleString("en"))
-})
+    return salary.toLocaleString("en");
+  });
 
   const titleJSX = Object.keys(salariesObj).map((role) => {
     return (
@@ -22,7 +21,9 @@ const SalaryInfo = ({salariesObj}) => {
     );
   });
 
-  const avgPayJSX = Object.values(salariesObj).reduce((a, b) => a+b).toLocaleString("en")
+  const avgPayJSX = Object.values(salariesObj)
+    .reduce((a, b) => a + b)
+    .toLocaleString("en");
 
   return (
     <div className="salary">
