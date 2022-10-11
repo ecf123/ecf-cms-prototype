@@ -1,12 +1,12 @@
-import Card from '../../components/Card/Card'
 import './CardContainer.scss'
+import Card from '../../components/Card/Card'
 
 const CardContainer = ({cards}) => {
 
-    const renderCards = cards?.map((card, index) => {
+    const renderCards = cards?.map((card) => {
         return (
             <Card 
-                key = {index}
+                key={card.title}
                 img = {card.img}
                 dateOrTime = {card.dateOrTime}
                 title = {card.title} 
