@@ -1,26 +1,22 @@
 import "./Card.scss";
 import iconArrow from "../../assets/arrow-upper-right-black.svg";
-import CategoriesMenu from "../CategoriesMenu/CategoriesMenu";
-
-const Card = ({ img, dateOrTime, title, cardInfo, links, condition }) => {
-  // typeof links === "string" ? (links = [links]) : links;
-
-  // const linksArr = links?.map((link, index) => {
-  //   if (index % 2 == 0) {
-  //     return (
-  //       <li key={index} className="card__link card__link--purple">
-  //         {link}
-  //       </li>
-  //     );
-  //   } else {
-  //     return (
-  //       <li key={index} className="card__link card__link--darkpurple">
-  //         {link}
-  //       </li>
-  //     );
-  //   }
-  // });
-
+const Card = ({ img, dateOrTime, title, cardInfo, links }) => {
+  typeof links === "string" ? (links = [links]) : links;
+  const linksArr = links?.map((link, index) => {
+    if (index % 2 == 0) {
+      return (
+        <li key={index} className="card__link card__link--purple">
+          {link}
+        </li>
+      );
+    } else {
+      return (
+        <li key={index} className="card__link card__link--darkpurple">
+          {link}
+        </li>
+      );
+    }
+  });
   return (
     <div className="card">
       <img className="card__image" src={img} alt="Card Image" />
@@ -30,9 +26,8 @@ const Card = ({ img, dateOrTime, title, cardInfo, links, condition }) => {
         <img className="card__icon" src={iconArrow} alt="Arrow Icon" />
       </div>
       <p className="card__info">{cardInfo}</p>
-      <CategoriesMenu links = {links} condition={condition}/>
+      <ul className="card__links">{linksArr}</ul>
     </div>
   );
 };
-
 export default Card;

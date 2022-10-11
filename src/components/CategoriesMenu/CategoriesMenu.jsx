@@ -1,4 +1,3 @@
-import React from "react";
 import "./CategoriesMenu.scss";
 import arrow from "../../assets/going-up-graph-arrow-grey.svg";
 import trophy from "../../assets/trophy-icon-grey.svg";
@@ -13,7 +12,7 @@ const CategoriesMenu = ({ links, condition }) => {
       if (condition) {
         return (
           <li key={index} className="categories-menu__item--marketplace">
-            <img className="categories-menu__item--icons" src={arrow} alt="Arrow Icon" />
+            <img className="categories-menu__item--icons" src={arrow} alt="Icon" />
             {link}
           </li>
         );
@@ -31,7 +30,7 @@ const CategoriesMenu = ({ links, condition }) => {
       if (condition) {
         return (
           <li key={index} className="categories-menu__item--marketplace">
-            <img className="categories-menu__item--icons" src={trophy} alt="Trophy icon" />
+            <img className="categories-menu__item--icons" src={trophy} alt="Icon" />
             {link}
           </li>
         );
