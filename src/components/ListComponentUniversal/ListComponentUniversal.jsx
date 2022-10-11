@@ -2,9 +2,8 @@ import "antd/dist/antd.css";
 import "./ListComponentUniversal.scss";
 import { Table } from "antd";
 import { useState } from "react";
-import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 
-const ListComponentUniversal = ({columnHeader, data, handleDelete, handleEdit}) => {
+const ListComponentUniversal = ({columns, data}) => {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const onSelectChange = (newSelectedRowKeys) => {
     console.log("selectedRowKeys changed: ", selectedRowKeys);
@@ -20,9 +19,9 @@ const ListComponentUniversal = ({columnHeader, data, handleDelete, handleEdit}) 
       {
         key: "odd",
         text: "Select Odd Row",
-        onSelect: (changableRowKeys) => {
+        onSelect: (changeableRowKeys) => {
           let newSelectedRowKeys = [];
-          newSelectedRowKeys = changableRowKeys.filter((_, index) => {
+          newSelectedRowKeys = changeableRowKeys.filter((_, index) => {
             if (index % 2 !== 0) {
               return false;
             }
@@ -34,9 +33,9 @@ const ListComponentUniversal = ({columnHeader, data, handleDelete, handleEdit}) 
       {
         key: "even",
         text: "Select Even Row",
-        onSelect: (changableRowKeys) => {
+        onSelect: (changeableRowKeys) => {
           let newSelectedRowKeys = [];
-          newSelectedRowKeys = changableRowKeys.filter((_, index) => {
+          newSelectedRowKeys = changeableRowKeys.filter((_, index) => {
             if (index % 2 !== 0) {
               return true;
             }
@@ -48,27 +47,9 @@ const ListComponentUniversal = ({columnHeader, data, handleDelete, handleEdit}) 
     ],
   };
 
-  const columnLastItem = {
-    title: " ",
-    dataIndex: "edit",
-    render: () => {
-      return (
-        <>
-          <DeleteOutlined
-            onClick={handleDelete}
-            style={{ color: "red", marginRight: 12 }}
-          />
-          <EditOutlined onClick={handleEdit} />
-        </>
-      );
-    },
-  }
-
-// const columns = columnHeader.push(columnLastItem);
-
   return (
     <>
-      <Table rowSelection={rowSelection} columns={columnHeader} dataSource={data} />
+      <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
     </>
   );
 };
