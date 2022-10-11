@@ -4,13 +4,16 @@ const FreeType = ({
   freeTypeLabelText,
   freeTypePlaceHolderText,
   handleFreeTypeValue,
-  name
+  name,
+  inputClassName
 }) => {
   return (
     <div className="free-type">
       <label className="free-type__label">{freeTypeLabelText}</label>
       <textarea
-        className="free-type__input"
+        // free-type__input is used for the design regular input
+        // free-type__input--empty is used for the design of a red input that has empty input after submit is clickec
+        className={inputClassName}
         type="text"
         // Will apply spellcheck to inputed text
         spellCheck="true"

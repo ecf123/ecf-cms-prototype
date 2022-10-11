@@ -5,13 +5,16 @@ const Short = ({
   shortType,
   shortPlaceHolderText,
   handleShortValue,
-  name
+  name,
+  inputClassName
 }) => {
   return (
     <div className="short">
       <label className="short__label">{shortLabelText}</label>
       <input
-        className="short__input"
+        // short__input is used for the design regular input
+        // short__input--empty is used for the design of a red input that has empty input after submit is clickec
+        className={inputClassName}
         type={shortType}
         // Will apply spellcheck to inputed text
         spellCheck="true"
