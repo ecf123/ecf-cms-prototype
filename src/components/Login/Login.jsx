@@ -1,8 +1,7 @@
-import React from "react";
+import "./Login.scss";
 import { useState } from "react";
 import Button from "../Button/Button";
 import LoginInputBox from "../LoginInputBox/LoginInputBox";
-import "./Login.scss";
 
 const Login = () => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
@@ -62,8 +61,8 @@ const Login = () => {
             buttonText={"Login"}
           />
           {hasError && (
-            <div className="login__alert">
-              <p>Sorry something went wrong </p>{" "}
+            <div>
+              <p className="login__alert">Sorry something went wrong </p>{" "}
             </div>
           )}
         </form>

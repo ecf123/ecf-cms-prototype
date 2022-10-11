@@ -1,11 +1,4 @@
-import {
-  render,
-  screen,
-  waitFor,
-  fireEvent,
-  getByRole,
-  getByTestId,
-} from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import Login from "./Login";
 import userEvent from "@testing-library/user-event";
 import { customRender } from "../../utils/testUtils";
@@ -73,7 +66,7 @@ it("should not submit the form when all credentials are valid and display succes
 });
 
 it("should submit the form when all credentials are valid and display success message", () => {
-  const { container } = render(<Login />);
+  render(<Login />);
 
   const emailInput = screen.getByLabelText("Email Address");
   userEvent.type(emailInput, "lucy@gmail.com");

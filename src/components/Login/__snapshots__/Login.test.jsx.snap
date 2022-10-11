@@ -18,7 +18,8 @@ exports[`should render the form 1`] = `
       <p
         class="login__title--text"
       >
-        Feugiat magna viverra pellentesque habitant. Libero id amet nisl, tellus cras eleifend et in. 
+        Feugiat magna viverra pellentesque habitant. Libero id amet nisl, tellus cras eleifend et in.
+         
       </p>
     </div>
     <div>
