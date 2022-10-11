@@ -10,22 +10,26 @@ exports[`PathwayHeader component matches the snapshot taken 1`] = `
     >
       Pathway Structure
     </h2>
-    <button
-      class="button black round-border medium"
+    <a
+      href="/*"
     >
-      <div
-        class="medium-img white-svg"
+      <button
+        class="button black round-border medium"
       >
-        <svg>
-          pen-icon.svg
-        </svg>
-      </div>
-      <p
-        class="text medium-text black"
-      >
-        Add Course
-      </p>
-    </button>
+        <div
+          class="medium-img white-svg"
+        >
+          <svg>
+            pen-icon.svg
+          </svg>
+        </div>
+        <p
+          class="text medium-text black"
+        >
+          Add Course
+        </p>
+      </button>
+    </a>
   </div>
 </div>
 `;
