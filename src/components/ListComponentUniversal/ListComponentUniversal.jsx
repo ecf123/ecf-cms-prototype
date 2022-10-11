@@ -1,4 +1,4 @@
-import "antd/dist/antd.css";
+import 'antd/dist/antd.min.css';
 import "./ListComponentUniversal.scss";
 import { Table } from "antd";
 import { useState } from "react";
