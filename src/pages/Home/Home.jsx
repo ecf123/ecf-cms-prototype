@@ -1,12 +1,7 @@
 import Layout from "../../components/Layout/Layout";
-import Login from "../../components/Login/Login";
 
 const Home = () => {
-  return (
-    <Layout>
-      <Login />
-    </Layout>
-  );
+  return <Layout />;
 };
 
 export default Home;
