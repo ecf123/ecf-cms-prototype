@@ -3,7 +3,7 @@ import "./ListComponentUniversal.scss";
 import { Table } from "antd";
 import { useState } from "react";
 // import { ReactComponent as Barclays } from "../../assets/barclays-icon-white-background.svg";
-import Airbnb from "../../assets/airbnb-logo.svg";
+// import Airbnb from "../../assets/airbnb-logo.svg";
 // import { render } from "@testing-library/react/types
 // import { render } from "react-dom";
 
@@ -27,21 +27,21 @@ const ListComponentUniversal = ({ columns, data }) => {
   //   return element;
   // });
 
-  data = data.map((element) => {
-    if (element.providersIcon) {
-      element.providersIcon.map((icon, index) => {
-        console.log(icon);
-        // render: () => {
-        return (
-          <div key={index}>
-            <img src={Airbnb} className="providers" alt="icon" />
-          </div>
-        );
-        // };
-      });
-    }
-    return element;
-  });
+  // data = data.map((element) => {
+  //   if (element.providersIcon) {
+  //     element.providersIcon.map((icon, index) => {
+  //       console.log(icon);
+  //       // render: () => {
+  //       return (
+  //         <div key={index}>
+  //           <img src={Airbnb} className="providers" alt="icon" />
+  //         </div>
+  //       );
+  //       // };
+  //     });
+  //   }
+  //   return element;
+  // });
 
   const rowSelection = {
     selectedRowKeys,

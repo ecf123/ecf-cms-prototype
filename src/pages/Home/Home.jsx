@@ -1,14 +1,11 @@
 import Layout from "../../components/Layout/Layout";
 import ListComponentUniversal from "../../components/ListComponentUniversal/ListComponentUniversal";
-import { Modal, Input } from "antd";
-// import Barclays from "../../assets/barclays-icon-white-background.svg";
+import { Modal, Input, Tag } from "antd";
+import Barclays from "../../assets/barclays-icon-white-background.svg";
 import Airbnb from "../../assets/airbnb-logo.svg";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { useState } from "react";
 
-// const textToImage = (image) => {
-//   return <img src={image} className="providers" />;
-// };
 
 const data = [];
 for (let i = 0; i < 5; i++) {
@@ -16,18 +13,18 @@ for (let i = 0; i < 5; i++) {
     key: i,
     id: i,
     pathway_name: `Financial Forest + ${i}`,
-    providersIcon: [
-      Airbnb,
-      Airbnb,
-      // textToImage(Airbnb),
-      // textToImage(Airbnb),
-      // textToImage(Airbnb),
+    providers: [
+      // "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ficons%2Fsantander.svg?alt=media&token=4be9b1c3-9230-4559-89eb-4fc13b219f08",
+      // "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ficons%2Fhsbc.svg?alt=media&token=f568f1fc-ade3-4bbf-9aee-1dc841cce600",
+      // "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ficons%2Fhalifax.svg?alt=media&token=0b431ade-cb19-4cc1-bc7d-b4d4456146a0",
+      Barclays,
+      Airbnb
     ],
     no_of_courses: `8`,
     no_of_lessons: `8`,
     est_completion_time: `20hrs`,
     no_enrolled: 32,
-    category: `management`,
+    category: [`management + ${i}`, 'developer', 'banking' ],
   });
 }
 
@@ -39,30 +36,48 @@ const Home = () => {
   const columns = [];
 
   Object.keys(data[0]).forEach((header) => {
-    // if (header == "providersIcon") {
-    // }
-
-    if (header != "id" && header != "key")
+    if (header == "category") {
+      columns.push({
+        title: 'CATEGORY',
+        key: 'category',
+        dataIndex: 'category',
+        render: (_, { category }) => (
+          <>
+            {category.map((tag) => {
+              let color = tag.length > 7 ? 'geekblue' : 'green';
+    
+              if (tag === 'developer') {
+                color = 'volcano';
+              }
+    
+              return (
+                <Tag color={color} key={tag}>
+                  {tag.toUpperCase()}
+                </Tag>
+              );
+            })}
+          </>
+        ),
+      },)
+    } else if (header == "providers") {
+      columns.push({
+        key: "providers",
+        title: "Providers",
+        dataIndex: "providers",
+        render: (_, { providers }) => (
+          <>
+            {providers.map((tag) => (
+              <img src={tag} key={tag}/>
+            ))}
+          </>)
+      })
+    }
+    else if (header != "id" && header != "key")
       columns.push({
         title: header.replace(/_/g, " ").toUpperCase(),
         dataIndex: header,
       });
   });
-
-  // const jsx = Object.keys(data[0]).map((header, index) => {
-  //   if (header != "id" && header != "key"){
-  //   return (
-  //   <Input
-  //     key={index}
-  //     value={editingEntry?.header}
-  //     onChange={(e) => {
-  //       setEditingEntry((pre) => {
-  //         return { ...pre, header: e.target.value };
-  //       });
-  //     }}
-  //   />)
-  //   }
-  // });
 
   columns.push({
     key: "",
@@ -120,7 +135,6 @@ const Home = () => {
         necessitatibus.
       </p> */}
       <ListComponentUniversal columns={columns} data={dataSource} />
-      <img src={Airbnb} />
       <Modal
         title="Edit Entry"
         open={isEditing}
