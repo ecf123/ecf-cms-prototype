@@ -1,3 +1,4 @@
+import { FALSE } from 'sass'
 import Card from '../../components/Card/Card'
 import './CardContainer.scss'
 
@@ -12,7 +13,7 @@ const CardContainer = ({cards}) => {
                 title = {card.title} 
                 cardInfo = {card.cardInfo}
                 links = {card.links}
-                condition={true}
+                condition={false}
             />
         )
     })

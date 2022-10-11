@@ -12,6 +12,15 @@
         margin: 0 0.6rem;
         border-radius: 0.6rem;
         padding: 0 0.6rem;
+
+        &--marketplace {
+          color: black;
+          padding-right: 10px;
+        }
+
+        &--icons {
+          padding-right: 10px;
+        }
     
         &--purple {
           color: $color-purple;
