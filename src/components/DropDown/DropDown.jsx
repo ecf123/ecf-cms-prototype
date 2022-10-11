@@ -1,26 +1,30 @@
 import "./DropDown.scss";
 import topicArrow from "../../assets/upside-down-arrow-grey.svg";
 
-const DropDown = ({ topicTitle, lessonTitle, lessonType }) => {
+const DropDown = ({ topicTitle, lessonArr, topicInput }) => {
+  const lessonList = lessonArr.map((lesson, index) => {
+    return (
+      <li key={index}>
+        <a href="#">
+          <p className="drop-down__content">
+            {lesson.title}
+          </p>
+        </a>
+      </li>
+    );
+  });
   return (
     <nav className="drop-down">
-      <input type="checkbox" id="click" />
+      <input type="checkbox" id={topicInput} />
       <label htmlFor="click">
         <span className="drop-down__title">
           {topicTitle}
-          <img src={topicArrow} alt="" className="drop-down__arrow" />
+          <img src={topicArrow} alt="Topic Arrow" className="drop-down__arrow" />
         </span>
       </label>
 
       <ul className="drop-down__list">
-        <li>
-          <a href="#">
-            <p className="drop-down__content">
-              <img src={lessonType} alt="" className="drop-down__image" />
-              {lessonTitle}
-            </p>
-          </a>
-        </li>
+        {lessonList}
       </ul>
     </nav>
   );

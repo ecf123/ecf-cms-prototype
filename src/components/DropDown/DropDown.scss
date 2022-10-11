@@ -1,4 +1,5 @@
 @use "../../styles/main.scss" as *;
+@use "../../styles/variables" as *;
 
 .drop-down {
   max-width: 55.5rem;
@@ -23,6 +24,7 @@
 
   &__list {
     display: flex;
+    flex-direction: column;
     clear: both;
     width: 100%;
     background-color: $color-white;
