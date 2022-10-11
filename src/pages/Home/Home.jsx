@@ -15,7 +15,7 @@ const Home = () => {
     //   </p>
     // </Layout>
     <AddPage 
-    shortLabelTextOne="num 1"
+    shortLabelTextOne="optional"
     shortLabelTextTwo="num 2" 
     freeTypeLabelTextOne="num 3"
     freeTypeLabelTextTwo="free type two"

@@ -24,20 +24,9 @@ const AddPathway = ({
       pageInfo.file ? setPageInfo({file: null}) : setPageInfo({file: URL.createObjectURL(e.target.files[0])});
     }
 
-    const handleShortValueOne = (e) => {
-        setPageInfo({ ...pageInfo, shortInputOne: e.target.value});
-    }
-
-    const handleShortValueTwo = (e) => {
-        setPageInfo({ ...pageInfo, shortInputTwo: e.target.value});
-    }
-
-    const handleFreeTypeValueOne = (e) => {
-        setPageInfo({ ...pageInfo, freeTypeInputOne: e.target.value});
-    }
-
-    const handleFreeTypeValueTwo = (e) => {
-        setPageInfo({ ...pageInfo, freeTypeInputTwo: e.target.value});
+    const handleChange = (e) => {
+        console.log(e.target.name);
+        setPageInfo({ ...pageInfo, [e.target.name]: e.target.value});
     }
 
     const storeInputs = () => {
@@ -65,21 +54,25 @@ const AddPathway = ({
                 shortLabelText={shortLabelTextOne}
                 shortPlaceHolderText={shortPlaceHolderTextOne}
                 shortType="text" 
-                handleShortValue={handleShortValueOne}
+                name="shortInputOne"
+                handleShortValue={handleChange}
             />
             <FreeType 
                 freeTypeLabelText={freeTypeLabelTextOne}
-                handleFreeTypeValue={handleFreeTypeValueOne}
+                name="freeTypeInputOne"
+                handleFreeTypeValue={handleChange}
             />
             <Short 
                 shortLabelText={shortLabelTextTwo}
                 shortType="text" 
                 shortPlaceHolderText={shortPlaceHolderTextTwo}
-                handleShortValue={handleShortValueTwo}
+                name="shortInputTwo"
+                handleShortValue={handleChange}
             />
             <FreeType 
                 freeTypeLabelText={freeTypeLabelTextTwo}
-                handleFreeTypeValue={handleFreeTypeValueTwo}
+                name="freeTypeInputTwo"
+                handleFreeTypeValue={handleChange}
             />
 
             <p className='add-pathway__error-message'>{errorMessage}</p>
