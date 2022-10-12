@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render marketPlace main card with children 1`] = `
+<div>
+  <div
+    class="main-card"
+  >
+    <img
+      alt="Test Description"
+      class="main-card__image"
+    />
+    <p
+      class="main-card__date"
+    >
+      22/09/2022
+    </p>
+    <h2
+      class="main-card__title"
+    >
+      Test Title
+    </h2>
+    <p
+      class="main-card__info"
+    >
+      Test article
+    </p>
+    <ul
+      class="categories-menu"
+    >
+      <li
+        class="categories-menu__item--marketplace"
+      >
+        <img
+          alt="Icon"
+          class="categories-menu__item--icons"
+          src="going-up-graph-arrow-grey.svg"
+        />
+        Word
+      </li>
+      <li
+        class="categories-menu__item--marketplace"
+      >
+        <img
+          alt="Icon"
+          class="categories-menu__item--icons"
+          src="trophy-icon-grey.svg"
+        />
+        Text
+      </li>
+    </ul>
+  </div>
+</div>
+`;
