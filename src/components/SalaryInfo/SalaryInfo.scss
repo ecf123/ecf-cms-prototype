@@ -1,0 +1,64 @@
+@use "../../styles/_reset.scss" as *;
+@use "../../styles/_variables.scss" as *;
+@use "../../styles/_typography.scss" as *;
+
+.salary {
+  width: 23.063rem;
+  height: fit-content;
+  padding: 1.9375rem;
+  border-radius: 0.625rem;
+  background: $color-white;
+  box-shadow: 0rem 1.25rem 2.5rem rgba($color-grey-dark, 0.24);
+
+  &__heading {
+    margin-bottom: 1rem;
+    font-weight: $font-weight-bold;
+    color: $color-blue-navy-dark;
+    font-size: $font-size-small;
+  }
+
+  &__number {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: $font-weight-bold;
+    font-size: 4rem;
+    color: $color-blue-navy-dark;
+  }
+
+  &__line {
+    width: 18.75rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    border: 0.0625rem solid $color-green-light;
+  }
+
+  &__jobs {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__titles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  &__title {
+    font-weight: $font-weight-bold;
+    color: $color-teal;
+  }
+
+  &__pays {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  &__pay {
+    text-align: end;
+    font-weight: $font-weight-bold;
+    color: $color-blue-navy-dark;
+  }
+}
