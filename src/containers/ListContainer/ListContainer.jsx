@@ -9,12 +9,12 @@ const ListContainer = ({title, cards}) => {
   return (
     <div className="list-page">
       <div className="list-page__header">
-        <PageTitle className="list-page__title" title={title+" List"} />
+        <PageTitle className="list-page__title page-title" title={title+" List"} />
       </div>
       <div className="list-page__body">
         <nav className="list-page__nav">
           <SearchBar placeHolderText={"Search for "+title}/>
-          <Button style={"button black round-border medium"} imgStyle={"medium-img white-svg"} textStyle={"text medium-text black"} buttonText={"Add "+title}><Pencil /></Button>
+          <Button style={"button black round-border large"} imgStyle={"medium-img white-svg"} textStyle={"text medium-text black"} buttonText={"Add "+title}><Pencil /></Button>
         </nav>
         <CardContainer cards={cards}/>
       </div>
