@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use "../../styles/_typography" as *;
 @use "../../styles/_variables.scss" as *;
 
@@ -35,3 +36,17 @@
 .tag__category{
 
 }
+=======
+@use "../../styles/variables" as *;
+
+.pathway-header {
+  max-width: 56rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    color: $color-blue-navy-dark;
+    font-size: $font-size-medium;
+  }
+}
+>>>>>>> a96090cdbf9b6af96ce8528bf3e7d0c611aa9ae5

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PathwayHeader component matches the snapshot taken 1`] = `
+<div>
+  <div
+    class="pathway-header"
+  >
+    <h2
+      class="pathway-header__title"
+    >
+      Pathway Structure
+    </h2>
+    <a
+      href="/*"
+    >
+      <button
+        class="button black round-border medium"
+      >
+        <div
+          class="medium-img white-svg"
+        >
+          <svg>
+            pen-icon.svg
+          </svg>
+        </div>
+        <p
+          class="text medium-text black"
+        >
+          Add Course
+        </p>
+      </button>
+    </a>
+  </div>
+</div>
+`;
