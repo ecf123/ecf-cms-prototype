@@ -2,10 +2,10 @@ import "./Card.scss";
 import iconArrow from "../../assets/arrow-upper-right-black.svg";
 import CategoriesMenu from '../CategoriesMenu/CategoriesMenu.jsx';
 
-const Card = ({ img, dateOrTime, title, cardInfo, links, condition }) => {
+const Card = ({ img, dateOrTime, title, cardInfo, links, imgDescription, condition }) => {
   return (
     <div className="card">
-      <img className="card__image" src={img} alt="Card Image" />
+      <img className="card__image" src={img} alt={imgDescription} />
       <p className="card__date">{dateOrTime}</p>
       <div className="card__header">
         <h2 className="card__title">{title}</h2>

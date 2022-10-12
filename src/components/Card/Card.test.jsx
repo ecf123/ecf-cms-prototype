@@ -5,7 +5,7 @@ import Card from "./Card";
 
 it("should render the card image", () => {
   //Arrange
-  render(<Card />);
+  render(<Card imgDescription={"Card Image"} />);
   //Act
   const image = screen.getByAltText("Card Image");
   //Assert

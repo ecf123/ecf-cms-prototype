@@ -11,6 +11,7 @@ const CardContainer = ({ cards, condition }) => {
         title={card.title}
         cardInfo={card.cardInfo}
         links={card.links}
+        imgDescription={card.imgDescription}
         condition={condition}
       />
     );
