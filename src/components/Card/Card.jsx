@@ -2,9 +2,7 @@ import "./Card.scss";
 import iconArrow from "../../assets/arrow-upper-right-black.svg";
 
 const Card = ({ img, dateOrTime, title, cardInfo, links }) => {
-  
-  typeof links === "string" ? links = [links] : links;
-
+  typeof links === "string" ? (links = [links]) : links;
   const linksArr = links?.map((link, index) => {
     if (index % 2 == 0) {
       return (
@@ -20,7 +18,6 @@ const Card = ({ img, dateOrTime, title, cardInfo, links }) => {
       );
     }
   });
-
   return (
     <div className="card">
       <img className="card__image" src={img} alt="Card Image" />
@@ -34,5 +31,4 @@ const Card = ({ img, dateOrTime, title, cardInfo, links }) => {
     </div>
   );
 };
-
 export default Card;

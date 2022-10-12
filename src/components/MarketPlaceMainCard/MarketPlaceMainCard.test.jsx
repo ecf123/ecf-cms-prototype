@@ -10,6 +10,8 @@ it("should render every marketPlace main card prop", () => {
       date="22/01/2022"
       title="Test Title"
       articleInfo="Test article"
+      links={["Word", "Text"]}
+      condition="true"
     />
   );
   
@@ -25,9 +27,16 @@ it("should render every marketPlace main card prop", () => {
 });
 
 it("should render an image in the marketplace main card", () => {
-  render(<MarketPlaceMainCard img={rollercoaster} imgDescription="Test alt text"/>);
-  const imgDescription = screen.queryByText("Test alt text")
-  expect(imgDescription).toBeFalsy();
+  render(<MarketPlaceMainCard 
+  img={rollercoaster}  
+  imgDescription="Test alt text"
+  date="22/01/2022"
+  title="Test Title"
+  articleInfo="Test article"
+  links={["Word", "Text"]}
+  condition="true"/>);
+  const imgDescription = screen.queryByAltText("Test alt text")
+  expect(imgDescription).toBeTruthy();
 })
 
 it("should render marketPlace main card with children", () => {
@@ -37,6 +46,8 @@ it("should render marketPlace main card with children", () => {
       imgDescription="Test Description"
       title="Test Title"
       articleInfo="Test article"
+      links={["Word", "Text"]}
+      condition="true"
     />
   );
   expect(container).toMatchSnapshot();
