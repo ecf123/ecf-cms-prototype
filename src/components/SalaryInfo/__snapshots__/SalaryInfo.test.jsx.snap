@@ -14,7 +14,7 @@ exports[`Should match the snapshot, with the props 1`] = `
       class="salary__number"
     >
       £
-      160,000
+      58,750
     </h2>
     <span
       class="salary__line"
