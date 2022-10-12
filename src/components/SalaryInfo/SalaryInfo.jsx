@@ -21,14 +21,15 @@ const SalaryInfo = ({ salariesObj }) => {
     );
   });
 
-  const avgPayJSX = Object.values(salariesObj)
-    .reduce((a, b) => a + b / Object.keys(salariesObj).length)
-    .toLocaleString("en");
+  const sumOfSalaries = Object.values(salariesObj)
+    .reduce((a, b) => a + b); 
+
+  const avgJSX =  (sumOfSalaries / Object.keys(salariesObj).length).toLocaleString("en");
 
   return (
     <div className="salary">
-      <h5 className="salary__heading">Average Salaries</h5>
-      <h2 className="salary__number">£{avgPayJSX}</h2>
+      <h2 className="salary__heading">Average Salaries</h2>
+      <h5 className="salary__number">£{avgJSX}</h5>
       <span className="salary__line"></span>
       <div className="salary__jobs">
         <div className="salary__titles">{titleJSX}</div>

@@ -5,17 +5,17 @@ exports[`Should match the snapshot, with the props 1`] = `
   <div
     class="salary"
   >
-    <h5
+    <h2
       class="salary__heading"
     >
       Average Salaries
-    </h5>
-    <h2
+    </h2>
+    <h5
       class="salary__number"
     >
       £
-      58,750
-    </h2>
+      40,000
+    </h5>
     <span
       class="salary__line"
     />
