@@ -3,28 +3,28 @@
 
 
 .heading {
-    max-width: 753px;
+    width: 46.8rem;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    gap: 1.25rem;
 
-    &__image{
+    &__image {
         width: 100%;
+        height: auto;
         position: relative;
     }
 
     &__icon{
-        width: 90px;
-        height: 90px;
-        top: 20px;
-        left: 20px;
+        width: 5.6rem;
+        height: 5.6rem;
+        top: 1.25rem;
+        left: 1.25rem;
         position: absolute;
         z-index: 1;
     }
 
     &__title {
         color: $color-blue-navy-dark;
-        width: 100%;
     }
 
     
