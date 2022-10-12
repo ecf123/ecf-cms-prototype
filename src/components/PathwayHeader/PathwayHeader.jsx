@@ -5,8 +5,8 @@ const PathwayHeader = ({headingTitle, headingImage, companyIcon, links, conditio
   
   return (
     <div className="heading">
-        <img className="heading__icon" src={companyIcon} alt="picture of company icon" />
-        <img className="heading__image" src={headingImage} alt="picture of pathway heading" />
+        <img className="heading__icon" src={companyIcon} alt="Company Icon" />
+        <img className="heading__image" src={headingImage} alt="Pathway Heading" />
         <h1 className="heading__title">{headingTitle}</h1>
         <CategoriesMenu links = {links}  condition = {condition}/>
     </div>   

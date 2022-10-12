@@ -1,31 +1,28 @@
 @use "../../styles/_typography" as *;
 @use "../../styles/_variables.scss" as *;
 
-
 .heading {
-    width: 46.8rem;
     display: flex;
     flex-direction: column;
+    width: 46.8rem;
     gap: 1.25rem;
 
     &__image {
+        position: relative;
         width: 100%;
         height: auto;
-        position: relative;
     }
 
     &__icon{
+        position: absolute;
+        z-index: 1;
         width: 5.6rem;
         height: 5.6rem;
         top: 1.25rem;
         left: 1.25rem;
-        position: absolute;
-        z-index: 1;
     }
 
     &__title {
         color: $color-blue-navy-dark;
-    }
-
-    
+    }    
 }
