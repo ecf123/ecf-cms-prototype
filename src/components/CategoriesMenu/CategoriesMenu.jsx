@@ -12,7 +12,11 @@ const CategoriesMenu = ({ links, condition }) => {
       if (condition) {
         return (
           <li key={index} className="categories-menu__item--marketplace">
-            <img className="categories-menu__item--icons" src={arrow} alt="Icon" />
+            <img
+              className="categories-menu__item--icons"
+              src={arrow}
+              alt="Icon"
+            />
             {link}
           </li>
         );
@@ -30,7 +34,11 @@ const CategoriesMenu = ({ links, condition }) => {
       if (condition) {
         return (
           <li key={index} className="categories-menu__item--marketplace">
-            <img className="categories-menu__item--icons" src={trophy} alt="Icon" />
+            <img
+              className="categories-menu__item--icons"
+              src={trophy}
+              alt="Icon"
+            />
             {link}
           </li>
         );
