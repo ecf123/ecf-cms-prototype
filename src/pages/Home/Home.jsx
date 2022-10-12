@@ -4,7 +4,7 @@ import ViewOptions from "../../components/ViewOptions/ViewOptions";
 const Home = () => {
   return (
     <Layout>
-      <ViewOptions/>
+     <ViewOptions />
     </Layout>
   );
 };

@@ -12,14 +12,13 @@
     background-color: $color-white;
     &__option{
         padding:10px;
-       // opacity:40%;
+        opacity:40%;
         color:$color-blue-navy-dark;
-        opacity:1;
-        position: relative;
+        // position: relative;
         text-decoration: none;
         
     }
-    &__option-clicked:after {
+    &__option--clicked:after {
         background: none repeat scroll 0 0 #B4DDC0;
         bottom: -10px;
         left:25%;
@@ -29,8 +28,9 @@
         position: relative;
         width: 50%;
      }
-    &__option-clicked{
-       opacity:1;
-       border-bottom: 2px $color-green-light solid;
+    &__option--clicked{
+       opacity:100%;
+       padding:10px;
+    //    border-bottom: 2px $color-green-light solid;
     }
 }
