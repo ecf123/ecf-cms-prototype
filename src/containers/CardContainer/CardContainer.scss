@@ -1,10 +1,10 @@
-@use '../../styles/variables.scss' as *;
+@use "../../styles/variables.scss" as *;
 
 .card-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 26.7rem);
-    gap: 1.6rem;
-    justify-content: center;
-    padding: 3.8rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 26.7rem);
+  gap: 1.6rem;
+  justify-content: center;
+  padding: 3.8rem;
 }

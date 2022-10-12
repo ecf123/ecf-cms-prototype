@@ -1,24 +1,21 @@
-import './CardContainer.scss'
-import Card from '../../components/Card/Card'
+import "./CardContainer.scss";
+import Card from "../../components/Card/Card";
 
-const CardContainer = ({cards}) => {
+const CardContainer = ({ cards }) => {
+  const renderCards = cards?.map((card) => {
+    return (
+      <Card
+        key={card.title}
+        img={card.img}
+        dateOrTime={card.dateOrTime}
+        title={card.title}
+        cardInfo={card.cardInfo}
+        links={card.links}
+      />
+    );
+  });
 
-    const renderCards = cards?.map((card) => {
-        return (
-            <Card 
-                key={card.title}
-                img = {card.img}
-                dateOrTime = {card.dateOrTime}
-                title = {card.title} 
-                cardInfo = {card.cardInfo}
-                links = {card.links}
-            />
-        )
-    })
-    
-  return (
-    <div className="card-container">{renderCards}</div>
-  )
-}
+  return <div className="card-container">{renderCards}</div>;
+};
 
-export default CardContainer
+export default CardContainer;
