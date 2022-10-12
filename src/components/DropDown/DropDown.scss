@@ -1,0 +1,68 @@
+@use "../../styles/main.scss" as *;
+@use "../../styles/variables" as *;
+
+.drop-down {
+  max-width: 55.5rem;
+  font-family: $font-secondary;
+  letter-spacing: $letter-spacing;
+  font-size: $font-size-small;
+  font-weight: $font-weight-regular;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.9rem;
+    cursor: pointer;
+    background: $color-white-smoke;
+    color: $color-blue-navy-dark;
+  }
+
+  &__title::after {
+    float: right;
+    right: 10%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    clear: both;
+    width: 100%;
+    background-color: $color-white;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease;
+  }
+
+  &__list li {
+    padding: 1.9rem;
+  }
+  &__list li a {
+    text-decoration: none;
+  }
+
+  &__content {
+    color: $color-grey-light;
+  }
+
+  &__image {
+    margin-right: 1.25rem;
+  }
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+}
+
+input ~ label span .drop-down__arrow {
+  transition: all ease-in-out 0.3s;
+}
+
+input:checked ~ label span .drop-down__arrow {
+  transform: rotate(180deg);
+}
+
+input:checked ~ .drop-down__list {
+  height: auto;
+}
