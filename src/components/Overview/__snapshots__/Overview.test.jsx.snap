@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Overview 1`] = `
+<div>
+  <div
+    class="overview"
+  >
+    <h2
+      class="overview__header"
+    />
+    <p
+      class="overview__text"
+    />
+  </div>
+</div>
+`;
