@@ -14,9 +14,7 @@
         padding:10px;
         opacity:40%;
         color:$color-blue-navy-dark;
-        // position: relative;
-        text-decoration: none;
-        
+        text-decoration: none; 
     }
     &__option--clicked:after {
         background: none repeat scroll 0 0 #B4DDC0;
@@ -31,6 +29,5 @@
     &__option--clicked{
        opacity:100%;
        padding:10px;
-    //    border-bottom: 2px $color-green-light solid;
     }
 }
