@@ -1,0 +1,36 @@
+@use '../../styles/main.scss' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/typography' as *;
+
+.view-options{
+    display:flex;
+    align-content: center;
+    justify-content:center;
+    font-family:$font-secondary ;
+    font-weight:$font-weight-regular;
+    font-size:$font-size-small;
+    background-color: $color-white;
+    &__option{
+        padding:10px;
+       // opacity:40%;
+        color:$color-blue-navy-dark;
+        opacity:1;
+        position: relative;
+        text-decoration: none;
+        
+    }
+    &__option-clicked:after {
+        background: none repeat scroll 0 0 #B4DDC0;
+        bottom: -10px;
+        left:25%;
+        content: "";
+        display: block;
+        height: 10px;
+        position: relative;
+        width: 50%;
+     }
+    &__option-clicked{
+       opacity:1;
+       border-bottom: 2px $color-green-light solid;
+    }
+}
