@@ -22,7 +22,7 @@ const SalaryInfo = ({ salariesObj }) => {
   });
 
   const avgPayJSX = Object.values(salariesObj)
-    .reduce((a, b) => a + b)
+    .reduce((a, b) => a + b / Object.keys(salariesObj).length)
     .toLocaleString("en");
 
   return (
