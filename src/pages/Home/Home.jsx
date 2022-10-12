@@ -1,9 +1,8 @@
 import Layout from "../../components/Layout/Layout";
 import ListComponentUniversal from "../../components/ListComponentUniversal/ListComponentUniversal";
-import { Modal, Input, Tag } from "antd";
+import { Modal, Input } from "antd";
 import Barclays from "../../assets/barclays-icon-white-background.svg";
 import Airbnb from "../../assets/airbnb-logo.svg";
-import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { useState } from "react";
 
 
@@ -27,78 +26,25 @@ for (let i = 0; i < 5; i++) {
   });
 }
 
+// for (let i = 0; i < 5; i++) {
+//   data.push({
+//     key: i,
+//     id: i,
+//     course_name: `Commercial Banking + ${i}`,
+//     course_provider: "Barclays",
+//     no_of_lessons: `23`,
+//     no_of_assignments: `2`,
+//     course_length: `345 mins`,
+//     students_enrolled: 124,
+//   });
+// }
+
 const Home = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [editingEntry, setEditingEntry] = useState(null);
   const [dataSource, setDataSource] = useState(data);
 
-  const columns = [];
-
-  Object.keys(data[0]).forEach((header) => {
-    if (header == "category") {
-      columns.push({
-        title: 'CATEGORY',
-        key: 'category',
-        dataIndex: 'category',
-        render: (_, { category }) => (
-          <>
-            {category.map((tag) => {
-              let color = tag.length > 7 ? 'processing' : 'success';
-    
-              if (tag === 'developer') {
-                color = 'error';
-              }
-    
-              return (
-                <Tag color={color} key={tag}>
-                  {tag.toUpperCase()}
-                </Tag>
-              );
-            })}
-          </>
-        ),
-      },)
-    } else if (header == "providers") {
-      columns.push({
-        key: "providers",
-        title: "Providers",
-        dataIndex: "providers",
-        render: (_, { providers }) => (
-          <>
-            {providers.map((tag) => (
-              <img src={tag} key={tag} className="providers"/>
-            ))}
-          </>)
-      })
-    }
-    else if (header != "id" && header != "key")
-      columns.push({
-        title: header.replace(/_/g, " ").toUpperCase(),
-        dataIndex: header,
-      });
-  });
-
-  columns.push({
-    key: "",
-    title: "",
-    render: (e) => {
-      return (
-        <>
-          <EditOutlined
-            onClick={() => {
-              onEdit(e);
-            }}
-          />
-          <DeleteOutlined
-            onClick={() => {
-              onDelete(e);
-            }}
-            style={{ color: "red", marginLeft: 12 }}
-          />
-        </>
-      );
-    },
-  });
+  
 
   const onDelete = (e) => {
     Modal.confirm({
@@ -133,7 +79,7 @@ const Home = () => {
         maxime tempora, temporibus beatae voluptas repellat rerum. Dignissimos,
         necessitatibus.
       </p> */}
-      <ListComponentUniversal columns={columns} data={dataSource} />
+      <ListComponentUniversal onDelete={onDelete} onEdit={onEdit} data={dataSource} />
       <Modal
         title="Edit Entry"
         open={isEditing}
@@ -163,10 +109,10 @@ const Home = () => {
           }}
         />
         <Input
-          value={editingEntry?.no_of_courses}
+          value={editingEntry?.category}
           onChange={(e) => {
             setEditingEntry((pre) => {
-              return { ...pre, no_of_courses: e.target.value };
+              return { ...pre, category: e.target.value.split(',') };
             });
           }}
         />

@@ -1,47 +1,93 @@
 import 'antd/dist/antd.min.css';
 import "./ListComponentUniversal.scss";
-import { Table } from "antd";
+import { Table, Tag} from "antd";
 import { useState } from "react";
-// import { ReactComponent as Barclays } from "../../assets/barclays-icon-white-background.svg";
-// import Airbnb from "../../assets/airbnb-logo.svg";
-// import { render } from "@testing-library/react/types
-// import { render } from "react-dom";
+import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 
-const ListComponentUniversal = ({ columns, data }) => {
+
+const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const onSelectChange = (newSelectedRowKeys) => {
     console.log("selectedRowKeys changed: ", selectedRowKeys);
     setSelectedRowKeys(newSelectedRowKeys);
   };
 
-  // data.map((element) => {
-  //   // console.log(element);
-  //   if (element.providersIcon) {
-  //     element.providersIconTag = [];
-  //     element.providersIcon.forEach((icon) => {
-  //       console.log(icon);
-  //       element.providersIconTag.push(<img src={icon} className="providers" />);
-  //       // icon = <img src={icon} className="providers" />;
-  //     });
-  //   }
-  //   return element;
-  // });
+  const columns = [];
 
-  // data = data.map((element) => {
-  //   if (element.providersIcon) {
-  //     element.providersIcon.map((icon, index) => {
-  //       console.log(icon);
-  //       // render: () => {
-  //       return (
-  //         <div key={index}>
-  //           <img src={Airbnb} className="providers" alt="icon" />
-  //         </div>
-  //       );
-  //       // };
-  //     });
-  //   }
-  //   return element;
-  // });
+  Object.keys(data[0]).forEach((header) => {
+
+    if (header.includes("name")) {
+      columns.push({
+        title: header.replace(/_/g, " ").toUpperCase(),
+        key: header,
+        dataIndex: header,
+        render: (text) => <a href="" className="table-name">{text}</a>,
+      })
+    } else if (header == "category") {
+      columns.push({
+        title: 'CATEGORY',
+        key: 'category',
+        dataIndex: 'category',
+        render: (_, { category }) => (
+          <>
+            {category.map((tag) => {
+              let color = tag.length > 7 ? 'processing' : 'success';
+    
+              if (tag === 'developer') {
+                color = 'error';
+              }
+    
+              return (
+                <Tag color={color} key={tag}>
+                  {tag.toUpperCase()}
+                </Tag>
+              );
+            })}
+          </>
+        ),
+      },)
+    } else if (header == "providers") {
+      columns.push({
+        key: "providers",
+        title: "PROVIDERS",
+        dataIndex: "providers",
+        render: (_, { providers }) => (
+          <>
+            {providers.map((icon) => (
+              <img src={icon} key={icon} className="providers"/>
+            ))}
+          </>)
+      })
+    }
+    else if (header != "id" && header != "key")
+      columns.push({
+        title: header.replace(/_/g, " ").toUpperCase(),
+        dataIndex: header,
+      });
+  });
+
+  columns.push({
+    key: "",
+    title: "",
+    render: (e) => {
+      return (
+        <>
+          <EditOutlined
+            onClick={() => {
+              console.log(e);
+              onEdit(e);
+            }}
+          />
+          <DeleteOutlined
+            onClick={() => {
+              onDelete(e);
+            }}
+            style={{ color: "red", marginLeft: 12 }}
+          />
+        </>
+      );
+    },
+  });
 
   const rowSelection = {
     selectedRowKeys,
@@ -83,7 +129,7 @@ const ListComponentUniversal = ({ columns, data }) => {
 
   return (
     <>
-      <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
+      <Table rowSelection={rowSelection} columns={columns} dataSource={data} pagination={{position: ["bottomLeft"]}}/>
     </>
   );
 };
