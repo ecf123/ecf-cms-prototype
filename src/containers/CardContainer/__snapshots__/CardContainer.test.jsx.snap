@@ -17,7 +17,6 @@ exports[`it should match the snapshot with props 1`] = `
       class="card"
     >
       <img
-        alt="Card Image"
         class="card__image"
         src="for-hire-image.svg"
       />
@@ -69,7 +68,6 @@ exports[`it should match the snapshot with props 1`] = `
       class="card"
     >
       <img
-        alt="Card Image"
         class="card__image"
         src="for-hire-image.svg"
       />
