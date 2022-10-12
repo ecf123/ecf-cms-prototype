@@ -15,7 +15,7 @@ const SalaryInfo = ({ salariesObj }) => {
 
   const payJSX = salariesIntArray.map((salary, index) => {
     return (
-      <h6 key={index} className="salary__payu">
+      <h6 key={index} className="salary__pay">
         £{salary}
       </h6>
     );
