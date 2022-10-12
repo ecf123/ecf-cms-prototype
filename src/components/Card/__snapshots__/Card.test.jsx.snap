@@ -28,7 +28,7 @@ exports[`Should render the card with no props 1`] = `
       class="card__info"
     />
     <ul
-      class="card__links"
+      class="categories-menu"
     />
   </div>
 </div>
@@ -69,20 +69,20 @@ exports[`Should render the card with props 1`] = `
       lorem ipsum
     </p>
     <ul
-      class="card__links"
+      class="categories-menu"
     >
       <li
-        class="card__link card__link--purple"
+        class="categories-menu__item categories-menu__item--purple"
       >
         one
       </li>
       <li
-        class="card__link card__link--darkpurple"
+        class="categories-menu__item categories-menu__item--darkpurple"
       >
         two
       </li>
       <li
-        class="card__link card__link--purple"
+        class="categories-menu__item categories-menu__item--purple"
       >
         three
       </li>

@@ -46,20 +46,20 @@ exports[`it should match the snapshot with props 1`] = `
         Test text one
       </p>
       <ul
-        class="card__links"
+        class="categories-menu"
       >
         <li
-          class="card__link card__link--purple"
+          class="categories-menu__item categories-menu__item--purple"
         >
           one
         </li>
         <li
-          class="card__link card__link--darkpurple"
+          class="categories-menu__item categories-menu__item--darkpurple"
         >
           two
         </li>
         <li
-          class="card__link card__link--purple"
+          class="categories-menu__item categories-menu__item--purple"
         >
           three
         </li>
@@ -98,20 +98,20 @@ exports[`it should match the snapshot with props 1`] = `
         Test text two
       </p>
       <ul
-        class="card__links"
+        class="categories-menu"
       >
         <li
-          class="card__link card__link--purple"
+          class="categories-menu__item categories-menu__item--purple"
         >
           one
         </li>
         <li
-          class="card__link card__link--darkpurple"
+          class="categories-menu__item categories-menu__item--darkpurple"
         >
           two
         </li>
         <li
-          class="card__link card__link--purple"
+          class="categories-menu__item categories-menu__item--purple"
         >
           three
         </li>
