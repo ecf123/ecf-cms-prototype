@@ -1,9 +1,8 @@
-import 'antd/dist/antd.min.css';
+import "antd/dist/antd.min.css";
 import "./ListComponentUniversal.scss";
-import { Table, Tag} from "antd";
+import { Table, Tag } from "antd";
 import { useState } from "react";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
-
 
 const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
@@ -15,28 +14,31 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
   const columns = [];
 
   Object.keys(data[0]).forEach((header) => {
-
     if (header.includes("name")) {
       columns.push({
         title: header.replace(/_/g, " ").toUpperCase(),
         key: header,
         dataIndex: header,
-        render: (text) => <a href="" className="table-name">{text}</a>,
-      })
+        render: (text) => (
+          <a href="" className="table__name">
+            {text}
+          </a>
+        ),
+      });
     } else if (header == "category") {
       columns.push({
-        title: 'CATEGORY',
-        key: 'category',
-        dataIndex: 'category',
+        title: "CATEGORY",
+        key: "category",
+        dataIndex: "category",
         render: (_, { category }) => (
           <>
             {category.map((tag) => {
-              let color = tag.length > 7 ? 'processing' : 'success';
-    
-              if (tag === 'developer') {
-                color = 'error';
+              let color = tag.length > 7 ? "processing" : "success";
+
+              if (tag === "developer") {
+                color = "error";
               }
-    
+
               return (
                 <Tag color={color} key={tag}>
                   {tag.toUpperCase()}
@@ -45,7 +47,7 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
             })}
           </>
         ),
-      },)
+      });
     } else if (header == "providers") {
       columns.push({
         key: "providers",
@@ -54,15 +56,16 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
         render: (_, { providers }) => (
           <>
             {providers.map((icon) => (
-              <img src={icon} key={icon} className="providers"/>
+              <img src={icon} key={icon} className="providers" />
             ))}
-          </>)
-      })
-    }
-    else if (header != "id" && header != "key")
+          </>
+        ),
+      });
+    } else if (header != "id" && header != "key")
       columns.push({
         title: header.replace(/_/g, " ").toUpperCase(),
         dataIndex: header,
+        className: "table__cell",
       });
   });
 
@@ -73,12 +76,14 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
       return (
         <>
           <EditOutlined
+            className="table__edit"
             onClick={() => {
               console.log(e);
               onEdit(e);
             }}
           />
           <DeleteOutlined
+            className="table__delete"
             onClick={() => {
               onDelete(e);
             }}
@@ -129,7 +134,13 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
 
   return (
     <>
-      <Table rowSelection={rowSelection} columns={columns} dataSource={data} pagination={{position: ["bottomLeft"]}}/>
+      <Table
+        className="table"
+        rowSelection={rowSelection}
+        columns={columns}
+        dataSource={data}
+        pagination={{ position: ["bottomLeft"] }}
+      />
     </>
   );
 };

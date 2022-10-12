@@ -5,9 +5,8 @@ import Barclays from "../../assets/barclays-icon-white-background.svg";
 import Airbnb from "../../assets/airbnb-logo.svg";
 import { useState } from "react";
 
-
 const data = [];
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 40; i++) {
   data.push({
     key: i,
     id: i,
@@ -16,13 +15,13 @@ for (let i = 0; i < 5; i++) {
       "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ficons%2Fhsbc.svg?alt=media&token=f568f1fc-ade3-4bbf-9aee-1dc841cce600",
       "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ficons%2Fhalifax.svg?alt=media&token=0b431ade-cb19-4cc1-bc7d-b4d4456146a0",
       Barclays,
-      Airbnb
+      Airbnb,
     ],
     no_of_courses: `8`,
     no_of_lessons: `8`,
     est_completion_time: `20hrs`,
     no_enrolled: 32,
-    category: [`management + ${i}`, 'developer', 'banking' ],
+    category: [`management + ${i}`, "developer", "banking"],
   });
 }
 
@@ -43,8 +42,6 @@ const Home = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [editingEntry, setEditingEntry] = useState(null);
   const [dataSource, setDataSource] = useState(data);
-
-  
 
   const onDelete = (e) => {
     Modal.confirm({
@@ -79,7 +76,11 @@ const Home = () => {
         maxime tempora, temporibus beatae voluptas repellat rerum. Dignissimos,
         necessitatibus.
       </p> */}
-      <ListComponentUniversal onDelete={onDelete} onEdit={onEdit} data={dataSource} />
+      <ListComponentUniversal
+        onDelete={onDelete}
+        onEdit={onEdit}
+        data={dataSource}
+      />
       <Modal
         title="Edit Entry"
         open={isEditing}
@@ -112,7 +113,7 @@ const Home = () => {
           value={editingEntry?.category}
           onChange={(e) => {
             setEditingEntry((pre) => {
-              return { ...pre, category: e.target.value.split(',') };
+              return { ...pre, category: e.target.value.split(",") };
             });
           }}
         />
