@@ -3,20 +3,29 @@
 
 
 .heading {
-    &__banner{
-    width: 749px;
-    height: 349.53px;
+    max-width: 753px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__image{
+        width: 100%;
+        position: relative;
     }
 
     &__icon{
         width: 90px;
         height: 90px;
-        padding: 20px;
+        top: 20px;
+        left: 20px;
+        position: absolute;
+        z-index: 1;
     }
 
-    &__image{
-        width: 749px;
-        height: 349.53px;
-        z-index: -1;
+    &__title {
+        color: $color-blue-navy-dark;
+        width: 100%;
     }
+
+    
 }
