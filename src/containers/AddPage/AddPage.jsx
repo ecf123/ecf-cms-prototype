@@ -16,12 +16,22 @@ const AddPathway = ({
     freeTypeLabelTextTwo, 
     uploadLabelName}) => {
 
-    const [pageInfo, setPageInfo] = useState({file: null, fileName: "", shortInputOne: "", shortInputTwo: "", freeTypeInputOne: "", freeTypeInputTwo: ""});
+    const [pageInfo, setPageInfo] = useState(
+        {
+            file: null, 
+            fileName: "", 
+            shortInputOne: "", 
+            shortInputTwo: "", 
+            freeTypeInputOne: "", 
+            freeTypeInputTwo: "",
+        });
+
     const [errorMessage, setErrorMessage] = useState("");
+    const [pageFirstOpened, setPageFirstOpened] = useState(true);
 
     const handleFileChange = (e) => {
       if (!pageInfo.file) setPageInfo({fileName: e.target.files[0].name});
-      pageInfo.file ? setPageInfo({file: null}) : setPageInfo({file: URL.createObjectURL(e.target.files[0])});
+      pageInfo.file ? setPageInfo({ ...pageInfo, file: null}) : setPageInfo({ ...pageInfo, file: URL.createObjectURL(e.target.files[0])});
     }
 
     const handleChange = (e) => {
@@ -30,19 +40,13 @@ const AddPathway = ({
     }
 
     const storeInputs = () => {
-        if(pageInfo.shortInputOne == "" && !shortLabelTextOne.includes("optional")){
-            setErrorMessage("Please enter the info needed for " + shortLabelTextOne);
-        }
-        else if (pageInfo.freeTypeInputOne == "" && !freeTypeLabelTextOne.includes("optional")){
-            setErrorMessage("Please enter the info needed for " + freeTypeLabelTextOne);
-        }
-        else if (pageInfo.shortInputTwo == "" && !shortLabelTextTwo.includes("optional")){
-            setErrorMessage("Please enter the info needed for " + shortLabelTextTwo);
-        }
-        else if (pageInfo.freeTypeInputTwo == "" && !freeTypeLabelTextTwo.includes("optional")) {
-            setErrorMessage("Please enter the info needed for " + freeTypeLabelTextTwo);
-        }
-        else {
+        setPageFirstOpened(false);
+        if((pageInfo.shortInputOne == "" && !shortLabelTextOne.includes("optional")) || 
+        (pageInfo.freeTypeInputOne == "" && !freeTypeLabelTextOne.includes("optional")) || 
+        (pageInfo.shortInputTwo == "" && !shortLabelTextTwo.includes("optional")) || 
+        (pageInfo.freeTypeInputTwo == "" && !freeTypeLabelTextTwo.includes("optional"))){
+            setErrorMessage("Please enter the info needed in the empty red boxes");
+        }else {
             setErrorMessage("");
         }
     }
@@ -55,11 +59,13 @@ const AddPathway = ({
                 shortPlaceHolderText={shortPlaceHolderTextOne}
                 shortType="text" 
                 name="shortInputOne"
+                inputClassName={((pageInfo.shortInputOne == "" && !shortLabelTextOne.includes("optional") && !pageFirstOpened) || (!pageFirstOpened && !shortLabelTextOne.includes("optional"))) ? "short__input--empty" : "short__input"}
                 handleShortValue={handleChange}
             />
             <FreeType 
                 freeTypeLabelText={freeTypeLabelTextOne}
                 name="freeTypeInputOne"
+                inputClassName={((pageInfo.freeTypeInputOne == "" && !freeTypeLabelTextOne.includes("optional") && !pageFirstOpened) || (!pageFirstOpened && !shortLabelTextOne.includes("optional"))) ? "free-type__input--empty" : "free-type__input"}
                 handleFreeTypeValue={handleChange}
             />
             <Short 
@@ -67,16 +73,17 @@ const AddPathway = ({
                 shortType="text" 
                 shortPlaceHolderText={shortPlaceHolderTextTwo}
                 name="shortInputTwo"
+                inputClassName={((pageInfo.shortInputTwo == "" && !shortLabelTextTwo.includes("optional") && !pageFirstOpened) || (!pageFirstOpened && !shortLabelTextOne.includes("optional"))) ?  "short__input--empty" : "short__input"}
                 handleShortValue={handleChange}
             />
             <FreeType 
                 freeTypeLabelText={freeTypeLabelTextTwo}
                 name="freeTypeInputTwo"
+                inputClassName={((pageInfo.freeTypeInputTwo == "" && !freeTypeLabelTextTwo.includes("optional") && !pageFirstOpened) || (!pageFirstOpened && !shortLabelTextOne.includes("optional"))) ? "free-type__input--empty" : "free-type__input"}
                 handleFreeTypeValue={handleChange}
             />
 
             <p className='add-pathway__error-message'>{errorMessage}</p>
-           
 
             <div className="add-pathway__buttons">
                 <Button 
