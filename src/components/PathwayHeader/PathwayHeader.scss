@@ -2,27 +2,27 @@
 @use "../../styles/_variables.scss" as *;
 
 .heading {
-    display: flex;
-    flex-direction: column;
-    width: 46.8rem;
-    gap: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  width: 46.8rem;
+  gap: 1.25rem;
 
-    &__image {
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
+  &__image {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
 
-    &__icon{
-        position: absolute;
-        z-index: 1;
-        width: 5.6rem;
-        height: 5.6rem;
-        top: 1.25rem;
-        left: 1.25rem;
-    }
+  &__icon {
+    position: absolute;
+    z-index: 1;
+    width: 5.6rem;
+    height: 5.6rem;
+    top: 1.25rem;
+    left: 1.25rem;
+  }
 
-    &__title {
-        color: $color-blue-navy-dark;
-    }    
+  &__title {
+    color: $color-blue-navy-dark;
+  }
 }
