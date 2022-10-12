@@ -42,7 +42,7 @@ const Login = () => {
             <h1 className="login__title--heading">Welcome Back</h1>
             <p className="login__title--text">
               Feugiat magna viverra pellentesque habitant. Libero id amet nisl,
-              tellus cras eleifend et in.{" "}
+              tellus cras eleifend et in.
             </p>
           </div>
           <div>
@@ -56,7 +56,7 @@ const Login = () => {
             />
             {hasError && (
               <div>
-                <p className="login__alert">Sorry something went wrong </p>{" "}
+                <p className="login__alert">Sorry something went wrong </p>
               </div>
             )}
           </div>
