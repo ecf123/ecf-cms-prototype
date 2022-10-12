@@ -1,2 +1,37 @@
 @use "../../styles/_typography" as *;
 @use "../../styles/_variables.scss" as *;
+
+
+.heading {
+
+
+    &__banner{
+    width: 749px;
+    height: 349.53px;
+    }
+
+    &__icon{
+        width: 90px;
+        height: 90px;
+        padding: 20px;
+    }
+
+    &__image{
+        width: 749px;
+        height: 349.53px;
+        z-index: -1;
+    }
+
+}
+.tag__container{
+
+    display: flex;
+}
+
+.tag__box{
+
+}
+
+.tag__category{
+
+}

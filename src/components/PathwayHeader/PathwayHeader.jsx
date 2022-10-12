@@ -1,9 +1,10 @@
 import "./PathwayHeader.scss";
-import {headingImage} from "../../assets/mobile-growing-investment.svg";
-import {companyIcon} from "../../assets/barclays-icon-white-background.svg";
 
 
-const PathwayHeader = ({headingTitle}) => {
+
+const PathwayHeader = ({headingTitle, headingImage, companyIcon }) => {
+
+const pathwayTags = ["Finance", "Investing"]
 
     const tagsJsx = pathwayTags.map((tag) => {
         return(
@@ -14,12 +15,12 @@ const PathwayHeader = ({headingTitle}) => {
     })
 
   return (
-    <div>
+    <div className="heading">
         <div className="heading__banner">
             <img className="heading__icon" src={companyIcon} alt="picture of company icon" />
             <img className="heading__image" src={headingImage} alt="picture of pathway heading" />
         </div>
-        <h2>{headingTitle}</h2>
+        <h2>Commercial Banking with Barclay’s{headingTitle}</h2>
         <div className="tag__container">
             {tagsJsx}
         </div>
