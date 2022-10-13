@@ -54,20 +54,20 @@ it("should render the 'add course' button on the screen", () => {
   expect(button).toBeInTheDocument();
 });
 
-it("should display the first card if search 'test title one'", () => {
+it("should display the first card only if search 'one'", () => {
   customRender(<ListContainer cards={cards} />);
 
   const searchCard1 = screen.getByText("Test title one");
   const searchCard2 = screen.getByText("Test title two");
+  const searchBox = screen.getByRole("textbox");
 
   expect(searchCard1).toBeInTheDocument();
   expect(searchCard2).toBeInTheDocument();
 
-  const searchBox = screen.getByRole("textbox");
   userEvent.type(searchBox, "one");
-  const searchBox1 = screen.getByText("Test title one");
-  const searchBox2 = screen.queryByText("Test title two");
+  const searchCardFiltered1 = screen.getByText("Test title one");
+  const searchCardFiltered2 = screen.queryByText("Test title two");
 
-  expect(searchBox1).toBeInTheDocument();
-  expect(searchBox2).toBeFalsy();
+  expect(searchCardFiltered1).toBeInTheDocument();
+  expect(searchCardFiltered2).not.toBeInTheDocument();
 });
