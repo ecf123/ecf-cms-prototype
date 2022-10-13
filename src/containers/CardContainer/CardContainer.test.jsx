@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
 import CardContainer from "./CardContainer";
 import image from "../../assets/for-hire-image.svg";
+import { BrowserRouter } from "react-router-dom";
 
 const cards = [
   {
@@ -21,17 +22,17 @@ const cards = [
 ];
 
 it("it should match the snapshot with props", () => {
-  const { container } = customRender(<CardContainer cards={cards} />);
+  const { container } = customRender(<BrowserRouter><CardContainer cards={cards} /></BrowserRouter>);
   expect(container).toMatchSnapshot();
 });
 
 it("Should render the card with no props", () => {
-  const { container } = customRender(<CardContainer />);
+  const { container } = customRender(<BrowserRouter><CardContainer /></BrowserRouter>);
   expect(container).toMatchSnapshot();
 });
 
 it("should render the first card component on the screen", () => {
-  render(<CardContainer cards={cards} />);
+  render(<BrowserRouter><CardContainer cards={cards} /></BrowserRouter>);
   const dateOrTime = screen.getByText("12:01");
   const title = screen.getByText("Test title one");
   const cardInfo = screen.getByText("Test text one");
@@ -42,7 +43,7 @@ it("should render the first card component on the screen", () => {
 });
 
 it("should render the second card component on the screen", () => {
-  render(<CardContainer cards={cards} />);
+  render(<BrowserRouter><CardContainer cards={cards} /></BrowserRouter>);
   const dateOrTime = screen.getByText("12:00");
   const title = screen.getByText("Test title two");
   const cardInfo = screen.getByText("Test text two");

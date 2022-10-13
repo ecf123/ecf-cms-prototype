@@ -1,11 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
+import { BrowserRouter } from "react-router-dom";
 
-import Card from "./Card";
+import Card from "./Card.jsx";
 
 it("should render the card image", () => {
   //Arrange
-  render(<Card imgDescription={"Card Image"} />);
+  render(<BrowserRouter><Card imgDescription={"Card Image"} /></BrowserRouter>);
   //Act
   const image = screen.getByAltText("Card Image");
   //Assert
@@ -14,7 +15,7 @@ it("should render the card image", () => {
 
 it("should display the date or time on the screen", () => {
   //Arrange
-  render(<Card dateOrTime="22/01/2022" />);
+  render(<BrowserRouter><Card dateOrTime="22/01/2022" /></BrowserRouter>);
   //Act
   const date = screen.queryByText("22/01/2022");
   //Assert
@@ -23,7 +24,7 @@ it("should display the date or time on the screen", () => {
 
 it("should display the header of the card on the screen", () => {
   //Arrange
-  render(<Card title="Test Title" />);
+  render(<BrowserRouter><Card title="Test Title" /></BrowserRouter>);
   //Act
   const header = screen.queryByText("Test Title");
   //Assert
@@ -32,7 +33,7 @@ it("should display the header of the card on the screen", () => {
 
 it("should display the links on the screen", () => {
   //Arrange
-  render(<Card links={["linkOne"]} />);
+  render(<BrowserRouter><Card links={["linkOne"]} /></BrowserRouter>);
   //Act
   const link = screen.getByText("linkOne");
   //Assert
