@@ -1,22 +1,20 @@
 @use "../../styles/variables.scss" as *;
 
-
-.list-page{
-
-  &__header{
+.list-page {
+  &__header {
     border-bottom: 2px solid $color-grey-light;
-    padding: 3rem 0;;
+    padding: 3rem 0;
   }
 
-  &__title{
+  &__title {
     padding-left: 3rem;
   }
 
-  &__body{
+  &__body {
     padding: 0 3rem;
   }
 
-  &__nav{
+  &__nav {
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
