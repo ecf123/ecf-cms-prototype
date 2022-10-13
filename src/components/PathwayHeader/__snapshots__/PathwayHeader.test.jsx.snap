@@ -6,12 +6,12 @@ exports[`should render the pathway header with props 1`] = `
     class="heading"
   >
     <img
-      alt="Company Icon"
+      alt="Barclays Icon"
       class="heading__icon"
       src="barclays-icon-white-background.svg"
     />
     <img
-      alt="Pathway Heading"
+      alt="Mobile Growing Investment"
       class="heading__image"
       src="mobile-growing-investment.svg"
     />

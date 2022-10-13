@@ -7,14 +7,16 @@ const PathwayHeader = ({
   companyIcon,
   links,
   condition,
+  iconAltText,
+  imageAltText
 }) => {
   return (
     <div className="heading">
-      <img className="heading__icon" src={companyIcon} alt="Company Icon" />
+      <img className="heading__icon" src={companyIcon} alt={iconAltText} />
       <img
         className="heading__image"
         src={headingImage}
-        alt="Pathway Heading"
+        alt={imageAltText}
       />
       <h1 className="heading__title">{headingTitle}</h1>
       <CategoriesMenu links={links} condition={condition} />
