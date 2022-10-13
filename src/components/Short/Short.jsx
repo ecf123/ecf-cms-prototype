@@ -5,7 +5,8 @@ const Short = ({
   shortType,
   shortPlaceHolderText,
   handleShortValue,
-  inputClassName
+  inputClassName,
+  name
 }) => {
   return (
     <div className="short">
@@ -13,6 +14,7 @@ const Short = ({
       <input
         className={inputClassName}
         type={shortType}
+        name={name}
         // Will apply spellcheck to inputed text
         spellCheck="true"
         placeholder={shortPlaceHolderText}
