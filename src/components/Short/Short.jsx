@@ -5,12 +5,13 @@ const Short = ({
   shortType,
   shortPlaceHolderText,
   handleShortValue,
+  inputClassName
 }) => {
   return (
     <div className="short">
       <label className="short__label">{shortLabelText}</label>
       <input
-        className="short__input"
+        className={inputClassName}
         type={shortType}
         // Will apply spellcheck to inputed text
         spellCheck="true"

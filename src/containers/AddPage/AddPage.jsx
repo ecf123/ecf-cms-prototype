@@ -39,8 +39,9 @@ const AddPathway = ({
         setPageInfo({ ...pageInfo, [e.target.name]: e.target.value});
     }
 
-    const storeInputs = () => {
+    const storeInputs = (event) => {
         setPageFirstOpened(false);
+        event.preventDefault();
         if((pageInfo.shortInputOne == "" && !shortLabelTextOne.includes("optional")) || 
         (pageInfo.freeTypeInputOne == "" && !freeTypeLabelTextOne.includes("optional")) || 
         (pageInfo.shortInputTwo == "" && !shortLabelTextTwo.includes("optional")) || 
@@ -65,7 +66,10 @@ const AddPathway = ({
             <FreeType 
                 freeTypeLabelText={freeTypeLabelTextOne}
                 name="freeTypeInputOne"
-                inputClassName={((pageInfo.freeTypeInputOne == "" && !freeTypeLabelTextOne.includes("optional") && !pageFirstOpened) || (!pageFirstOpened && !shortLabelTextOne.includes("optional"))) ? "free-type__input--empty" : "free-type__input"}
+                inputClassName={((pageInfo.freeTypeInputOne == "" && !freeTypeLabelTextOne.includes("optional") && !pageFirstOpened) 
+                || (!pageFirstOpened && !shortLabelTextOne.includes("optional"))) 
+                ? "free-type__input--empty" 
+                : "free-type__input"}
                 handleFreeTypeValue={handleChange}
             />
             <Short 
@@ -86,16 +90,16 @@ const AddPathway = ({
             <p className='add-pathway__error-message'>{errorMessage}</p>
 
             <div className="add-pathway__buttons">
-                <Button 
-                    style={"button light-grey round-border modal"}
-                    textStyle={"text modal-text light-grey"}
-                    buttonText={"Cancel"}
-                />
-                <Button
+            <Button
                     style={"button black round-border modal"}
                     textStyle={"text modal-text black"}
                     buttonText={"Submit"}
                     buttonFunction={storeInputs}
+                />
+                <Button 
+                    style={"button light-grey round-border modal"}
+                    textStyle={"text modal-text light-grey"}
+                    buttonText={"Cancel"}
                 />
             </div>
         </div>

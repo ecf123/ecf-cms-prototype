@@ -35,6 +35,10 @@
         &__input{
             margin-bottom: 1rem;
             font-size: $font-size-small;
+            &--empty{
+                margin-bottom: 1rem;
+                font-size: $font-size-small;
+            }
         }
    }
 
@@ -42,6 +46,10 @@
         &__input {
             margin-bottom: 1rem;
             font-size: $font-size-small;
+            &--empty{
+                margin-bottom: 1rem;
+                font-size: $font-size-small;
+            }
         }
    }
 
