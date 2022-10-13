@@ -1,31 +1,31 @@
 import './ViewOptions.scss';
 import { useState } from 'react';
 
-const ViewOptions = ({text}) => {
-  const [selected, setSelected] = useState(text);
+const ViewOptions = () => {
+  const [selected, setSelected] = useState("Overview");
 
-  const getCurrentPage = (text) => {
-    setSelected(text);
-  };
-
-  let classes = "view-options__option";
+  let classesOverview = "view-options__option";
+  let classesCourses = "view-options__option";
+  let classesStats = "view-options__option"
   
-  const handleClick = (text) => {
-    getCurrentPage(text);
-  };
 
-  if (selected == text) {
-      classes += "--clicked";
+    if (selected == "Overview") {
+      classesOverview += "--clicked";
+    }
+    if (selected == "Courses") {
+      classesCourses += "--clicked";
+    }
+    if (selected == "Stats") {
+      classesStats += "--clicked";
     }
 
- 
   return (
     <div className='view-options'>
-        <h3 text="Overview" onClick={handleClick} className={classes}>Overview</h3>
-        <h3 text="Courses"onClick={handleClick} className={classes}>Courses</h3>
-        <h3 text="Stats" onClick={handleClick} className={classes}>Stats</h3>
-    </div>
+        <h3 onClick={() => (setSelected("Overview"))} className={classesOverview}>Overview</h3>
+        <h3 onClick={() => (setSelected("Courses"))} className={classesCourses}>Courses</h3>
+        <h3 onClick={() => (setSelected("Stats"))} className={classesStats}>Stats</h3>
+    </div>  
   )
-}
+ }
 
 export default ViewOptions;
