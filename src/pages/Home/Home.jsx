@@ -5,7 +5,29 @@ import Barclays from "../../assets/barclays-icon-white-background.svg";
 import Airbnb from "../../assets/airbnb-logo.svg";
 import { useState } from "react";
 
-const data = [];
+
+// const data = [{
+//       key: 1,
+//       id: dataJson.id,
+//       course_name: `Commercial Banking + ${1}`,
+//       course_provider: "Barclays",
+//       no_of_lessons: `23`,
+//       no_of_assignments: `2`,
+//       course_length: `345 mins`,
+//       students_enrolled: 124,
+//     },
+//     {
+//       key: 2,
+//       id: 2,
+//       // course_name: `Commercial Banking + ${2}`,
+//       course_provider: "Barclays",
+//       no_of_assignments: `2`,
+//       course_length: `345 mins`,
+//       students_enrolled: 124,
+//     }
+//   ];
+
+  const data = [];
 for (let i = 0; i < 40; i++) {
   data.push({
     key: i,
@@ -102,10 +124,10 @@ const Home = () => {
         }}
       >
         <Input
-          value={editingEntry?.pathway_name}
+          value={editingEntry?.course_name}
           onChange={(e) => {
             setEditingEntry((pre) => {
-              return { ...pre, pathway_name: e.target.value };
+              return { ...pre, course_name: e.target.value };
             });
           }}
         />

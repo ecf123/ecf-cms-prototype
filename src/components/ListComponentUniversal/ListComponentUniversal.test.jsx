@@ -12,6 +12,7 @@ window.matchMedia =
 it("should render the list component universal with multiple columns and rows", () => {
   const columns = [
     {
+      key: 1,
       title: "NO OF COURSES",
       dataIndex: "no_of_courses",
     },
@@ -26,6 +27,7 @@ it("should render the list component universal with multiple columns and rows", 
   ];
   const data = [
     {
+      key: 1,
       no_of_courses: `8`,
       no_of_lessons: `8`,
       est_completion_time: `20hrs`,

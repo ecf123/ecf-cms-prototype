@@ -3,6 +3,7 @@ import "./ListComponentUniversal.scss";
 import { Table, Tag } from "antd";
 import { useState } from "react";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
@@ -20,9 +21,9 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
         key: header,
         dataIndex: header,
         render: (text) => (
-          <a href="" className="table__name">
+          <Link to={text.split(" ").join("")} className="table__name">
             {text}
-          </a>
+          </Link>
         ),
       });
     } else if (header == "category") {
