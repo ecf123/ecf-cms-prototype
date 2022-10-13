@@ -5,7 +5,6 @@ import Barclays from "../../assets/barclays-icon-white-background.svg";
 import Airbnb from "../../assets/airbnb-logo.svg";
 import { useState } from "react";
 
-
 // const data = [{
 //       key: 1,
 //       id: dataJson.id,
@@ -27,7 +26,7 @@ import { useState } from "react";
 //     }
 //   ];
 
-  const data = [];
+const data = [];
 for (let i = 0; i < 40; i++) {
   data.push({
     key: i,
@@ -43,7 +42,13 @@ for (let i = 0; i < 40; i++) {
     no_of_lessons: `8`,
     est_completion_time: `20hrs`,
     no_enrolled: 32,
-    category: [`management + ${i}`, "developer", "banking"],
+    category: [
+      "design",
+      "digital marketing",
+      "programming",
+      "finance",
+      "business",
+    ],
   });
 }
 

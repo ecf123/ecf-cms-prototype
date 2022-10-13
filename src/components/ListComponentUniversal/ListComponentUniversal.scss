@@ -1,17 +1,5 @@
 @use "../../styles/variables"as *;
 
-// .ant-table-thead>tr>th {
-//     color: $color-grey-dark;
-//     // height: 3.75rem !important;
-//     
-//     background-color: $color-white-smoke;
-// }
-
-// table separetors
-// .ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
-//     display: none !important;
-// }
-
 
 .table {
     width: 83.4rem;
@@ -26,22 +14,51 @@
         color: $color-black;
     }
 
+    &__providers {
+        width: 1.5rem;
+        height: 1.5rem;
+        padding: 0.2rem;
+        margin-right: -0.3rem;
+        background: $color-white;
+        border-radius: 50%;
+    }
+
     &__cell {
         color: $color-grey-dark;
         height: 4rem;
     }
 
-    &__edit svg {
+    &__tag {
+        border-radius: 15px;
+        border: none;
+        color: $color-grey-dark;
+    }
+
+    &__edit {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__edit img {
         filter: invert(20%);
         width: 0.9rem;
         height: 1rem;
 
         &:hover {
             filter: invert(71%);
+
         }
     }
 
-    &__delete svg {
+    &__delete {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-left: 0.8rem;
+    }
+
+    &__delete img {
         filter: invert(30%) sepia(70%) saturate(3000%) hue-rotate(314deg) brightness(132%) contrast(90%);
         width: 0.9rem;
         height: 1rem;
@@ -50,6 +67,30 @@
             filter: invert(71%) sepia(88%) saturate(6543%) hue-rotate(336deg) brightness(98%) contrast(86%);
         }
     }
+
+
+    // icons from ant:
+    // &__edit svg {
+    //     filter: invert(20%);
+    //     width: 0.9rem;
+    //     height: 1rem;
+
+
+    //     &:hover {
+    //         filter: invert(71%);
+    //     }
+    // }
+
+    // &__delete svg {
+    //     filter: invert(30%) sepia(70%) saturate(3000%) hue-rotate(314deg) brightness(132%) contrast(90%);
+    //     width: 0.9rem;
+    //     height: 1rem;
+
+    //     &:hover {
+    //         filter: invert(71%) sepia(88%) saturate(6543%) hue-rotate(336deg) brightness(98%) contrast(86%);
+    //     }
+    // }
+
 }
 
 .ant-pagination {
@@ -91,31 +132,5 @@
             border-color: $color-grey-light !important;
         }
 
-    }
-}
-
-
-//classname should be assigned to the providers icons in the table
-.providers {
-    width: 1.5rem;
-    height: 1.5rem;
-    padding: 0.2rem;
-    margin-right: -0.3rem;
-    background: $color-white;
-    border-radius: 50%;
-}
-
-.ant-tag {
-    border-radius: 15px;
-    border: none;
-}
-
-.ant-modal {
-    & span {
-        color: black !important;
-    }
-
-    & svg {
-        filter: invert(71%) sepia(88%) saturate(6543%) hue-rotate(336deg) brightness(98%) contrast(86%);
     }
 }

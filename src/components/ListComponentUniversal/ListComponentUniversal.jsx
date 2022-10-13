@@ -1,11 +1,12 @@
 import "antd/dist/antd.min.css";
 import "./ListComponentUniversal.scss";
 import { Table, Tag } from "antd";
-import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
+// import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import edit from "../../assets/notepad-and-pencil-grey.svg";
+import deletes from "../../assets/bin-icon.svg";
 
 const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
-
   const columns = [];
 
   Object.keys(data[0]).forEach((header) => {
@@ -28,14 +29,23 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
         render: (_, { category }) => (
           <>
             {category.map((tag) => {
-              let color = tag.length > 7 ? "processing" : "success";
-
-              if (tag === "developer") {
-                color = "error";
-              }
+              let color = "#f1cceb";
+              const colors = ["orange", "purple", "cyan", "green", "red"];
+              const categories = [
+                "design",
+                "digital marketing",
+                "programming",
+                "finance",
+                "business",
+              ];
+              categories.forEach((category, index) => {
+                if (category == tag) {
+                  color = colors[index];
+                }
+              });
 
               return (
-                <Tag color={color} key={tag}>
+                <Tag color={color} key={tag} className="table__tag">
                   {tag.toUpperCase()}
                 </Tag>
               );
@@ -51,7 +61,7 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
         render: (_, { providers }) => (
           <>
             {providers.map((icon) => (
-              <img src={icon} key={icon} className="providers" />
+              <img src={icon} key={icon} className="table__providers" />
             ))}
           </>
         ),
@@ -70,7 +80,25 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
     render: (e) => {
       return (
         <>
-          <EditOutlined
+          <button
+            className="table__edit"
+            onClick={() => {
+              onEdit(e);
+            }}
+          >
+            <img src={edit} alt="edit pencil" />
+          </button>
+          <button
+            className="table__delete"
+            onClick={() => {
+              onDelete(e);
+            }}
+          >
+            <img src={deletes} alt="edit pencil" />
+          </button>
+
+          {/* icons from ant */}
+          {/* <EditOutlined
             className="table__edit"
             onClick={() => {
               console.log(e);
@@ -83,21 +111,19 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
               onDelete(e);
             }}
             style={{ color: "red", marginLeft: 12 }}
-          />
+          /> */}
         </>
       );
     },
   });
 
   return (
-
-      <Table
-        className="table"
-        columns={columns}
-        dataSource={data}
-        pagination={{ position: ["bottomLeft"] }}
-      />
-
+    <Table
+      className="table"
+      columns={columns}
+      dataSource={data}
+      pagination={{ position: ["bottomLeft"] }}
+    />
   );
 };
 
