@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the category options with props 1`] = `
+<div>
+  <ul
+    class="categories-menu"
+  >
+    <li
+      class="categories-menu__item categories-menu__item--purple"
+    >
+      one
+    </li>
+    <li
+      class="categories-menu__item categories-menu__item--darkpurple"
+    >
+      two
+    </li>
+    <li
+      class="categories-menu__item categories-menu__item--purple"
+    >
+      three
+    </li>
+  </ul>
+</div>
+`;

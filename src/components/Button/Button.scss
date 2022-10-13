@@ -1,0 +1,182 @@
+@use "../../styles/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  width: fit-content;
+  text-align: center;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.black-svg {
+  svg {
+    path {
+      stroke: $color-blue-navy-dark;
+    }
+  }
+}
+
+.white-svg {
+  svg {
+    path {
+      stroke: $color-white;
+    }
+  }
+}
+
+.small-img {
+  svg {
+    display: flex;
+    align-items: center;
+    margin-right: 0.35rem;
+    path {
+      height: 0.47rem;
+      width: auto;
+    }
+  }
+}
+
+.medium-img {
+  svg {
+    display: flex;
+    align-items: center;
+    path {
+      height: 0.75rem;
+      width: auto;
+    }
+  }
+}
+
+.large-img {
+  margin-right: 0.44rem;
+  display: flex;
+  align-items: center;
+  svg {
+    path {
+      height: 1.06rem;
+      width: auto;
+    }
+  }
+}
+
+.no-img {
+  width: 0;
+}
+
+.text {
+  font-family: $font-secondary;
+  font-weight: $font-weight-regular;
+}
+
+.round-border {
+  border-radius: 2.5rem;
+}
+
+.square-border {
+  border-radius: 0.26rem;
+}
+
+.rounded-square-border {
+  border-radius: 0.5rem;
+}
+
+.green {
+  background-color: $color-green-light;
+  color: $background-color;
+}
+
+.grey {
+  background-color: $color-grey-light;
+  color: $background-color;
+}
+
+.light-grey {
+  background-color: $color-white-smoke;
+  color: $background-color;
+}
+
+.white {
+  background-color: $color-white;
+  color: $background-color;
+}
+
+.black {
+  background-color: $color-blue-navy-dark;
+  color: $color-white;
+}
+
+.border {
+  border: 1px solid $color-grey-light;
+}
+
+.red {
+  background-color: $color-red-normal;
+  color: $color-white;
+}
+
+.small {
+  height: 1.375rem;
+  padding: 0.502rem 0.5rem;
+}
+
+.small-text {
+  margin: 0;
+  font-size: 0.6rem;
+}
+
+.medium {
+  height: 2.45rem;
+  padding: 0.6875rem 1.25rem;
+}
+
+.medium-text {
+  margin: 0;
+  font-size: $font-size-extra-small;
+  margin-left: 0.45rem;
+}
+
+.large {
+  height: 3.1rem;
+  padding: 0.9375rem 2.5rem;
+}
+
+.large-text {
+  margin: 0;
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+}
+
+.modal-text {
+  font-size: $font-size-small;
+  font-weight: $font-weight-regular;
+}
+
+.login-black {
+  background-color: $color-green;
+  padding: 0.844rem 10.063rem;
+  height: 2.813rem;
+  width: 22.125rem;
+}
+
+.login-green {
+  background-color: #b6ddc2;
+  padding: 1.0625rem 12.6875rem;
+  width: 28.0625rem;
+  height: 3.75rem;
+}
+
+.modal {
+  height: 2.75rem;
+  padding: 0.625rem;
+  width: 10.625rem;
+}

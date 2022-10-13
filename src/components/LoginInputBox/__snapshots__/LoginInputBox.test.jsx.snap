@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the login input box component 1`] = `
+<div>
+  <div
+    class="input-box"
+  >
+    <label
+      class="input-box__label"
+    />
+    <input
+      alt="input box"
+      type="text"
+    />
+  </div>
+</div>
+`;

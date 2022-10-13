@@ -10,18 +10,18 @@ it("Should match the snapshot, with the props", () => {
   expect(container).toMatchSnapshot();
 });
 
-it("Should render the Short textarea", () => {
+it("Should render in the Short input box", () => {
   // 1. Arrange
   render(<Short />);
   // 2. Act
-  const input = screen.getByTestId("input");
+  const input = screen.getByRole("textbox");
   // 3. Assert
   expect(input).toBeInTheDocument();
   //comment
 });
 
 it("Should render the Short label", () => {
-  render(<Short />);
-  const label = screen.getByTestId("label");
+  render(<Short shortLabelText="Label Text!" />);
+  const label = screen.getByText("Label Text!");
   expect(label).toBeInTheDocument();
 });

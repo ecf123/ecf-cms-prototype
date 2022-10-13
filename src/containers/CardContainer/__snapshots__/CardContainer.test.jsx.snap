@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the card with no props 1`] = `
+<div>
+  <div
+    class="card-container"
+  />
+</div>
+`;
+
+exports[`it should match the snapshot with props 1`] = `
+<div>
+  <div
+    class="card-container"
+  >
+    <div
+      class="card"
+    >
+      <img
+        alt="Card Image"
+        class="card__image"
+        src="for-hire-image.svg"
+      />
+      <p
+        class="card__date"
+      >
+        12:01
+      </p>
+      <div
+        class="card__header"
+      >
+        <h2
+          class="card__title"
+        >
+          Test title one
+        </h2>
+        <img
+          alt="Arrow Icon"
+          class="card__icon"
+          src="arrow-upper-right-black.svg"
+        />
+      </div>
+      <p
+        class="card__info"
+      >
+        Test text one
+      </p>
+      <ul
+        class="card__links"
+      >
+        <li
+          class="card__link card__link--purple"
+        >
+          one
+        </li>
+        <li
+          class="card__link card__link--darkpurple"
+        >
+          two
+        </li>
+        <li
+          class="card__link card__link--purple"
+        >
+          three
+        </li>
+      </ul>
+    </div>
+    <div
+      class="card"
+    >
+      <img
+        alt="Card Image"
+        class="card__image"
+        src="for-hire-image.svg"
+      />
+      <p
+        class="card__date"
+      >
+        12:00
+      </p>
+      <div
+        class="card__header"
+      >
+        <h2
+          class="card__title"
+        >
+          Test title two
+        </h2>
+        <img
+          alt="Arrow Icon"
+          class="card__icon"
+          src="arrow-upper-right-black.svg"
+        />
+      </div>
+      <p
+        class="card__info"
+      >
+        Test text two
+      </p>
+      <ul
+        class="card__links"
+      >
+        <li
+          class="card__link card__link--purple"
+        >
+          one
+        </li>
+        <li
+          class="card__link card__link--darkpurple"
+        >
+          two
+        </li>
+        <li
+          class="card__link card__link--purple"
+        >
+          three
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

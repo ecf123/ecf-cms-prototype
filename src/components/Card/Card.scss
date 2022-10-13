@@ -1,0 +1,69 @@
+@use "../../styles/variables" as *;
+
+.card {
+  font-family: $font-secondary;
+  max-width: 26.7rem;
+  height: 33rem;
+  font-style: normal;
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__date {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-extra-small;
+    line-height: 1.2rem;
+    color: $color-teal;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .card__icon {
+      margin-top: 0.6rem;
+    }
+    .card__title {
+      font-weight: $font-weight-regular;
+      font-size: $font-size-medium;
+      line-height: 2rem;
+      color: $color-black;
+    }
+  }
+
+  &__info {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-small;
+    line-height: 1.5rem;
+    margin-bottom: 1.6rem;
+    color: $color-teal;
+  }
+
+  &__links {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-extra-small;
+    line-height: 1.2rem;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    margin: 0 0.6rem;
+    border-radius: 0.6rem;
+    padding: 0 0.6rem;
+
+    &--purple {
+      color: $color-purple;
+      background-color: #f9f5ff;
+    }
+
+    &--darkpurple {
+      color: $color-purple-dark;
+      background-color: #f8f9fc;
+    }
+  }
+}

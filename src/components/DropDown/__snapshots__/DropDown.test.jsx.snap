@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render DropDown component 1`] = `
+<div>
+  <nav
+    class="drop-down"
+  >
+    <input
+      type="checkbox"
+    />
+    <label>
+      <span
+        class="drop-down__title"
+      >
+        <img
+          alt="Topic Arrow"
+          class="drop-down__arrow"
+          src="upside-down-arrow-grey.svg"
+        />
+      </span>
+    </label>
+    <ul
+      class="drop-down__list"
+    >
+      <li>
+        <a
+          href="#"
+        >
+          <p
+            class="drop-down__content"
+          >
+            The role of banking in the financial system
+          </p>
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+        >
+          <p
+            class="drop-down__content"
+          >
+            Currency Risk Management
+          </p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
