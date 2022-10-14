@@ -1,0 +1,242 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should match the snapshot with props 1`] = `
+<div>
+  <div
+    class="list-page"
+  >
+    <div
+      class="list-page__header"
+    >
+      <h1
+        class="list-page__title page-title"
+      >
+        title List
+      </h1>
+    </div>
+    <div
+      class="list-page__body"
+    >
+      <nav
+        class="list-page__nav"
+      >
+        <div
+          class="search-bar"
+        >
+          <img
+            alt="Search Icon"
+            class="search-bar__image"
+            src="magnifying-glass-grey.svg"
+          />
+          <input
+            class="search-bar__input"
+            placeholder="Search for title"
+            type="text"
+            value=""
+          />
+        </div>
+        <a
+          href="/*"
+        >
+          <button
+            class="button black round-border large"
+          >
+            <div
+              class="medium-img white-svg"
+            >
+              <svg>
+                pen-icon.svg
+              </svg>
+            </div>
+            <p
+              class="text medium-text black"
+            >
+              Add title
+            </p>
+          </button>
+        </a>
+      </nav>
+      <div
+        class="card-container"
+      >
+        <div
+          class="card"
+        >
+          <a
+            href="/*"
+          >
+            <img
+              class="card__image"
+              src="for-hire-image.svg"
+            />
+          </a>
+          <p
+            class="card__date"
+          >
+            12:01
+          </p>
+          <a
+            class="card__header"
+            href="/*"
+          >
+            <h2
+              class="card__title"
+            >
+              Test title one
+            </h2>
+            <img
+              alt="Arrow Icon"
+              class="card__icon"
+              src="arrow-upper-right-black.svg"
+            />
+          </a>
+          <p
+            class="card__info"
+          >
+            Test text one
+          </p>
+          <ul
+            class="categories-menu"
+          >
+            <li
+              class="categories-menu__item categories-menu__item--purple"
+            >
+              one
+            </li>
+            <li
+              class="categories-menu__item categories-menu__item--darkpurple"
+            >
+              two
+            </li>
+            <li
+              class="categories-menu__item categories-menu__item--purple"
+            >
+              three
+            </li>
+          </ul>
+        </div>
+        <div
+          class="card"
+        >
+          <a
+            href="/*"
+          >
+            <img
+              class="card__image"
+              src="for-hire-image.svg"
+            />
+          </a>
+          <p
+            class="card__date"
+          >
+            12:00
+          </p>
+          <a
+            class="card__header"
+            href="/*"
+          >
+            <h2
+              class="card__title"
+            >
+              Test title two
+            </h2>
+            <img
+              alt="Arrow Icon"
+              class="card__icon"
+              src="arrow-upper-right-black.svg"
+            />
+          </a>
+          <p
+            class="card__info"
+          >
+            Test text two
+          </p>
+          <ul
+            class="categories-menu"
+          >
+            <li
+              class="categories-menu__item categories-menu__item--purple"
+            >
+              one
+            </li>
+            <li
+              class="categories-menu__item categories-menu__item--darkpurple"
+            >
+              two
+            </li>
+            <li
+              class="categories-menu__item categories-menu__item--purple"
+            >
+              three
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`it should match the snapshot without props 1`] = `
+<div>
+  <div
+    class="list-page"
+  >
+    <div
+      class="list-page__header"
+    >
+      <h1
+        class="list-page__title page-title"
+      >
+        undefined List
+      </h1>
+    </div>
+    <div
+      class="list-page__body"
+    >
+      <nav
+        class="list-page__nav"
+      >
+        <div
+          class="search-bar"
+        >
+          <img
+            alt="Search Icon"
+            class="search-bar__image"
+            src="magnifying-glass-grey.svg"
+          />
+          <input
+            class="search-bar__input"
+            placeholder="Search for undefined"
+            type="text"
+            value=""
+          />
+        </div>
+        <a
+          href="/*"
+        >
+          <button
+            class="button black round-border large"
+          >
+            <div
+              class="medium-img white-svg"
+            >
+              <svg>
+                pen-icon.svg
+              </svg>
+            </div>
+            <p
+              class="text medium-text black"
+            >
+              Add undefined
+            </p>
+          </button>
+        </a>
+      </nav>
+      <div
+        class="card-container"
+      />
+    </div>
+  </div>
+</div>
+`;
