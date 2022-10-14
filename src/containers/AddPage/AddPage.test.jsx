@@ -20,6 +20,9 @@ it("Should match the snapshot, with the props", () => {
 it("Should display an error message above the buttons if the first short's label name does not contain the word optional and the input is empty", () => {
     render(<AddPage 
             shortLabelTextOne="short text one"
+            shortLabelTextTwo="optional" 
+            freeTypeLabelTextOne="optional"
+            freeTypeLabelTextTwo="optional"
         />);
 
     const shortTextOneInput = screen.queryByRole("textbox", {name: /short text one/i})
@@ -28,7 +31,7 @@ it("Should display an error message above the buttons if the first short's label
     const button = screen.getByRole("button", {name: /Submit/i});
     userEvent.click(button);
 
-    const errorMessage = screen.queryByText("Please enter the info needed for short text one");
+    const errorMessage = screen.queryByText("Please enter the info needed in the empty red boxes");
 
     expect(errorMessage).toBeInTheDocument();
 });
@@ -47,7 +50,7 @@ it("Should display an error message above the buttons if the second short's labe
     const button = screen.getByRole("button", {name: /Submit/i});
     userEvent.click(button);
 
-    const errorMessage = screen.queryByText("Please enter the info needed for short text two");
+    const errorMessage = screen.queryByText("Please enter the info needed in the empty red boxes");
 
     expect(errorMessage).toBeInTheDocument();
 });
@@ -66,7 +69,7 @@ it("Should display an error message above the buttons if the first free type's l
     const button = screen.getByRole("button", {name: /Submit/i});
     userEvent.click(button);
 
-    const errorMessage = screen.queryByText("Please enter the info needed for free type one");
+    const errorMessage = screen.queryByText("Please enter the info needed in the empty red boxes");
 
     expect(errorMessage).toBeInTheDocument();
 });
@@ -85,7 +88,7 @@ it("Should display an error message above the buttons if the second free type's 
     const button = screen.getByRole("button", {name: /Submit/i});
     userEvent.click(button);
 
-    const errorMessage = screen.queryByText("Please enter the info needed for free type two");
+    const errorMessage = screen.queryByText("Please enter the info needed in the empty red boxes");
 
     expect(errorMessage).toBeInTheDocument();
 });

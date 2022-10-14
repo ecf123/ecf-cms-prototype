@@ -66,10 +66,7 @@ const AddPathway = ({
             <FreeType 
                 freeTypeLabelText={freeTypeLabelTextOne}
                 name="freeTypeInputOne"
-                inputClassName={((pageInfo.freeTypeInputOne != "" && !freeTypeLabelTextOne.includes("optional") && !pageFirstOpened) 
-                || (pageFirstOpened && !freeTypeLabelTextOne.includes("optional")) || freeTypeLabelTextOne.includes("optional")) 
-                ? "free-type__input" 
-                : "free-type__input--empty"}
+                inputClassName={((pageInfo.freeTypeInputOne != "" && !freeTypeLabelTextOne.includes("optional") && !pageFirstOpened) || (pageFirstOpened && !freeTypeLabelTextOne.includes("optional")) || freeTypeLabelTextOne.includes("optional")) ? "free-type__input" : "free-type__input--empty"}
                 handleFreeTypeValue={handleChange}
             />
             <Short 

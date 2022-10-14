@@ -18,6 +18,7 @@ exports[`Should match the snapshot, with the props 1`] = `
         </label>
         <input
           class="short__input"
+          name="shortInputOne"
           placeholder="e.g. Financial Forest"
           spellcheck="true"
           type="text"
@@ -33,6 +34,7 @@ exports[`Should match the snapshot, with the props 1`] = `
         </label>
         <textarea
           class="free-type__input"
+          name="freeTypeInputOne"
           spellcheck="true"
           type="text"
         />
@@ -47,6 +49,7 @@ exports[`Should match the snapshot, with the props 1`] = `
         </label>
         <input
           class="short__input"
+          name="shortInputTwo"
           placeholder="e.g. Fund Manager"
           spellcheck="true"
           type="text"
@@ -62,6 +65,7 @@ exports[`Should match the snapshot, with the props 1`] = `
         </label>
         <textarea
           class="free-type__input"
+          name="freeTypeInputTwo"
           spellcheck="true"
           type="text"
         />
@@ -72,26 +76,34 @@ exports[`Should match the snapshot, with the props 1`] = `
       <div
         class="add-pathway__buttons"
       >
-        <button
-          class="button light-grey round-border modal"
+        <div
+          class="add-pathway__cancel"
         >
-          <div />
-          <p
-            class="text modal-text light-grey"
+          <button
+            class="button black round-border large"
           >
-            Cancel
-          </p>
-        </button>
-        <button
-          class="button black round-border modal"
+            <div />
+            <p
+              class="text large-text black"
+            >
+              Submit
+            </p>
+          </button>
+        </div>
+        <div
+          class="add-pathway__submit"
         >
-          <div />
-          <p
-            class="text modal-text black"
+          <button
+            class="button light-grey round-border large"
           >
-            Submit
-          </p>
-        </button>
+            <div />
+            <p
+              class="text large-text light-grey"
+            >
+              Cancel
+            </p>
+          </button>
+        </div>
       </div>
     </div>
     <div
