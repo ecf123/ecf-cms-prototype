@@ -13,6 +13,12 @@
 
     }
 
+    &__correct {
+        font-weight: $font-weight-bold;
+        color: $color-grey-normal;  
+
+    }
+
     &__title {
         font-weight:$font-weight-bold;
         color: $color-blue-navy-dark;

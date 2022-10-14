@@ -5,7 +5,7 @@ import "./styles/main.scss";
 
 const App = () => {
 
-  const answer = ["Adrian", "Atif", "Andy", "Connel"];
+  const answer = ["Adrian", "Atif", "Andy", "Connel", "Connel *"];
   const question = "What is my name"
   const questionNumber = 1
 
