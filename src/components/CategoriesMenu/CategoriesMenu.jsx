@@ -7,7 +7,7 @@ const CategoriesMenu = ({ links, condition }) => {
 
   // Set condition to true if rendering in marketplace
 
-  let linksArr = links.map((link, index) => {
+  let linksArr = links?.map((link, index) => {
     if (index % 2 == 0) {
       if (condition) {
         return (
