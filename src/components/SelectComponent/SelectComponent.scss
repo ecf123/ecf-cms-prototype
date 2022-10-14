@@ -1,0 +1,31 @@
+.select {
+    border: solid 1px black;
+    border-radius: 8px;
+    width: 512px;
+    padding-left: 8px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.select__label {
+    font-size: 14px;
+    color: black;
+    padding-bottom: 40px;
+}
+
+select.select__dropdown {
+    background: url(../../assets/upside-down-arrow-grey.svg)  no-repeat right;
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+    width: 490px;
+    height: 24px;
+    color: grey;
+    border: none;
+    font-size: 1rem;
+    
+}
+
+.select__dropdownoption {
+    padding: 10px;
+}
