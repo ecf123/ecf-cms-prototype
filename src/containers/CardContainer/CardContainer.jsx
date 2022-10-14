@@ -1,7 +1,7 @@
 import "./CardContainer.scss";
 import Card from "../../components/Card/Card";
 
-const CardContainer = ({ cards }) => {
+const CardContainer = ({ cards, condition }) => {
   const renderCards = cards?.map((card) => {
     return (
       <Card
@@ -11,6 +11,8 @@ const CardContainer = ({ cards }) => {
         title={card.title}
         cardInfo={card.cardInfo}
         links={card.links}
+        imgDescription={card.imgDescription}
+        condition={condition}
       />
     );
   });
