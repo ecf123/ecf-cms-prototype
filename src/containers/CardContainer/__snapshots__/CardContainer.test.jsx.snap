@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the card with no props 1`] = `
+<div>
+  <div
+    class="card-container"
+  />
+</div>
+`;
+
+exports[`it should match the snapshot with props 1`] = `
+<div>
+  <div
+    class="card-container"
+  >
+    <div
+      class="card"
+    >
+      <a
+        href="/*"
+      >
+        <img
+          class="card__image"
+          src="for-hire-image.svg"
+        />
+      </a>
+      <p
+        class="card__date"
+      >
+        12:01
+      </p>
+      <a
+        class="card__header"
+        href="/*"
+      >
+        <h2
+          class="card__title"
+        >
+          Test title one
+        </h2>
+        <img
+          alt="Arrow Icon"
+          class="card__icon"
+          src="arrow-upper-right-black.svg"
+        />
+      </a>
+      <p
+        class="card__info"
+      >
+        Test text one
+      </p>
+      <ul
+        class="categories-menu"
+      >
+        <li
+          class="categories-menu__item categories-menu__item--purple"
+        >
+          one
+        </li>
+        <li
+          class="categories-menu__item categories-menu__item--darkpurple"
+        >
+          two
+        </li>
+        <li
+          class="categories-menu__item categories-menu__item--purple"
+        >
+          three
+        </li>
+      </ul>
+    </div>
+    <div
+      class="card"
+    >
+      <a
+        href="/*"
+      >
+        <img
+          class="card__image"
+          src="for-hire-image.svg"
+        />
+      </a>
+      <p
+        class="card__date"
+      >
+        12:00
+      </p>
+      <a
+        class="card__header"
+        href="/*"
+      >
+        <h2
+          class="card__title"
+        >
+          Test title two
+        </h2>
+        <img
+          alt="Arrow Icon"
+          class="card__icon"
+          src="arrow-upper-right-black.svg"
+        />
+      </a>
+      <p
+        class="card__info"
+      >
+        Test text two
+      </p>
+      <ul
+        class="categories-menu"
+      >
+        <li
+          class="categories-menu__item categories-menu__item--purple"
+        >
+          one
+        </li>
+        <li
+          class="categories-menu__item categories-menu__item--darkpurple"
+        >
+          two
+        </li>
+        <li
+          class="categories-menu__item categories-menu__item--purple"
+        >
+          three
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
