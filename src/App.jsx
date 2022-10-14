@@ -4,9 +4,12 @@ import AddQuestion from "./components/AddQuestion/AddQuestion";
 import "./styles/main.scss";
 
 const App = () => {
+
+  const answer = ["Value: £15.99", "Flavours Exp 31/07/22", "Items: Grenade Carb Killa Protein Bars - 12 X 60g - All", "Service: Yodel Direct"];
+
   return (
     <Routes>
-      <Route path="*" element={<AddQuestion />} />
+      <Route path="*" element={<AddQuestion answers={answer}/>} />
     </Routes>
   );
 };

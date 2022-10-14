@@ -3,32 +3,25 @@ import './AddQuestion.scss'
 import binIcon from "../../assets/bin-icon.svg"
 import penIcon from "../../assets/pen-icon.svg"
 
-const AddQuestion = () => {
+const AddQuestion = ({question, answers}) => {
+
+  const answerJSX = answers?.map((answer, index) => {
+    return (
+      <li key={index} className='list__item'>{answer}</li>
+    )
+  })
 
   return (
     <div>
       <div className='questions'>
-        <h4>Q1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+        <h4>Q{index}. {question} </h4>
         <ol type='A'>
-            <li>Answer A</li>
-            <li>Answer B</li>
-            <li>Answer C</li>
-            <li>Answer D</li>
+            {answerJSX}
         </ol>
         </div>
         <div className='buttons'>
-          <Button style={}
-                  textStyle={}
-                  buttonText={}
-                  children={}
-                  imgStyle={}
-                  buttonFunction={}/>
-          <Button style={}
-                  textStyle={}
-                  buttonText={}
-                  children={}
-                  imgStyle={}
-                  buttonFunction={}/>
+          <img className='buttons__bin' src={binIcon} alt="" />
+          <img className='buttons__pen' src={penIcon} alt="" />
         </div>
     </div>
   )
