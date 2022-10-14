@@ -1,11 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
+import { BrowserRouter } from "react-router-dom";
 
-import Card from "./Card";
+import Card from "./Card.jsx";
 
 it("should render the card image", () => {
   //Arrange
-  render(<Card />);
+  render(<Card imgDescription={"Card Image"} />, { wrapper: BrowserRouter });
   //Act
   const image = screen.getByAltText("Card Image");
   //Assert
@@ -14,7 +15,7 @@ it("should render the card image", () => {
 
 it("should display the date or time on the screen", () => {
   //Arrange
-  render(<Card dateOrTime="22/01/2022" />);
+  render(<Card dateOrTime="22/01/2022" />, { wrapper: BrowserRouter });
   //Act
   const date = screen.queryByText("22/01/2022");
   //Assert
@@ -23,7 +24,7 @@ it("should display the date or time on the screen", () => {
 
 it("should display the header of the card on the screen", () => {
   //Arrange
-  render(<Card title="Test Title" />);
+  render(<Card title="Test Title" />, { wrapper: BrowserRouter });
   //Act
   const header = screen.queryByText("Test Title");
   //Assert
@@ -32,7 +33,7 @@ it("should display the header of the card on the screen", () => {
 
 it("should display the links on the screen", () => {
   //Arrange
-  render(<Card links={["linkOne"]} />);
+  render(<Card links={["linkOne"]} />, { wrapper: BrowserRouter });
   //Act
   const link = screen.getByText("linkOne");
   //Assert
@@ -41,7 +42,7 @@ it("should display the links on the screen", () => {
 
 it("should display the article paragraph on the screen", () => {
   //Arrange
-  render(<Card cardInfo="Test card" />);
+  render(<Card cardInfo="Test card" />, { wrapper: BrowserRouter });
   //Act
   const paragraph = screen.getByText("Test card");
   //Assert
@@ -50,7 +51,7 @@ it("should display the article paragraph on the screen", () => {
 
 it("should render the arrow icon", () => {
   //Arrange
-  render(<Card />);
+  render(<Card />, { wrapper: BrowserRouter });
   //Act
   const image = screen.getByAltText("Arrow Icon");
   //Assert
@@ -58,7 +59,7 @@ it("should render the arrow icon", () => {
 });
 
 it("Should render the card with no props", () => {
-  const { container } = customRender(<Card />);
+  const { container } = customRender(<Card />, { wrapper: BrowserRouter });
   expect(container).toMatchSnapshot();
 });
 
@@ -70,7 +71,8 @@ it("Should render the card with props", () => {
       title="Card"
       cardInfo="lorem ipsum"
       links={["one", "two", "three"]}
-    />
+    />,
+    { wrapper: BrowserRouter }
   );
   expect(container).toMatchSnapshot();
 });

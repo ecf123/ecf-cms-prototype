@@ -1,0 +1,27 @@
+@use "../../styles/variables" as *;
+
+.main-card {
+  width: 34rem;
+  font-family: $font-secondary;
+
+  &__image {
+    width: 100%;
+    height: 21.2rem;
+    margin-bottom: 1.25rem;
+  }
+  &__date {
+    color: $color-teal;
+    font-size: $font-size-small;
+  }
+  &__title {
+    color: $color-blue-dark;
+    font-size: $font-size-large;
+    font-weight: $font-weight-regular;
+    margin: 0.938rem;
+  }
+  &__info {
+    color: $color-teal;
+    font-size: $font-size-small;
+    font-weight: $font-weight-regular;
+  }
+}

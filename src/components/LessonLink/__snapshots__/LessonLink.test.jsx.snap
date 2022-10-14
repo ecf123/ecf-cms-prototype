@@ -15,9 +15,14 @@ exports[`LessonLink component matches the snapshot taken 1`] = `
           alt="play files icon"
           src="play-files-icon.svg"
         />
-        <h5
-          class="container__title-header"
-        />
+        <a
+          href="/"
+          style="text-decoration: none;"
+        >
+          <h5
+            class="container__title-header"
+          />
+        </a>
       </div>
       <div
         class="container__time"
@@ -31,15 +36,19 @@ exports[`LessonLink component matches the snapshot taken 1`] = `
         />
       </div>
     </div>
-    <div
-      class="container__arrow"
+    <a
+      href="/"
     >
-      <img
-        alt="course arrow"
-        class="container-arrow-image"
-        src="arrow-pointing-right-icon.svg"
-      />
-    </div>
+      <div
+        class="container__arrow"
+      >
+        <img
+          alt="course arrow"
+          class="container-arrow-image"
+          src="arrow-pointing-right-icon.svg"
+        />
+      </div>
+    </a>
   </div>
 </div>
 `;
@@ -59,11 +68,16 @@ exports[`LessonLink component matches the snapshot taken with props 1`] = `
           alt="play files icon"
           src="play-files-icon.svg"
         />
-        <h5
-          class="container__title-header"
+        <a
+          href="/"
+          style="text-decoration: none;"
         >
-          blablabla
-        </h5>
+          <h5
+            class="container__title-header"
+          >
+            blablabla
+          </h5>
+        </a>
       </div>
       <div
         class="container__time"
@@ -79,15 +93,19 @@ exports[`LessonLink component matches the snapshot taken with props 1`] = `
         </h6>
       </div>
     </div>
-    <div
-      class="container__arrow"
+    <a
+      href="/"
     >
-      <img
-        alt="course arrow"
-        class="container-arrow-image"
-        src="arrow-pointing-right-icon.svg"
-      />
-    </div>
+      <div
+        class="container__arrow"
+      >
+        <img
+          alt="course arrow"
+          class="container-arrow-image"
+          src="arrow-pointing-right-icon.svg"
+        />
+      </div>
+    </a>
   </div>
 </div>
 `;
