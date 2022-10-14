@@ -12,6 +12,8 @@ it("should render the pathway header with props", () => {
       companyIcon={companyIcon}
       links={["Finance", "Investing"]}
       condition={false}
+      iconAltText = "Barclays Icon"
+      imageAltText = "Mobile Growing Investment"
     />
   );
   expect(container).toMatchSnapshot();
@@ -25,6 +27,8 @@ it("should render the pathway header title", () => {
       companyIcon={companyIcon}
       links={["Finance", "Investing"]}
       condition={false}
+      iconAltText = "Barclays Icon"
+      imageAltText = "Mobile Growing Investment"
     />
   );
   const title = screen.getByRole("heading");
@@ -39,6 +43,8 @@ it("should render the pathway header links", () => {
       companyIcon={companyIcon}
       links={["Finance", "Investing"]}
       condition={false}
+      iconAltText = "Barclays Icon"
+      imageAltText = "Mobile Growing Investment"
     />
   );
   const linksOne = screen.getByText(/Finance/);
@@ -55,10 +61,12 @@ it("should render the pathway header image and icon", () => {
       companyIcon={companyIcon}
       links={["Finance", "Investing"]}
       condition={false}
+      iconAltText = "Barclays Icon"
+      imageAltText = "Mobile Growing Investment"
     />
   );
-  const image = screen.getByAltText("Company Icon");
-  const icon = screen.getByAltText("Pathway Heading");
-  expect(image).toBeInTheDocument();
+  const icon = screen.getByAltText("Barclays Icon");
+  const image = screen.getByAltText("Mobile Growing Investment");
   expect(icon).toBeInTheDocument();
+  expect(image).toBeInTheDocument();
 });
