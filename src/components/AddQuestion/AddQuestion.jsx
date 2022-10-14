@@ -5,11 +5,13 @@ import penIcon from "../../assets/pen-icon.svg"
 
 const AddQuestion = ({question, answers, questionNumber}) => {
 
-  const answerJSX = answers?.map((answer, index) => {
+  let answerJSX = answers?.map((answer, index) => {
     return (
-      <li key={index} className='question__each-answer'>{answer}</li>
-    )
-  })
+      answer.includes("*") ?  (<li key={index} className='question__each-answer'>{answer.replace("*", "")} <b className='question__correct'>(correct)</b></li>)
+     : (<li key={index} className='question__each-answer'>{answer}</li>)
+    
+  )})
+
 
   return (
     <div className='question'>
