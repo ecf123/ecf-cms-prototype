@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
-import { Table } from "antd";
 import { customRender } from "../../utils/testUtils";
+import ListComponentUniversal from "./ListComponentUniversal";
 
 window.matchMedia =
   window.matchMedia ||
@@ -12,21 +12,6 @@ window.matchMedia =
     };
   };
 
-const columns = [
-  {
-    key: 1,
-    title: "NO OF COURSES",
-    dataIndex: "no_of_courses",
-  },
-  {
-    title: "NO OF LESSONS",
-    dataIndex: "no_of_lessons",
-  },
-  {
-    title: "EST. COMPLETION TIME",
-    dataIndex: "est_completion_time",
-  },
-];
 const data = [
   {
     key: 1,
@@ -42,26 +27,25 @@ const data = [
   },
 ];
 
-it("renders the ListComponentUniversal without props", () => {
-  const { container } = customRender(<Table />);
-  expect(container).toMatchSnapshot();
-});
-
-it("renders the ListComponentUniversal with props", () => {
-  const { container } = customRender(
-    <Table columns={columns} dataSource={data} />
-  );
+it("renders the ListComponentUniversal with data", () => {
+  const { container } = customRender(<ListComponentUniversal data={data}/>);
   expect(container).toMatchSnapshot();
 });
 
 it("should render the list component universal with multiple columns and with one row", () => {
-  render(<Table columns={columns} dataSource={data} />);
+  render(<ListComponentUniversal data={data} />);
   const cell = screen.getByText("20hrs");
   expect(cell).toBeInTheDocument();
 });
 
 it("should render the list component universal with multiple columns and with multiple rows", () => {
-  render(<Table columns={columns} dataSource={data} />);
+  render(<ListComponentUniversal data={data} />);
   const cell = screen.getByText("48");
   expect(cell).toBeInTheDocument();
+});
+
+it("should render table headers in capitals without underscores", () => {
+  render(<ListComponentUniversal data={data} />);
+  const header = screen.getByText("NO OF LESSONS");
+  expect(header).toBeInTheDocument();
 });

@@ -1,10 +1,10 @@
 import "antd/dist/antd.min.css";
 import "./ListComponentUniversal.scss";
 import { Table, Tag } from "antd";
-// import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
+import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import edit from "../../assets/notepad-and-pencil-grey.svg";
-import deletes from "../../assets/bin-icon.svg";
+// import edit from "../../assets/notepad-and-pencil-grey.svg";
+// import deletes from "../../assets/bin-icon.svg";
 
 const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
   const columns = [];
@@ -15,6 +15,7 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
         title: header.replace(/_/g, " ").toUpperCase(),
         key: header,
         dataIndex: header,
+        className: "table__cell",
         render: (text) => (
           <Link to={text.split(" ").join("")} className="table__name">
             {text}
@@ -26,6 +27,7 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
         title: "CATEGORY",
         key: "category",
         dataIndex: "category",
+        className: "table__categories table__cell",
         render: (_, { category }) => (
           <>
             {category.map((tag) => {
@@ -58,6 +60,7 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
         key: "providers",
         title: "PROVIDERS",
         dataIndex: "providers",
+        className: "table__cell",
         render: (_, { providers }) => (
           <>
             {providers.map((icon) => (
@@ -80,7 +83,7 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
     render: (e) => {
       return (
         <>
-          <button
+          {/* <button
             className="table__edit"
             onClick={() => {
               onEdit(e);
@@ -95,10 +98,10 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
             }}
           >
             <img src={deletes} alt="edit pencil" />
-          </button>
+          </button> */}
 
           {/* icons from ant */}
-          {/* <EditOutlined
+          <EditOutlined
             className="table__edit"
             onClick={() => {
               console.log(e);
@@ -111,7 +114,7 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
               onDelete(e);
             }}
             style={{ color: "red", marginLeft: 12 }}
-          /> */}
+          />
         </>
       );
     },
@@ -122,7 +125,7 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
       className="table"
       columns={columns}
       dataSource={data}
-      pagination={{ position: ["bottomLeft"] }}
+      pagination={{ position: ["bottomLeft"], pageSize: 5 }}
     />
   );
 };

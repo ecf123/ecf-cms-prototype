@@ -27,7 +27,7 @@ import { useState } from "react";
 //   ];
 
 const data = [];
-for (let i = 0; i < 40; i++) {
+for (let i = 0; i < 60; i++) {
   data.push({
     key: i,
     id: i,
@@ -44,10 +44,10 @@ for (let i = 0; i < 40; i++) {
     no_enrolled: 32,
     category: [
       "design",
+      "business",
       "digital marketing",
       "programming",
       "finance",
-      "business",
     ],
   });
 }
@@ -129,10 +129,10 @@ const Home = () => {
         }}
       >
         <Input
-          value={editingEntry?.course_name}
+          value={editingEntry?.pathway_name}
           onChange={(e) => {
             setEditingEntry((pre) => {
-              return { ...pre, course_name: e.target.value };
+              return { ...pre, pathway_name: e.target.value };
             });
           }}
         />
