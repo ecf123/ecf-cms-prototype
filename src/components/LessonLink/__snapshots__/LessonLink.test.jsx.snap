@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LessonLink component matches the snapshot taken 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="container__course-info"
+    >
+      <div
+        class="container__title"
+      >
+        <img
+          alt="play files icon"
+          src="play-files-icon.svg"
+        />
+        <h5
+          class="container__title-header"
+        />
+      </div>
+      <div
+        class="container__time"
+      >
+        <img
+          alt="clock icon"
+          src="clock-icon.svg"
+        />
+        <h6
+          class="container__time-header"
+        />
+      </div>
+    </div>
+    <div
+      class="container__arrow"
+    >
+      <img
+        alt="course arrow"
+        class="container-arrow-image"
+        src="arrow-pointing-right-icon.svg"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`LessonLink component matches the snapshot taken with props 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="container__course-info"
+    >
+      <div
+        class="container__title"
+      >
+        <img
+          alt="play files icon"
+          src="play-files-icon.svg"
+        />
+        <h5
+          class="container__title-header"
+        >
+          blablabla
+        </h5>
+      </div>
+      <div
+        class="container__time"
+      >
+        <img
+          alt="clock icon"
+          src="clock-icon.svg"
+        />
+        <h6
+          class="container__time-header"
+        >
+          10 min
+        </h6>
+      </div>
+    </div>
+    <div
+      class="container__arrow"
+    >
+      <img
+        alt="course arrow"
+        class="container-arrow-image"
+        src="arrow-pointing-right-icon.svg"
+      />
+    </div>
+  </div>
+</div>
+`;
