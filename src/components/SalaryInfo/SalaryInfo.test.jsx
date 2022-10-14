@@ -9,9 +9,7 @@ it("Should match the snapshot, with the props", () => {
     Audit: 30000,
     Consultant: 100000,
   };
-  const { container } = customRender(
-    <SalaryInfo salariesObj={obj} />
-  );
+  const { container } = customRender(<SalaryInfo salariesObj={obj} />);
   expect(container).toMatchSnapshot();
 });
 
