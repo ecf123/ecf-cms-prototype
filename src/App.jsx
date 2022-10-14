@@ -1,7 +1,7 @@
 // import { Route, Routes } from "react-router-dom";
 // import Home from "./pages/Home/Home";
 import "./styles/main.scss";
-import hamburger from "./assets/holding-card.svg";
+import PathwayDisplay from "./components/PathwayDisplay/PathwayDisplay";
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
     //   <Route path="*" element={<Home />} />
       
     // </Routes>
-    <img src={hamburger}/>
+    <PathwayDisplay />
   );
 };
 

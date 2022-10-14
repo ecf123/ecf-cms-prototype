@@ -1,0 +1,31 @@
+@use "../../styles/_variables" as *;
+
+.pathway-display {
+    height: 76px;
+    width: 1334px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: #fcfcfd;
+
+    &__container {
+        display: flex;
+        align-items: center;
+
+        .pathway-display__option {
+            margin: 10px;
+        }
+    }
+
+    #grid-icon {
+        padding: 10px;
+        border: 1.5px solid $color-grey-light;
+        border-radius: 11px;
+        background-color: #ffffff;
+    }
+
+    &__button {
+        text-decoration: none;
+    }
+}
