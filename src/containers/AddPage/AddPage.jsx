@@ -90,17 +90,21 @@ const AddPathway = ({
             <p className='add-pathway__error-message'>{errorMessage}</p>
 
             <div className="add-pathway__buttons">
-            <Button
-                    style={"button black round-border modal"}
-                    textStyle={"text modal-text black"}
-                    buttonText={"Submit"}
-                    buttonFunction={storeInputs}
-                />
-                <Button 
-                    style={"button light-grey round-border modal"}
-                    textStyle={"text modal-text light-grey"}
-                    buttonText={"Cancel"}
-                />
+                <div className="add-pathway__cancel">
+                    <Button
+                        style={"button black round-border large"}
+                        textStyle={"text large-text black"}
+                        buttonText={"Submit"}
+                        buttonFunction={storeInputs}
+                    />
+                </div>
+                <div className="add-pathway__submit">
+                    <Button 
+                        style={"button light-grey round-border large"}
+                        textStyle={"text large-text light-grey"}
+                        buttonText={"Cancel"}
+                    />
+                </div>
             </div>
         </div>
 

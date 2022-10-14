@@ -47,9 +47,17 @@
       border: 0.063rem solid $color-red-normal;
       box-shadow: 0rem 1px 2px $color-red-normal;
       border-radius: 0.5rem;
+      &:focus{
+        outline: none;
+      }
+      &::placeholder {
+        color: $color-grey-dark;
+      }
     }
-
-    ::placeholder {
+    &:focus{
+      outline: none;
+    }
+    &::placeholder {
       color: $color-grey-dark;
     }
   }
