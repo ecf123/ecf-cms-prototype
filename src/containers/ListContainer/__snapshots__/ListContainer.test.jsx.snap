@@ -62,18 +62,22 @@ exports[`it should match the snapshot with props 1`] = `
         <div
           class="card"
         >
-          <img
-            alt="Card Image"
-            class="card__image"
-            src="for-hire-image.svg"
-          />
+          <a
+            href="/*"
+          >
+            <img
+              class="card__image"
+              src="for-hire-image.svg"
+            />
+          </a>
           <p
             class="card__date"
           >
             12:01
           </p>
-          <div
+          <a
             class="card__header"
+            href="/*"
           >
             <h2
               class="card__title"
@@ -85,27 +89,27 @@ exports[`it should match the snapshot with props 1`] = `
               class="card__icon"
               src="arrow-upper-right-black.svg"
             />
-          </div>
+          </a>
           <p
             class="card__info"
           >
             Test text one
           </p>
           <ul
-            class="card__links"
+            class="categories-menu"
           >
             <li
-              class="card__link card__link--purple"
+              class="categories-menu__item categories-menu__item--purple"
             >
               one
             </li>
             <li
-              class="card__link card__link--darkpurple"
+              class="categories-menu__item categories-menu__item--darkpurple"
             >
               two
             </li>
             <li
-              class="card__link card__link--purple"
+              class="categories-menu__item categories-menu__item--purple"
             >
               three
             </li>
@@ -114,18 +118,22 @@ exports[`it should match the snapshot with props 1`] = `
         <div
           class="card"
         >
-          <img
-            alt="Card Image"
-            class="card__image"
-            src="for-hire-image.svg"
-          />
+          <a
+            href="/*"
+          >
+            <img
+              class="card__image"
+              src="for-hire-image.svg"
+            />
+          </a>
           <p
             class="card__date"
           >
             12:00
           </p>
-          <div
+          <a
             class="card__header"
+            href="/*"
           >
             <h2
               class="card__title"
@@ -137,27 +145,27 @@ exports[`it should match the snapshot with props 1`] = `
               class="card__icon"
               src="arrow-upper-right-black.svg"
             />
-          </div>
+          </a>
           <p
             class="card__info"
           >
             Test text two
           </p>
           <ul
-            class="card__links"
+            class="categories-menu"
           >
             <li
-              class="card__link card__link--purple"
+              class="categories-menu__item categories-menu__item--purple"
             >
               one
             </li>
             <li
-              class="card__link card__link--darkpurple"
+              class="categories-menu__item categories-menu__item--darkpurple"
             >
               two
             </li>
             <li
-              class="card__link card__link--purple"
+              class="categories-menu__item categories-menu__item--purple"
             >
               three
             </li>
