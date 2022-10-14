@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use '../../styles/main.scss' as *;
 @use '../../styles/variables' as *;
 @use '../../styles/typography' as *;
@@ -34,3 +35,39 @@
        border-bottom: 2px $color-green-light solid;
     }
 }
+=======
+@use "../../styles/main.scss" as *;
+@use "../../styles/variables" as *;
+
+.view-options {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-family: $font-secondary;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-small;
+  background-color: $color-white;
+  box-shadow: inset 0rem -0.125rem 0rem 0rem #e6e6e6;
+  &__option {
+    padding: 0.625rem;
+    opacity: 40%;
+    color: $color-blue-navy-dark;
+    text-decoration: none;
+  }
+  &__option--clicked:after {
+    background: none repeat scroll 0 0 #b4ddc0;
+    bottom: -0.625rem;
+    left: 25%;
+    content: "";
+    display: block;
+    height: 0.25rem;
+    position: relative;
+    width: 50%;
+  }
+  &__option--clicked {
+    padding: 0.625rem;
+    color: $color-blue-navy-dark;
+    opacity: 100%;
+  }
+}
+>>>>>>> 580e22dc312720150b4b754fd0198098134aa5a4

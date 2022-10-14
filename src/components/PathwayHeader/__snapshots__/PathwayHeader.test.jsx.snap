@@ -1,35 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PathwayHeader component matches the snapshot taken 1`] = `
+exports[`should render the pathway header with props 1`] = `
 <div>
   <div
-    class="pathway-header"
+    class="heading"
   >
-    <h2
-      class="pathway-header__title"
+    <img
+      alt="Barclays Icon"
+      class="heading__icon"
+      src="barclays-icon-white-background.svg"
+    />
+    <img
+      alt="Mobile Growing Investment"
+      class="heading__image"
+      src="mobile-growing-investment.svg"
+    />
+    <h1
+      class="heading__title"
     >
-      Pathway Structure
-    </h2>
-    <a
-      href="/*"
+      Commercial Banking with Barclay's
+    </h1>
+    <ul
+      class="categories-menu"
     >
-      <button
-        class="button black round-border medium"
+      <li
+        class="categories-menu__item categories-menu__item--purple"
       >
-        <div
-          class="medium-img white-svg"
-        >
-          <svg>
-            pen-icon.svg
-          </svg>
-        </div>
-        <p
-          class="text medium-text black"
-        >
-          Add Course
-        </p>
-      </button>
-    </a>
+        Finance
+      </li>
+      <li
+        class="categories-menu__item categories-menu__item--darkpurple"
+      >
+        Investing
+      </li>
+    </ul>
   </div>
 </div>
 `;

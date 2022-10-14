@@ -9,7 +9,6 @@ exports[`Should match the snapshot, with the props 1`] = `
       class="free-type__label"
     />
     <textarea
-      class="free-type__input"
       spellcheck="true"
       type="text"
     />
