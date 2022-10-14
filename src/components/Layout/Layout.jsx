@@ -3,7 +3,8 @@ import NavBar from  "../NavBar/NavBar"
 import HeaderProfile from "../HeaderProfile/HeaderProfile"
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children, user }) => {
+  const { image, name, role } = user;
 
   return (
   <div className="layout">
@@ -14,7 +15,7 @@ const Layout = ({ children }) => {
 
     <header className="layout__header">
       <h1 className="layout__header--title">Header</h1>
-      <HeaderProfile />
+      <HeaderProfile name={name} profileImg={image} role={role} />
     </header>
     
     <main className="layout__body">
