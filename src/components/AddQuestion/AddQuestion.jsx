@@ -3,19 +3,19 @@ import './AddQuestion.scss'
 import binIcon from "../../assets/bin-icon.svg"
 import penIcon from "../../assets/pen-icon.svg"
 
-const AddQuestion = ({question, answers}) => {
+const AddQuestion = ({question, answers, questionNumber}) => {
 
   const answerJSX = answers?.map((answer, index) => {
     return (
-      <li key={index} className='list__item'>{answer}</li>
+      <li key={index} className='question__each-answer'>{answer}</li>
     )
   })
 
   return (
-    <div>
-      <div className='questions'>
-        <h4>Q{index}. {question} </h4>
-        <ol type='A'>
+    <div className='question'>
+      <div className='question__container'>
+        <h6 className='question__title'>Q{questionNumber}. {question}? </h6>
+        <ol className='question__answers' type='A'>
             {answerJSX}
         </ol>
         </div>

@@ -5,11 +5,13 @@ import "./styles/main.scss";
 
 const App = () => {
 
-  const answer = ["Value: £15.99", "Flavours Exp 31/07/22", "Items: Grenade Carb Killa Protein Bars - 12 X 60g - All", "Service: Yodel Direct"];
+  const answer = ["Adrian", "Atif", "Andy", "Connel"];
+  const question = "What is my name"
+  const questionNumber = 1
 
   return (
     <Routes>
-      <Route path="*" element={<AddQuestion answers={answer}/>} />
+      <Route path="*" element={<AddQuestion question= {question} answers={answer} questionNumber={questionNumber}/>} />
     </Routes>
   );
 };
