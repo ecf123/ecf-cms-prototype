@@ -1,12 +1,12 @@
 @use "../../styles/_variables" as *;
 
 .pathway-display {
-    height: 76px;
-    width: 1334px;
+    height: 4.75rem;
+    width: 83rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    padding: 1.9rem;
     background-color: #fcfcfd;
 
     &__container {
@@ -14,14 +14,14 @@
         align-items: center;
 
         .pathway-display__option {
-            margin: 10px;
+            margin: 0.6rem;
         }
     }
 
     #grid-icon {
-        padding: 10px;
-        border: 1.5px solid $color-grey-light;
-        border-radius: 11px;
+        padding: 0.6rem;
+        border: 0.09rem solid $color-grey-light;
+        border-radius: 0.7rem;
         background-color: #ffffff;
     }
 
