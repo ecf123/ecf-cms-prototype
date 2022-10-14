@@ -21,10 +21,11 @@ const SalaryInfo = ({ salariesObj }) => {
     );
   });
 
-  const sumOfSalaries = Object.values(salariesObj)
-    .reduce((a, b) => a + b); 
+  const sumOfSalaries = Object.values(salariesObj).reduce((a, b) => a + b);
 
-  const avgJSX =  (sumOfSalaries / Object.keys(salariesObj).length).toLocaleString("en");
+  const avgJSX = (
+    sumOfSalaries / Object.keys(salariesObj).length
+  ).toLocaleString("en");
 
   return (
     <div className="salary">
