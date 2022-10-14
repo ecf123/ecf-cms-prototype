@@ -4,26 +4,23 @@ import HeaderProfile from "../HeaderProfile/HeaderProfile"
 
 
 const Layout = ({ children }) => {
+
   return (
-  
   <div className="layout">
 
-    <div className="layout__nav-bar">
+    <aside className="layout__nav-bar">
       <NavBar />
-    </div>
+    </aside>
 
-    <div className="layout__header">
+    <header className="layout__header">
       <h1 className="layout__header--title">Header</h1>
       <HeaderProfile />
-    </div>
-
-
-    <div>
+    </header>
+    
+    <main className="layout__body">
       {children}
-    </div>
+    </main>
     
-    
-  
   </div>
   )
 };
