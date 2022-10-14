@@ -28,7 +28,7 @@ const data = [
 ];
 
 it("renders the ListComponentUniversal with data", () => {
-  const { container } = customRender(<ListComponentUniversal data={data}/>);
+  const { container } = customRender(<ListComponentUniversal data={data} />);
   expect(container).toMatchSnapshot();
 });
 

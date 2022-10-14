@@ -6,7 +6,10 @@ import "./styles/main.scss";
 const App = () => {
   return (
     <Routes>
-      <Route path="/FinancialForest+1" element={<Short freeTypeLabelText="hello"/>} />
+      <Route
+        path="/FinancialForest+1"
+        element={<Short freeTypeLabelText="hello" />}
+      />
       <Route path="*" element={<Home />} />
     </Routes>
   );

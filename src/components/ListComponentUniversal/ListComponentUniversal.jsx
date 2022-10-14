@@ -1,15 +1,14 @@
 import "antd/dist/antd.min.css";
 import "./ListComponentUniversal.scss";
 import { Table, Tag } from "antd";
-import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-// import edit from "../../assets/notepad-and-pencil-grey.svg";
-// import deletes from "../../assets/bin-icon.svg";
+import edit from "../../assets/notepad-and-pencil-grey.svg";
+import deletes from "../../assets/bin-icon.svg";
 
 const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
   const columns = [];
 
-  Object.keys(data[0]).forEach((header) => {
+  data ? Object.keys(data[0]).forEach((header) => {
     if (header.includes("name")) {
       columns.push({
         title: header.replace(/_/g, " ").toUpperCase(),
@@ -75,7 +74,7 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
         dataIndex: header,
         className: "table__cell",
       });
-  });
+  }): data;
 
   columns.push({
     key: "",
@@ -83,7 +82,7 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
     render: (e) => {
       return (
         <>
-          {/* <button
+          <button
             className="table__edit"
             onClick={() => {
               onEdit(e);
@@ -98,23 +97,7 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
             }}
           >
             <img src={deletes} alt="edit pencil" />
-          </button> */}
-
-          {/* icons from ant */}
-          <EditOutlined
-            className="table__edit"
-            onClick={() => {
-              console.log(e);
-              onEdit(e);
-            }}
-          />
-          <DeleteOutlined
-            className="table__delete"
-            onClick={() => {
-              onDelete(e);
-            }}
-            style={{ color: "red", marginLeft: 12 }}
-          />
+          </button>
         </>
       );
     },

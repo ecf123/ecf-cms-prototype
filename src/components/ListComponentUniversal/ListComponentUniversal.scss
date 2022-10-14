@@ -1,139 +1,117 @@
-@use "../../styles/variables"as *;
-
+@use "../../styles/variables" as *;
 
 .table {
-    width: 69.5rem;
-    height: 100%;
-    background-color: $color-white-smoke;
+  width: 69.5rem;
+  height: 100%;
+  background-color: $color-white-smoke;
 
-    &__name {
-        font-weight: $font-weight-bold;
-        color: $color-black;
+  &__name {
+    font-weight: $font-weight-bold;
+    color: $color-black;
+  }
+
+  &__providers {
+    width: 1.3rem;
+    height: 1.3rem;
+    padding: 0.1rem;
+    margin-left: -0.3rem;
+    background: $color-white;
+    border-radius: 50%;
+  }
+
+  &__cell {
+    color: $color-grey-dark;
+    min-height: 3rem;
+    max-width: 6.5rem;
+    font-size: $font-size-smallest;
+    font-family: $font-secondary;
+  }
+
+  &__categories {
+    max-width: 9rem;
+  }
+
+  &__tag {
+    border-radius: 1rem;
+    border: none;
+    color: $color-grey-dark;
+    margin: 0 0.1rem;
+  }
+
+  &__edit {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    & img {
+      filter: invert(71%);
+      width: 0.8rem;
     }
 
-    &__providers {
-        width: 1.3rem;
-        height: 1.3rem;
-        padding: 0.1rem;
-        margin-left: -0.3rem;
-        background: $color-white;
-        border-radius: 50%;
+    &:hover img {
+      filter: invert(20%);
+    }
+  }
+
+  &__delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 0.6rem;
+
+    & img {
+      filter: invert(30%) sepia(70%) saturate(3000%) hue-rotate(314deg)
+        brightness(132%) contrast(90%);
+      width: 0.8rem;
     }
 
-    &__cell {
-        color: $color-grey-dark;
-        min-height: 3rem;
-        max-width: 6.5rem;
-        font-size: $font-size-smallest;
-        font-family: $font-secondary;
+    &:hover img {
+      filter: invert(71%) sepia(88%) saturate(6543%) hue-rotate(336deg)
+        brightness(98%) contrast(86%);
     }
-
-    &__categories  {
-        max-width: 9rem;
-    }
-
-    &__tag {
-        border-radius: 1rem;
-        border: none;
-        color: $color-grey-dark;
-        margin: 0 0.1rem;
-    }
-
-    &__edit {
-        background: none;
-        border: none;
-        cursor: pointer;
-
-        & img {
-            filter: invert(71%);
-            width: 0.8rem;
-        }
-
-        &:hover img {
-            filter: invert(20%);
-        }
-    }
-
-    &__delete {
-        background: none;
-        border: none;
-        cursor: pointer;
-        margin-left: 0.6rem;
-
-        & img {
-            filter: invert(30%) sepia(70%) saturate(3000%) hue-rotate(314deg) brightness(132%) contrast(90%);
-            width: 0.8rem;
-        }
-
-        &:hover img {
-            filter: invert(71%) sepia(88%) saturate(6543%) hue-rotate(336deg) brightness(98%) contrast(86%);
-        }
-    }
-
-
-    // icons from ant:
-    &__edit svg {
-        filter: invert(20%);
-        width: 0.9rem;
-        height: 1rem;
-
-
-        &:hover {
-            filter: invert(71%);
-        }
-    }
-
-    &__delete svg {
-        filter: invert(30%) sepia(70%) saturate(3000%) hue-rotate(314deg) brightness(132%) contrast(90%);
-        width: 0.9rem;
-        height: 1rem;
-
-        &:hover {
-            filter: invert(71%) sepia(88%) saturate(6543%) hue-rotate(336deg) brightness(98%) contrast(86%);
-        }
-    }
-
+  }
 }
 
 .ant-pagination {
-    &-item {
-        border-radius: 0.2rem;
-        &:hover {
-            border-color: $color-grey-light;
-        }
+  &-item {
+    border-radius: 0.2rem;
 
-        &:hover a {
-            color: $color-grey-dark;
-        }
+    &:hover {
+      border-color: $color-grey-light;
     }
 
-    &-item-active {
-        background-color: $color-black;
-        border-color: $color-grey-normal;
+    &:hover a {
+      color: $color-grey-dark;
+    }
+  }
 
-        & a {
-            color: $color-white;
-        }
+  &-item-active {
+    background-color: $color-black;
+    border-color: $color-grey-normal;
+
+    & a {
+      color: $color-white;
+    }
+  }
+
+  &-disabled {
+    opacity: 0.3;
+  }
+
+  &-next,
+  &-prev {
+    border-radius: 0.2rem;
+
+    & svg {
+      filter: invert(71%);
     }
 
-    &-disabled {
-        opacity: 0.3;
+    &:hover button {
+      border-color: $color-grey-light !important;
     }
+  }
 
-    &-next,
-    &-prev {
-        border-radius: 0.2rem;
-        & svg {
-            filter: invert(71%);
-        }
-
-        &:hover button {
-            border-color: $color-grey-light !important;
-        }
-
-    }
-
-    &-options {
-        display: none;
-    }
+  &-options {
+    display: none;
+  }
 }

@@ -12,9 +12,7 @@ window.matchMedia =
   };
 
 it("Should render layout with children", () => {
-  const { container } = customRender(
-    <Home/>
-  );
+  const { container } = customRender(<Home />);
 
   expect(container).toMatchSnapshot();
 });
