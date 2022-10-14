@@ -1,21 +1,21 @@
 import "./PathwayHeader.scss";
-import Button from "../Button/Button";
-import { ReactComponent as Pencil } from "../../assets/pen-icon.svg";
-import { Link } from "react-router-dom";
-const PathwayHeader = ({ link }) => {
+import CategoriesMenu from "../CategoriesMenu/CategoriesMenu";
+
+const PathwayHeader = ({
+  headingTitle,
+  headingImage,
+  companyIcon,
+  links,
+  condition,
+  iconAltText,
+  imageAltText,
+}) => {
   return (
-    <div className="pathway-header">
-      <h2 className="pathway-header__title">Pathway Structure</h2>
-      <Link to={link}>
-        <Button
-          style={"button black round-border medium"}
-          imgStyle={"medium-img white-svg"}
-          textStyle={"text medium-text black"}
-          buttonText={"Add Course"}
-        >
-          <Pencil />
-        </Button>
-      </Link>
+    <div className="heading">
+      <img className="heading__icon" src={companyIcon} alt={iconAltText} />
+      <img className="heading__image" src={headingImage} alt={imageAltText} />
+      <h1 className="heading__title">{headingTitle}</h1>
+      <CategoriesMenu links={links} condition={condition} />
     </div>
   );
 };
