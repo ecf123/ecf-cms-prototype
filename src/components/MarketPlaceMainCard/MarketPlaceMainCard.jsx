@@ -13,7 +13,7 @@ const MarketPlaceMainCard = ({img, imgDescription, date, title, articleInfo, lin
           <CategoriesMenu links={links} condition={false} />
         )}
     </div>
-  )
-}
+  );
+};
 
-export default MarketPlaceMainCard
+export default MarketPlaceMainCard;
