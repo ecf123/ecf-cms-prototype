@@ -24,30 +24,6 @@ exports[`should render marketPlace main card with children 1`] = `
     >
       Test article
     </p>
-    <ul
-      class="categories-menu"
-    >
-      <li
-        class="categories-menu__item--marketplace"
-      >
-        <img
-          alt="Icon"
-          class="categories-menu__item--icons"
-          src="going-up-graph-arrow-grey.svg"
-        />
-        Word
-      </li>
-      <li
-        class="categories-menu__item--marketplace"
-      >
-        <img
-          alt="Icon"
-          class="categories-menu__item--icons"
-          src="trophy-icon-grey.svg"
-        />
-        Text
-      </li>
-    </ul>
   </div>
 </div>
 `;
