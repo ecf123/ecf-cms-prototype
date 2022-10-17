@@ -3,3 +3,8 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+// to reset base font back to 16px
+html {
+  font-size: 100% !important;
+}
