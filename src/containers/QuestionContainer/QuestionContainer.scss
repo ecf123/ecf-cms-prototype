@@ -1,15 +1,30 @@
 @use "../../styles/variables.scss" as *;
 
-.questions {
+.container {
 
     width: 27.625rem;
     height: 41.75rem;
-    padding: 2.18rem;
     display: flex;
     flex-direction: column;
     background: $color-green-light;
     overflow-y: scroll;
+    padding: 2.18rem;
 
+    // &__question {
+        
+    // }
+
+    &__line {
+        margin-top: 1.09rem;
+        margin-bottom: 1.09rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: 0.5px solid black;
+        width: 100%;
+        background-color: black;
+    }
     
 
 }

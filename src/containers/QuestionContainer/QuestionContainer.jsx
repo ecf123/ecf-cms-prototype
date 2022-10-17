@@ -3,19 +3,19 @@ import "./QuestionContainer.scss"
 
 const QuestionContainer = ({questionsArray}) => {
 
-    const answers = ["Grenade Protein Bars *", "pHD Smart Plan Protein Bar *", "Professional Diva HairDryer", "Black Plus Decker Heater", "Serious Mass Protein Powder *"];
-    const question = "What sells on Amazon the most"
-    const questionNumber = 7
+    
 
-    const questionsArrayJSX = questionsArray.map((answer, index) => {
-        return (
-            <AddQuestion question= {question} answers={answers} questionNumber={questionNumber}/>
-            <span></span>
+    const questionsArrayJSX = questionsArray?.map((question, index) => {  
+      return (
+          <div key={index} className="container__question">
+            <AddQuestion question = {question.question} answers={question.answers} questionNumber={question.questionNumber}/>
+            <div className="container__line"></div>
+          </div>
         )
-        })
+      })
 
   return (
-    <div className="questions">
+    <div className="container">
         {questionsArrayJSX}
     </div>
   )
