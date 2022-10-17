@@ -1,15 +1,21 @@
 import './HeaderContainer.scss';
 import HeaderProfile from '../../components/HeaderProfile/HeaderProfile';
 import PageTitle from '../../components/PageTitle/PageTitle';
-import PathwayHeader from '../../components/PathwayHeader/PathwayHeader';
-const HeaderContainer = () => {
+const HeaderContainer = ({profileImg, 
+  name, 
+  role, 
+  toggle, 
+  titleSmall,
+  titleLarge, 
+  classNameSmall,
+classNameLarge}) => {
   return (
     <div className='header-container'>
         <div className='header-container__top'>
-            <PathwayHeader/>
-            <HeaderProfile/> 
+          <PageTitle className={classNameSmall} title={titleSmall}/>
+            <HeaderProfile profileImg={profileImg} name={name} role={role} toggle={toggle}/> 
         </div>
-        <PageTitle className="page-title--large"/>
+        <PageTitle className={classNameLarge} title={titleLarge}/>
     </div>
   )
 }
