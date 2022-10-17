@@ -5,16 +5,10 @@ import { BrowserRouter } from "react-router-dom";
 
 describe("LessonLink component", () => {
   it("matches the snapshot taken", () => {
-    const { container } = customRender(<LessonLink />);
+    const { container } = customRender(<LessonLink courseDuration={"10 min"} courseTitle={"The Role of Banking in the Financial System"}/>);
     expect(container).toMatchSnapshot();
   });
 
-  it("matches the snapshot taken with props", () => {
-    const { container } = customRender(
-      <LessonLink courseDuration={"10 min"} />
-    );
-    expect(container).toMatchSnapshot();
-  });
 
   it("should render all images", () => {
     render(<LessonLink />, { wrapper: BrowserRouter });
