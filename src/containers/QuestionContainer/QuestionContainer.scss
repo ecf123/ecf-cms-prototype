@@ -1,0 +1,11 @@
+@use "../../styles/variables.scss" as *;
+
+.questions {
+
+    width: 27.625rem;
+    height: 41.75rem;
+
+    background: $color-green-light;
+
+    overflow-y: scroll;
+}
