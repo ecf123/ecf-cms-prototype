@@ -3,7 +3,42 @@ import ListComponentUniversal from "../../components/ListComponentUniversal/List
 import { Modal, Input } from "antd";
 import { useState } from "react";
 
-const data = [];
+
+
+const dataJSON=[{
+  id:"kjsvswkvfsihvds"},
+     {
+  challenges:[
+      {   
+      duration:"15 minutes",
+      type:"Assigment"
+        },
+      {
+        duration:"1 hrs",
+        type:"Assigment"
+          }]
+      },{
+  lessons:[
+        {   
+        duration:"15 minutes",
+        type:"Video"
+          },
+        {
+        duration:"10 minutes",
+        type:"Video"
+            },
+            {
+        duration:"15 minutes",
+        type:"Video"
+                }]
+        },{
+  title :"Halifax",
+      }, 
+        {
+  name:"Halifax as provider",
+        }
+]
+// const data = [];
 // for (let i = 0; i < 60; i++) {
 //   data.push({
 //     key: i,
@@ -29,24 +64,65 @@ const data = [];
 //   });
 // }
 
-for (let i = 0; i < 5; i++) {
-  data.push({
-    key: i,
-    id: i,
-    course_name: `Commercial Banking + ${i}`,
-    course_provider: "Barclays",
-    no_of_lessons: `23`,
-    no_of_assignments: `2`,
-    course_length: `345 mins`,
-    students_enrolled: 124,
-  });
-}
+// for (let i = 0; i < 5; i++) {
+//   data.push({
+//     key: i,
+//     id: i,
+//     course_name: `Commercial Banking + ${i}`,
+//     course_provider: "Barclays",
+//     no_of_lessons: `23`,
+//     no_of_assignments: `2`,
+//     course_length: `345 mins`,
+//     students_enrolled: 124,
+//   });
+// }
 
 const LessonList = () => {
     const [isEditing, setIsEditing] = useState(false);
     const [editingEntry, setEditingEntry] = useState(null);
-    const [dataSource, setDataSource] = useState(data);
+     
+    const data=[];
+console.log(dataJSON);
+  dataJSON.forEach(course => {
+    let durrationArray=[];
+    let courseDuration=0; 
+
+        course.lessons.forEach(element => {
+              durrationArray.push(...element.duration.split(" "))
+                  });
+                  console.log(durrationArray);
+        course.challenges.forEach(element => {
+              durrationArray.push(...element.duration.split(" "))
+                   });
+
+  for (let i = 0; i < durrationArray.length; i++) {
+
+    if(durrationArray[i]=="hrs"){
+     courseDuration +=Number(durrationArray[i-1])*60
+    }
+    else if(durrationArray[i]=="minutes"){
+     courseDuration +=Number(durrationArray[i-1])
+    }
+
+
+    data.push({
+    key: course.id,
+    id: course.id,
+    // missing name from database 
+    course_name: course.name,
+    course_provider: course.title,
+    no_of_lessons:course.lessons.length() ,
+    no_of_assignments: course.challenges.length(),
+    course_length: courseDuration,
+     // missing name from database 
+    students_enrolled: 0,
   
+    })
+  }
+}) ;
+
+const [dataSource, setDataSource] = useState(data);
+
     const onDelete = (e) => {
       Modal.confirm({
         title: "Are you sure, you want to delete this record?",
