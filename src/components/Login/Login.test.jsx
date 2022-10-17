@@ -23,14 +23,14 @@ it("shouldn't render the success message on load", () => {
   expect(successMessage).toBeFalsy();
 });
 
-it("should not submit the form when all credentials are valid and display success message", () => {
+it("should not submit the form when not all credentials are valid and display error message", () => {
   render(<Login />);
 
   const emailInput = screen.getByLabelText("Email Address");
   userEvent.type(emailInput, "cheniangam63.com");
 
   const passwordInput = screen.getByLabelText("Password");
-  userEvent.type(passwordInput, "");
+  userEvent.type(passwordInput, "fix");
 
   const button = screen.queryByText("Login");
   userEvent.click(button);
