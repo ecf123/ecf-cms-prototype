@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LessonLink component matches the snapshot taken 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="container__course-info"
+    >
+      <div
+        class="container__title"
+      >
+        <img
+          alt="play files icon"
+          src="play-files-icon.svg"
+        />
+        <a
+          href="/"
+          style="text-decoration: none;"
+        >
+          <h5
+            class="container__title-header"
+          >
+            The Role of Banking in the Financial System
+          </h5>
+        </a>
+      </div>
+      <div
+        class="container__time"
+      >
+        <img
+          alt="clock icon"
+          src="clock-icon.svg"
+        />
+        <h6
+          class="container__time-header"
+        >
+          10 min
+        </h6>
+      </div>
+    </div>
+    <a
+      href="/"
+    >
+      <div
+        class="container__arrow"
+      >
+        <img
+          alt="course arrow"
+          class="container-arrow-image"
+          src="arrow-pointing-right-icon.svg"
+        />
+      </div>
+    </a>
+  </div>
+</div>
+`;
