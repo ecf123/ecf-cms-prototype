@@ -1,17 +1,13 @@
 @use "../../styles/variables" as *;
 
-.header-container{
+.header-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.625rem;
+  background-color: $color-white;
+  &__top {
     display: flex;
-    flex-direction: column;
-    padding: 10px;
-    background-color: $color-white;
-
-    &__top{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 1464px;
-        height: 107px;
-        
-    }
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
