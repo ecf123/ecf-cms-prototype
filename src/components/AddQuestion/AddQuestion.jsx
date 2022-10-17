@@ -1,5 +1,4 @@
 import "./AddQuestion.scss";
-// import Button from "../Button/Button"
 import binIcon from "../../assets/bin-icon.svg";
 import penIcon from "../../assets/pen-icon.svg";
 
