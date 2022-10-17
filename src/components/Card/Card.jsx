@@ -1,14 +1,22 @@
 import "./Card.scss";
 import iconArrow from "../../assets/arrow-upper-right-black.svg";
-import CategoriesMenu from '../CategoriesMenu/CategoriesMenu.jsx';
+import CategoriesMenu from "../CategoriesMenu/CategoriesMenu.jsx";
 import { Link } from "react-router-dom";
 
-const Card = ({ img, dateOrTime, title, cardInfo, links, imgDescription, condition }) => {
+const Card = ({
+  img,
+  dateOrTime,
+  title,
+  cardInfo,
+  links,
+  imgDescription,
+  condition,
+}) => {
   return (
     <div className="card">
       <Link to="*">
         <img className="card__image" src={img} alt={imgDescription} />
-      </Link>      
+      </Link>
       <p className="card__date">{dateOrTime}</p>
       <Link to="*" className="card__header">
         <h2 className="card__title">{title}</h2>

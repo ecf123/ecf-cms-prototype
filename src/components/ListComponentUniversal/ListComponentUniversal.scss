@@ -1,8 +1,7 @@
 @use "../../styles/variables" as *;
 
 .table {
-  width: 69.5rem;
-  height: 100%;
+  width: 83.375rem;
   background-color: $color-white-smoke;
 
   &__name {
@@ -11,9 +10,9 @@
   }
 
   &__providers {
-    width: 1.3rem;
-    height: 1.3rem;
-    padding: 0.1rem;
+    width: 1.43rem;
+    height: 1.43rem;
+    padding: 0.15rem;
     margin-left: -0.3rem;
     background: $color-white;
     border-radius: 50%;
@@ -21,18 +20,18 @@
 
   &__cell {
     color: $color-grey-dark;
-    min-height: 3rem;
-    max-width: 6.5rem;
-    font-size: $font-size-smallest;
+    min-height: 3.3rem;
+    max-width: 7rem;
+    font-size: $font-size-extra-small;
     font-family: $font-secondary;
   }
 
   &__categories {
-    max-width: 9rem;
+    max-width: 10rem;
   }
 
   &__tag {
-    border-radius: 1rem;
+    border-radius: 1.1rem;
     border: none;
     color: $color-grey-dark;
     margin: 0 0.1rem;
@@ -45,7 +44,7 @@
 
     & img {
       filter: invert(71%);
-      width: 0.8rem;
+      width: 0.95rem;
     }
 
     &:hover img {
@@ -57,12 +56,12 @@
     background: none;
     border: none;
     cursor: pointer;
-    margin-left: 0.6rem;
+    margin-left: 0.7rem;
 
     & img {
       filter: invert(30%) sepia(70%) saturate(3000%) hue-rotate(314deg)
         brightness(132%) contrast(90%);
-      width: 0.8rem;
+      width: 0.95rem;
     }
 
     &:hover img {
@@ -74,7 +73,7 @@
 
 .ant-pagination {
   &-item {
-    border-radius: 0.2rem;
+    border-radius: 0.25rem;
 
     &:hover {
       border-color: $color-grey-light;
@@ -100,7 +99,7 @@
 
   &-next,
   &-prev {
-    border-radius: 0.2rem;
+    border-radius: 0.25rem;
 
     & svg {
       filter: invert(71%);
