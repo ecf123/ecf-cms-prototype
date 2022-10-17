@@ -5,6 +5,8 @@
 
     & svg {
         filter: invert(71%) sepia(88%) saturate(6543%) hue-rotate(336deg) brightness(98%) contrast(86%);
-        box-shadow: 10px 10px red;
+        box-shadow: 0px 0px 10px white;
+        background: transparent;
+        border-radius: 50%;
     }
 }
