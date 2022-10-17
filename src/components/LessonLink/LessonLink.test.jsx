@@ -11,7 +11,7 @@ describe("LessonLink component", () => {
 
   it("matches the snapshot taken with props", () => {
     const { container } = customRender(
-      <LessonLink courseDuration={"10 min"} courseTitle={"blablabla"} />
+      <LessonLink courseDuration={"10 min"} />
     );
     expect(container).toMatchSnapshot();
   });
