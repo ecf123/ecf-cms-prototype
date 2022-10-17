@@ -74,9 +74,7 @@ exports[`LessonLink component matches the snapshot taken with props 1`] = `
         >
           <h5
             class="container__title-header"
-          >
-            blablabla
-          </h5>
+          />
         </a>
       </div>
       <div
