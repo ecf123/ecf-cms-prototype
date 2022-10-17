@@ -7,7 +7,6 @@ const SelectComponent = () => {
     <>
     <label className="select__label" htmlFor="">Lesson Type</label>
     <div className='select'>
-        
         <select className='select__dropdown' name="" id=""  img={topicArrow}>
             <option className="select__dropdownoption" value="">Lesson</option>
             <option className="select__dropdownoption" value="">Assessment Quiz</option>
