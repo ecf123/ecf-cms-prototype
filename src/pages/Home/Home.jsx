@@ -1,6 +1,8 @@
-import Layout from "../../components/Layout/Layout";
+// import Layout from "../../components/Layout/Layout";
+import SelectComponent from "../../components/SelectComponent/SelectComponent";
 const Home = () => {
-  return <Layout>
-  </Layout>;
-};
+  return (
+    
+ <SelectComponent topicTitle={"lesson"} selectArr={[{"title":"omar" },{"title": "andriniho"}]}/>
+)}
 export default Home;
