@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Pathway Display 1`] = `
+<div>
+  <div
+    class="pathway-display"
+  >
+    <div
+      class="pathway-display__container"
+    >
+      <img
+        alt="grid display option button"
+        class="pathway-display__option"
+        id="grid-icon"
+        src="grid-icon.svg"
+      />
+      <img
+        alt="list view option button"
+        class="pathway-display__option"
+        src="hamburger-icon.svg"
+      />
+    </div>
+    <a
+      class="pathway-display__button"
+      href="/*"
+    >
+      <button
+        class="button black round-border medium"
+      >
+        <div
+          class="medium-img white-svg"
+        >
+          <svg>
+            pen-icon.svg
+          </svg>
+        </div>
+        <p
+          class="text medium-text black"
+        >
+          Add Course
+        </p>
+      </button>
+    </a>
+  </div>
+</div>
+`;
