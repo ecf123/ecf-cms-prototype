@@ -25,8 +25,6 @@ const Layout = ({ children, user }) => {
           titleSmall={selected}
           classNameSmall="page-title page-title--small"
         />
-        {/* <h1 className="layout__header--title">{selected}</h1>
-        <HeaderProfile name={name} profileImg={image} role={role} /> */}
       </header>
 
       <main className="layout__body">{children}</main>
