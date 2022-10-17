@@ -6,7 +6,7 @@ const Short = ({
   shortPlaceHolderText,
   handleShortValue,
   inputClassName,
-  name
+  name,
 }) => {
   return (
     <div className="short">
