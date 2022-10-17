@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Logo from "../Logo/Logo";
 import NavBarItem from "../NavBarItem/NavBarItem";
 import "./NavBar.scss";
@@ -9,11 +8,7 @@ import { ReactComponent as PathwaysIcon } from "../../assets/pathways-chain-icon
 import { ReactComponent as MarketplaceIcon } from "../../assets/marketplace-shopping-trolley-icon.svg";
 import { ReactComponent as UsersIcon } from "../../assets/users-people-icon.svg";
 
-const NavBar = () => {
-  const [selected, setSelected] = useState("Dashboard");
-  const getCurrentPage = (page) => {
-    setSelected(page);
-  };
+const NavBar = ({ selected, getCurrentPage }) => {
   return (
     <div className="nav-bar">
       <div className="nav-bar__container">
