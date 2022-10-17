@@ -1,0 +1,116 @@
+@use "../../styles/variables" as *;
+
+.table {
+  width: 83.375rem;
+  background-color: $color-white-smoke;
+
+  &__name {
+    font-weight: $font-weight-bold;
+    color: $color-black;
+  }
+
+  &__providers {
+    width: 1.43rem;
+    height: 1.43rem;
+    padding: 0.15rem;
+    margin-left: -0.3rem;
+    background: $color-white;
+    border-radius: 50%;
+  }
+
+  &__cell {
+    color: $color-grey-dark;
+    min-height: 3.3rem;
+    max-width: 7rem;
+    font-size: $font-size-extra-small;
+    font-family: $font-secondary;
+  }
+
+  &__categories {
+    max-width: 10rem;
+  }
+
+  &__tag {
+    border-radius: 1.1rem;
+    border: none;
+    color: $color-grey-dark;
+    margin: 0 0.1rem;
+  }
+
+  &__edit {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    & img {
+      filter: invert(71%);
+      width: 0.95rem;
+    }
+
+    &:hover img {
+      filter: invert(20%);
+    }
+  }
+
+  &__delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 0.7rem;
+
+    & img {
+      filter: invert(30%) sepia(70%) saturate(3000%) hue-rotate(314deg)
+        brightness(132%) contrast(90%);
+      width: 0.95rem;
+    }
+
+    &:hover img {
+      filter: invert(71%) sepia(88%) saturate(6543%) hue-rotate(336deg)
+        brightness(98%) contrast(86%);
+    }
+  }
+}
+
+.ant-pagination {
+  &-item {
+    border-radius: 0.25rem;
+
+    &:hover {
+      border-color: $color-grey-light;
+    }
+
+    &:hover a {
+      color: $color-grey-dark;
+    }
+  }
+
+  &-item-active {
+    background-color: $color-black;
+    border-color: $color-grey-normal;
+
+    & a {
+      color: $color-white;
+    }
+  }
+
+  &-disabled {
+    opacity: 0.3;
+  }
+
+  &-next,
+  &-prev {
+    border-radius: 0.25rem;
+
+    & svg {
+      filter: invert(71%);
+    }
+
+    &:hover button {
+      border-color: $color-grey-light !important;
+    }
+  }
+
+  &-options {
+    display: none;
+  }
+}
