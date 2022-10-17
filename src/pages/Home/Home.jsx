@@ -1,12 +1,7 @@
-import SelectComponent from "../../components/SelectComponent/SelectComponent";
+import Layout from "../../components/Layout/Layout";
 
 const Home = () => {
-
-
-  return (
-  <div>
-    <SelectComponent/>
-  </div>
-)};
+  return <Layout />;
+};
 
 export default Home;
