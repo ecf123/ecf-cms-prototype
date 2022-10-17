@@ -48,7 +48,7 @@ exports[`renders the NavBar 1`] = `
           href="/"
         >
           <div
-            class="nav-bar-item selected"
+            class="nav-bar-item"
           >
             <div
               class="nav-bar-item__image"
