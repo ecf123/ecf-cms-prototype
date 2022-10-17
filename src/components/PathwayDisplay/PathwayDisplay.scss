@@ -15,20 +15,18 @@
 
         .pathway-display__option {
             margin: 0.6rem;
+            padding: 0.6rem;            
+            border-radius: 0.7rem;
         }
     }
 
     #grid-icon {
-        padding: 0.6rem;
         border: 0.09rem solid $color-grey-light;
-        border-radius: 0.7rem;
         background-color: #ffffff;
     }
     
     #list-icon {
-        padding: 0.6rem;
         border: 0.09rem solid $color-grey-light;
-        border-radius: 0.7rem;
         background-color: #ffffff;
     }
 

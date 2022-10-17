@@ -1,7 +1,6 @@
-// import { Route, Routes } from "react-router-dom";
-// import Home from "./pages/Home/Home";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home";
 import "./styles/main.scss";
-import PathwayDisplay from "./components/PathwayDisplay/PathwayDisplay";
 
 const App = () => {
 
@@ -10,7 +9,6 @@ const App = () => {
     <Routes>
       <Route path="*" element={<Home />} />
     </Routes>
-    
   );
 };
 

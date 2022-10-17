@@ -8,17 +8,18 @@ import { useState } from "react";
 
 
 const PathwayDisplay = () => {
-  const [border, setBorder] = useState(true);
   
-  const toggleDisplay = () => {
-    setBorder(!border)
-    
+  const [border, setBorder] = useState(true);
+
+  const toggleDisplay = (display) => {
+    setBorder(display)
   }
+
   return (
     <div className="pathway-display">
         <div className="pathway-display__container">
-          <img className="pathway-display__option" id={border? "grid-icon":""} src={grid} alt="grid display option button" onClick={() => toggleDisplay()}/>
-          <img className="pathway-display__option" id={border? "":"list-icon"} src ={hamburger} alt="list view option button" onClick={() => toggleDisplay()}/>
+          <img className="pathway-display__option" id={border && "grid-icon"} src={grid} alt="grid display option button" onClick={() => toggleDisplay(true)}/>
+          <img className="pathway-display__option" id={!border && "list-icon"} src ={hamburger} alt="list view option button" onClick={() => toggleDisplay(false)}/>
         </div>
         <Link to = "*" className="pathway-display__button">
           < Button style={"button black round-border medium"} imgStyle={"medium-img white-svg"} textStyle={"text medium-text black"} buttonText={"Add Course"}><Pencil /></Button>
