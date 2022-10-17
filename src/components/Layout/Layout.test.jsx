@@ -14,26 +14,23 @@ it("Should render layout with children", () => {
 });
 
 it("should render the correct page title when clicking", () => {
-  customRender( <Layout /> )
+  customRender(<Layout />);
 
-  const dashBoard = screen.queryAllByText("Dashboard")[0]
-  userEvent.click(dashBoard)
+  const dashBoard = screen.queryAllByText("Dashboard")[0];
+  userEvent.click(dashBoard);
 
-  const pageTitle = screen.getByRole("heading", {level: 1})
+  const pageTitle = screen.getByRole("heading", { level: 1 });
 
   expect(pageTitle.innerHTML).toBe("Dashboard");
+});
 
-})
+it("when clicking the marketplace on navbar, the title should be the same", () => {
+  customRender(<Layout />);
 
+  const marketPlace = screen.queryAllByText("Marketplace")[0];
+  userEvent.click(marketPlace);
 
-it("when clicking the marketplace, the title should be the same with the choice", () => {
-  customRender( <Layout /> )
-
-  const marketPlace = screen.queryAllByText("Marketplace")[0]
-  userEvent.click(marketPlace)
-
-  const pageTitle = screen.getByRole("heading", {level: 1})
+  const pageTitle = screen.getByRole("heading", { level: 1 });
 
   expect(pageTitle.innerHTML).toBe("Marketplace");
-
-})
+});

@@ -1,23 +1,22 @@
 @use "../../styles/variables" as *;
 
 .layout {
-
   display: grid;
   grid-template-columns: 16.5rem auto;
   grid-template-rows: auto 1fr;
 
-  &__nav-bar{
+  &__nav-bar {
     grid-area: 1/1/3/2;
   }
 
-  &__header{
+  &__header {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
     align-items: center;
     padding-right: 0;
-    
-    &--title{
+
+    &--title {
       color: $color-blue-navy-dark;
       font-size: $font-size-extra-large;
       font-family: $font-secondary;
