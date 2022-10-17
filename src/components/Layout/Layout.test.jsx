@@ -19,7 +19,7 @@ it("should render the correct page title when clicking", () => {
   const dashBoard = screen.queryAllByText("Dashboard")[0];
   userEvent.click(dashBoard);
 
-  const pageTitle = screen.getByRole("heading", { level: 1 });
+  const pageTitle = screen.getAllByRole("heading", { level: 1 })[0];
 
   expect(pageTitle.innerHTML).toBe("Dashboard");
 });
@@ -30,7 +30,7 @@ it("when clicking the marketplace on navbar, the title should be the same", () =
   const marketPlace = screen.queryAllByText("Marketplace")[0];
   userEvent.click(marketPlace);
 
-  const pageTitle = screen.getByRole("heading", { level: 1 });
+  const pageTitle = screen.getAllByRole("heading", { level: 1 })[0];
 
   expect(pageTitle.innerHTML).toBe("Marketplace");
 });

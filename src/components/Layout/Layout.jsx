@@ -1,7 +1,7 @@
 import "./Layout.scss";
 import NavBar from "../NavBar/NavBar";
-import HeaderProfile from "../HeaderProfile/HeaderProfile";
 import { useState } from "react";
+import HeaderContainer from "../../containers/HeaderContainer/HeaderContainer";
 
 const Layout = ({ children, user }) => {
   const [selected, setSelected] = useState("Dashboard");
@@ -18,8 +18,15 @@ const Layout = ({ children, user }) => {
       </aside>
 
       <header className="layout__header">
-        <h1 className="layout__header--title">{selected}</h1>
-        <HeaderProfile name={name} profileImg={image} role={role} />
+        <HeaderContainer
+          profileImg={image}
+          name={name}
+          role={role}
+          titleSmall={selected}
+          classNameSmall="page-title page-title--small"
+        />
+        {/* <h1 className="layout__header--title">{selected}</h1>
+        <HeaderProfile name={name} profileImg={image} role={role} /> */}
       </header>
 
       <main className="layout__body">{children}</main>

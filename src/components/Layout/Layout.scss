@@ -10,16 +10,6 @@
   }
 
   &__header {
-    display: flex;
-    justify-content: space-between;
     padding: 2rem;
-    align-items: center;
-    padding-right: 0;
-
-    &--title {
-      color: $color-blue-navy-dark;
-      font-size: $font-size-extra-large;
-      font-family: $font-secondary;
-    }
   }
 }
