@@ -4,8 +4,12 @@
 
     width: 27.625rem;
     height: 41.75rem;
-
+    padding: 2.18rem;
+    display: flex;
+    flex-direction: column;
     background: $color-green-light;
-
     overflow-y: scroll;
+
+    
+
 }
