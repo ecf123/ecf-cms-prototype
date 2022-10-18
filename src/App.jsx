@@ -30,6 +30,7 @@ const App = () => {
     <Routes>
       <Route path="*" element={<QuestionContainer questionsArray = {questionsArray}/>} />
     </Routes>
+    
   );
 };
 
