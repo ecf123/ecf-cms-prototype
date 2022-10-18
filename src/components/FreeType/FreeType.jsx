@@ -5,7 +5,7 @@ const FreeType = ({
   freeTypePlaceHolderText,
   handleFreeTypeValue,
   name,
-  inputClassName
+  inputClassName,
 }) => {
   return (
     <div className="free-type">
