@@ -4,7 +4,6 @@ exports[`Should match the snapshot 1`] = `
 <div>
   <label
     class="select__label"
-    for=""
   >
     Lesson Type
   </label>
@@ -13,19 +12,15 @@ exports[`Should match the snapshot 1`] = `
   >
     <select
       class="select__dropdown"
-      id=""
       img="upside-down-arrow-grey.svg"
-      name=""
     >
       <option
         class="select__dropdownoption"
-        value=""
       >
         Lesson
       </option>
       <option
         class="select__dropdownoption"
-        value=""
       >
         Assessment Quiz
       </option>

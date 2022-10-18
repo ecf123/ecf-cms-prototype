@@ -1,33 +1,18 @@
 import "./SelectComponent.scss";
 import topicArrow from "../../assets/upside-down-arrow-grey.svg";
 
-const SelectComponent = ({topicTitle, selectArr}) => {
-    const selectList = selectArr.map((select, index) => {
-    return (
-      <li key={index}>
-        <a href="#">
-          <p className="drop-down__content">{select.title}</p>
-        </a>
-      </li>
-    );
-  });
+const SelectComponent = () => {
   return (
-    <nav className="drop-down">
-      <input type="checkbox" id={topicTitle} />
-      <label htmlFor={topicTitle}>
-        <span className="drop-down__title">
-          {topicTitle}
-          <img
-            src={topicArrow}
-            alt="Topic Arrow"
-            className="drop-down__arrow"
-          />
-        </span>
-      </label>
+     <>
+     <label className="select__label">Lesson Type</label>
+     <div className='select'>
 
-      <ul className="drop-down__list">{selectList}</ul>
-    </nav>
-  );
-  }
-
+         <select className='select__dropdown' img={topicArrow}>
+             <option className="select__dropdownoption">Lesson</option>
+             <option className="select__dropdownoption">Assessment Quiz</option>
+        </select>
+    </div>
+    </>
+  )
+}
 export default SelectComponent
