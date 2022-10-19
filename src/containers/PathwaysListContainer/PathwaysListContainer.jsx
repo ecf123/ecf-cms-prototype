@@ -5,10 +5,52 @@ import { useState } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import ViewOptions from "../../components/ViewOptions/ViewOptions";
 
-const CourseListContainer = ({dataJSON}) => {
+const entryListContainer = ({dataJSON}) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editingEntry, setEditingEntry] = useState(null);
-  const [dataSource, setDataSource] = useState();
+  const [dataSource, setDataSource] = useState(dataJSON ? dataJSON.map(entry => {
+
+
+
+    return {
+      key: entry.id,
+      id: entry.id,
+      pathway_name: entry.header,
+      providers: [],
+      no_of_courses: entry.skillstree.children[0].children.length,
+      no_of_lessons: "171",
+      entry_length: "22 hrs",
+      // missing name from database
+      students_enrolled: 0,
+    };
+  }) : dataJSON);
+
+//    const data = [];
+//  for (let i = 0; i < 60; i++) {
+//  data.push({
+//   key: i,
+//   id: i,
+//   pathway_name: `Financial Forest + ${i}`,
+//   providers: [
+//    "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ficons%2Fhsbc.svg?alt=media&token=f568f1fc-ade3-4bbf-9aee-1dc841cce600",
+//    "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ficons%2Fhalifax.svg?alt=media&token=0b431ade-cb19-4cc1-bc7d-b4d4456146a0",
+//   //  Barclays,
+//   //  Airbnb,
+//   ],
+//   no_of_courses: `8`,
+//   no_of_lessons: `8`,
+//   est_completion_time: `20hrs`,
+//   no_enrolled: 32,
+//   category: [
+//    "design",
+//    "business",
+//    "digital marketing",
+//    "programming",
+//    "finance",
+//   ],
+//  });
+// }
+//  const [dataSource, setDataSource] = useState(data);
 
   const onDelete = (e) => {
     Modal.confirm({
@@ -33,15 +75,15 @@ const CourseListContainer = ({dataJSON}) => {
   };
 
   return (
-    <div className="course-list">
-      <div className="course-list__header">
+    <div className="entry-list">
+      <div className="entry-list__header">
           <PageTitle
-            className="course-list__title page-title"
-            title="Course List"
+            className="entry-list__title page-title"
+            title="entry List"
           />
-          <ViewOptions selectedOption="Courses"/>
+          <ViewOptions selectedOption="entrys"/>
       </div>
-      <div className="course-list__table">
+      <div className="entry-list__table">
         <ListComponentUniversal
           onDelete={onDelete}
           onEdit={onEdit}
@@ -69,7 +111,7 @@ const CourseListContainer = ({dataJSON}) => {
         }}
       >
         <Input
-     value={editingEntry?.course_name}
+     value={editingEntry?.entry_name}
      onChange={(e) => {
       setEditingEntry((pre) => {
        return { ...pre, pathway_name: e.target.value };
@@ -90,4 +132,4 @@ const CourseListContainer = ({dataJSON}) => {
   );
 };
 
-export default CourseListContainer;
+export default entryListContainer;
