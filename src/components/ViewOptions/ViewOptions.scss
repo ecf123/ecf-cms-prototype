@@ -1,58 +1,22 @@
-<<<<<<< HEAD
-@use '../../styles/main.scss' as *;
-@use '../../styles/variables' as *;
-@use '../../styles/typography' as *;
-
-.view-options{
-    display:flex;
-    align-content: center;
-    justify-content:center;
-    font-family:$font-secondary ;
-    font-weight:$font-weight-regular;
-    font-size:$font-size-small;
-    background-color: $color-white;
-    &__option{
-        padding:10px;
-       // opacity:40%;
-        color:$color-blue-navy-dark;
-        opacity:1;
-        position: relative;
-        text-decoration: none;
-        
-    }
-    &__option-clicked:after {
-        background: none repeat scroll 0 0 #B4DDC0;
-        bottom: -10px;
-        left:25%;
-        content: "";
-        display: block;
-        height: 10px;
-        position: relative;
-        width: 50%;
-     }
-    &__option-clicked{
-       opacity:1;
-       border-bottom: 2px $color-green-light solid;
-    }
-}
-=======
 @use "../../styles/main.scss" as *;
 @use "../../styles/variables" as *;
 
 .view-options {
   display: flex;
   align-content: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-family: $font-secondary;
-  font-weight: $font-weight-regular;
-  font-size: $font-size-small;
   background-color: $color-white;
   box-shadow: inset 0rem -0.125rem 0rem 0rem #e6e6e6;
+  cursor: pointer;
   &__option {
+    margin-left: 2rem;
     padding: 0.625rem;
     opacity: 40%;
     color: $color-blue-navy-dark;
     text-decoration: none;
+    font-size: $font-size-small;
+    font-weight: $font-weight-regular;
   }
   &__option--clicked:after {
     background: none repeat scroll 0 0 #b4ddc0;
@@ -65,9 +29,11 @@
     width: 50%;
   }
   &__option--clicked {
+    margin-left: 2rem;
     padding: 0.625rem;
     color: $color-blue-navy-dark;
     opacity: 100%;
+    font-size: $font-size-small;
+    font-weight: $font-weight-regular;
   }
 }
->>>>>>> 580e22dc312720150b4b754fd0198098134aa5a4

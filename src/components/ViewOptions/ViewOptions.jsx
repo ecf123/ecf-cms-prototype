@@ -1,21 +1,8 @@
-<<<<<<< HEAD
-import './ViewOptions.scss';
-
-const ViewOptions = () => {
-  return (
-    <div className='view-options'>
-        <h3 className='view-options__option'>Overview</h3>
-        <h3 className='view-options__option'>Courses</h3>
-        <h3 className='view-options__option'>Stats</h3>
-    </div>
-  )
-}
-=======
 import "./ViewOptions.scss";
 import { useState } from "react";
 
-const ViewOptions = () => {
-  const [selected, setSelected] = useState("Overview");
+const ViewOptions = ({selectedOption}) => {
+  const [selected, setSelected] = useState(selectedOption);
 
   let classesOverview = "view-options__option";
   let classesCourses = "view-options__option";
@@ -45,6 +32,5 @@ const ViewOptions = () => {
     </div>
   );
 };
->>>>>>> 580e22dc312720150b4b754fd0198098134aa5a4
 
 export default ViewOptions;

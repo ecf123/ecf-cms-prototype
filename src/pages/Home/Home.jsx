@@ -3,7 +3,9 @@ import ViewOptions from "../../components/ViewOptions/ViewOptions";
 
 const Home = () => {
   return (
-    <Layout></Layout>
+    <Layout>
+      <ViewOptions selectedOption={"Overview"}/>
+    </Layout>
   );
 };
 
