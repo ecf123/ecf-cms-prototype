@@ -1,15 +1,17 @@
-import "./LessonList.scss";
+import "./CourseListContainer.scss";
 import ListComponentUniversal from "../../components/ListComponentUniversal/ListComponentUniversal";
 import { Modal, Input } from "antd";
 import { useState } from "react";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import ViewOptions from "../../components/ViewOptions/ViewOptions";
 
 
 
-const LessonList = ({dataJSON}) => {
+const CourseListContainer = ({dataJSON}) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editingEntry, setEditingEntry] = useState(null);
   const [dataSource, setDataSource] = useState( dataJSON ? dataJSON.map((course) => {
-    let durationArray = [];
+    let durationArray = ["15", "minutes", "1", "hrs"];
     let courseDuration = 0;
 
     course.lessons.forEach((element) => {
@@ -27,12 +29,11 @@ const LessonList = ({dataJSON}) => {
         courseDuration += Number(durationArray[i - 1]);
       }
     }
-    return{
+    return {
         key: course.id,
         id: course.id,
-        // missing name from database
         course_name: course.name,
-        course_provider: course.title,
+        course_provider: course.provider,
         no_of_lessons: course.lessons.length,
         no_of_assignments: course.challenges.length,
         course_length: courseDuration,
@@ -65,12 +66,21 @@ const LessonList = ({dataJSON}) => {
   };
 
   return (
-    <>
-      <ListComponentUniversal
-        onDelete={onDelete}
-        onEdit={onEdit}
-        data={dataSource}
-      />
+    <div className="course-list">
+      <div className="course-list__header">
+          <PageTitle
+            className="course-list__title page-title"
+            title="Course List"
+          />
+          <ViewOptions selectedOption="Courses"/>
+      </div>
+      <div className="course-list__table">
+        <ListComponentUniversal
+          onDelete={onDelete}
+          onEdit={onEdit}
+          data={dataSource}
+        />
+      </div>
       <Modal
         title="Edit Entry"
         open={isEditing}
@@ -100,8 +110,9 @@ const LessonList = ({dataJSON}) => {
           }}
         />
       </Modal>
-    </>
+    </div>
+    
   );
 };
 
-export default LessonList;
+export default CourseListContainer;

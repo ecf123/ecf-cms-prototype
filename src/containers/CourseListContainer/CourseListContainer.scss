@@ -1,4 +1,8 @@
+@use "../../styles/variables" as *;
+
 .ant-modal {
+    margin: 18vh auto !important;
+
     & span {
         color: black !important;
     }
@@ -10,3 +14,15 @@
         border-radius: 50%;
     }
 }
+
+.course-list {
+    &__header {
+        margin-bottom: 3rem;
+    }
+
+    &__title, 
+    &__table {
+        padding-left: 4rem;
+    }
+}
+

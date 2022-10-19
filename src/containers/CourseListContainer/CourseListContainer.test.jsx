@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import LessonList from "./LessonList";
+import CourseListContainer from "./CourseListContainer";
 import { customRender } from "../../utils/testUtils";
 import { BrowserRouter } from "react-router-dom";
 
@@ -76,13 +76,13 @@ const dataJSON = [
 
 it("it should match the snapshot with props", () => {
   const { container } = customRender(
-    <LessonList dataJSON={dataJSON}/>
+    <CourseListContainer dataJSON={dataJSON}/>
   );
   expect(container).toMatchSnapshot();
 });
 
 it("Should render the first row", () => {
-  render(<LessonList dataJSON={dataJSON} />, {wrapper: BrowserRouter});
+  render(<CourseListContainer dataJSON={dataJSON} />, {wrapper: BrowserRouter});
   const courseDuration = screen.getByText("115");
   const courseProvider = screen.getByText("Halifax");
   expect(courseDuration).toBeInTheDocument();
@@ -90,7 +90,7 @@ it("Should render the first row", () => {
 });
 
 it("Should render the second row", () => {
-    render(<LessonList dataJSON={dataJSON} />, {wrapper: BrowserRouter});
+    render(<CourseListContainer dataJSON={dataJSON} />, {wrapper: BrowserRouter});
     const courseDuration = screen.getByText("220");
     const courseProvider = screen.getByText("Barclays");
     expect(courseDuration).toBeInTheDocument();
