@@ -1,0 +1,35 @@
+@use "../../styles/variables" as *;
+
+
+.add-lesson {
+    color: black;
+    border: solid black 1px;
+    display: flex;
+    flex-direction: column;
+
+    &__input {
+        height: 48px;
+        width: 512px;
+    }
+    &__answer {
+        height: 48px;
+        width: 512px;
+    }
+    &__buttons {
+        margin-top: 50px;
+        display: flex;
+        gap: px;
+    }
+    &__add{
+        text-decoration: underline dotted;
+        color: black;
+    }
+}
+
+label {
+    color: #344054;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+}

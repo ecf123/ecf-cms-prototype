@@ -2,6 +2,7 @@ import "./Layout.scss";
 import NavBar from "../NavBar/NavBar";
 import { useState } from "react";
 import HeaderContainer from "../../containers/HeaderContainer/HeaderContainer";
+import AddingLessonQuizContainer from "../../containers/AddingLessonQuizContainer/AddingLessonQuizContainer";
 
 const Layout = ({ children, user }) => {
   const [selected, setSelected] = useState("Dashboard");
@@ -26,8 +27,9 @@ const Layout = ({ children, user }) => {
           classNameSmall="page-title page-title--small"
         />
       </header>
-
+      <AddingLessonQuizContainer />
       <main className="layout__body">{children}</main>
+      
     </div>
   );
 };
