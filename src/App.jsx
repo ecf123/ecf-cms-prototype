@@ -1,12 +1,9 @@
-import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home/Home";
+import Routing from "./containers/Routing/Routing";
 import "./styles/main.scss";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="*" element={<Home />} />
-    </Routes>
+    <Routing />
   );
 };
 

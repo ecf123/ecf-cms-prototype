@@ -8,7 +8,7 @@ const Logo = ({ getCurrentPage }) => {
     getCurrentPage("Dashboard");
   };
   return (
-    <Link to="*" className="link">
+    <Link to="/" className="link">
       <div className="logo" onClick={handleClick}>
         <div className="logo__box">
           <img src={logo} alt="The Future Hub Logo" className="logo__image" />

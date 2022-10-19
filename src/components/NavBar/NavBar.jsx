@@ -21,7 +21,7 @@ const NavBar = ({ selected, getCurrentPage }) => {
             text="Dashboard"
             selected={selected}
             getCurrentPage={getCurrentPage}
-            link=""
+            link="/"
           >
             <DashboardIcon />
           </NavBarItem>
@@ -29,7 +29,7 @@ const NavBar = ({ selected, getCurrentPage }) => {
             text="Pathways"
             selected={selected}
             getCurrentPage={getCurrentPage}
-            link=""
+            link="/pathways"
           >
             <PathwaysIcon />
           </NavBarItem>
@@ -37,7 +37,7 @@ const NavBar = ({ selected, getCurrentPage }) => {
             text="Articles"
             selected={selected}
             getCurrentPage={getCurrentPage}
-            link=""
+            link="/articles"
           >
             <ArticleIcon />
           </NavBarItem>
@@ -45,7 +45,7 @@ const NavBar = ({ selected, getCurrentPage }) => {
             text="Marketplace"
             selected={selected}
             getCurrentPage={getCurrentPage}
-            link=""
+            link="/marketplace"
           >
             <MarketplaceIcon />
           </NavBarItem>
@@ -53,7 +53,7 @@ const NavBar = ({ selected, getCurrentPage }) => {
             text="Users"
             selected={selected}
             getCurrentPage={getCurrentPage}
-            link=""
+            link="/users"
           >
             <UsersIcon />
           </NavBarItem>
@@ -63,7 +63,7 @@ const NavBar = ({ selected, getCurrentPage }) => {
           text="Settings"
           selected={selected}
           getCurrentPage={getCurrentPage}
-          link=""
+          link="/settings"
         >
           <CogIcon />
         </NavBarItem>

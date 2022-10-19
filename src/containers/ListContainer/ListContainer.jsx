@@ -18,6 +18,8 @@ const ListContainer = ({ title, cards }) => {
     card.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const link = title=="Article" ? "/articles/add" : "/marketplace/add";
+
   return (
     <div className="list-page">
       <div className="list-page__header">
@@ -33,7 +35,7 @@ const ListContainer = ({ title, cards }) => {
             handleSearchInput={handleSearchInput}
             value={searchTerm}
           />
-          <Link to="*">
+          <Link to={link}>
             <Button
               style={"button black round-border large"}
               imgStyle={"medium-img white-svg"}
