@@ -6,7 +6,7 @@ exports[`Should render the view options component 1`] = `
     class="view-options"
   >
     <h3
-      class="view-options__option--clicked"
+      class="view-options__option"
     >
       Overview
     </h3>
