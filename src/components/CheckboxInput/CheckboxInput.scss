@@ -1,19 +1,19 @@
 @use "../../styles/variables.scss" as *;
 
 .checkbox {
-  margin: 100px;
-  border: 1px solid #d0d5dd;
-  max-width: 512px;
-  height: 48px;
-  border-radius: 8px;
+  margin: 6.25rem;
+  border: 0.063rem solid #d0d5dd;
+  max-width: 32rem;
+  height: 3rem;
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 0 0.938rem;
 
   &__input {
     border: none;
-    width: 450px;
+    width: 28.125rem;
     height: 80%;
     font-family: $font-secondary;
     font-size: $font-size-small;
