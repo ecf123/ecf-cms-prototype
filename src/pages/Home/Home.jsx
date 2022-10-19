@@ -1,5 +1,4 @@
-// import Layout from "../../components/Layout/Layout";
-import SelectComponent from "../../components/SelectComponent/SelectComponent";
+import Layout from "../../components/Layout/Layout";
 const Home = () => {
   return <Layout>
   </Layout>;
