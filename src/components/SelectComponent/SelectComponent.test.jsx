@@ -10,7 +10,7 @@ it("Should match the snapshot", () => {
   });
 
 it("Should render in the SelectComponent select box", () => {
-    render(<SelectComponent />);
+    render(<SelectComponent />)
     const input = screen.getByText("Lesson");
     expect(input).toBeInTheDocument();
 });
