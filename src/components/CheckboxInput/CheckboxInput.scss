@@ -1,26 +1,26 @@
 @use "../../styles/variables.scss" as *;
 
 .checkbox {
-    margin: 100px;
-    border: 1px solid #d0d5dd;
-    max-width: 512px;
-    height: 48px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
+  margin: 100px;
+  border: 1px solid #d0d5dd;
+  max-width: 512px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
 
-    &__input {
-        border: none;
-        width: 450px;
-        height: 80%;
-        font-family: $font-secondary;
-        font-size:$font-size-small;
-        color: $color-grey-normal;
-    }
+  &__input {
+    border: none;
+    width: 450px;
+    height: 80%;
+    font-family: $font-secondary;
+    font-size: $font-size-small;
+    color: $color-grey-normal;
+  }
 
-    &__input:focus {
-        outline: none;
-    }
+  &__input:focus {
+    outline: none;
+  }
 }
