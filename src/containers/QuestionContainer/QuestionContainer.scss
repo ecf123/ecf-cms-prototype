@@ -9,10 +9,6 @@
   overflow-y: scroll;
   padding: 2.18rem;
 
-  // &__question {
-
-  // }
-
   &__line {
     margin-top: 2.18rem;
     margin-bottom: 2.18rem;
@@ -20,7 +16,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 0.5px solid $color-grey-light;
+    border: 0.031rem solid $color-grey-light;
     width: 100%;
     background-color: $color-grey-light;
   }
