@@ -1,7 +1,7 @@
 import "./ViewOptions.scss";
 import { useState } from "react";
 
-const ViewOptions = ({selectedOption}) => {
+const ViewOptions = ({ selectedOption }) => {
   const [selected, setSelected] = useState(selectedOption);
 
   let classesOverview = "view-options__option";
