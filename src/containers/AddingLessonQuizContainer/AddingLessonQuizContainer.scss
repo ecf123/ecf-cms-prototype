@@ -6,14 +6,26 @@
     border: solid black 1px;
     display: flex;
     flex-direction: column;
+    
+
 
     &__input {
-        height: 48px;
-        width: 512px;
+       
+        border-radius: 0.5rem;
+        width: 32rem;
+        padding-left: 0.5rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
     }
     &__answer {
-        height: 48px;
-        width: 512px;
+       
+        border-radius: 0.5rem;
+        width: 32rem;
+        padding-left: 0.5rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
     }
     &__buttons {
         margin-top: 50px;
@@ -33,3 +45,27 @@ font-style: normal;
 font-weight: 500;
 font-size: 14px;
 }
+
+
+
+
+// &__label{
+//     font-size: 0.88rem;
+//     color: $color-blue-dark;
+//     padding-bottom: 2.5rem;
+// }
+
+// &__dropdown {
+//     background: url(../../assets/upside-down-arrow-grey.svg)  no-repeat right;
+//     -webkit-appearance:none; 
+//     appearance:none;
+//     width: 30.63rem;
+//     height: 1.5rem;
+//     color: $color-grey-dark;
+//     border: none;
+//     font-size: 1rem;
+    
+//     &:focus{
+//         outline: none;
+//     }
+// }
