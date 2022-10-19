@@ -1,0 +1,529 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should match the snapshot, with the data inserted 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="container__question"
+    >
+      <div
+        class="question"
+      >
+        <div
+          class="question__container"
+        >
+          <h6
+            class="question__title"
+          >
+            Q
+            1
+            . 
+            What sells on Amazon the most
+            ?
+             
+          </h6>
+          <ol
+            class="question__answers"
+            type="A"
+          >
+            <li
+              class="question__each-answer"
+            >
+              Grenade Protein Bars 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              pHD Smart Plan Protein Bar 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Professional Diva HairDryer
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Black Plus Decker Heater
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Serious Mass Protein Powder 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+          </ol>
+        </div>
+        <div
+          class="buttons"
+        >
+          <img
+            alt="Delete Question"
+            class="buttons__bin"
+            src="bin-icon.svg"
+          />
+          <img
+            alt="Edit Question"
+            class="buttons__pen"
+            src="pen-icon.svg"
+          />
+        </div>
+      </div>
+      <div
+        class="container__line"
+      />
+    </div>
+    <div
+      class="container__question"
+    >
+      <div
+        class="question"
+      >
+        <div
+          class="question__container"
+        >
+          <h6
+            class="question__title"
+          >
+            Q
+            1
+            . 
+            What sells on Amazon the most
+            ?
+             
+          </h6>
+          <ol
+            class="question__answers"
+            type="A"
+          >
+            <li
+              class="question__each-answer"
+            >
+              Grenade Protein Bars 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              pHD Smart Plan Protein Bar 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Professional Diva HairDryer
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Black Plus Decker Heater
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Serious Mass Protein Powder 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+          </ol>
+        </div>
+        <div
+          class="buttons"
+        >
+          <img
+            alt="Delete Question"
+            class="buttons__bin"
+            src="bin-icon.svg"
+          />
+          <img
+            alt="Edit Question"
+            class="buttons__pen"
+            src="pen-icon.svg"
+          />
+        </div>
+      </div>
+      <div
+        class="container__line"
+      />
+    </div>
+    <div
+      class="container__question"
+    >
+      <div
+        class="question"
+      >
+        <div
+          class="question__container"
+        >
+          <h6
+            class="question__title"
+          >
+            Q
+            1
+            . 
+            What sells on Amazon the most
+            ?
+             
+          </h6>
+          <ol
+            class="question__answers"
+            type="A"
+          >
+            <li
+              class="question__each-answer"
+            >
+              Grenade Protein Bars 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              pHD Smart Plan Protein Bar 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Professional Diva HairDryer
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Black Plus Decker Heater
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Serious Mass Protein Powder 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+          </ol>
+        </div>
+        <div
+          class="buttons"
+        >
+          <img
+            alt="Delete Question"
+            class="buttons__bin"
+            src="bin-icon.svg"
+          />
+          <img
+            alt="Edit Question"
+            class="buttons__pen"
+            src="pen-icon.svg"
+          />
+        </div>
+      </div>
+      <div
+        class="container__line"
+      />
+    </div>
+    <div
+      class="container__question"
+    >
+      <div
+        class="question"
+      >
+        <div
+          class="question__container"
+        >
+          <h6
+            class="question__title"
+          >
+            Q
+            1
+            . 
+            What sells on Amazon the most
+            ?
+             
+          </h6>
+          <ol
+            class="question__answers"
+            type="A"
+          >
+            <li
+              class="question__each-answer"
+            >
+              Grenade Protein Bars 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              pHD Smart Plan Protein Bar 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Professional Diva HairDryer
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Black Plus Decker Heater
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Serious Mass Protein Powder 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+          </ol>
+        </div>
+        <div
+          class="buttons"
+        >
+          <img
+            alt="Delete Question"
+            class="buttons__bin"
+            src="bin-icon.svg"
+          />
+          <img
+            alt="Edit Question"
+            class="buttons__pen"
+            src="pen-icon.svg"
+          />
+        </div>
+      </div>
+      <div
+        class="container__line"
+      />
+    </div>
+    <div
+      class="container__question"
+    >
+      <div
+        class="question"
+      >
+        <div
+          class="question__container"
+        >
+          <h6
+            class="question__title"
+          >
+            Q
+            1
+            . 
+            What sells on Amazon the most
+            ?
+             
+          </h6>
+          <ol
+            class="question__answers"
+            type="A"
+          >
+            <li
+              class="question__each-answer"
+            >
+              Grenade Protein Bars 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              pHD Smart Plan Protein Bar 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Professional Diva HairDryer
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Black Plus Decker Heater
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Serious Mass Protein Powder 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+          </ol>
+        </div>
+        <div
+          class="buttons"
+        >
+          <img
+            alt="Delete Question"
+            class="buttons__bin"
+            src="bin-icon.svg"
+          />
+          <img
+            alt="Edit Question"
+            class="buttons__pen"
+            src="pen-icon.svg"
+          />
+        </div>
+      </div>
+      <div
+        class="container__line"
+      />
+    </div>
+    <div
+      class="container__question"
+    >
+      <div
+        class="question"
+      >
+        <div
+          class="question__container"
+        >
+          <h6
+            class="question__title"
+          >
+            Q
+            1
+            . 
+            What sells on Amazon the most
+            ?
+             
+          </h6>
+          <ol
+            class="question__answers"
+            type="A"
+          >
+            <li
+              class="question__each-answer"
+            >
+              Grenade Protein Bars 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              pHD Smart Plan Protein Bar 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Professional Diva HairDryer
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Black Plus Decker Heater
+            </li>
+            <li
+              class="question__each-answer"
+            >
+              Serious Mass Protein Powder 
+               
+              <b
+                class="question__correct"
+              >
+                (correct)
+              </b>
+            </li>
+          </ol>
+        </div>
+        <div
+          class="buttons"
+        >
+          <img
+            alt="Delete Question"
+            class="buttons__bin"
+            src="bin-icon.svg"
+          />
+          <img
+            alt="Edit Question"
+            class="buttons__pen"
+            src="pen-icon.svg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
