@@ -1,11 +1,11 @@
-import { Route, Routes } from "react-router-dom";
-import PageNotFound from "./components/PageNotFound/PageNotFound";
 import "./styles/main.scss";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home";
 
 const App = () => {
   return (
     <Routes>
-      <Route path="*" element={< PageNotFound/>} />
+      <Route path="*" element={<Home/>} />
     </Routes>
     
   );

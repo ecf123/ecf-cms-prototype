@@ -4,21 +4,21 @@ import { BrowserRouter } from "react-router-dom";
 import PageNotFound from "./PageNotFound";
 
 it("Should render the Page Not Found ", () => {
-    const { container } = customRender(<PageNotFound />);
+  const { container } = customRender(<PageNotFound />);
 
-    expect(container).toMatchSnapshot();
-  });
+  expect(container).toMatchSnapshot();
+});
 
-  it("Should render an image", () => {
-    render(<PageNotFound />, { wrapper: BrowserRouter });
+it("Should render an image", () => {
+  render(<PageNotFound />, { wrapper: BrowserRouter });
 
-    const image = screen.getByRole("img");
-    expect(image).toBeInTheDocument();
-  });
+  const image = screen.getByRole("img");
+  expect(image).toBeInTheDocument();
+});
 
-  it("Should render an button", () => {
-    render(<PageNotFound />, { wrapper: BrowserRouter })
+it("Should render a button", () => {
+  render(<PageNotFound />, { wrapper: BrowserRouter });
 
-    const button = screen.getByRole("button");
-    expect(button).toBeInTheDocument();
-  })
+  const button = screen.getByRole("button");
+  expect(button).toBeInTheDocument();
+});
