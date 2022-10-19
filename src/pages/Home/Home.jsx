@@ -1,9 +1,11 @@
 import Layout from "../../components/Layout/Layout";
-import ViewOptions from "../../components/ViewOptions/ViewOptions";
+import CourseOverview from "../../containers/CourseOverview/CourseOverview";
 
 const Home = () => {
   return (
-    <Layout></Layout>
+    <Layout>
+      <CourseOverview />
+    </Layout>
   );
 };
 
