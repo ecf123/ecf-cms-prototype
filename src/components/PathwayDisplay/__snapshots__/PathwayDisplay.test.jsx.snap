@@ -8,17 +8,25 @@ exports[`Should render Pathway Display 1`] = `
     <div
       class="pathway-display__container"
     >
-      <img
-        alt="grid display option button"
-        class="pathway-display__option"
-        id="grid-icon"
-        src="grid-icon.svg"
-      />
-      <img
-        alt="list view option button"
-        class="pathway-display__option"
-        src="hamburger-icon.svg"
-      />
+      <a
+        href="/*"
+      >
+        <img
+          alt="grid display option button"
+          class="pathway-display__option"
+          id="grid-icon"
+          src="grid-icon.svg"
+        />
+      </a>
+      <a
+        href="/*"
+      >
+        <img
+          alt="list view option button"
+          class="pathway-display__option"
+          src="hamburger-icon.svg"
+        />
+      </a>
     </div>
     <a
       class="pathway-display__button"
