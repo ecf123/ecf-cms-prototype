@@ -7,6 +7,7 @@ const App = () => {
     <Routes>
       <Route path="*" element={< PageNotFound/>} />
     </Routes>
+    
   );
 };
 
