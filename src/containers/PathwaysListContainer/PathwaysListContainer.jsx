@@ -39,14 +39,38 @@ const PathwaysListContainer = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const [editingEntry, setEditingEntry] = useState(null);
-  const [dataSource, setDataSource] = useState(dataJSON);
+  const [dataSource, setDataSource] = useState(null);
 
+  const cleanData = () => {
+    dataJSON ? setDataSource(dataJSON
+    .filter((entry) => {entry.pathway_name.toLowerCase().includes(searchTerm.toLowerCase())})
+    .map((entry) => {      
+            let providersArr = [
+              entry.skillstree.children[0].icon,
+              entry.skillstree.children[0].children[1].children[0].icon,
+            ];
+            entry.skillstree.children[0].children.forEach((part) => {
+              providersArr.push(part.icon);
+            });
+  
+            return {
+              key: entry.id,
+              id: entry.id,
+              pathway_name: entry.header,
+              providers: providersArr,
+              no_of_courses: entry.skillstree.children[0].children.length,
+              no_of_lessons: Math.floor(Math.random() * 150 + 20),
+              entry_length: Math.floor(Math.random() * 25 + 5) + " hrs",
+              // missing name from database
+              students_enrolled: Math.floor(Math.random() * 15 + 10),
+            };
+          }))
+        : setDataSource(null)
+  }
+  
+  
   useEffect(() => {
-    // setDataSource(dataJSON
-    //   ? dataJSON.filter((entry) => {
-    //     
-    //   }): dataJSON)
-    dataJSON = [dataJSON.filter((entry) => {entry.pathway_name.toLowerCase().includes(searchTerm.toLowerCase())})]
+    cleanData()
   }, [searchTerm])
 
 
