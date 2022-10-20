@@ -1,7 +1,6 @@
 import ListContainer from "./ListContainer";
 import { screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
-import image from "../../assets/for-hire-image.svg";
 import userEvent from "@testing-library/user-event";
 
 const dataArticles = [
