@@ -1,6 +1,6 @@
 @use "../../styles/variables" as *;
 
-.entry-list {
+.pathway-list {
 
     &__header {
         padding: 0 3rem 2rem 3rem;
@@ -10,4 +10,12 @@
     &__table {
         padding: 3rem;
     }
+
+    &__nav {
+        padding: 2rem 3rem 2rem 5rem;
+        display:flex;
+        justify-content: space-between;
+        max-width: 1334px;
+    }
+
 }

@@ -7,8 +7,9 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import Button from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 import {ReactComponent as Pencil} from "../../assets/pen-icon.svg";
+import { useEffect } from "react";
 
-const dataJSON = [];
+let dataJSON = [];
 for (let i = 0; i < 6; i++) {
 dataJSON.push({
  key: i,
@@ -35,11 +36,25 @@ dataJSON.push({
 }
 
 const PathwaysListContainer = () => {
+  const [searchTerm, setSearchTerm] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const [editingEntry, setEditingEntry] = useState(null);
   const [dataSource, setDataSource] = useState(dataJSON);
-    // dataJSON
-    //   ? dataJSON.map((entry) => {
+
+  useEffect(() => {
+    // setDataSource(dataJSON
+    //   ? dataJSON.filter((entry) => {
+    //     
+    //   }): dataJSON)
+    dataJSON = [dataJSON.filter((entry) => {entry.pathway_name.toLowerCase().includes(searchTerm.toLowerCase())})]
+  }, [searchTerm])
+
+
+  // dataJSON
+  //     ? dataJSON.filter((entry) =>
+  //   entry.header.toLowerCase().includes(searchTerm.toLowerCase()))
+  //     .map((entry) => {
+      
     //       let providersArr = [
     //         entry.skillstree.children[0].icon,
     //         entry.skillstree.children[0].children[1].children[0].icon,
@@ -62,6 +77,11 @@ const PathwaysListContainer = () => {
   //       })
   //     : dataJSON
   // );
+
+  const handleSearchInput = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
 
 
   const onDelete = (e) => {
@@ -87,31 +107,33 @@ const PathwaysListContainer = () => {
   };
 
   return (
-    <div className="entry-list">
-      <div className="entry-list__header">
+    <div className="pathway-list">
+      <div className="pathway-list__header">
         <PageTitle
-          className="entry-list__title page-title"
+          className="pathway-list__title page-title"
           title="Pathways List"
         />
       </div>
 
-      <nav className="entry-list__nav">
+      <nav className="pathway-list__nav">
           <SearchBar
             placeHolderText={"Search for placeholder"}
+            handleSearchInput={handleSearchInput}
+            value={searchTerm}
           />
           <Link to="*">
             <Button
               style={"button black round-border large"}
               imgStyle={"medium-img white-svg"}
               textStyle={"text medium-text black"}
-              buttonText={"Add Placeholder"}
+              buttonText={"Add Pathways"}
             >
               <Pencil />
             </Button>
           </Link>
         </nav>
 
-      <div className="entry-list__table">
+      <div className="pathway-list__table">
         <ListComponentUniversal
           onDelete={onDelete}
           onEdit={onEdit}
