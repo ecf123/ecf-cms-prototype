@@ -1,1 +1,13 @@
 @use "../../styles/variables" as *;
+
+.entry-list {
+
+    &__header {
+        padding: 0 3rem 2rem 3rem;
+        border-bottom: 2px $color-grey-light solid;
+    }
+
+    &__table {
+        padding: 3rem;
+    }
+}
