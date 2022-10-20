@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
   };
 
   //const { image, name, role } = user || {};
-  
+
   const user = {
     image: profile,
     name: "Brett Zieme",
