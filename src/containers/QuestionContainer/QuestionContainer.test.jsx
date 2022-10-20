@@ -22,7 +22,7 @@ const questionsArray = [
       "Black Plus Decker Heater",
       "Serious Mass Protein Powder *",
     ],
-    questionNumber: 1,
+    questionNumber: 2,
   },
   {
     question: "What sells on Amazon the most",
@@ -33,7 +33,7 @@ const questionsArray = [
       "Black Plus Decker Heater",
       "Serious Mass Protein Powder *",
     ],
-    questionNumber: 1,
+    questionNumber: 3,
   },
   {
     question: "What sells on Amazon the most",
@@ -44,7 +44,7 @@ const questionsArray = [
       "Black Plus Decker Heater",
       "Serious Mass Protein Powder *",
     ],
-    questionNumber: 1,
+    questionNumber: 4,
   },
   {
     question: "What sells on Amazon the most",
@@ -55,7 +55,7 @@ const questionsArray = [
       "Black Plus Decker Heater",
       "Serious Mass Protein Powder *",
     ],
-    questionNumber: 1,
+    questionNumber: 5,
   },
   {
     question: "What sells on Amazon the most",
@@ -66,7 +66,7 @@ const questionsArray = [
       "Black Plus Decker Heater",
       "Serious Mass Protein Powder *",
     ],
-    questionNumber: 1,
+    questionNumber: 6,
   },
 ];
 
