@@ -2,21 +2,14 @@ import "./Layout.scss";
 import NavBar from "../NavBar/NavBar";
 import { useState } from "react";
 import HeaderContainer from "../../containers/HeaderContainer/HeaderContainer";
-import profile from "../../assets/profile-picture.svg";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, user }) => {
   const [selected, setSelected] = useState("Dashboard");
   const getCurrentPage = (page) => {
     setSelected(page);
   };
 
-  //const { image, name, role } = user || {};
-
-  const user = {
-    image: profile,
-    name: "Brett Zieme",
-    role: "Admin",
-  };
+  const { image, name, role } = user || {};
 
   return (
     <div className="layout">
@@ -26,9 +19,9 @@ const Layout = ({ children }) => {
 
       <header className="layout__header">
         <HeaderContainer
-          profileImg={user.image}
-          name={user.name}
-          role={user.role}
+          profileImg={image}
+          name={name}
+          role={role}
           titleSmall={selected}
           classNameSmall="page-title page-title--small"
         />
