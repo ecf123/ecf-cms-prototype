@@ -1,6 +1,21 @@
-import Layout from "../../components/Layout/Layout";
+import LessonContentPreview from "../../components/LessonContentPreview/LessonContentPreview";
+
 const Home = () => {
-  return <Layout></Layout>;
+
+  const lessons = [
+    {
+      title: "Test",
+      content: "longer text test" 
+    },
+    {
+      title: "Test2",
+      content: "longer text test2" 
+    }
+  ]
+
+  return <LessonContentPreview lessonsArray={lessons}/>;
+
+
 };
 
 export default Home;
