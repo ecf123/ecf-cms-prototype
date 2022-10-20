@@ -5,17 +5,15 @@ import { useState } from "react"
 const QuestionAnswer = () => {
 
 
-    //add button - onclick - const [numberOfBoxes, setNumberOfBoxes] = useState(4)
-    //for each numberOfBoxes, render a checkbox component
 
     const [numberOfBoxes, setNumberOfBoxes] = useState([1, 2, 3, 4]);
 
 
     const addBox = () => {
-        const boxes = numberOfBoxes.length()
+        let boxes = numberOfBoxes + 1;
+        numberOfBoxes.push(boxes)
         setNumberOfBoxes(
             [...numberOfBoxes],
-            numberOfBoxes.push(boxes + 1)
         );
         console.log(numberOfBoxes);
     }
