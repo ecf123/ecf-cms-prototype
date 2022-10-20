@@ -9,7 +9,7 @@ import { useState } from "react";
 
 const ListContainer = ({ title, data }) => {
 
-  const cards=data.map(element=>{
+  const cards=data?.map(element=>{
     if(title == "Article"){
       const paragraphContent = element.articleContent[0].paragraph
       return{

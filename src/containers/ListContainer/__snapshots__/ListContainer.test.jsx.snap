@@ -11,7 +11,7 @@ exports[`it should match the snapshot with props 1`] = `
       <h1
         class="list-page__title page-title"
       >
-        title List
+        Article List
       </h1>
     </div>
     <div
@@ -30,7 +30,7 @@ exports[`it should match the snapshot with props 1`] = `
           />
           <input
             class="search-bar__input"
-            placeholder="Search for title"
+            placeholder="Search for Article"
             type="text"
             value=""
           />
@@ -51,7 +51,7 @@ exports[`it should match the snapshot with props 1`] = `
             <p
               class="text medium-text black"
             >
-              Add title
+              Add Article
             </p>
           </button>
         </a>
@@ -67,13 +67,13 @@ exports[`it should match the snapshot with props 1`] = `
           >
             <img
               class="card__image"
-              src="for-hire-image.svg"
+              src="https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/cv-pic.jpg?alt=media&token=8f649302-9820-426d-80f2-2337e970fc71"
             />
           </a>
           <p
             class="card__date"
           >
-            12:01
+            23 May 2022
           </p>
           <a
             class="card__header"
@@ -93,7 +93,7 @@ exports[`it should match the snapshot with props 1`] = `
           <p
             class="card__info"
           >
-            Test text one
+            Lorem ipsum dolor sit amet. Id earum enim eum maxime nihil eos commodi quisquam non amet magnam eum sunt voluptatem et laborum magni.
           </p>
           <ul
             class="categories-menu"
@@ -101,17 +101,7 @@ exports[`it should match the snapshot with props 1`] = `
             <li
               class="categories-menu__item categories-menu__item--purple"
             >
-              one
-            </li>
-            <li
-              class="categories-menu__item categories-menu__item--darkpurple"
-            >
-              two
-            </li>
-            <li
-              class="categories-menu__item categories-menu__item--purple"
-            >
-              three
+              Finance
             </li>
           </ul>
         </div>
@@ -123,13 +113,13 @@ exports[`it should match the snapshot with props 1`] = `
           >
             <img
               class="card__image"
-              src="for-hire-image.svg"
+              src="https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/cv-pic.jpg?alt=media&token=8f649302-9820-426d-80f2-2337e970fc71"
             />
           </a>
           <p
             class="card__date"
           >
-            12:00
+            23 May 2022
           </p>
           <a
             class="card__header"
@@ -149,7 +139,7 @@ exports[`it should match the snapshot with props 1`] = `
           <p
             class="card__info"
           >
-            Test text two
+            Lorem ipsum dolor sit amet. Id earum enim eum maxime nihil eos commodi quisquam non amet magnam eum sunt voluptatem et laborum magni.
           </p>
           <ul
             class="categories-menu"
@@ -157,17 +147,131 @@ exports[`it should match the snapshot with props 1`] = `
             <li
               class="categories-menu__item categories-menu__item--purple"
             >
-              one
+              Finance
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`it should match the snapshot with props 2`] = `
+<div>
+  <div
+    class="list-page"
+  >
+    <div
+      class="list-page__header"
+    >
+      <h1
+        class="list-page__title page-title"
+      >
+        Marketplace List
+      </h1>
+    </div>
+    <div
+      class="list-page__body"
+    >
+      <nav
+        class="list-page__nav"
+      >
+        <div
+          class="search-bar"
+        >
+          <img
+            alt="Search Icon"
+            class="search-bar__image"
+            src="magnifying-glass-grey.svg"
+          />
+          <input
+            class="search-bar__input"
+            placeholder="Search for Marketplace"
+            type="text"
+            value=""
+          />
+        </div>
+        <a
+          href="/*"
+        >
+          <button
+            class="button black round-border large"
+          >
+            <div
+              class="medium-img white-svg"
+            >
+              <svg>
+                pen-icon.svg
+              </svg>
+            </div>
+            <p
+              class="text medium-text black"
+            >
+              Add Marketplace
+            </p>
+          </button>
+        </a>
+      </nav>
+      <div
+        class="card-container"
+      >
+        <div
+          class="card"
+        >
+          <a
+            href="/*"
+          >
+            <img
+              class="card__image"
+              src="https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/market-place%2Famazon-logo.png?alt=media&token=0c9914b9-b020-421c-acaa-e87ff25be8a0"
+            />
+          </a>
+          <p
+            class="card__date"
+          />
+          <a
+            class="card__header"
+            href="/*"
+          >
+            <h2
+              class="card__title"
+            >
+              Earn a £5 Amazon Voucher
+            </h2>
+            <img
+              alt="Arrow Icon"
+              class="card__icon"
+              src="arrow-upper-right-black.svg"
+            />
+          </a>
+          <p
+            class="card__info"
+          >
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          </p>
+          <ul
+            class="categories-menu"
+          >
+            <li
+              class="categories-menu__item--marketplace"
+            >
+              <img
+                alt="Icon"
+                class="categories-menu__item--icons"
+                src="going-up-graph-arrow-grey.svg"
+              />
+              400
             </li>
             <li
-              class="categories-menu__item categories-menu__item--darkpurple"
+              class="categories-menu__item--marketplace"
             >
-              two
-            </li>
-            <li
-              class="categories-menu__item categories-menu__item--purple"
-            >
-              three
+              <img
+                alt="Icon"
+                class="categories-menu__item--icons"
+                src="trophy-icon-grey.svg"
+              />
+              1
             </li>
           </ul>
         </div>
