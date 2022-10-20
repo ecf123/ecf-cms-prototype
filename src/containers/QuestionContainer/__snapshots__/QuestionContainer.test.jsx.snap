@@ -5,9 +5,7 @@ exports[`Should match the snapshot, with the data inserted 1`] = `
   <div
     class="container"
   >
-    <div
-      class="container__question"
-    >
+    <div>
       <div
         class="question"
       >
@@ -92,9 +90,7 @@ exports[`Should match the snapshot, with the data inserted 1`] = `
         class="container__line"
       />
     </div>
-    <div
-      class="container__question"
-    >
+    <div>
       <div
         class="question"
       >
@@ -105,7 +101,7 @@ exports[`Should match the snapshot, with the data inserted 1`] = `
             class="question__title"
           >
             Q
-            1
+            2
             . 
             What sells on Amazon the most
             ?
@@ -179,9 +175,7 @@ exports[`Should match the snapshot, with the data inserted 1`] = `
         class="container__line"
       />
     </div>
-    <div
-      class="container__question"
-    >
+    <div>
       <div
         class="question"
       >
@@ -192,7 +186,7 @@ exports[`Should match the snapshot, with the data inserted 1`] = `
             class="question__title"
           >
             Q
-            1
+            3
             . 
             What sells on Amazon the most
             ?
@@ -266,9 +260,7 @@ exports[`Should match the snapshot, with the data inserted 1`] = `
         class="container__line"
       />
     </div>
-    <div
-      class="container__question"
-    >
+    <div>
       <div
         class="question"
       >
@@ -279,7 +271,7 @@ exports[`Should match the snapshot, with the data inserted 1`] = `
             class="question__title"
           >
             Q
-            1
+            4
             . 
             What sells on Amazon the most
             ?
@@ -353,9 +345,7 @@ exports[`Should match the snapshot, with the data inserted 1`] = `
         class="container__line"
       />
     </div>
-    <div
-      class="container__question"
-    >
+    <div>
       <div
         class="question"
       >
@@ -366,7 +356,7 @@ exports[`Should match the snapshot, with the data inserted 1`] = `
             class="question__title"
           >
             Q
-            1
+            5
             . 
             What sells on Amazon the most
             ?
@@ -440,9 +430,7 @@ exports[`Should match the snapshot, with the data inserted 1`] = `
         class="container__line"
       />
     </div>
-    <div
-      class="container__question"
-    >
+    <div>
       <div
         class="question"
       >
@@ -453,7 +441,7 @@ exports[`Should match the snapshot, with the data inserted 1`] = `
             class="question__title"
           >
             Q
-            1
+            6
             . 
             What sells on Amazon the most
             ?

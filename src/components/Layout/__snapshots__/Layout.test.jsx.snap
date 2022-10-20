@@ -199,16 +199,21 @@ exports[`Should render layout with children 1`] = `
             <img
               alt="user avatar"
               class="header-profile__image"
+              src="profile-picture.svg"
             />
             <div
               class="header-profile__text"
             >
               <h2
                 class="header-profile__name"
-              />
+              >
+                Brett Zieme
+              </h2>
               <p
                 class="header-profile__role"
-              />
+              >
+                Admin
+              </p>
             </div>
             <button
               class="header-profile__arrow"
