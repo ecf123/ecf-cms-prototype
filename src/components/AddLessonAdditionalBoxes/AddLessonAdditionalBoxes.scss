@@ -1,22 +1,49 @@
+@use "../../styles/variables" as *;
 
-
-.input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+.add-lesson {
+    display: flex;
+    flex-direction: column;
 }
 
-.input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.input[type=text], select {
+  width: 32rem;
+  height: 3rem;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  display: inline-block;
+  box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+.add-lesson__input-two {
+    height: 9.37rem !important;
+    width: 32rem !important;
+}
+.add-lesson__add{
+    text-decoration: underline dotted;
+    text-underline-offset: 0.25rem;
+    color: $color-blue-navy-dark;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.8rem;
+    cursor: pointer;
+
+}
+
+label {
+    color: $color-blue-navy;
+    font-size: $font-size-extra-small;
+}
+
+input::placeholder {
+    color: $color-grey-light;
+}
+
+.add-lesson__label-two {
+    margin-top: 1.75rem;
 }
