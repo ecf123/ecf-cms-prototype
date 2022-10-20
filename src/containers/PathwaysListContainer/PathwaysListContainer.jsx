@@ -5,52 +5,34 @@ import { useState } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import ViewOptions from "../../components/ViewOptions/ViewOptions";
 
-const entryListContainer = ({dataJSON}) => {
+const entryListContainer = ({ dataJSON }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editingEntry, setEditingEntry] = useState(null);
-  const [dataSource, setDataSource] = useState(dataJSON ? dataJSON.map(entry => {
+  const [dataSource, setDataSource] = useState(
+    dataJSON
+      ? dataJSON.map((entry) => {
+          let providersArr = [
+            entry.skillstree.children[0].icon,
+            entry.skillstree.children[0].children[1].children[0].icon,
+          ];
+          entry.skillstree.children[0].children.forEach((part) => {
+            providersArr.push(part.icon);
+          });
 
-
-
-    return {
-      key: entry.id,
-      id: entry.id,
-      pathway_name: entry.header,
-      providers: [],
-      no_of_courses: entry.skillstree.children[0].children.length,
-      no_of_lessons: "171",
-      entry_length: "22 hrs",
-      // missing name from database
-      students_enrolled: 0,
-    };
-  }) : dataJSON);
-
-//    const data = [];
-//  for (let i = 0; i < 60; i++) {
-//  data.push({
-//   key: i,
-//   id: i,
-//   pathway_name: `Financial Forest + ${i}`,
-//   providers: [
-//    "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ficons%2Fhsbc.svg?alt=media&token=f568f1fc-ade3-4bbf-9aee-1dc841cce600",
-//    "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ficons%2Fhalifax.svg?alt=media&token=0b431ade-cb19-4cc1-bc7d-b4d4456146a0",
-//   //  Barclays,
-//   //  Airbnb,
-//   ],
-//   no_of_courses: `8`,
-//   no_of_lessons: `8`,
-//   est_completion_time: `20hrs`,
-//   no_enrolled: 32,
-//   category: [
-//    "design",
-//    "business",
-//    "digital marketing",
-//    "programming",
-//    "finance",
-//   ],
-//  });
-// }
-//  const [dataSource, setDataSource] = useState(data);
+          return {
+            key: entry.id,
+            id: entry.id,
+            pathway_name: entry.header,
+            providers: providersArr,
+            no_of_courses: entry.skillstree.children[0].children.length,
+            no_of_lessons: Math.floor(Math.random() * 150 + 20),
+            entry_length: Math.floor(Math.random() * 25 + 5) + " hrs",
+            // missing name from database
+            students_enrolled: Math.floor(Math.random() * 15 + 10),
+          };
+        })
+      : dataJSON
+  );
 
   const onDelete = (e) => {
     Modal.confirm({
@@ -77,11 +59,11 @@ const entryListContainer = ({dataJSON}) => {
   return (
     <div className="entry-list">
       <div className="entry-list__header">
-          <PageTitle
-            className="entry-list__title page-title"
-            title="entry List"
-          />
-          <ViewOptions selectedOption="entrys"/>
+        <PageTitle
+          className="entry-list__title page-title"
+          title="entry List"
+        />
+        <ViewOptions selectedOption="entrys" />
       </div>
       <div className="entry-list__table">
         <ListComponentUniversal
@@ -111,24 +93,23 @@ const entryListContainer = ({dataJSON}) => {
         }}
       >
         <Input
-     value={editingEntry?.entry_name}
-     onChange={(e) => {
-      setEditingEntry((pre) => {
-       return { ...pre, pathway_name: e.target.value };
-      });
-     }}
-    />
-    <Input
-     value={editingEntry?.category}
-     onChange={(e) => {
-      setEditingEntry((pre) => {
-       return { ...pre, category: e.target.value.split(",") };
-      });
-     }}
-    />
+          value={editingEntry?.pathway_name}
+          onChange={(e) => {
+            setEditingEntry((pre) => {
+              return { ...pre, pathway_name: e.target.value };
+            });
+          }}
+        />
+        <Input
+          value={editingEntry?.category}
+          onChange={(e) => {
+            setEditingEntry((pre) => {
+              return { ...pre, category: e.target.value.split(",") };
+            });
+          }}
+        />
       </Modal>
     </div>
-    
   );
 };
 
