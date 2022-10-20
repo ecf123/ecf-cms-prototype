@@ -32,7 +32,7 @@ it("Should render the card with no props", () => {
 });
 
 it("should render the first card component on the screen", () => {
-  render(<CardContainer cards={cards} />, {wrapper: BrowserRouter});
+  render(<CardContainer cards={cards} />, { wrapper: BrowserRouter });
   const dateOrTime = screen.getByText("12:01");
   const title = screen.getByText("Test title one");
   const cardInfo = screen.getByText("Test text one");
@@ -43,7 +43,7 @@ it("should render the first card component on the screen", () => {
 });
 
 it("should render the second card component on the screen", () => {
-  render(<CardContainer cards={cards} />, {wrapper: BrowserRouter});
+  render(<CardContainer cards={cards} />, { wrapper: BrowserRouter });
   const dateOrTime = screen.getByText("12:00");
   const title = screen.getByText("Test title two");
   const cardInfo = screen.getByText("Test text two");

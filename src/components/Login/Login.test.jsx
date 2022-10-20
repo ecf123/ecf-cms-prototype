@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { customRender } from "../../utils/testUtils";
 
 it("should render the form", () => {
-  const { container } = customRender(<Login/>);
+  const { container } = customRender(<Login />);
   expect(container).toMatchSnapshot();
 });
 
