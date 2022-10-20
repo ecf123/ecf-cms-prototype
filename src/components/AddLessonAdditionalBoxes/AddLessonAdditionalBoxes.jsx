@@ -1,20 +1,19 @@
-import React from 'react'
 import "./AddLessonAdditionalBoxes.scss";
 import FreeType from '../FreeType/FreeType';
 import Short from '../Short/Short';
 
-const AddLessonAdditionalBoxes = ({handleFreeTypeValue, handleShortValue, handleAddLessonContent}) => {
+const AddLessonAdditionalBoxes = ({handleFreeTypeValue, handleShortValue, handleAddLessonContent, shortLabelText, shortPlaceHolderText, freeTypeLabelText}) => {
   return (
     <div className='add-lesson'>
         <Short 
-          shortLabelText = "Additional Subtitle(s) (optional)"
+          shortLabelText = {shortLabelText}
           shortType = "text"
-          shortPlaceHolderText = "e.g. Fund Manager"
+          shortPlaceHolderText = {shortPlaceHolderText}
           handleShortValue = {handleShortValue}
           inputClassName = "add-lesson__input-one input"
           name = "input-one"/>
         <FreeType 
-          freeTypeLabelText = "Additional Content (optional)"
+          freeTypeLabelText = {freeTypeLabelText}
           handleFreeTypeValue = {handleFreeTypeValue}
           name = "input-two"
           inputClassName = 'add-lesson__input-two input' />

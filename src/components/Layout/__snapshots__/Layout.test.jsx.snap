@@ -223,6 +223,41 @@ exports[`Should render layout with children 1`] = `
         <h1 />
       </div>
     </header>
+    <div
+      class="add-lesson"
+    >
+      <div
+        class="short"
+      >
+        <label
+          class="short__label"
+        />
+        <input
+          class="add-lesson__input-one input"
+          name="input-one"
+          spellcheck="true"
+          type="text"
+        />
+      </div>
+      <div
+        class="free-type"
+      >
+        <label
+          class="free-type__label"
+        />
+        <textarea
+          class="add-lesson__input-two input"
+          name="input-two"
+          spellcheck="true"
+          type="text"
+        />
+      </div>
+      <h5
+        class="add-lesson__add"
+      >
+        Add +
+      </h5>
+    </div>
     <main
       class="layout__body"
     >
