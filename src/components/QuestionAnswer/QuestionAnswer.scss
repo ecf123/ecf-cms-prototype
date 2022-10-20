@@ -1,0 +1,14 @@
+@use "../../styles/_reset.scss" as *;
+@use "../../styles/_variables.scss" as *;
+
+.question-answer {
+    height: fit-content;
+    width: 32rem;
+
+    &__button {
+        border: none;
+        border-bottom: 3px dotted;
+        background-color: transparent;
+        color: grey;
+    }
+}
