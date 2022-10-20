@@ -9,13 +9,11 @@
     height: 3rem;
     display: flex;
     align-items: center;
-    
     &__label{
         font-size: 0.88rem;
         color: $color-blue-dark;
         padding-bottom: 2.5rem;
     }
-    
     &__dropdown {
         background: url(../../assets/upside-down-arrow-grey.svg)  no-repeat right;
         -webkit-appearance:none; 
@@ -24,8 +22,7 @@
         height: 1.5rem;
         color: $color-grey-dark;
         border: none;
-        font-size: 1rem;
-        
+        font-size: 1rem; 
         &:focus{
             outline: none;
         }
