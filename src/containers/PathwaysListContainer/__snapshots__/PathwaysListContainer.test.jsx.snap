@@ -27,7 +27,7 @@ exports[`it should match the snapshot with props 1`] = `
         />
         <input
           class="search-bar__input"
-          placeholder="Search for placeholder"
+          placeholder="Search for pathways"
           type="text"
           value=""
         />

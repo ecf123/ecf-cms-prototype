@@ -65,7 +65,7 @@ const PathwaysListContainer = ({ dataJSON }) => {
 
       <nav className="pathway-list__nav">
         <SearchBar
-          placeHolderText={"Search for placeholder"}
+          placeHolderText="Search for pathways"
           handleSearchInput={handleSearchInput}
           value={searchTerm}
         />
