@@ -36,12 +36,6 @@ describe("MediaUploadBox component", () => {
     expect(altText).toBeTruthy();
   });
 
-  it("should display thumbnail label on render", () => {
-    render(<MediaUploadBox uploadLabelName={"Pathway Thumbnail"} />);
-    const label = screen.getByLabelText("Pathway Thumbnail");
-    expect(label).toBeTruthy();
-  });
-
   it("should display the upload button on render", () => {
     render(<MediaUploadBox />);
     const button = screen.getByRole("button");
