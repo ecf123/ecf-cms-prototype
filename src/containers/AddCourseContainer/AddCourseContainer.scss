@@ -7,6 +7,7 @@
     width: min-content;
     grid-template-areas: "input-texts media-upload";
     
+    
     &__uploadContainer{
         margin-left: 2.93rem;
       }
@@ -28,12 +29,12 @@
   
     &__input-texts {
       grid-area: input-texts;
-      margin: 0rem 1rem;
+      margin: 0rem 4.313rem;
     }
   
     &__buttons {
       display: flex;
-
+      margin-top: 4rem;
     }
   
     .short {

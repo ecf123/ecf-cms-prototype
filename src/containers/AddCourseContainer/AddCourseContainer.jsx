@@ -14,6 +14,8 @@ const AddCourseContainer = ({
   freeTypeLabelTextOne,
   uploadLabelName,
   uploadLabelNameTwo,
+  handleCancel,
+  handleSubmit
 }) => {
   const [pageInfo, setPageInfo] = useState({
     file: null,
@@ -116,7 +118,7 @@ const AddCourseContainer = ({
 
         <div className="add-course__buttons">
           <div className="add-course__cancel">
-            <Button style={"button light-grey round-border large"} textStyle={"text large-text light-grey"} buttonText={"Cancel"} />
+            <Button style={"button light-grey round-border large"} textStyle={"text large-text light-grey"} buttonText={"Cancel"} onClick={handleCancel} />
           </div>
           <div className="add-course__submit">
             <Button
@@ -124,6 +126,7 @@ const AddCourseContainer = ({
               textStyle={"text large-text black"}
               buttonText={"Submit"}
               buttonFunction={storeInputs}
+              onClick={handleSubmit}
             />
           </div>
         </div>
