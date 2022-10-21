@@ -1,19 +1,25 @@
+@use "../../styles/main.scss" as *;
+@use "../../styles/variables" as *;
+
 .course-overview {
     display: grid;
     grid-template-columns: 3fr 2fr;
     height: 100%;
-    gap: 50px;
+    gap: 30px;
 
     &__main{
-        display:grid;
-        grid-template-rows: 3fr 1fr 5fr;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
         margin-left: 32px;
     }
     &__side{
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        align-items: center;
         gap: 10px;
         margin-right:10px;
+       padding-top: 10px;
+        background-color: $color-white-smoke;
     }
 }

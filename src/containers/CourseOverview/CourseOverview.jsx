@@ -8,14 +8,17 @@ import PathwayOverviewHeader from '../../components/PathwayOverviewHeader/Pathwa
 import handleDelete from '../../components/MoreOptions/MoreOptions'
 import handleEdit from "../../components/MoreOptions/MoreOptions"
 import './CourseOverview.scss'
+import image from '../../assets/money-growing-on-tree.svg'
 
 const CourseOverview = () => {
   return (
     <section className='course-overview'>
         <div className="course-overview__main">
-        <PathwayIntroduction className="pi" image={"image"} description={"Lorem Ipsum"}/>
+        <PathwayIntroduction className="pi" image={image} description={"    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto recusandae ratione voluptatibus voluptatem, eos id. Dicta assumenda tenetur voluptas laborum animi voluptatibus deserunt, magnam quae fuga dolor eaque! Accusamus, nihil.Lorem ipsum dolor"}/>
         <PathwayOverviewHeader className="course-overview__main--poh"link={"link"}/>
         <DropDown className="course-overview__main--dd"topicTitle={"Financial Forest"} lessonArr={["english", "maths", "physics"]}/>
+        <DropDown className="course-overview__main--dd"topicTitle={"Glasgow"} lessonArr={["lenzie", "cambuslang", "shawlands"]}/>
+
         </div>
         <div className='course-overview__side'>
         <MoreOptions className='course-overview__side--mo'title="Financal Forest" description="Lorem ipsum" handleDelete={handleDelete} handleEdit={handleEdit}/>
