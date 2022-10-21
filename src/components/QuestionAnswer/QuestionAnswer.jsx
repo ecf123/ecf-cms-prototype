@@ -1,36 +1,21 @@
 import "./QuestionAnswer.scss"
 import Short from '../Short/Short'
-import { useState } from "react"
 
-const QuestionAnswer = () => {
-
-
-
-    const [numberOfBoxes, setNumberOfBoxes] = useState([1, 2, 3, 4]);
-
-
-    const addBox = () => {
-        let boxes = numberOfBoxes + 1;
-        numberOfBoxes.push(boxes)
-        setNumberOfBoxes(
-            [...numberOfBoxes],
-        );
-        console.log(numberOfBoxes);
-    }
+const QuestionAnswer = ({submitQuestion}) => {
 
 
   return (
-    <div className='question-answer'>
-        <Short shortLabelText={"Question"} inputClassName={"short__input"}/>
-        {numberOfBoxes.map((box) => {
-            return (
-                <div key={box} >
-                    <Short shortLabelText={"Question"} inputClassName={"short__input"}/>
-                </div>
-            )
-        })}
-        <button className="question-answer__button" onClick={addBox}>Add +</button>
-    </div>
+    <form className='form' onSubmit={submitQuestion}>
+        <Short shortLabelText={"Question"}/>
+        <p className="form__answers__heading">Answers</p>
+        <div className="form__answers">
+        <Short />
+        <Short />
+        <Short />
+        <Short />
+        <button className="form__button" >Add +</button>
+        </div>
+    </form>
   )
 }
 
