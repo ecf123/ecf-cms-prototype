@@ -43,11 +43,6 @@ exports[`renders the ListComponentUniversal with data 1`] = `
                     >
                       EST COMPLETION TIME
                     </th>
-                    <th
-                      class="ant-table-cell"
-                    >
-                      
-                    </th>
                   </tr>
                 </thead>
                 <tbody
@@ -72,26 +67,6 @@ exports[`renders the ListComponentUniversal with data 1`] = `
                     >
                       20hrs
                     </td>
-                    <td
-                      class="ant-table-cell"
-                    >
-                      <button
-                        class="table__edit"
-                      >
-                        <img
-                          alt="edit pencil"
-                          src="notepad-and-pencil-grey.svg"
-                        />
-                      </button>
-                      <button
-                        class="table__delete"
-                      >
-                        <img
-                          alt="edit pencil"
-                          src="bin-icon.svg"
-                        />
-                      </button>
-                    </td>
                   </tr>
                   <tr
                     class="ant-table-row ant-table-row-level-0"
@@ -111,26 +86,6 @@ exports[`renders the ListComponentUniversal with data 1`] = `
                       class="ant-table-cell table__cell"
                     >
                       40hrs
-                    </td>
-                    <td
-                      class="ant-table-cell"
-                    >
-                      <button
-                        class="table__edit"
-                      >
-                        <img
-                          alt="edit pencil"
-                          src="notepad-and-pencil-grey.svg"
-                        />
-                      </button>
-                      <button
-                        class="table__delete"
-                      >
-                        <img
-                          alt="edit pencil"
-                          src="bin-icon.svg"
-                        />
-                      </button>
                     </td>
                   </tr>
                 </tbody>
