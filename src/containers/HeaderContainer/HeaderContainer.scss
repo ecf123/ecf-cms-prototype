@@ -5,9 +5,8 @@
   flex-direction: column;
   padding: 0.625rem;
   background-color: $color-white;
-  &__top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  color: $color-blue-navy-dark;
+  font-size: 64px;
+  font-weight: $font-weight-regular;
+  font-family: $font-secondary;
 }

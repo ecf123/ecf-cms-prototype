@@ -1,11 +1,9 @@
 import Layout from "../../components/Layout/Layout";
-<<<<<<< HEAD
-import ViewOptions from "../../components/ViewOptions/ViewOptions";
-
-=======
->>>>>>> 4da0eacbaa5f61976e369bf8d5751905f2fbec0e
+import HeaderContainer from "../../containers/HeaderContainer/HeaderContainer";
 const Home = () => {
-  return <Layout>
-  </Layout>;
+  return (
+  <Layout>
+    <HeaderContainer  titleLarge={"Financial Forest"} classNameLarge={"header-container"} />
+  </Layout>);
 };
 export default Home;
