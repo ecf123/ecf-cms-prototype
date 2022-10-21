@@ -1,5 +1,6 @@
 import "./QuestionAnswer.scss"
 import Short from '../Short/Short'
+import CheckboxInput from "../CheckboxInput/CheckboxInput"
 
 const QuestionAnswer = ({handleShortValue, onSubmit}) => {
 
@@ -10,10 +11,13 @@ const QuestionAnswer = ({handleShortValue, onSubmit}) => {
         <Short shortLabelText={"Question"} handleShortValue={handleShortValue}/>
         <p className="form__answers__heading">Answers</p>
         <div className="form__answers">
-        <Short />
-        <Short />
-        <Short />
-        <Short />
+
+          <CheckboxInput/>
+          <CheckboxInput/>
+          <CheckboxInput/>
+          <CheckboxInput/>
+    
+
         </div>
     </form>
   )

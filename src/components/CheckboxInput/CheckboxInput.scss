@@ -1,0 +1,26 @@
+@use "../../styles/variables.scss" as *;
+
+.checkbox {
+  margin: 6.25rem;
+  border: 0.063rem solid #d0d5dd;
+  max-width: 32rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.938rem;
+
+  &__input {
+    border: none;
+    width: 28.125rem;
+    height: 80%;
+    font-family: $font-secondary;
+    font-size: $font-size-small;
+    color: $color-grey-normal;
+  }
+
+  &__input:focus {
+    outline: none;
+  } 
+}
