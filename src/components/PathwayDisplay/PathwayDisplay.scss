@@ -1,36 +1,36 @@
 @use "../../styles/_variables" as *;
 
 .pathway-display {
-    height: 4.75rem;
-    max-width: 83rem;
+  height: 4.75rem;
+  max-width: 83rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.9rem;
+  background-color: #fcfcfd;
+
+  &__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1.9rem;
-    background-color: #fcfcfd;
 
-    &__container {
-        display: flex;
-        align-items: center;
+    .pathway-display__option {
+      margin: 0.6rem;
+      padding: 0.6rem;
+      border-radius: 0.7rem;
+    }
+  }
 
-        .pathway-display__option {
-            margin: 0.6rem;
-            padding: 0.6rem;            
-            border-radius: 0.7rem;
-        }
-    }
+  #grid-icon {
+    border: 0.09rem solid $color-grey-light;
+    background-color: #ffffff;
+  }
 
-    #grid-icon {
-        border: 0.09rem solid $color-grey-light;
-        background-color: #ffffff;
-    }
-    
-    #list-icon {
-        border: 0.09rem solid $color-grey-light;
-        background-color: #ffffff;
-    }
+  #list-icon {
+    border: 0.09rem solid $color-grey-light;
+    background-color: #ffffff;
+  }
 
-    &__button {
-        text-decoration: none;
-    }
+  &__button {
+    text-decoration: none;
+  }
 }
