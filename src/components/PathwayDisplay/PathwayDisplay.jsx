@@ -19,10 +19,10 @@ const PathwayDisplay = () => {
     <div className="pathway-display">
         <div className="pathway-display__container">
           <Link to = "*">
-            <img className="pathway-display__option" id={border && "grid-icon"} src={grid} alt="grid display option button" onClick={() => toggleDisplay(true)}/>
+            <img className="pathway-display__option" id={border ? "grid-icon" : ""} src={grid} alt="grid display option button" onClick={() => toggleDisplay(true)}/>
           </Link>
           <Link to = "*">
-            <img className="pathway-display__option" id={!border && "list-icon"} src ={hamburger} alt="list view option button" onClick={() => toggleDisplay(false)}/>
+            <img className="pathway-display__option" id={border ? "" : "list-icon"} src ={hamburger} alt="list view option button" onClick={() => toggleDisplay(false)}/>
           </Link>
         </div>
         <Link to = "*" className="pathway-display__button">
