@@ -168,17 +168,17 @@ exports[`it should match the snapshot with props 1`] = `
                         <td
                           class="ant-table-cell table__cell"
                         >
-                          100
+                          122
                         </td>
                         <td
                           class="ant-table-cell table__cell"
                         >
-                          20 hrs
+                          19 hrs
                         </td>
                         <td
                           class="ant-table-cell table__cell"
                         >
-                          24
+                          21
                         </td>
                         <td
                           class="ant-table-cell table__categories table__cell"
@@ -236,17 +236,17 @@ exports[`it should match the snapshot with props 1`] = `
                         <td
                           class="ant-table-cell table__cell"
                         >
-                          82
+                          122
                         </td>
                         <td
                           class="ant-table-cell table__cell"
                         >
-                          26 hrs
+                          19 hrs
                         </td>
                         <td
                           class="ant-table-cell table__cell"
                         >
-                          16
+                          21
                         </td>
                         <td
                           class="ant-table-cell table__categories table__cell"
