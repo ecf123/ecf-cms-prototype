@@ -1,4 +1,3 @@
-import React from 'react'
 import ListContainer from '../../containers/ListContainer/ListContainer'
 
 const Articles = () => {
