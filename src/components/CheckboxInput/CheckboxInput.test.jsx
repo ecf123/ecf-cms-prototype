@@ -18,12 +18,10 @@ it("Should render the Checkbox Input textarea", () => {
   //comment
 });
 
-it("Should render the Checkbox has been clicked by user", () => {
+it("Should render the checkbox as not checked by default, then check the checkbox if it is clicked", () => {
   render(<CheckboxInput />);
   const checkbox = screen.getByRole("checkbox");
   expect(checkbox).not.toBeChecked();
   fireEvent.click(checkbox);
   expect(checkbox).toBeChecked();
 });
-
-
