@@ -1,0 +1,36 @@
+.pi {
+  grid-area: pi;
+}
+
+.course-overview__main--poh {
+  grid-area: poh;
+}
+
+.course-overview__main--dd {
+  grid-area: dd;
+}
+
+.course-overview__side--mo {
+  grid-area: mo;
+}
+
+.course-overview__side--si {
+  grid-area: si;
+}
+
+.course-overview__side--pc {
+  grid-area: pc;
+}
+
+.course-overview {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  height: 100%;
+  grid-template-areas: "pi mo";
+  gap: 50px;
+}
+.course-overview__main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
