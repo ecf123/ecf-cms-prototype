@@ -2,29 +2,31 @@
 
 exports[`Should match the snapshot 1`] = `
 <div>
-  <label
-    class="select__label"
-  >
-    Lesson Type
-  </label>
-  <div
-    class="select"
-  >
-    <select
-      class="select__dropdown"
-      src="upside-down-arrow-grey.svg"
+  <div>
+    <label
+      class="select__label"
     >
-      <option
-        class="select__dropdownoption"
+      Lesson Type
+    </label>
+    <div
+      class="select"
+    >
+      <select
+        class="select__dropdown"
+        src="upside-down-arrow-grey.svg"
       >
-        Lesson
-      </option>
-      <option
-        class="select__dropdownoption"
-      >
-        Assessment Quiz
-      </option>
-    </select>
+        <option
+          class="select__dropdownoption"
+        >
+          Lesson
+        </option>
+        <option
+          class="select__dropdownoption"
+        >
+          Assessment Quiz
+        </option>
+      </select>
+    </div>
   </div>
 </div>
 `;
