@@ -1,34 +1,40 @@
 import "./ViewOptions.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const ViewOptions = () => {
-  const [selected, setSelected] = useState("Overview");
+const ViewOptions = ({ selectedOption }) => {
+  const [selected, setSelected] = useState(selectedOption);
 
-  let classesOverview = "view-options__option";
-  let classesCourses = "view-options__option";
-  let classesStats = "view-options__option";
+  const selectionChange = (option) => setSelected(option);
 
-  if (selected == "Overview") {
-    classesOverview += "--clicked";
-  }
-  if (selected == "Courses") {
-    classesCourses += "--clicked";
-  }
-  if (selected == "Stats") {
-    classesStats += "--clicked";
-  }
+  const setClassName = (option) =>
+    selected != option
+      ? "view-options__overview"
+      : "view-options__overview--clicked";
 
   return (
     <div className="view-options">
-      <h3 onClick={() => setSelected("Overview")} className={classesOverview}>
+      <Link
+        to="*"
+        onClick={() => selectionChange("Overview")}
+        className={setClassName("Overview")}
+      >
         Overview
-      </h3>
-      <h3 onClick={() => setSelected("Courses")} className={classesCourses}>
+      </Link>
+      <Link
+        to="*"
+        onClick={() => selectionChange("Courses")}
+        className={setClassName("Courses")}
+      >
         Courses
-      </h3>
-      <h3 onClick={() => setSelected("Stats")} className={classesStats}>
+      </Link>
+      <Link
+        to="*"
+        onClick={() => selectionChange("Stats")}
+        className={setClassName("Stats")}
+      >
         Stats
-      </h3>
+      </Link>
     </div>
   );
 };

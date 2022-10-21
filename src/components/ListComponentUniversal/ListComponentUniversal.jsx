@@ -2,10 +2,8 @@ import "antd/dist/antd.min.css";
 import "./ListComponentUniversal.scss";
 import { Table, Tag } from "antd";
 import { Link } from "react-router-dom";
-import edit from "../../assets/notepad-and-pencil-grey.svg";
-import deletes from "../../assets/bin-icon.svg";
 
-const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
+const ListComponentUniversal = ({ data }) => {
   const columns = [];
 
   data
@@ -41,7 +39,7 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
                     "business",
                   ];
                   categories.forEach((category, index) => {
-                    if (category == tag) {
+                    if (category == tag.toLowerCase().trim()) {
                       color = colors[index];
                     }
                   });
@@ -77,33 +75,6 @@ const ListComponentUniversal = ({ data, onEdit, onDelete }) => {
           });
       })
     : data;
-
-  columns.push({
-    key: "",
-    title: "",
-    render: (e) => {
-      return (
-        <>
-          <button
-            className="table__edit"
-            onClick={() => {
-              onEdit(e);
-            }}
-          >
-            <img src={edit} alt="edit pencil" />
-          </button>
-          <button
-            className="table__delete"
-            onClick={() => {
-              onDelete(e);
-            }}
-          >
-            <img src={deletes} alt="edit pencil" />
-          </button>
-        </>
-      );
-    },
-  });
 
   return (
     <Table
