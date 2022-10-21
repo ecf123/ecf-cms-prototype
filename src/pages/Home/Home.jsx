@@ -1,21 +1,6 @@
-import LessonContentPreview from "../../components/LessonContentPreview/LessonContentPreview";
-
+import Layout from "../../components/Layout/Layout";
 const Home = () => {
-
-  const lessons = [
-    {
-      title: "Test",
-      content: "longer text test" 
-    },
-    {
-      title: "Test2",
-      content: "longer text test2" 
-    }
-  ]
-
-  return <LessonContentPreview lessonsArray={lessons}/>;
-
-
+  return <Layout></Layout>;
 };
 
 export default Home;
