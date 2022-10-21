@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the Page Not Found  1`] = `
+<div>
+  <div
+    class="pageNotFound"
+  >
+    <img
+      alt="A magnifying glass"
+      class="pageNotFound__image"
+      src="404-not-found-magnifying-glass.png"
+    />
+    <h4
+      class="pageNotFound__message"
+    >
+      Sorry the page you requested could not be found.
+    </h4>
+    <h5
+      class="pageNotFound__message"
+    >
+      Please go back to the home page
+    </h5>
+    <a
+      href="/*"
+    >
+      <button
+        class="pageNotFound__button"
+      >
+        Home
+      </button>
+    </a>
+  </div>
+</div>
+`;
