@@ -1,6 +1,7 @@
 @use "../../styles/variables" as *;
 
 .layout {
+  //max-width: 100vw;
   display: grid;
   grid-template-columns: 16.5rem auto;
   grid-template-rows: auto 1fr;
