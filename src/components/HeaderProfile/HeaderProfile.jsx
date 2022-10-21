@@ -1,5 +1,5 @@
 import "./HeaderProfile.scss";
-import Button from "../../components/Button/Button";
+import { Link } from "react-router-dom";
 import arrow from "../../assets/upside-down-arrow-grey.svg";
 
 const HeaderProfile = ({
@@ -11,7 +11,7 @@ const HeaderProfile = ({
   arrowClass,
 }) => {
   return (
-    <div>
+    <div className="dropdown">
       <div className="header-profile" onClick={toggle}>
         <img
           className="header-profile__image"
@@ -22,24 +22,12 @@ const HeaderProfile = ({
           <h2 className="header-profile__name">{name}</h2>
           <p className="header-profile__role">{role}</p>
         </div>
-        <button>
           <img src={arrow} alt="toggle" className={arrowClass} />
-        </button>
       </div>
       {displayed && (
         <div className="dropdown__items">
-          <Button
-            className="profile__log-out"
-            style={"button white rounded-square-border border modal"}
-            textStyle={"text modal-text white"}
-            buttonText={"Log out"}
-          />
-          <Button
-            className="profile__log-out"
-            style={"button red rounded-square-border border modal"}
-            textStyle={"text modal-text red"}
-            buttonText={"Change Profile"}
-          />
+          <Link to={'/*'}><p>change profile</p></Link>
+          <Link to={'/*'}><p>Log out</p></Link>
         </div>
       )}
     </div>

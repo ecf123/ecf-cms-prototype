@@ -57,17 +57,27 @@
     background: none;
   }
   &__down-arrow {
-    rotate: 180;
-    height: 0.41375rem;
-    width: 0.6875rem;
-    margin-left: 2.781rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background: none;
+    transform: rotate(180);
   }
 }
+.dropdown {  
+  position: relative;  
+  display: inline-block;  
+}  
+
+.dropdown__items {  
+ position: absolute;  
+ background-color: white;  
+ min-width: 185px;  
+}    
+.dropdown__items Link {  
+  display: block;  
+  font-size: 18px;  
+  background-color: #ddd;  
+  color: black;  
+  text-decoration: none;  
+  padding: 10px;  
+} 
 
 
 
