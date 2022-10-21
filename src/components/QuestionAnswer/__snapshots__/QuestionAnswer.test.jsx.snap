@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the question and answer form 1`] = `
+<div>
+  <form
+    class="form"
+  >
+    <div
+      class="short"
+    >
+      <label
+        class="short__label"
+      >
+        Question
+      </label>
+      <input
+        spellcheck="true"
+      />
+    </div>
+    <p
+      class="form__answers__heading"
+    >
+      Answers
+    </p>
+    <div
+      class="form__answers"
+    >
+      <div
+        class="short"
+      >
+        <label
+          class="short__label"
+        />
+        <input
+          spellcheck="true"
+        />
+      </div>
+      <div
+        class="short"
+      >
+        <label
+          class="short__label"
+        />
+        <input
+          spellcheck="true"
+        />
+      </div>
+      <div
+        class="short"
+      >
+        <label
+          class="short__label"
+        />
+        <input
+          spellcheck="true"
+        />
+      </div>
+      <div
+        class="short"
+      >
+        <label
+          class="short__label"
+        />
+        <input
+          spellcheck="true"
+        />
+      </div>
+    </div>
+  </form>
+</div>
+`;
