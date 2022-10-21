@@ -15,36 +15,17 @@ const PathwayDisplay = () => {
 
   return (
     <div className="pathway-display">
-      <div className="pathway-display__container">
-        <Link to="*">
-          <img
-            className="pathway-display__option"
-            id={border && "grid-icon"}
-            src={grid}
-            alt="grid display option button"
-            onClick={() => toggleDisplay(true)}
-          />
+        <div className="pathway-display__container">
+          <Link to = "*">
+            <img className="pathway-display__option" id={border ? "grid-icon" : ""} src={grid} alt="grid display option button" onClick={() => toggleDisplay(true)}/>
+          </Link>
+          <Link to = "*">
+            <img className="pathway-display__option" id={border ? "" : "list-icon"} src ={hamburger} alt="list view option button" onClick={() => toggleDisplay(false)}/>
+          </Link>
+        </div>
+        <Link to = "*" className="pathway-display__button">
+          < Button style={"button black round-border medium"} imgStyle={"medium-img white-svg"} textStyle={"text medium-text black"} buttonText={"Add Course"}><Pencil /></Button>
         </Link>
-        <Link to="*">
-          <img
-            className="pathway-display__option"
-            id={!border && "list-icon"}
-            src={hamburger}
-            alt="list view option button"
-            onClick={() => toggleDisplay(false)}
-          />
-        </Link>
-      </div>
-      <Link to="*" className="pathway-display__button">
-        <Button
-          style={"button black round-border medium"}
-          imgStyle={"medium-img white-svg"}
-          textStyle={"text medium-text black"}
-          buttonText={"Add Course"}
-        >
-          <Pencil />
-        </Button>
-      </Link>
     </div>
   );
 };
