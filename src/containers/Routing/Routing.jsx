@@ -4,6 +4,8 @@ import ListContainer from "../ListContainer/ListContainer";
 import Login from "../../components/Login/Login";
 import AddPage from "../../containers/AddPage/AddPage";
 
+//File is currently redundant and exists only incase of refactoring
+
 const Routing = () => {
   return (
     <Router>
