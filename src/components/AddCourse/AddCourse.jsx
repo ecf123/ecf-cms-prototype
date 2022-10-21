@@ -18,8 +18,13 @@ const AddCourse = ({
   handleFileChange2,
   storeInputs,
   errorMessage,
-  pageFirstOpened,
-  pageInfo
+  classNameInput,
+  classNameInputTwo,
+  classNameInputThree,
+  file,
+  fileName,
+  fileTwo,
+  fileNameTwo
 }) => {
   return (
     <div className="add-course">
@@ -28,25 +33,13 @@ const AddCourse = ({
           shortLabelText={shortLabelTextOne}
           shortType="text"
           name="shortInputOne"
-          inputClassName={
-            (pageInfo.shortInputOne != "" && !pageFirstOpened) ||
-            (pageFirstOpened) ||
-            shortLabelTextOne.includes("optional")
-              ? "short__input"
-              : "short__input--empty"
-          }
+          inputClassName={classNameInput}
           handleShortValue={handleChange}
         />
         <FreeType
           freeTypeLabelText={freeTypeLabelTextOne}
           name="freeTypeInputOne"
-          inputClassName={
-            (pageInfo.freeTypeInputOne != "" && !freeTypeLabelTextOne.includes("optional") && !pageFirstOpened) ||
-            (pageFirstOpened && !freeTypeLabelTextOne.includes("optional")) ||
-            freeTypeLabelTextOne.includes("optional")
-              ? "free-type__input"
-              : "free-type__input--empty"
-          }
+          inputClassName={classNameInputThree}
           handleFreeTypeValue={handleChange}
         />
         <Short
@@ -54,13 +47,7 @@ const AddCourse = ({
           shortType="text"
           shortPlaceHolderText={shortPlaceHolderTextTwo}
           name="shortInputTwo"
-          inputClassName={
-            (pageInfo.shortInputTwo != "" && !shortLabelTextTwo.includes("optional") && !pageFirstOpened) ||
-            (pageFirstOpened && !shortLabelTextTwo.includes("optional")) ||
-            shortLabelTextTwo.includes("optional")
-              ? "short__input"
-              : "short__input--empty"
-          }
+          inputClassName={classNameInputTwo}
           handleShortValue={handleChange}
         />
         <Short
@@ -68,13 +55,7 @@ const AddCourse = ({
           shortType="text"
           shortPlaceHolderText={shortPlaceHolderTextThree}
           name="shortInputTwo"
-          inputClassName={
-            (pageInfo.shortInputTwo != "" && !shortLabelTextTwo.includes("optional") && !pageFirstOpened) ||
-            (pageFirstOpened && !shortLabelTextTwo.includes("optional")) ||
-            shortLabelTextTwo.includes("optional")
-              ? "short__input"
-              : "short__input--empty"
-          }
+          inputClassName={classNameInputTwo}
           handleShortValue={handleChange}
         />
 
@@ -97,21 +78,21 @@ const AddCourse = ({
       <div className="add-course__uploadContainer">
         <div className="add-course__media-upload">
           <MediaUploadBox
-            file={pageInfo.file}
+            file={file}
             handleFileChange={handleFileChange}
             uploadLabelName={uploadLabelName}
             uploadButtonText="Upload Image"
-            fileName={pageInfo.fileName}
+            fileName={fileName}
             newId={"file1"}
           />
         </div>
         <div className="add-course__media-upload2">
           <MediaUploadBox
-            file={pageInfo.fileTwo}
+            file={fileTwo}
             handleFileChange={handleFileChange2}
             uploadLabelName={uploadLabelNameTwo}
             uploadButtonText="Upload Image"
-            fileName={pageInfo.fileName}
+            fileName={fileNameTwo}
             newId={"file2"}
           />
         </div>

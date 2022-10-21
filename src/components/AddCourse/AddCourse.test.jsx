@@ -1,33 +1,37 @@
-import {render, screen} from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
-import AddCourseContainer from "./AddCourseContainer";
+import { render, screen } from "@testing-library/react";
+import AddCourse from "./AddCourse";
 
-it("it should match the snapshot with props", () => {
-    const { container } = customRender(<AddCourseContainer shortLabelTextOne={"Course Name"}/>);
-    expect(container).toMatchSnapshot();
-});
-
-it("Should display an error message above the buttons if the all short's label name and the input is empty", () => {
-render(
-    <AddCourseContainer
-    shortLabelTextOne="short text one"
-    shortLabelTextTwo="optional"
-    freeTypeLabelTextOne="optional"
-    freeTypeLabelTextTwo="optional"
+it("Should match the snapshot, with the props", () => {
+  const { container } = customRender(
+    <AddCourse
+      shortLabelTextOne={"Course Name"}
+      freeTypeLabelTextOne={"Course Overview"}
+      shortLabelTextTwo={"Course Provider"}
+      shortPlaceHolderTextTwo={"e.g Barclays..."}
+      shortLabelTextThree={"Course Mentor"}
+      shortPlaceHolderTextThree={"e.g Barclays"}
+      uploadLabelName={"Course Thumbnail"}
+      uploadLabelNameTwo={"Provider Logo"}
     />
-);
+  );
 
-const shortTextOneInput = screen.queryByRole("textbox", {
-    name: /short text one/i,
+  expect(container).toMatchSnapshot();
 });
-userEvent.type(shortTextOneInput, "");
 
-const button = screen.getByRole("button", { name: /Submit/i });
-userEvent.click(button);
-
-const errorMessage = screen.queryByText(
-    "Please enter the info needed in the empty red boxes"
-);
-
-expect(errorMessage).toBeInTheDocument();
+it("should have 2 buttons", () => {
+  render(
+    <AddCourse
+      shortLabelTextOne={"Course Name"}
+      freeTypeLabelTextOne={"Course Overview"}
+      shortLabelTextTwo={"Course Provider"}
+      shortPlaceHolderTextTwo={"e.g Barclays..."}
+      shortLabelTextThree={"Course Mentor"}
+      shortPlaceHolderTextThree={"e.g Barclays"}
+      uploadLabelName={"Course Thumbnail"}
+      uploadLabelNameTwo={"Provider Logo"}
+    />
+  );
+  const buttons = screen.getAllByRole("button");
+  expect(buttons.length).toBe(4);
 });
