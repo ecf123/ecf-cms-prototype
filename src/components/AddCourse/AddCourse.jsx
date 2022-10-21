@@ -15,6 +15,7 @@ const AddCourse = ({
   uploadLabelNameTwo,
   handleChange,
   handleFileChange,
+  handleFileChange2,
   storeInputs,
   errorMessage,
   pageFirstOpened,
@@ -101,15 +102,17 @@ const AddCourse = ({
             uploadLabelName={uploadLabelName}
             uploadButtonText="Upload Image"
             fileName={pageInfo.fileName}
+            newId={"file1"}
           />
         </div>
         <div className="add-course__media-upload2">
           <MediaUploadBox
-            file={pageInfo.file}
-            handleFileChange={handleFileChange}
+            file={pageInfo.fileTwo}
+            handleFileChange={handleFileChange2}
             uploadLabelName={uploadLabelNameTwo}
             uploadButtonText="Upload Image"
             fileName={pageInfo.fileName}
+            newId={"file2"}
           />
         </div>
       </div>

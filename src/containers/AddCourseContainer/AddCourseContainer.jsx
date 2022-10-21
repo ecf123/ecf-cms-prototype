@@ -17,8 +17,8 @@ const AddCourseContainer = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [pageFirstOpened, setPageFirstOpened] = useState(true);
 
-  const handleFileChange = (e, whichFile) => {
-    if(whichFile == pageInfo.file){
+  const handleFileChange = (e) => {
+    console.log(pageInfo)
       if (!pageInfo.file) setPageInfo({ fileName: e.target.files[0].name });
       pageInfo.file
         ? setPageInfo({ ...pageInfo, file: null })
@@ -26,17 +26,18 @@ const AddCourseContainer = () => {
             ...pageInfo,
             file: URL.createObjectURL(e.target.files[0]),
           });
-    } else {
-      if (!pageInfo.fileTwo) setPageInfo({ fileTwoName: e.target.files[0].name });
+    }
+
+  const handleFileChange2 = (e) => {
+    console.log(pageInfo)
+    if (!pageInfo.fileTwo) setPageInfo({ fileTwoName: e.target.files[0].name });
       pageInfo.fileTwo
         ? setPageInfo({ ...pageInfo, fileTwo: null })
         : setPageInfo({
             ...pageInfo,
             fileTwo: URL.createObjectURL(e.target.files[0]),
           });
-    }
-   
-  };
+  }
 
   const handleChange = (e) => {
     console.log(e.target.name);
@@ -65,6 +66,7 @@ const AddCourseContainer = () => {
         uploadLabelNameTwo={"Provider Logo"}
         handleChange={handleChange}
         handleFileChange={handleFileChange}
+        handleFileChange2={handleFileChange2}
         storeInputs={storeInputs}
         errorMessage={errorMessage}
         pageFirstOpened={pageFirstOpened}
