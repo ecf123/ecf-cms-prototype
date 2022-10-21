@@ -4,6 +4,7 @@ import { Table, Tag } from "antd";
 import { Link } from "react-router-dom";
 const ListComponentUniversal = ({ data }) => {
   const columns = [];
+
   data
     ? Object.keys(data[0]).forEach((header) => {
         if (header.includes("name")) {
@@ -27,7 +28,7 @@ const ListComponentUniversal = ({ data }) => {
             render: (_, { category }) => (
               <>
                 {category.map((tag) => {
-                  let color = "#F1CCEB";
+                  let color = "#f1cceb";
                   const colors = ["orange", "purple", "cyan", "green", "red"];
                   const categories = [
                     "design",
@@ -41,6 +42,7 @@ const ListComponentUniversal = ({ data }) => {
                       color = colors[index];
                     }
                   });
+
                   return (
                     <Tag color={color} key={tag} className="table__tag">
                       {tag.toUpperCase()}
@@ -72,6 +74,7 @@ const ListComponentUniversal = ({ data }) => {
           });
       })
     : data;
+
   return (
     <Table
       className="table"
@@ -81,4 +84,5 @@ const ListComponentUniversal = ({ data }) => {
     />
   );
 };
+
 export default ListComponentUniversal;
