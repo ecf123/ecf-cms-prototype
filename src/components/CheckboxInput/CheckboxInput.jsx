@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./CheckboxInput.scss";
 
 const CheckboxInput = ({handleClick, handleInput}) => {
