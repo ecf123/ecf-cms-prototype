@@ -1,0 +1,16 @@
+@use "../../styles/variables" as *;
+
+.pathway-header {
+  max-width: 56rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    color: $color-blue-navy-dark;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-regular;
+  }
+  &__link {
+    text-decoration: none;
+  }
+}
