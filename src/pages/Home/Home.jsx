@@ -1,7 +1,6 @@
-import AddLessonAdditionalBoxes from "../../components/AddLessonAdditionalBoxes/AddLessonAdditionalBoxes";
 import Layout from "../../components/Layout/Layout";
 const Home = () => {
-  return <Layout><AddLessonAdditionalBoxes/></Layout>;
+  return <Layout></Layout>;
 };
 
 export default Home;
