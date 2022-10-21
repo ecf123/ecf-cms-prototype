@@ -2,18 +2,18 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
     height: 100%;
-   
     gap: 50px;
+
     &__main{
-        display:flex;
-        justify-content: space-around;
-        flex-direction: column;
+        display:grid;
+        grid-template-rows: 3fr 1fr 5fr;
         margin-left: 32px;
     }
     &__side{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        gap: 10px;
         margin-right:10px;
     }
 }
