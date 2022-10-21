@@ -1,6 +1,5 @@
 import "./PathwaysListContainer.scss";
 import ListComponentUniversal from "../../components/ListComponentUniversal/ListComponentUniversal";
-import { Modal, Input } from "antd";
 import { useState } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import SearchBar from "../../components/SearchBar/SearchBar";
@@ -11,10 +10,9 @@ import { useEffect } from "react";
 
 
 
-const PathwaysListContainer = ({dataSource, setDataSource, dataJSON}) => {
+const PathwaysListContainer = ({ dataJSON }) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [isEditing, setIsEditing] = useState(false);
-  const [editingEntry, setEditingEntry] = useState(null);
+  const [dataSource, setDataSource] = useState(null);
 
   const cleanData = () => {
     const filteredData = dataJSON ? dataJSON
@@ -55,30 +53,6 @@ const PathwaysListContainer = ({dataSource, setDataSource, dataJSON}) => {
     setSearchTerm(event.target.value);
   };
 
-
-
-  const onDelete = (e) => {
-    Modal.confirm({
-      title: "Are you sure, you want to delete this record?",
-      okText: "Yes",
-      okType: "danger",
-      onOk: () => {
-        setDataSource((pre) => {
-          return pre.filter((row) => row.id !== e.id);
-        });
-      },
-    });
-  };
-
-  const onEdit = (e) => {
-    setIsEditing(true);
-    setEditingEntry({ ...e });
-  };
-  const resetEditing = () => {
-    setIsEditing(false);
-    setEditingEntry(null);
-  };
-
   return (
     <div className="pathway-list">
       <div className="pathway-list__header">
@@ -108,48 +82,9 @@ const PathwaysListContainer = ({dataSource, setDataSource, dataJSON}) => {
 
       <div className="pathway-list__table">
         <ListComponentUniversal
-          onDelete={onDelete}
-          onEdit={onEdit}
           data={dataSource}
         />
       </div>
-      <Modal
-        title="Edit Entry"
-        open={isEditing}
-        okText="Save"
-        onCancel={() => {
-          resetEditing();
-        }}
-        onOk={() => {
-          setDataSource((pre) => {
-            return pre.map((e) => {
-              if (e.id === editingEntry.id) {
-                return editingEntry;
-              } else {
-                return e;
-              }
-            });
-          });
-          resetEditing();
-        }}
-      >
-        <Input
-          value={editingEntry?.pathway_name}
-          onChange={(e) => {
-            setEditingEntry((pre) => {
-              return { ...pre, pathway_name: e.target.value };
-            });
-          }}
-        />
-        <Input
-          value={editingEntry?.category}
-          onChange={(e) => {
-            setEditingEntry((pre) => {
-              return { ...pre, category: e.target.value.split(",") };
-            });
-          }}
-        />
-      </Modal>
     </div>
   );
 };
