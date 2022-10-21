@@ -34,9 +34,9 @@ const PathwaysListContainer = ({ dataJSON }) => {
             pathway_name: entry.header,
             providers: providersArr,
             no_of_courses: entry.skillsTree.children[0].children.length,
-            no_of_lessons: Math.floor(Math.random() * 150 + 20),
-            pathways_length: Math.floor(Math.random() * 25 + 5) + " hrs",
-            students_enrolled: Math.floor(Math.random() * 15 + 10),
+            no_of_lessons: 122,
+            pathways_length: "19 hrs",
+            students_enrolled: 21,
             category: entry.category.split(","),
           };
         })
