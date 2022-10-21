@@ -1,19 +1,23 @@
 import "./QuestionAnswer.scss"
 import Short from '../Short/Short'
+import CheckboxInput from "../CheckboxInput/CheckboxInput"
 
-const QuestionAnswer = ({submitQuestion}) => {
+const QuestionAnswer = ({handleShortValue, onSubmit}) => {
 
 
   return (
-    <form className='form' onSubmit={submitQuestion}>
-        <Short shortLabelText={"Question"}/>
+    
+    <form className='form' onSubmit = {onSubmit}>
+        <Short shortLabelText={"Question"} handleShortValue={handleShortValue}/>
         <p className="form__answers__heading">Answers</p>
         <div className="form__answers">
-        <Short />
-        <Short />
-        <Short />
-        <Short />
-        <button className="form__button" >Add +</button>
+
+          <CheckboxInput/>
+          <CheckboxInput/>
+          <CheckboxInput/>
+          <CheckboxInput/>
+    
+
         </div>
     </form>
   )
