@@ -1,4 +1,7 @@
-import "./PathwaysListContainer.jsx";
+import PathwaysListContainer from "./PathwaysListContainer.jsx";
+import { render, screen } from "@testing-library/react";
+import { customRender } from "../../utils/testUtils";
+import { BrowserRouter } from "react-router-dom";
 
 window.matchMedia =
   window.matchMedia ||
@@ -94,24 +97,28 @@ let collection = [
 ];
 
 it("it should match the snapshot with props", () => {
-    const { container } = customRender(
-      <PathwaysListContainer dataJSON={collection}/>
-    );
-    expect(container).toMatchSnapshot();
+  const { container } = customRender(
+    <PathwaysListContainer dataJSON={collection} />
+  );
+  expect(container).toMatchSnapshot();
+});
+
+it("Should render the first row", () => {
+  render(<PathwaysListContainer dataJSON={collection} />, {
+    wrapper: BrowserRouter,
   });
-  
-  it("Should render the first row", () => {
-    render(<PathwaysListContainer dataJSON={collection} />, {wrapper: BrowserRouter});
-    const pathwayName = screen.getByText("Financial Forest");
-    const category = screen.getByText("Finance");
-    expect(pathwayName).toBeInTheDocument();
-    expect(category).toBeInTheDocument();
+  const pathwayName = screen.getByText("Financial Forest");
+  const category = screen.getByText("FINANCE");
+  expect(pathwayName).toBeInTheDocument();
+  expect(category).toBeInTheDocument();
+});
+
+it("Should render the second row", () => {
+  render(<PathwaysListContainer dataJSON={collection} />, {
+    wrapper: BrowserRouter,
   });
-  
-  it("Should render the second row", () => {
-      render(<PathwaysListContainer dataJSON={collection} />, {wrapper: BrowserRouter});
-      const pathwayName = screen.getByText("Business Bonanza");
-      const category = screen.getByText("Programming");
-      expect(pathwayName).toBeInTheDocument();
-      expect(category).toBeInTheDocument();
-    });
+  const pathwayName = screen.getByText("Business Bonanza");
+  const category = screen.getByText("PROGRAMMING");
+  expect(pathwayName).toBeInTheDocument();
+  expect(category).toBeInTheDocument();
+});
