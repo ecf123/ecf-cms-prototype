@@ -2,18 +2,18 @@ import "./AddLessonAdditionalBoxes.scss";
 import FreeType from '../FreeType/FreeType';
 import Short from '../Short/Short';
 
-const AddLessonAdditionalBoxes = ({handleFreeTypeValue, handleShortValue, handleAddLessonContent, shortLabelText, shortPlaceHolderText, freeTypeLabelText}) => {
+const AddLessonAdditionalBoxes = ({handleFreeTypeValue, handleShortValue, handleAddLessonContent}) => {
   return (
     <div className='add-lesson'>
         <Short 
-          shortLabelText = {shortLabelText}
+          shortLabelText = "Additional Subtitle(s) (optional)"
           shortType = "text"
-          shortPlaceHolderText = {shortPlaceHolderText}
+          shortPlaceHolderText = "e.g. Fund Manager"
           handleShortValue = {handleShortValue}
           inputClassName = "add-lesson__input-one input"
           name = "input-one"/>
         <FreeType 
-          freeTypeLabelText = {freeTypeLabelText}
+          freeTypeLabelText = "Additional Content (optional)"
           handleFreeTypeValue = {handleFreeTypeValue}
           name = "input-two"
           inputClassName = 'add-lesson__input-two input' />
