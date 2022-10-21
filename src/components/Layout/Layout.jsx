@@ -2,6 +2,7 @@ import "./Layout.scss";
 import NavBar from "../NavBar/NavBar";
 import { useState } from "react";
 import HeaderContainer from "../../containers/HeaderContainer/HeaderContainer";
+import SelectComponent from "../../components/SelectComponent/SelectComponent";
 
 const Layout = ({ children, user }) => {
   const [selected, setSelected] = useState("Dashboard");
@@ -26,6 +27,8 @@ const Layout = ({ children, user }) => {
           classNameSmall="page-title page-title--small"
         />
       </header>
+
+      <SelectComponent />
 
       <main className="layout__body">{children}</main>
     </div>
