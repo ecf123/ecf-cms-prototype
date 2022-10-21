@@ -1,10 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const SinglePathway = () => {
+    const {pathwayName} = useParams();
     return (
-        <Link to="courses">Pathway Courses</Link>
-
+        <>
+            {pathwayName} <br/>
+            <Link to="courses">Pathway Courses</Link>
+        </>
+        
     )
 }
 
