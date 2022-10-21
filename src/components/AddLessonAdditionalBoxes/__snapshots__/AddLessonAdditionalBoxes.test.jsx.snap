@@ -14,7 +14,7 @@ exports[`Should render the AddLessonAdditionalBoxes with props 1`] = `
         Additional Subtitle(s) (optional)
       </label>
       <input
-        class="short__input-one input"
+        class="short__input"
         name="input-one"
         placeholder="e.g. Fund Manager"
         spellcheck="true"
@@ -30,7 +30,7 @@ exports[`Should render the AddLessonAdditionalBoxes with props 1`] = `
         Additional Content (optional)
       </label>
       <textarea
-        class="freeType__input-two input"
+        class="free-type__input"
         name="input-two"
         spellcheck="true"
         type="text"

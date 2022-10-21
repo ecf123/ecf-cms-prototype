@@ -10,13 +10,13 @@ const AddLessonAdditionalBoxes = ({handleFreeTypeValue, handleShortValue}) => {
           shortType = "text"
           shortPlaceHolderText = "e.g. Fund Manager"
           handleShortValue = {handleShortValue}
-          inputClassName = "short__input-one input"
+          inputClassName = "short__input"
           name = "input-one"/>
         <FreeType 
           freeTypeLabelText = "Additional Content (optional)"
           handleFreeTypeValue = {handleFreeTypeValue}
           name = "input-two"
-          inputClassName = 'freeType__input-two input' />
+          inputClassName = 'free-type__input' />
     </div>
   )
 }
