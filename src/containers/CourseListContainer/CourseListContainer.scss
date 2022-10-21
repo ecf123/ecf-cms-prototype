@@ -1,0 +1,17 @@
+@use "../../styles/variables" as *;
+
+.course-list {
+    &__header {
+        margin-bottom: 3rem;
+    }
+
+    &__title, 
+    &__table {
+        padding-left: 4rem;
+    }
+
+    &__display-selector {
+        margin: 3rem 4rem;
+    }
+}
+
