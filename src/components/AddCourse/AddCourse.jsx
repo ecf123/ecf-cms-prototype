@@ -1,5 +1,4 @@
 import "./AddCourse.scss";
-import { useState } from "react";
 import Short from "../../components/Short/Short";
 import FreeType from "../../components/FreeType/FreeType";
 import Button from "../../components/Button/Button";
@@ -14,47 +13,13 @@ const AddCourse = ({
   freeTypeLabelTextOne,
   uploadLabelName,
   uploadLabelNameTwo,
+  handleChange,
+  handleFileChange,
+  storeInputs,
+  errorMessage,
+  pageFirstOpened,
+  pageInfo
 }) => {
-  const [pageInfo, setPageInfo] = useState({
-    file: null,
-    fileName: "",
-    shortInputOne: "",
-    shortInputTwo: "",
-    freeTypeInputOne: "",
-    freeTypeInputTwo: "",
-  });
-
-  const [errorMessage, setErrorMessage] = useState("");
-  const [pageFirstOpened, setPageFirstOpened] = useState(true);
-
-  const handleFileChange = (e) => {
-    if (!pageInfo.file) setPageInfo({ fileName: e.target.files[0].name });
-    pageInfo.file
-      ? setPageInfo({ ...pageInfo, file: null })
-      : setPageInfo({
-          ...pageInfo,
-          file: URL.createObjectURL(e.target.files[0]),
-        });
-  };
-
-  const handleChange = (e) => {
-    console.log(e.target.name);
-    setPageInfo({ ...pageInfo, [e.target.name]: e.target.value });
-  };
-
-  const storeInputs = (event) => {
-    setPageFirstOpened(false);
-    event.preventDefault();
-    if (
-      (pageInfo.shortInputOne == "" && !shortLabelTextOne.includes("optional")) ||
-      (pageInfo.freeTypeInputOne == "" && !freeTypeLabelTextOne.includes("optional")) ||
-      (pageInfo.shortInputTwo == "" && !shortLabelTextTwo.includes("optional"))
-    ) {
-      setErrorMessage("Please enter the info needed in the empty red boxes");
-    } else {
-      setErrorMessage("");
-    }
-  };
   return (
     <div className="add-course">
       <div className="add-course__input-texts">
@@ -63,8 +28,8 @@ const AddCourse = ({
           shortType="text"
           name="shortInputOne"
           inputClassName={
-            (pageInfo.shortInputOne != "" && !shortLabelTextOne.includes("optional") && !pageFirstOpened) ||
-            (pageFirstOpened && !shortLabelTextOne.includes("optional")) ||
+            (pageInfo.shortInputOne != "" && !pageFirstOpened) ||
+            (pageFirstOpened) ||
             shortLabelTextOne.includes("optional")
               ? "short__input"
               : "short__input--empty"
