@@ -4,6 +4,7 @@ import Short from "../../components/Short/Short";
 import SelectComponent from "../../components/SelectComponent/SelectComponent";
 import Button from "../../components/Button/Button";
 import MediaUploadBox from "../../components/MediaUploadBox/MediaUploadBox"
+import AddLessonAdditionalBoxes from "../../components/AddLessonAdditionalBoxes/AddLessonAdditionalBoxes";
 
 const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => {
   
@@ -46,6 +47,11 @@ const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => 
           inputClassName="short__input"
           name="estimated completion time"
         />
+        <div>
+        <AddLessonAdditionalBoxes />
+        </div>
+        
+        
 
 
           <h5 className='add-lesson__add'>Add +</h5>
@@ -76,7 +82,6 @@ const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => 
           />
       </div>
       <div className="add-lesson__content">
-        
       </div>
     </div>
   );

@@ -2,9 +2,16 @@
 
 .add-lesson{
 
+    display: flex;
+    flex-direction: row !important;
+    
+    width: 100vw;
+    
+
     &__buttons {
         display: flex;
         flex-direction: row;
+        gap: 0.56rem;
         margin-top: 1rem;
     }
 
@@ -24,7 +31,15 @@
         flex-direction: column;
         gap: 1.68rem;
     }
+    &__content {
+        height: 684px;
+        width: 430px;
+        border: solid black 1px;
+        background-color: $color-grey-light;
+    }
 }
+
+
 
 
 
