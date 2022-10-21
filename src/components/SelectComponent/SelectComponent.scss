@@ -2,29 +2,29 @@
 @use "../../styles/_variables.scss" as *;
 
 .select {
-    border: solid 1px black;
-    border-radius: 0.5rem;
-    width: 32rem;
-    padding-left: 0.5rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    &__label{
-        font-size: 0.88rem;
-        color: $color-blue-dark;
-        padding-bottom: 2.5rem;
+  border: solid 1px black;
+  border-radius: 0.5rem;
+  width: 32rem;
+  padding-left: 0.5rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  &__label {
+    font-size: 0.88rem;
+    color: $color-blue-dark;
+    padding-bottom: 2.5rem;
+  }
+  &__dropdown {
+    background: url(../../assets/upside-down-arrow-grey.svg) no-repeat right;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30.63rem;
+    height: 1.5rem;
+    color: $color-grey-dark;
+    border: none;
+    font-size: 1rem;
+    &:focus {
+      outline: none;
     }
-    &__dropdown {
-        background: url(../../assets/upside-down-arrow-grey.svg)  no-repeat right;
-        -webkit-appearance:none; 
-        appearance:none;
-        width: 30.63rem;
-        height: 1.5rem;
-        color: $color-grey-dark;
-        border: none;
-        font-size: 1rem; 
-        &:focus{
-            outline: none;
-        }
-    }
+  }
 }
