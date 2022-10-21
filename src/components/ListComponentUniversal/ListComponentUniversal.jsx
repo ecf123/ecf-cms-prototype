@@ -2,7 +2,6 @@ import "antd/dist/antd.min.css";
 import "./ListComponentUniversal.scss";
 import { Table, Tag } from "antd";
 import { Link } from "react-router-dom";
-
 const ListComponentUniversal = ({ data }) => {
   const columns = [];
 
