@@ -14,6 +14,7 @@ exports[`should render the question and answer form 1`] = `
         Question
       </label>
       <input
+        class="short__input"
         spellcheck="true"
       />
     </div>
@@ -26,43 +27,51 @@ exports[`should render the question and answer form 1`] = `
       class="form__answers"
     >
       <div
-        class="short"
+        class="checkbox"
       >
-        <label
-          class="short__label"
+        <input
+          class="checkbox__input"
+          type="text"
         />
         <input
-          spellcheck="true"
+          class="checkbox__selector"
+          type="checkbox"
         />
       </div>
       <div
-        class="short"
+        class="checkbox"
       >
-        <label
-          class="short__label"
+        <input
+          class="checkbox__input"
+          type="text"
         />
         <input
-          spellcheck="true"
+          class="checkbox__selector"
+          type="checkbox"
         />
       </div>
       <div
-        class="short"
+        class="checkbox"
       >
-        <label
-          class="short__label"
+        <input
+          class="checkbox__input"
+          type="text"
         />
         <input
-          spellcheck="true"
+          class="checkbox__selector"
+          type="checkbox"
         />
       </div>
       <div
-        class="short"
+        class="checkbox"
       >
-        <label
-          class="short__label"
+        <input
+          class="checkbox__input"
+          type="text"
         />
         <input
-          spellcheck="true"
+          class="checkbox__selector"
+          type="checkbox"
         />
       </div>
     </div>
