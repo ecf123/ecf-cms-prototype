@@ -2,7 +2,9 @@ import "./LessonContentPreviewItem.scss"
 import binIcon from "../../assets/bin-icon.svg";  
 import penIcon from "../../assets/pen-icon.svg";
 
-const LessonContentPreviewItem = ({content,title,handleEdit,handleDelete}) => {
+const LessonContentPreviewItem = ({lesson,handleEdit,handleDelete}) => {
+
+  const {title, content} = lesson ?? {};
 
   return (
     <div className="lesson-content__item">

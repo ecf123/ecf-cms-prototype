@@ -3,11 +3,10 @@ import "./LessonContentPreview.scss"
 
 const LessonContentPreview = ({lessonsArray, handleEdit, handleDelete}) => {
 
-  const lessons = lessonsArray.map((lesson,index) => {
-    const { title, content } = lesson
+  const lessons = lessonsArray?.map((lesson,index) => {
     return (
     <div key={index}>
-      <LessonContentPreviewItem content={content} title={title} handleDelete={handleDelete} handleEdit={handleEdit} />
+      <LessonContentPreviewItem lesson={lesson} handleDelete={handleDelete} handleEdit={handleEdit} />
       {index < lessonsArray.length - 1 && (
           <div className="lesson-preview__line"></div>
       )}
