@@ -5,11 +5,17 @@ import HeaderContainer from "../../containers/HeaderContainer/HeaderContainer";
 
 const Layout = ({ children, user }) => {
   const [selected, setSelected] = useState("Dashboard");
+  const [displayed, setDisplayed] = useState(false);
   const getCurrentPage = (page) => {
     setSelected(page);
   };
 
-  const { image, name, role } = user || {};
+const { image, name, role } = user || {};
+ 
+
+  const toggle =()=>{
+    setDisplayed(!displayed);
+  }
 
   return (
     <div className="layout">
@@ -24,6 +30,8 @@ const Layout = ({ children, user }) => {
           role={role}
           titleSmall={selected}
           classNameSmall="page-title page-title--small"
+          toggle={toggle}
+          displayed={displayed}
         />
       </header>
       

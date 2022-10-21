@@ -10,6 +10,7 @@ const HeaderContainer = ({
   titleLarge,
   classNameSmall,
   classNameLarge,
+  displayed
 }) => {
   return (
     <div className="header-container">
@@ -20,6 +21,7 @@ const HeaderContainer = ({
           name={name}
           role={role}
           toggle={toggle}
+          displayed={displayed}
         />
       </div>
       <PageTitle className={classNameLarge} title={titleLarge} />
