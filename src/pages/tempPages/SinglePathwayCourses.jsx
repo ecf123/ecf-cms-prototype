@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const SinglePathwayCourses = () => {
     return (<>
-        <Link to="List">Courses List </Link>
-        <Link to="/Course" >Single course</Link>
+        <Link to="list">Courses List </Link><br/>
+        <Link to="/course" >Single course</Link>
     </>
     )
 }

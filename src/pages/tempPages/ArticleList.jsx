@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 
 const ArticleList = () => {
     return (
-        <div>ArticleList
-            <Link to="/AddArticle" >Add article  </Link>
-            <Link to="SingleArticle" >Article title</Link>
+        <div>
+            <p>ArticleList</p>
+            <Link to="/addarticle" >Add article  </Link>
+            <Link to="singlearticle" >Article title</Link>
         </div>
     )
 }

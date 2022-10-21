@@ -5,8 +5,8 @@ const Course = () => {
     const { courseName } = useParams()
     return (
         <>
-            <Link to="AddLesson">Add lesson</Link>
-            <Link to="SingleLesson">Single lesson</Link>
+            <Link to="addlesson">Add lesson</Link><br/>
+            <Link to="singlelesson">Single lesson</Link>
             <p>{courseName}</p>
         </>
     )

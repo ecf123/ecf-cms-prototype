@@ -8,7 +8,7 @@ const SingleArticle = () => {
     const { articleTitle } = useParams()
 
     return (
-        <div>SingleArticle {articleTitle}</div>
+        <div>SingleArticle <br/>{articleTitle}</div>
     )
 }
 

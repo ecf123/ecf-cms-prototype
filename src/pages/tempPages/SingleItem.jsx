@@ -5,6 +5,6 @@ export const SingleItem = () => {
     const { prizeName } = useParams()
 
     return (
-        <div>SingleItem {prizeName}</div>
+        <div>SingleItem <br/>{prizeName}</div>
     )
 }

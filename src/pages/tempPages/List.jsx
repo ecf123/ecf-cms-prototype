@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const List = () => {
     return (
-        <Link to="/Course" >Single Course</Link>
+        <Link to="/course" >Single Course</Link>
     )
 }
 

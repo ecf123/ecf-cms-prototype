@@ -4,8 +4,9 @@ import { useParams } from 'react-router-dom'
 const CourseSingleLesson = () => {
     const { courseName, lessonTitle } = useParams()
     return (
-        <div>CourseSingleLesson
-            {courseName + lessonTitle}
+        <div>CourseSingleLesson<br/>
+            {courseName}<br/>
+            {lessonTitle}
         </div>
     )
 }
