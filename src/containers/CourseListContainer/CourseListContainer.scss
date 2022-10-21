@@ -1,20 +1,5 @@
 @use "../../styles/variables" as *;
 
-.ant-modal {
-    margin: 18vh auto !important;
-
-    & span {
-        color: black !important;
-    }
-
-    & svg {
-        filter: invert(71%) sepia(88%) saturate(6543%) hue-rotate(336deg) brightness(98%) contrast(86%);
-        box-shadow: 0px 0px 10px white;
-        background: transparent;
-        border-radius: 50%;
-    }
-}
-
 .course-list {
     &__header {
         margin-bottom: 3rem;
@@ -23,6 +8,10 @@
     &__title, 
     &__table {
         padding-left: 4rem;
+    }
+
+    &__display-selector {
+        margin: 3rem 4rem;
     }
 }
 

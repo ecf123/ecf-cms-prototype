@@ -40,7 +40,7 @@ const dataJSON = [
           type: "Video",
         },
       ],
-      title: "Halifax",
+      provider: "Halifax",
       name: "Halifax as provider",
     },
     {
@@ -69,7 +69,7 @@ const dataJSON = [
           type: "Video",
         },
       ],
-      title: "Barclays",
+      provider: "Barclays",
       name: "Barclays as provider",
     },
   ];

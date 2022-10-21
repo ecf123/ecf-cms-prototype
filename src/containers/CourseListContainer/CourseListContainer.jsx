@@ -1,15 +1,13 @@
 import "./CourseListContainer.scss";
 import ListComponentUniversal from "../../components/ListComponentUniversal/ListComponentUniversal";
-
 import PageTitle from "../../components/PageTitle/PageTitle";
 import ViewOptions from "../../components/ViewOptions/ViewOptions";
-
-
+import PathwayDisplay from "../../components/PathwayDisplay/PathwayDisplay";
 
 const CourseListContainer = ({dataJSON}) => {
 
   const dataSource = dataJSON ? dataJSON.map((course) => {
-    let durationArray = ["15", "minutes", "1", "hrs"];
+    let durationArray = [];
     let courseDuration = 0;
 
     course.lessons.forEach((element) => {
@@ -47,6 +45,9 @@ const CourseListContainer = ({dataJSON}) => {
             title="Course List"
           />
           <ViewOptions selectedOption="Courses"/>
+      </div>
+      <div className="course-list__display-selector">
+        <PathwayDisplay />
       </div>
       <div className="course-list__table">
         <ListComponentUniversal
