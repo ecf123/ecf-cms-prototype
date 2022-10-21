@@ -5,8 +5,11 @@ import SelectComponent from "../../components/SelectComponent/SelectComponent";
 import Button from "../../components/Button/Button";
 import MediaUploadBox from "../../components/MediaUploadBox/MediaUploadBox"
 import AddLessonAdditionalBoxes from "../../components/AddLessonAdditionalBoxes/AddLessonAdditionalBoxes";
+import PageNotFound  from "../../components/PageNotFound/PageNotFound"
+
 
 const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => {
+
   
   const [pageInfo, setPageInfo] = useState({
     file: null,
@@ -27,9 +30,11 @@ const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => 
         });
   };
 
+   
+
   return (
-    <div className="add-lesson">
-      <div className="add-lesson__container">
+    <div className="lesson">
+      <div className="lesson__container">
         <Short
           shortLabelText="Lesson Name"
           shortType="text"
@@ -38,7 +43,7 @@ const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => 
           inputClassName="short__input"
           name="lesson name"
         />
-        <SelectComponent className="add-lesson__select" />
+        <SelectComponent className="lesson__select" />
         <Short
           shortLabelText="Estimated Completion Time"
           shortType="text"
@@ -47,17 +52,13 @@ const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => 
           inputClassName="short__input"
           name="estimated completion time"
         />
-        <div>
-        <AddLessonAdditionalBoxes />
-        </div>
-        
-        
+        {true ? (<AddLessonAdditionalBoxes />) : (<PageNotFound/>)}
+      
+
+        <h5 className='lesson__add'>Add +</h5>
 
 
-          <h5 className='add-lesson__add'>Add +</h5>
-
-
-        <div className="add-lesson__buttons">
+        <div className="lesson__buttons">
             <Button
               style={"button light-grey round-border large"}
               textStyle={"text large-text light-grey"}
@@ -81,7 +82,8 @@ const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => 
           fileName={pageInfo.fileName}
           />
       </div>
-      <div className="add-lesson__content">
+      <div className="lesson__content">
+
       </div>
     </div>
   );

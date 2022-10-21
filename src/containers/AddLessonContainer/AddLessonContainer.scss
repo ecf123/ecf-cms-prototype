@@ -1,12 +1,8 @@
 @use "../../styles/_variables.scss" as *;
 
-.add-lesson{
-
+.lesson {
     display: flex;
-    flex-direction: row !important;
-    
-    width: 100vw;
-    
+    gap: 2.18rem;
 
     &__buttons {
         display: flex;
@@ -14,7 +10,6 @@
         gap: 0.56rem;
         margin-top: 1rem;
     }
-
     &__add {
         text-decoration: underline dotted;
         text-underline-offset: 0.25rem;
@@ -25,8 +20,7 @@
         font-size: 0.8rem;
         cursor: pointer;
     }
-
-    &__container{
+    &__container {
         display: flex;
         flex-direction: column;
         gap: 1.68rem;
