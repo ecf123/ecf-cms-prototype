@@ -1,8 +1,8 @@
-@use "./variables" as *;
+@use "./variables"as *;
 
 * {
   font-family: $font-primary;
-  color: $text-color;
+  // color: $text-color;
 }
 
 p {
