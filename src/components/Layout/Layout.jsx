@@ -26,7 +26,7 @@ const Layout = ({ children, user }) => {
           classNameSmall="page-title page-title--small"
         />
       </header>
-
+      
       <main className="layout__body">{children}</main>
     </div>
   );

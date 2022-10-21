@@ -69,5 +69,4 @@ const Home = () => {
     <Layout><CourseListContainer dataJSON={dataJSON}/></Layout>
   );
 };
-
 export default Home;
