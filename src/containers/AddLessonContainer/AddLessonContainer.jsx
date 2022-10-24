@@ -5,7 +5,8 @@ import SelectComponent from "../../components/SelectComponent/SelectComponent";
 import Button from "../../components/Button/Button";
 import MediaUploadBox from "../../components/MediaUploadBox/MediaUploadBox"
 import AddLessonAdditionalBoxes from "../../components/AddLessonAdditionalBoxes/AddLessonAdditionalBoxes";
-import PageNotFound  from "../../components/PageNotFound/PageNotFound"
+import QuestionAnswer  from "../../components/QuestionAnswer/QuestionAnswer";
+import QuestionContainer from "../../container/QuestionContainer/QuestionContainer";
 
 
 const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => {
@@ -61,7 +62,7 @@ const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => 
           inputClassName="short__input"
           name="estimated completion time"
         />
-        {inputs == "Lesson" ? (<AddLessonAdditionalBoxes />) : (<PageNotFound/>)};
+        {inputs == "Lesson" ? (<AddLessonAdditionalBoxes />) : (<QuestionAnswer />)};
         <h5 className='lesson__add'>Add +</h5>
         <div className="lesson__buttons">
             <Button
@@ -88,6 +89,7 @@ const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => 
           />
       </div>
       <div className="lesson__content">
+        < QuestionContainer />
 
       </div>
     </div>
