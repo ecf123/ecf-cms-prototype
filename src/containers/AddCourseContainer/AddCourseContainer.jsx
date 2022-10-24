@@ -106,9 +106,6 @@ const AddCourseContainer = () => {
         uploadLabelName={"Course Thumbnail"}
         uploadLabelNameTwo={"Provider Logo"}
         propsObject={propsObject}
-        classNameInput={classNameInput}
-        classNameInputTwo={classNameInputTwo}
-        classNameInputThree={classNameInputThree}
 />
     </div>
   );
