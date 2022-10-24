@@ -1,9 +1,11 @@
 import "./LandingPageHeader.scss";
-
+import logo from "../../assets/logo-dark-bg.svg"
 
 const LandingPageHeader = () => {
   return (
-    <div>LandingPageHeader</div>
+    <div className="header">
+      <img src={logo} alt="logo" />
+    </div>
   )
 }
 

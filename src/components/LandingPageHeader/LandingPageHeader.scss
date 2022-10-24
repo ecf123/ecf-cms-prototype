@@ -1,2 +1,6 @@
-@use "../../styles/variables";
+@use "../../styles/variables" as *;
 
+.header {
+    background-color: $color-blue-navy-dark;
+    padding: 0.5rem;
+}
