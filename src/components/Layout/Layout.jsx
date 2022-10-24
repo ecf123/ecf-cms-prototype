@@ -6,7 +6,7 @@ import HeaderContainer from "../../containers/HeaderContainer/HeaderContainer";
 const Layout = ({ children, user }) => {
   const [selected, setSelected] = useState("Dashboard");
   const [displayed, setDisplayed] = useState(false);
-  const [arrowClass, setArrowClass] = useState("drop-down__arrow");
+  const [arrowClass, setArrowClass] = useState("header-profile__arrow");
   const getCurrentPage = (page) => {
     setSelected(page);
   };
@@ -16,7 +16,7 @@ const { image, name, role } = user || {};
 
   const toggle =()=>{
     setDisplayed(!displayed);
-    displayed?setArrowClass("drop-down__arrow"):setArrowClass("header-profile__down-arrow")
+    displayed?setArrowClass("header-profile__arrow"):setArrowClass("header-profile__down-arrow")
     
   }
 

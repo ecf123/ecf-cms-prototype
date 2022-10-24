@@ -22,12 +22,12 @@ const HeaderProfile = ({
           <h2 className="header-profile__name">{name}</h2>
           <p className="header-profile__role">{role}</p>
         </div>
-          <img src={arrow} alt="toggle" className={arrowClass} />
+        <img src={arrow} alt="toggle" className={arrowClass} />
       </div>
       {displayed && (
         <div className="dropdown__items">
           <p className="dropdown__item-blank"></p>
-          <Link className="dropdown__link" to={'/*'}><p className="dropdown__item">change profile</p></Link>
+          <Link className="dropdown__link" to={'/*'}><p className="dropdown__item">Change profile</p></Link>
           <Link className="dropdown__link" to={'/*2'}><p className="dropdown__item">Log out</p></Link>
         </div>
       )}

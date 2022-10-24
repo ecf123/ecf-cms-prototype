@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
 import HeaderProfile from "./HeaderProfile";
 import { ReactComponent as Profile } from "../../assets/profile-picture.svg";
-
+import userEvent from "@testing-library/user-event";
 it("Should render the HeaderProfile", () => {
   const { container } = customRender(<HeaderProfile profileImg={Profile} />);
   expect(container).toMatchSnapshot();
@@ -24,3 +24,12 @@ it("Should not display the alt text if the image is present", () => {
   const svgAltText = screen.queryByText("user avatar");
   expect(svgAltText).toBeFalsy();
 });
+
+it("should not show user options dropdown ", () => {
+  render(<HeaderProfile profileImg={Profile} />);
+  const role = screen.queryByText(/Log out/);
+  expect(role).toBeFalsy();
+});
+
+
+

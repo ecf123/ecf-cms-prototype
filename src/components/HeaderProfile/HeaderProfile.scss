@@ -11,7 +11,7 @@
   align-items: center;
   border-radius: 4.375rem;
   background-color: $color-white;
-
+  cursor: pointer;
   &__image {
     height: 3.125rem;
     width: 3.125rem;
@@ -58,7 +58,15 @@
     background: none;
   }
   &__down-arrow {
-    transform: rotate(180);
+    height: 0.41375rem;
+    width: 0.6875rem;
+    margin-left: 2.781rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    transform: rotate(180deg);
   }
 }
 .dropdown {
@@ -70,15 +78,14 @@
 
   &__items {
     position: absolute;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
     width: 14.625rem;
+    padding-bottom: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     z-index: -1;
-    border-radius: 1.8rem;
-    background-color: $color-white;
+    border-radius: 1.9rem;
+    background-color: $color-white-smoke;
   }
 
   &__link {
