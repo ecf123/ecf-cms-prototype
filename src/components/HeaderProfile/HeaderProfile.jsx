@@ -26,8 +26,9 @@ const HeaderProfile = ({
       </div>
       {displayed && (
         <div className="dropdown__items">
-          <Link to={'/*'}><p>change profile</p></Link>
-          <Link to={'/*'}><p>Log out</p></Link>
+          <p className="dropdown__item-blank"></p>
+          <Link className="dropdown__link" to={'/*'}><p className="dropdown__item">change profile</p></Link>
+          <Link className="dropdown__link" to={'/*2'}><p className="dropdown__item">Log out</p></Link>
         </div>
       )}
     </div>
