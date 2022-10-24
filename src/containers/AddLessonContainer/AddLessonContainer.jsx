@@ -10,6 +10,16 @@ import PageNotFound  from "../../components/PageNotFound/PageNotFound"
 
 const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => {
 
+  const [inputs, setInputs] = useState("Lesson");
+
+  const onChange = (event) => {
+    if (event.target.value === "Lesson"){
+        setInputs("Lesson")
+    } else if (event.target.value === "Assessment Quiz"){
+        setInputs("Assessment Quiz")
+    }
+  }
+
   
   const [pageInfo, setPageInfo] = useState({
     file: null,
@@ -43,7 +53,7 @@ const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => 
           inputClassName="short__input"
           name="lesson name"
         />
-        <SelectComponent className="lesson__select" />
+        <SelectComponent className="lesson__select" onChange={onChange}/>
         <Short
           shortLabelText="Estimated Completion Time"
           shortType="text"
@@ -52,7 +62,7 @@ const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => 
           inputClassName="short__input"
           name="estimated completion time"
         />
-        {true ? (<AddLessonAdditionalBoxes />) : (<PageNotFound/>)}
+        {inputs == "Lesson" ? (<AddLessonAdditionalBoxes />) : (<PageNotFound/>)};
       
 
         <h5 className='lesson__add'>Add +</h5>
