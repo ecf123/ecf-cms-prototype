@@ -11,21 +11,11 @@ const AddCourse = ({
   shortPlaceHolderTextTwo,
   shortPlaceHolderTextThree,
   freeTypeLabelTextOne,
-  uploadLabelName,
   uploadLabelNameTwo,
-  handleChange,
-  handleFileChange,
-  handleFileChange2,
-  storeInputs,
-  errorMessage,
-  classNameInput,
-  classNameInputTwo,
-  classNameInputThree,
-  file,
-  fileName,
-  fileTwo,
-  fileNameTwo
+  uploadLabelName,
+  propsObject  
 }) => {
+
   return (
     <div className="add-course">
       <div className="add-course__input-texts">
@@ -33,33 +23,33 @@ const AddCourse = ({
           shortLabelText={shortLabelTextOne}
           shortType="text"
           name="shortInputOne"
-          inputClassName={classNameInput}
-          handleShortValue={handleChange}
+          inputClassName={{...propsObject}.classNameInput}
+          handleShortValue={{...propsObject}.handleChange}
         />
         <FreeType
           freeTypeLabelText={freeTypeLabelTextOne}
           name="freeTypeInputOne"
-          inputClassName={classNameInputThree}
-          handleFreeTypeValue={handleChange}
+          inputClassName={{...propsObject}.classNameInputThree}
+          handleFreeTypeValue={{...propsObject}.handleChange}
         />
         <Short
           shortLabelText={shortLabelTextTwo}
           shortType="text"
           shortPlaceHolderText={shortPlaceHolderTextTwo}
           name="shortInputTwo"
-          inputClassName={classNameInputTwo}
-          handleShortValue={handleChange}
+          inputClassName={{...propsObject}.classNameInputTwo}
+          handleShortValue={{...propsObject}.handleChange}
         />
         <Short
           shortLabelText={shortLabelTextThree}
           shortType="text"
           shortPlaceHolderText={shortPlaceHolderTextThree}
           name="shortInputTwo"
-          inputClassName={classNameInputTwo}
-          handleShortValue={handleChange}
+          inputClassName={{...propsObject}.classNameInputTwo}
+          handleShortValue={{...propsObject}.handleChange}
         />
 
-        <p className="add-course__error-message">{errorMessage}</p>
+        <p className="add-course__error-message">{{...propsObject}.errorMessage}</p>
 
         <div className="add-course__buttons">
           <div className="add-course__cancel">
@@ -70,7 +60,7 @@ const AddCourse = ({
               style={"button black round-border large"}
               textStyle={"text large-text black"}
               buttonText={"Submit"}
-              buttonFunction={storeInputs}
+              buttonFunction={{...propsObject}.storeInputs}
             />
           </div>
         </div>
@@ -78,21 +68,21 @@ const AddCourse = ({
       <div className="add-course__uploadContainer">
         <div className="add-course__media-upload">
           <MediaUploadBox
-            file={file}
-            handleFileChange={handleFileChange}
+            file={{...propsObject}.file}
+            handleFileChange={{...propsObject}.handleFileChange}
             uploadLabelName={uploadLabelName}
             uploadButtonText="Upload Image"
-            fileName={fileName}
+            fileName={{...propsObject}.fileName}
             newId={"file1"}
           />
         </div>
         <div className="add-course__media-upload2">
           <MediaUploadBox
-            file={fileTwo}
-            handleFileChange={handleFileChange2}
+            file={{...propsObject}.fileTwo}
+            handleFileChange={{...propsObject}.handleFileChange2}
             uploadLabelName={uploadLabelNameTwo}
             uploadButtonText="Upload Image"
-            fileName={fileNameTwo}
+            fileName={{...propsObject}.fileNameTwo}
             newId={"file2"}
           />
         </div>
