@@ -11,6 +11,7 @@ const LoginInputBox = ({ labelText, inputBoxStyle, inputType }) => {
         className={inputBoxStyle}
         type={inputType}
         id={labelText}
+        required
       />
     </div>
   );
