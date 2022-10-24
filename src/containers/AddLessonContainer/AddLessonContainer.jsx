@@ -10,11 +10,13 @@ import QuestionContainer from "../../containers/QuestionContainer/QuestionContai
 import LessonContentPreview from "../../components/LessonContentPreview/LessonContentPreview";
 
 const AddLessonContainer = ({
-  handleShortValue,
+  
   handleSubmit,
   handleCancel,
 }) => {
   const [inputs, setInputs] = useState("Lesson");
+  const [freeTypeValue, setFreeTypeValue] = useState("");
+  const [shortValue, setShortValue] = useState("");
 
   const onChange = (event) => {
     if (event.target.value === "Lesson") {
@@ -43,17 +45,21 @@ const AddLessonContainer = ({
         });
   };
 
-  let lessonsArray = [];
+  let lessonsArray = []
   let questionsArray = [];
 
-  const addData = (e) => {
-    if (inputs == "Lesson") {
-      let handleFreeTypeValueText = e.target.value;
-      let  handleShortValueText = e.target.value;
-      console.log(handleShortValueText)
-      lessonsArray.push(handleFreeTypeValueText, handleShortValueText);
+  const handleFreeTypeValue = (e) => {
+    setFreeTypeValue(e.target.value);
+  }
+  const handleShortValue = (e) => {
+    setShortValue(e.target.value);
+  }
+
+  const addData = () => {
+    
+      lessonsArray.set({title : freeTypeValue, content : shortValue});
       console.log(lessonsArray);
-    }
+   
   };
 
   return (
