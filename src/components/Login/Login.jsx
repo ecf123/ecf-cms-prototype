@@ -5,7 +5,7 @@ import LoginInputBox from "../LoginInputBox/LoginInputBox";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-const Login = ({ setUser, setLogIn }) => {
+const Login = ({ setCredential, setLogIn }) => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [hasError, setHasError] = useState(false);
 
@@ -27,10 +27,9 @@ const Login = ({ setUser, setLogIn }) => {
       email: email,
       password: password
     }
-    setUser(user)
+    setCredential(user)
     setHasSubmitted(true);
   };
-
 
 
   const navigate = useNavigate();
@@ -79,7 +78,7 @@ const Login = ({ setUser, setLogIn }) => {
             )}
           </div>
 
-          <Button
+          < Button
             style={"button login-black square-border"}
             textStyle={"text medium-text black"}
             buttonText={"Login"}
