@@ -2,17 +2,23 @@
 @use "../../styles/_variables.scss" as *;
 
 .select {
-  border: solid 1px black;
   border-radius: 0.5rem;
   width: 32rem;
   padding-left: 0.5rem;
   height: 3rem;
   display: flex;
   align-items: center;
+  border: 1px solid $color-grey-light;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  margin-top: 0.4rem;
+  font-size: $font-size-small;
+
   &__label {
-    font-size: 0.88rem;
-    color: $color-blue-dark;
-    padding-bottom: 2.5rem;
+    color: $color-blue-navy;
+    font-family: $font-secondary;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    line-height: 1.25rem;
   }
   &__dropdown {
     background: url(../../assets/upside-down-arrow-grey.svg) no-repeat right;
@@ -22,7 +28,6 @@
     height: 1.5rem;
     color: $color-grey-dark;
     border: none;
-    font-size: 1rem;
     &:focus {
       outline: none;
     }

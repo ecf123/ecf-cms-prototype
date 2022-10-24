@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render LandingPageHeader 1`] = `
+<div>
+  <div
+    class="header"
+  >
+    <img
+      alt="logo"
+      src="logo-dark-bg.svg"
+    />
+  </div>
+</div>
+`;
