@@ -1,4 +1,3 @@
-import {render, screen, userEvent} from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
 import AddCourseContainer from "./AddCourseContainer";
 
