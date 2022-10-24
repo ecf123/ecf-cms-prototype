@@ -35,7 +35,7 @@ exports[`should render the form 1`] = `
           alt="input box"
           class="input-box__input short"
           id="Email Address"
-          type="text"
+          type="email"
         />
       </div>
       <div
@@ -51,7 +51,7 @@ exports[`should render the form 1`] = `
           alt="input box"
           class="input-box__input short"
           id="Password"
-          type="text"
+          type="password"
         />
       </div>
     </div>

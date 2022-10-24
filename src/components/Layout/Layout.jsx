@@ -38,7 +38,7 @@ const { image, name, role } = user || {};
           arrowClass={arrowClass}
         />
       </header>
-      
+
       <main className="layout__body">{children}</main>
     </div>
   );
