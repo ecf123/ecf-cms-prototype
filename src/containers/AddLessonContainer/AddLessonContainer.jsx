@@ -20,7 +20,6 @@ const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => 
     }
   }
 
-  
   const [pageInfo, setPageInfo] = useState({
     file: null,
     fileName: "",
@@ -63,11 +62,7 @@ const AddLessonContainer = ({ handleShortValue, handleSubmit, handleCancel}) => 
           name="estimated completion time"
         />
         {inputs == "Lesson" ? (<AddLessonAdditionalBoxes />) : (<PageNotFound/>)};
-      
-
         <h5 className='lesson__add'>Add +</h5>
-
-
         <div className="lesson__buttons">
             <Button
               style={"button light-grey round-border large"}
