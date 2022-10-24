@@ -1,6 +1,5 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Login from "./Login";
-import userEvent from "@testing-library/user-event";
 import { customRender } from "../../utils/testUtils";
 
 it("should render the form", () => {
