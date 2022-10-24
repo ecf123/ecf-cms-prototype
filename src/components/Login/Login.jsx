@@ -13,7 +13,7 @@ const Login = () => {
     const email = e.target.elements[0].value;
     const password = e.target.elements[1].value;
 
-    if (!email || !password || !email.includes("@")) {
+    if (!email || !password) {
       setHasError(true);
       return;
     }
@@ -49,10 +49,12 @@ const Login = () => {
             <LoginInputBox
               inputBoxStyle="input-box__input short"
               labelText="Email Address"
+              inputType="email"
             />
             <LoginInputBox
               inputBoxStyle="input-box__input short"
               labelText="Password"
+              inputType="password"
             />
             {hasError && (
               <div>

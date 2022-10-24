@@ -2,17 +2,34 @@
 @use "../../styles/_variables.scss" as *;
 
 .select {
+<<<<<<< HEAD
   border: solid 1px black;
+=======
+>>>>>>> 9f5575bd0d8de0a372f23b70f0375ac0f13196fd
   border-radius: 0.5rem;
   width: 32rem;
   padding-left: 0.5rem;
   height: 3rem;
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   &__label {
     font-size: 0.88rem;
     color: $color-blue-dark;
     padding-bottom: 2.5rem;
+=======
+  border: 1px solid $color-grey-light;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  margin-top: 0.4rem;
+  font-size: $font-size-small;
+
+  &__label {
+    color: $color-blue-navy;
+    font-family: $font-secondary;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    line-height: 1.25rem;
+>>>>>>> 9f5575bd0d8de0a372f23b70f0375ac0f13196fd
   }
   &__dropdown {
     background: url(../../assets/upside-down-arrow-grey.svg) no-repeat right;
@@ -22,9 +39,16 @@
     height: 1.5rem;
     color: $color-grey-dark;
     border: none;
+<<<<<<< HEAD
     font-size: 1rem;
+=======
+>>>>>>> 9f5575bd0d8de0a372f23b70f0375ac0f13196fd
     &:focus {
       outline: none;
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9f5575bd0d8de0a372f23b70f0375ac0f13196fd
