@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the lesson content preview with data 1`] = `
+<div>
+  <div
+    class="lesson-preview"
+  >
+    <div>
+      <div
+        class="lesson-content__item"
+      >
+        <h6
+          class="lesson-content__title"
+        >
+          Test title
+        </h6>
+        <p
+          class="lesson-content__text"
+        >
+          Content
+        </p>
+        <div
+          class="buttons"
+        >
+          <img
+            alt="Delete Question"
+            class="buttons__bin"
+            src="bin-icon.svg"
+          />
+          <img
+            alt="Edit Question"
+            class="buttons__pen"
+            src="pen-icon.svg"
+          />
+        </div>
+      </div>
+      <div
+        class="lesson-preview__line"
+      />
+    </div>
+    <div>
+      <div
+        class="lesson-content__item"
+      >
+        <h6
+          class="lesson-content__title"
+        >
+          Test title two
+        </h6>
+        <p
+          class="lesson-content__text"
+        >
+          Content plus
+        </p>
+        <div
+          class="buttons"
+        >
+          <img
+            alt="Delete Question"
+            class="buttons__bin"
+            src="bin-icon.svg"
+          />
+          <img
+            alt="Edit Question"
+            class="buttons__pen"
+            src="pen-icon.svg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Should render the lesson content preview without data 1`] = `
+<div>
+  <div
+    class="lesson-preview"
+  />
+</div>
+`;

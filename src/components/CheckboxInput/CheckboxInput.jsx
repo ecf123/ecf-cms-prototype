@@ -1,11 +1,14 @@
 import "./CheckboxInput.scss";
 
-const CheckboxInput = ({handleClick, handleInput}) => {
-
+const CheckboxInput = ({ handleClickCheckbox, handleCheckboxValue }) => {
   return (
     <div className="checkbox">
-      <input onChange={handleInput} type="text" className="checkbox__input" />
-      <input onClick={handleClick} type="checkbox" className="checkbox__selector" />
+      <input
+        onChange={handleCheckboxValue}
+        type="text"
+        className="checkbox__input"
+      />
+      <input onClick={handleClickCheckbox} type="checkbox" />
     </div>
   );
 };
