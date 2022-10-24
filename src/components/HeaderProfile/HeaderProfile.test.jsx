@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
 import HeaderProfile from "./HeaderProfile";
 import { ReactComponent as Profile } from "../../assets/profile-picture.svg";
-import userEvent from "@testing-library/user-event";
+
 it("Should render the HeaderProfile", () => {
   const { container } = customRender(<HeaderProfile profileImg={Profile} />);
   expect(container).toMatchSnapshot();
