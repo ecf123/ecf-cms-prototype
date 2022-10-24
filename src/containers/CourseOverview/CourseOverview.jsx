@@ -7,33 +7,34 @@ import SalaryInfo from "../../components/SalaryInfo/SalaryInfo";
 import PathwayOverviewHeader from "../../components/PathwayOverviewHeader/PathwayOverviewHeader";
 import handleDelete from "../../components/MoreOptions/MoreOptions";
 import handleEdit from "../../components/MoreOptions/MoreOptions";
+import image from '../../assets/money-growing-on-tree.svg'
 
-const CourseOverview = ({image, description, link, topicTitle, topicArr, lessonArr, title}) => {
+const CourseOverview = ({dataJSON}) => {
   return (
     <section className="course-overview">
       <div className="course-overview__main">
-        <PathwayIntroduction image={image} description={description} />
-        <PathwayOverviewHeader link={link} />
+        <PathwayIntroduction image={image} description={"Lorem ipsum dolor sit amet. Ea nisi accusamus 33 Quis quidem ut quia obcaecati ex modi dolore 33 suscipit labore. Ut aliquid molestias aut voluptate incidunt nam assumenda quis et iste vero sit dolor dicta At iusto sunt suscipit nulla."} />
+        <PathwayOverviewHeader link={"link"} />
         <div className="course-overview__main--drop">
-        {topicArr.map((topic) => {
+        {dataJSON.map((topic) => {
           return (
             <>
-             <DropDown topicTitle={topicTitle} lessonArr={lessonArr} />
+             <DropDown topicTitle={topic.name} lessonArr={topic.lessons} />
             </>
           )
         } )}
-         
+        
         </div>
       </div>
       <div className="course-overview__side">
         <MoreOptions
-          title={title}
-          description={description}
+          title={"Financial Forest"}
+          description={"Lorem ipsum dolor sit amet. Ea nisi accusamus 33 Quis quidem ut quia obcaecati ex modi dolore 33 suscipit labore. Ut aliquid molestias aut voluptate incidunt nam assumenda quis et iste vero sit dolor dicta At iusto sunt suscipit nulla."}
           handleDelete={handleDelete}
           handleEdit={handleEdit}
         />
-        <SalaryInfo salariesObj={salariesObj} />
-        <PotentialCareers potentialCareers={potentialCareers} />
+        <SalaryInfo salariesObj={[30000, 60000, 40000, 50000]} />
+        <PotentialCareers potentialCareers={["Financial Analyst", "Accountant", "Investment Analyst", "Stock Broker"]} />
       </div>
     </section>
   );
