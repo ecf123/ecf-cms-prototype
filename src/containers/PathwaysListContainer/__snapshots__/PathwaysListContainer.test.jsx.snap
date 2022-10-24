@@ -131,7 +131,7 @@ exports[`it should match the snapshot with props 1`] = `
                         >
                           <a
                             class="table__name"
-                            href="/FinancialForest"
+                            href="/pathways/FinancialForest"
                           >
                             Financial Forest
                           </a>
@@ -199,7 +199,7 @@ exports[`it should match the snapshot with props 1`] = `
                         >
                           <a
                             class="table__name"
-                            href="/BusinessBonanza"
+                            href="/pathways/BusinessBonanza"
                           >
                             Business Bonanza
                           </a>
