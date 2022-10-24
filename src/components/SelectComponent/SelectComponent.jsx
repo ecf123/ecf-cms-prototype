@@ -13,7 +13,6 @@ const SelectComponent = ({onChange}) => {
              <option className="select__dropdownoption">Assessment Quiz</option>
         </select>
     </div>
-    </>
   )
 }
 export default SelectComponent

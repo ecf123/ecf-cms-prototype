@@ -26,9 +26,6 @@ it("shouldn't render the success message on load", () => {
 it("should not submit the form when not all credentials are valid and display error message", () => {
   render(<Login />);
 
-  const emailInput = screen.getByLabelText("Email Address");
-  userEvent.type(emailInput, "cheniangam63.com");
-
   const passwordInput = screen.getByLabelText("Password");
   userEvent.type(passwordInput, "fix");
 
