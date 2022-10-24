@@ -27,14 +27,13 @@ exports[`should render the form 1`] = `
       >
         <label
           class="input-box__label"
-          for="Email Address"
         >
           Email Address
         </label>
         <input
           alt="input box"
-          class="input-box__input short"
-          id="Email Address"
+          class="input-box__input"
+          required=""
           type="email"
         />
       </div>
@@ -43,14 +42,13 @@ exports[`should render the form 1`] = `
       >
         <label
           class="input-box__label"
-          for="Password"
         >
           Password
         </label>
         <input
           alt="input box"
-          class="input-box__input short"
-          id="Password"
+          class="input-box__input"
+          required=""
           type="password"
         />
       </div>

@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should match the snapshot 1`] = `
+<div>
+  <div
+    class="registration-form"
+  >
+    <h2
+      class="registration-form__header"
+    >
+      Register
+    </h2>
+    <form
+      class="registration-form__form"
+    >
+      <div
+        class="input-box"
+      >
+        <label
+          class="input-box__label"
+          for="first-name"
+        >
+          First Name
+        </label>
+        <input
+          alt="input box"
+          class="input-box__input"
+          id="first-name"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="input-box"
+      >
+        <label
+          class="input-box__label"
+          for="last-name"
+        >
+          Last Name
+        </label>
+        <input
+          alt="input box"
+          class="input-box__input"
+          id="last-name"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="input-box"
+      >
+        <label
+          class="input-box__label"
+          for="email"
+        >
+          Email
+        </label>
+        <input
+          alt="input box"
+          class="input-box__input"
+          id="email"
+          required=""
+          type="email"
+        />
+      </div>
+      <div
+        class="input-box"
+      >
+        <label
+          class="input-box__label"
+          for="password"
+        >
+          Password
+        </label>
+        <input
+          alt="input box"
+          class="input-box__input"
+          id="password"
+          required=""
+          type="password"
+        />
+      </div>
+      <div
+        class="input-box"
+      >
+        <label
+          class="input-box__label"
+          for="re-type-password"
+        >
+          Re-Type Password
+        </label>
+        <input
+          alt="input box"
+          class="input-box__input"
+          id="re-type-password"
+          required=""
+          type="password"
+        />
+      </div>
+      <button
+        class="registration-form__button"
+      >
+        Create Account
+      </button>
+    </form>
+  </div>
+</div>
+`;
