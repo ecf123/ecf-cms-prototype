@@ -1,6 +1,6 @@
 import "./LoginInputBox.scss";
 
-const LoginInputBox = ({ labelText, inputBoxStyle, inputType }) => {
+const LoginInputBox = ({ labelText, inputType }) => {
   return (
     <div className="input-box">
       <label htmlFor={labelText} className="input-box__label">
@@ -8,7 +8,7 @@ const LoginInputBox = ({ labelText, inputBoxStyle, inputType }) => {
       </label>
       <input
         alt="input box"
-        className={inputBoxStyle}
+        className="input-box__input"
         type={inputType}
         id={labelText}
         required

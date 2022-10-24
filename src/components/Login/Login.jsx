@@ -47,12 +47,10 @@ const Login = () => {
           </div>
           <div>
             <LoginInputBox
-              inputBoxStyle="input-box__input short"
               labelText="Email Address"
               inputType="email"
             />
             <LoginInputBox
-              inputBoxStyle="input-box__input short"
               labelText="Password"
               inputType="password"
             />
