@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should match the snapshot, with the props 1`] = `
+<div>
+  <div
+    class="add-course"
+  >
+    <div
+      class="add-course__input-texts"
+    >
+      <div
+        class="short"
+      >
+        <label
+          class="short__label"
+        >
+          Course Name
+        </label>
+        <input
+          name="shortInputOne"
+          spellcheck="true"
+          type="text"
+        />
+      </div>
+      <div
+        class="free-type"
+      >
+        <label
+          class="free-type__label"
+        >
+          Course Overview
+        </label>
+        <textarea
+          name="freeTypeInputOne"
+          spellcheck="true"
+          type="text"
+        />
+      </div>
+      <div
+        class="short"
+      >
+        <label
+          class="short__label"
+        >
+          Course Provider
+        </label>
+        <input
+          name="shortInputTwo"
+          placeholder="e.g Barclays..."
+          spellcheck="true"
+          type="text"
+        />
+      </div>
+      <div
+        class="short"
+      >
+        <label
+          class="short__label"
+        >
+          Course Mentor
+        </label>
+        <input
+          name="shortInputTwo"
+          placeholder="e.g Barclays"
+          spellcheck="true"
+          type="text"
+        />
+      </div>
+      <p
+        class="add-course__error-message"
+      />
+      <div
+        class="add-course__buttons"
+      >
+        <div
+          class="add-course__cancel"
+        >
+          <button
+            class="button light-grey round-border large"
+          >
+            <div />
+            <p
+              class="text large-text light-grey"
+            >
+              Cancel
+            </p>
+          </button>
+        </div>
+        <div
+          class="add-course__submit"
+        >
+          <button
+            class="button black round-border large"
+          >
+            <div />
+            <p
+              class="text large-text black"
+            >
+              Submit
+            </p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="add-course__uploadContainer"
+    >
+      <div
+        class="add-course__media-upload"
+      >
+        <div
+          class="thumbnail"
+        >
+          <label
+            class="thumbnail__label"
+            for="file1"
+          >
+            Course Thumbnail
+          </label>
+          <div
+            class="thumbnail__container"
+          >
+            <div
+              class="thumbnail__btn--wrapper"
+            >
+              <button
+                class="button light-grey round-border small"
+              >
+                <div />
+                <p
+                  class="text small-text light-grey"
+                >
+                  Upload Image
+                </p>
+              </button>
+              <input
+                accept="image/*,video/*,audio/*,.txt"
+                class="thumbnail__btn--input"
+                id="file1"
+                type="file"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="add-course__media-upload2"
+      >
+        <div
+          class="thumbnail"
+        >
+          <label
+            class="thumbnail__label"
+            for="file2"
+          >
+            Provider Logo
+          </label>
+          <div
+            class="thumbnail__container"
+          >
+            <div
+              class="thumbnail__btn--wrapper"
+            >
+              <button
+                class="button light-grey round-border small"
+              >
+                <div />
+                <p
+                  class="text small-text light-grey"
+                >
+                  Upload Image
+                </p>
+              </button>
+              <input
+                accept="image/*,video/*,audio/*,.txt"
+                class="thumbnail__btn--input"
+                id="file2"
+                type="file"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

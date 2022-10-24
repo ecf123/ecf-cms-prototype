@@ -1,0 +1,30 @@
+@use "../../styles/_variables" as *;
+@use "../../styles/_typography" as *;
+
+.pageNotFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__image {
+    width: 500px;
+    height: auto;
+  }
+
+  &__message {
+    color: $color-blue-navy;
+  }
+
+  &__button {
+    margin: 0.5rem;
+    width: 6rem;
+    height: 2.5rem;
+    background-color: #004273;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+}

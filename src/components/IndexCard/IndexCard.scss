@@ -1,0 +1,45 @@
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
+
+.index-card {
+  height: fit-content;
+  width: 34rem;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  &__video {
+    height: auto;
+    width: 34rem;
+    border: 1px solid black;
+  }
+
+  &__text-div {
+    width: 33rem;
+  }
+
+  &__title {
+    color: $color-blue-dark;
+    font-family: $font-secondary;
+    margin-top: 1.813rem;
+  }
+
+  &__duration-div {
+    display: flex;
+    margin-top: 0.835rem;
+  }
+
+  &__duration {
+    color: $color-teal;
+    margin-left: 0.646rem;
+    font-family: $font-secondary;
+  }
+
+  &__paragraph {
+    color: $color-teal;
+    font-family: $font-secondary;
+    line-height: $letter-spacing;
+  }
+}

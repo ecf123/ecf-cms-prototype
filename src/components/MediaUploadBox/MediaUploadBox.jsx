@@ -8,10 +8,11 @@ const MediaUploadBox = ({
   uploadLabelName,
   uploadButtonText,
   fileName,
+  newId
 }) => {
   return (
     <div className="thumbnail">
-      <label htmlFor="file-input" className="thumbnail__label">
+      <label htmlFor={newId} className="thumbnail__label">
         {uploadLabelName}
       </label>
       <div className="thumbnail__container">
@@ -24,7 +25,7 @@ const MediaUploadBox = ({
             />
             <input
               className="thumbnail__btn--input"
-              id="file-input"
+              id={newId}
               type="file"
               onChange={handleFileChange}
               accept="image/*,video/*,audio/*,.txt"

@@ -12,6 +12,6 @@ const Home = () => {
       <AddCourseContainer shortLabelTextOne={"Course Name"} freeTypeLabelTextOne={"Course Overview"} shortLabelTextTwo={"Course Provider"} shortPlaceHolderTextTwo={"E.G Barclays..."} shortLabelTextThree={"Course Mentor"} shortPlaceHolderTextThree={"E.G Barclays"} uploadLabelName={"Course Thumbnail"} uploadLabelNameTwo={"Provider Logo"}/>
     </Layout>
   );
-};
 
+};
 export default Home;
