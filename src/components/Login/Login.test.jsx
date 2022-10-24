@@ -22,5 +22,3 @@ it("shouldn't render the success message on load", () => {
   expect(successMessage).toBeFalsy();
 });
 
-
-
