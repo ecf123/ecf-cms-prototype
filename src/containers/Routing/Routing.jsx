@@ -15,10 +15,10 @@ import Course from "../../pages/tempPages/Course";
 import CourseAddLesson from "../../pages/tempPages/CourseAddLesson";
 import CourseSingleLesson from "../../pages/tempPages/CourseSingleLesson";
 import List from "../../pages/tempPages/List";
-import Welcome from "../../pages/tempPages/Welcome";
-import LoginPage from "../../pages/tempPages/LoginPage";
-import RegisterPage from "../../pages/tempPages/RegisterPage";
 import LandingPageHeader from "../../components/LandingPageHeader/LandingPageHeader";
+import LandingPage from "../../pages/LandingPage/LandingPage";
+import LoginPage from "../../pages/LogInPage/LoginPage";
+import RegisterPage from "../../pages/RegisterPage/RegisterPage";
 
 const Routing = () => {
 
@@ -32,7 +32,7 @@ const Routing = () => {
           <>
             <LandingPageHeader/>
             <Routes>
-              <Route path="/" element={<Welcome />}/>
+              <Route path="/" element={<LandingPage/>}/>
               <Route path="/sign-in" element={<LoginPage setLogIn={setLogIn} setUser={setUser} />}/>
               <Route path="/register" element={<RegisterPage setLogIn={setLogIn} setUser={setUser} />}/>
             </Routes>
