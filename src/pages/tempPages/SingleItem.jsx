@@ -8,3 +8,5 @@ export const SingleItem = () => {
         <div>SingleItem <br/>{prizeName}</div>
     )
 }
+
+export default SingleItem
