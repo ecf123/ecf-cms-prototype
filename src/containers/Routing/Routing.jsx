@@ -4,9 +4,7 @@ import Home from "../../pages/Home/Home";
 import Layout from "../../components/Layout/Layout";
 import Pathways from "../../pages/Pathways/Pathways";
 import Marketplace from "../../pages/Marketplace/Marketplace";
-import SingleArticle from "../../pages/tempPages/SingleArticle";
 import AddArticle from "../../pages/AddArticle/AddArticle";
-import SingleItem from "../../pages/tempPages/SingleItem";
 import SinglePathway from "../../pages/SinglePathway/SinglePathway";
 import SinglePathwayCourses from "../../pages/tempPages/SinglePathwayCourses";
 import CourseAddLesson from "../../pages/tempPages/CourseAddLesson";
@@ -22,6 +20,8 @@ import Articles from "../../pages/Articles/Articles";
 import SignOut from "../../pages/SignOut/SignOut";
 import AddLesson from "../../pages/AddLesson/AddLesson";
 import AddPathway from "../../pages/AddPathway/AddPathway";
+import ArticleIndex from "../../pages/ArticleIndex/ArticleIndex";
+import PrizeIndex from "../../pages/PrizeIndex/PrizeIndex";
 
 const Routing = () => {
 
@@ -65,13 +65,13 @@ const Routing = () => {
               <Route path="/addpathway" element={<AddPathway/>}/>
 
               <Route path="/articles" element={<Articles />} />
-              <Route path="/articles/:articleTitle" element={<SingleArticle />} />
+              <Route path="/articles/:articleTitle" element={<ArticleIndex />} />
 
               <Route path="/addarticle" element={<AddArticle />} />
 
               <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/addprize" element={<AddPrizePage />} />
-              <Route path="/marketplace/:prizeName" element={<SingleItem />} />
+              <Route path="/marketplace/:prizeName" element={<PrizeIndex />} />
 
               <Route path="/users" element={<p>Users</p>} />
               <Route path="/settings" element={<p>Settings</p>} />
