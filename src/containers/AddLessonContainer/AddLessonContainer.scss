@@ -3,6 +3,8 @@
 .lesson {
     display: flex;
     gap: 2.18rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
 
     &__buttons {
         display: flex;
@@ -28,9 +30,25 @@
     &__content {
         height: 684px;
         width: 430px;
-        // border: solid black 1px;
-        // background-color: $color-grey-light;
     }
+
+    &__add-button {
+        margin-top: 2.5rem;
+        padding: 1rem 2.5rem;
+        background: #2D303A;
+        border: none;
+        border-radius: 2.5rem;
+        cursor: pointer;
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    &__header {
+        padding: 0 3rem 3rem 3rem;
+        border-bottom: 2px $color-grey-light solid;
+        display: block;
+      }
 }
 
 

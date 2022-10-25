@@ -47,7 +47,7 @@ it("Should render the Question answers", () => {
   expect(listItem).toBeInTheDocument();
 });
 
-it("Should render the Question buttons svg", () => {
+it("Should render the Question button svg", () => {
   render(
     <AddQuestion
       question={question}
@@ -56,9 +56,7 @@ it("Should render the Question buttons svg", () => {
     />
   );
   const deleteIcon = screen.getByAltText("Delete Question");
-  const editIcon = screen.getByAltText("Edit Question");
   expect(deleteIcon).toBeInTheDocument();
-  expect(editIcon).toBeInTheDocument();
 });
 
 it("Should render the Question with the correct answer", () => {

@@ -8,29 +8,28 @@ import AddLessonAdditionalBoxes from "../../components/AddLessonAdditionalBoxes/
 import QuestionAnswer from "../../components/QuestionAnswer/QuestionAnswer";
 import QuestionContainer from "../../containers/QuestionContainer/QuestionContainer";
 import LessonContentPreview from "../../components/LessonContentPreview/LessonContentPreview";
+import { useNavigate } from "react-router-dom";
+import PageTitle from "../../components/PageTitle/PageTitle";
 
-const AddLessonContainer = ({
-  handleSubmit,
-  handleCancel,
-}) => {
-  const [inputs, setInputs] = useState("Lesson");
-  const [data, setData] = useState([])
-  const [additionalInfo, setAdditionalInfo] = useState({title: "", content: ""})
-  const [question] = useState({question: "", answers: []})
-  
-  const onChange = (event) => {
-    if (event.target.value === "Lesson") {
-      setInputs("Lesson");
-    } else if (event.target.value === "Assessment Quiz") {
-      setInputs("Assessment Quiz");
-    }
-  };
+const AddLessonContainer = () => {
+  const [inputs, setInputs] = useState(true);
+  const [data, setData] = useState([]);
+  let navigate = useNavigate();
+  const [additionalInfo, setAdditionalInfo] = useState({
+    title: "",
+    content: "",
+  });
+  const [question] = useState({ question: "", answers: [] });
+
+  const onChange = (event) => event.target.value === "Lesson" ? setInputs(true) : setInputs(false);
 
   const [pageInfo, setPageInfo] = useState({
     file: null,
     fileName: "",
     shortInputOne: "",
     shortInputTwo: "",
+    questions: [],
+    additionalInfos: []
   });
 
   const handleFileChange = (e) => {
@@ -44,71 +43,96 @@ const AddLessonContainer = ({
   };
 
   const addData = () => {
-    setData([...data, additionalInfo])
+    setData([...data, additionalInfo]);
   };
 
   const handleDelete = (e) => {
-    setData(data.filter(object => object.content != e.target.parentElement.parentElement.children[1].firstChild.data))
-  }
+    inputs
+      ? setData(
+          data.filter(
+            (object) =>
+              object.content !=
+              e.target.parentElement.parentElement.children[1].firstChild.data
+          )
+        )
+      : setData(
+          data.filter(
+            (object) =>
+              object.question !=
+              e.target.parentElement.parentElement.children[0].firstChild.childNodes[2].data
+          )
+        );
+  };
   let array = [];
   const addAnswers = (e) => {
-    array.push(e.target.parentElement.children[4][1].value)
-    array.push(e.target.parentElement.children[4][3].value)
-    array.push(e.target.parentElement.children[4][5].value)
-    array.push(e.target.parentElement.children[4][7].value)
-    setData([...data, {...question, question: e.target.parentElement.children[4][0].value, answers: array }])
+    array.push(e.target.parentElement.children[3][1].value);
+    array.push(e.target.parentElement.children[3][2].value);
+    array.push(e.target.parentElement.children[3][3].value);
+    array.push(e.target.parentElement.children[3][4].value);
+    setData([
+      ...data,
+      {
+        ...question,
+        question: e.target.parentElement.children[3][0].value,
+        answers: array,
+      },
+    ]);
+  };
 
+  const handleSubmit = () => {
+    console.log(pageInfo)
+    navigate("/asd") // back to lessons
   }
 
+  const handleCancel = () => {
+    navigate("/xczc") // back to lessons
+  }
 
-  
-
-
-  return (
+  return (<>
+    <div className="lesson__header">
+    <PageTitle
+      className="lesson__title page-title"
+      title="Add Lesson"
+    />
+  </div>
     <div className="lesson">
       <div className="lesson__container">
-        <button onClick={()=> {
-          console.log(question)
-        }}
-        >Info</button>
         <Short
           shortLabelText="Lesson Name"
           shortType="text"
-          // No placeholder needed
-          handleShortValue={(e) => setPageInfo({...pageInfo, shortInputOne: e.target.value})}
+          handleShortValue={(e) =>
+            setPageInfo({ ...pageInfo, shortInputOne: e.target.value })
+          }
           inputClassName="short__input"
           name="lesson name"
-
         />
         <SelectComponent className="lesson__select" onChange={onChange} />
         <Short
           shortLabelText="Estimated Completion Time"
           shortType="text"
-          // No placeholder needed
-          handleShortValue={(e) => setPageInfo({...pageInfo, shortInputTwo: e.target.value})}
+          handleShortValue={(e) =>
+            setPageInfo({ ...pageInfo, shortInputTwo: e.target.value })
+          }
           inputClassName="short__input"
           name="estimated completion time"
         />
-        {inputs == "Lesson" ? (
+        {inputs ? (
           <AddLessonAdditionalBoxes
             handleFreeTypeValue={(e) => {
-              setAdditionalInfo({...additionalInfo, content: e.target.value})
+              setAdditionalInfo({ ...additionalInfo, content: e.target.value });
             }}
-            handleShortValue={(e) => setAdditionalInfo({...additionalInfo, title: e.target.value})}
+            handleShortValue={(e) =>
+              setAdditionalInfo({ ...additionalInfo, title: e.target.value })
+            }
           />
         ) : (
-          <QuestionAnswer
-            // handleShortValue={(e) => setQuestion({...question, title: e.target.value})}
-            onSubmit={addAnswers}
-            // handleCheckboxValue={(e)=> {
-              // array.push(e.target.value);
-              // console.log(array);
-            // }}
-            // handleClickCheckbox={handleClickCheckbox}
-          />
+          <QuestionAnswer onSubmit={addAnswers}></QuestionAnswer>
         )}
         ;
-        <h5 className="lesson__add" onClick={inputs == "Lesson" ? addData : addAnswers}>
+        <h5
+          className="lesson__add"
+          onClick={inputs ? addData : addAnswers}
+        >
           Add +
         </h5>
         <div className="lesson__buttons">
@@ -136,7 +160,7 @@ const AddLessonContainer = ({
         />
       </div>
       <div className="lesson__content">
-        {inputs == "Lesson" ? (
+        {inputs ? (
           <LessonContentPreview
             lessonsArray={data}
             handleDelete={handleDelete}
@@ -144,12 +168,15 @@ const AddLessonContainer = ({
         ) : (
           <QuestionContainer
             questionsArray={data}
-            // handleDelete={handleDelete}
+            handleDelete={handleDelete}
           />
         )}
-        ;
-      </div>
+        
+        <button className="lesson__add-button" onClick={() => inputs ? setPageInfo({ ...pageInfo, additionalInfos: data }) : setPageInfo({ ...pageInfo, questions: data })}>Confirm data</button>
+      </div>      
+
     </div>
+    </>
   );
 };
 
