@@ -1,0 +1,43 @@
+@use "../../styles/variables" as *;
+@use "../../styles/_typography" as *;
+
+.course-container {
+  &__header{
+    border-bottom: 2px solid $color-grey-light;
+    padding: 3rem 0;
+  }
+
+  &__title {
+    padding-left: 3rem;
+  }
+
+  &__body{
+    padding-left: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    &--left > * {
+      padding: 2rem 0;
+    }
+    &--right {
+      padding: 1rem;
+    }
+  }
+
+  &__curriculum{
+    &--header{
+      display: flex;
+      justify-content: space-between;
+      padding-right: 3rem;
+      padding-bottom: 3rem;
+    }
+    &--title{
+      color: $color-blue-navy-dark;
+      font-family: $font-secondary;
+    }
+  }
+
+  &__line{
+    border-bottom: 2px solid $color-white-smoke;
+    margin-bottom: 1rem;
+  }
+}
