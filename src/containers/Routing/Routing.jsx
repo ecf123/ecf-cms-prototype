@@ -18,6 +18,7 @@ import List from "../../pages/tempPages/List";
 import Welcome from "../../pages/tempPages/Welcome";
 import LoginPage from "../../pages/tempPages/LoginPage";
 import RegisterPage from "../../pages/tempPages/RegisterPage";
+import LandingPageHeader from "../../components/LandingPageHeader/LandingPageHeader";
 
 const Routing = () => {
 
@@ -28,11 +29,14 @@ const Routing = () => {
     <>
       {!loggedIn && 
         (
-        <Routes>
-          <Route path="/" element={<Welcome />}/>
-          <Route path="/sign-in" element={<LoginPage setLoggedIn={setLoggedIn} setUser={setUser} />}/>
-          <Route path="/register" element={<RegisterPage setLoggedIn={setLoggedIn} setUser={setUser} />}/>
-        </Routes>
+          <>
+            <LandingPageHeader/>
+            <Routes>
+              <Route path="/" element={<Welcome />}/>
+              <Route path="/sign-in" element={<LoginPage setLoggedIn={setLoggedIn} setUser={setUser} />}/>
+              <Route path="/register" element={<RegisterPage setLoggedIn={setLoggedIn} setUser={setUser} />}/>
+            </Routes>
+          </>
         )
       }
       {
