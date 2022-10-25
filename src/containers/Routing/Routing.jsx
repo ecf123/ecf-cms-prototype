@@ -21,6 +21,7 @@ import AddPrizePage from "../../pages/AddPrizePage/AddPrizePage";
 import Articles from "../../pages/Articles/Articles";
 import SignOut from "../../pages/SignOut/SignOut";
 import AddLesson from "../../pages/AddLesson/AddLesson";
+import AddPathway from "../../pages/AddPathway/AddPathway";
 
 const Routing = () => {
 
@@ -61,6 +62,7 @@ const Routing = () => {
                 path="/:courseName/:lessonTitle"
                 element={<CourseSingleLesson />}
               />
+              <Route path="/addpathway" element={<AddPathway/>}/>
 
               <Route path="/articles" element={<Articles />} />
               <Route path="/articles/:articleTitle" element={<SingleArticle />} />

@@ -1,9 +1,11 @@
 import "./ViewOptions.scss";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const ViewOptions = ({ selectedOption }) => {
   const [selected, setSelected] = useState(selectedOption);
+  const location = useLocation();
+  const course = location.pathname.split("/").slice(0,3).join("/");
 
   const selectionChange = (option) => setSelected(option);
 
@@ -15,7 +17,7 @@ const ViewOptions = ({ selectedOption }) => {
   return (
     <div className="view-options">
       <Link
-        to="*"
+        to={course}
         onClick={() => selectionChange("Overview")}
         className={setClassName("Overview")}
       >

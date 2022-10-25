@@ -31,6 +31,7 @@ const CourseList = () => {
       ],
       title: "Halifax",
       name: "Halifax as provider",
+      provider: "Halifax"
     },
     {
       id: "fsdfsdfdghsfghs",
@@ -60,6 +61,8 @@ const CourseList = () => {
       ],
       title: "Barclays",
       name: "Commercial Banking",
+      provider: "Barclays"
+
     },
   ];
   return (

@@ -17,7 +17,6 @@ const AddLessonContainer = () => {
   let navigate = useNavigate();
   const location = useLocation();
   const course = location.pathname.split("/").slice(0,-1).join("/");
-  console.log(course);
   const [additionalInfo, setAdditionalInfo] = useState({
     title: "",
     content: "",
@@ -131,7 +130,6 @@ const AddLessonContainer = () => {
         ) : (
           <QuestionAnswer onSubmit={addAnswers}></QuestionAnswer>
         )}
-        ;
         <h5
           className="lesson__add"
           onClick={inputs ? addData : addAnswers}
