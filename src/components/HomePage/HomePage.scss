@@ -1,0 +1,57 @@
+@use "../../styles/variables.scss" as *;
+@use "../../styles/typography.scss" as *;
+
+.homePage {
+  &__heading {
+    color: $color-blue-navy-dark;
+    font-weight: $font-weight-regular;
+  }
+
+  &__image {
+    width: 5rem;
+  }
+  &__logo {
+    display: flex;
+    margin-bottom: 4rem;
+    margin-right: 1rem;
+  }
+  &__tag {
+    display: flex;
+    text-align: left;
+    margin-top: 4rem;
+  }
+  &__tagText {
+    margin: auto;
+    font-size: $font-size-medium;
+    color: $color-blue-navy-dark;
+  }
+
+  &__span {
+    color: $color-blue-navy-dark;
+    font-weight: $font-weight-regular;
+  }
+  &__container {
+    margin: auto;
+    max-width: 25rem;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__tag {
+    color: $color-grey-light;
+  }
+
+  &__tagline {
+    margin-top: 2rem;
+    width: 20rem;
+    color: $color-white-blue;
+  }
+
+  &__buttons {
+    margin: 1rem;
+  }
+}

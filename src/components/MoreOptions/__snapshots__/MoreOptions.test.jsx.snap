@@ -18,33 +18,33 @@ exports[`Should render MoreOption component 1`] = `
       class="more-options__buttons"
     >
       <button
-        class="button grey round-border small more-options__button"
+        class="button light-grey round-border medium"
       >
         <div
-          class="small-img black-svg"
+          class="medium-img black-svg"
         >
           <svg>
             pen-icon.svg
           </svg>
         </div>
         <p
-          class="text small-text grey"
+          class="text medium-text light-grey"
         >
           Edit
         </p>
       </button>
       <button
-        class="button red round-border small more-options__button"
+        class="button red round-border medium"
       >
         <div
-          class="small-img white-svg"
+          class="medium-img white-svg"
         >
           <svg>
             bin-icon.svg
           </svg>
         </div>
         <p
-          class="text small-text red"
+          class="text medium-text red"
         >
           Delete
         </p>
