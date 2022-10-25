@@ -1,8 +1,8 @@
 @use "../../styles/_typography.scss" as *;
 @use "../../styles/_variables.scss" as *;
 
-.lesson-content{
-  &__item{
+.lesson-content {
+  &__item {
     width: fit-content;
     height: fit-content;
     font-size: $font-size-extra-small;

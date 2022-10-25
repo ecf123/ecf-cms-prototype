@@ -1,10 +1,9 @@
-import "./LessonContentPreviewItem.scss"
-import binIcon from "../../assets/bin-icon.svg";  
+import "./LessonContentPreviewItem.scss";
+import binIcon from "../../assets/bin-icon.svg";
 import penIcon from "../../assets/pen-icon.svg";
 
-const LessonContentPreviewItem = ({lesson,handleEdit,handleDelete}) => {
-
-  const {title, content} = lesson ?? {};
+const LessonContentPreviewItem = ({ lesson, handleEdit, handleDelete }) => {
+  const { title, content } = lesson ?? {};
 
   return (
     <div className="lesson-content__item">
@@ -25,7 +24,7 @@ const LessonContentPreviewItem = ({lesson,handleEdit,handleDelete}) => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LessonContentPreviewItem
+export default LessonContentPreviewItem;

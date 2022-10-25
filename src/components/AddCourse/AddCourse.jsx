@@ -53,7 +53,11 @@ const AddCourse = ({
 
         <div className="add-course__buttons">
           <div className="add-course__cancel">
-            <Button style={"button light-grey round-border large"} textStyle={"text large-text light-grey"} buttonText={"Cancel"} />
+            <Button
+              style={"button light-grey round-border large"}
+              textStyle={"text large-text light-grey"}
+              buttonText={"Cancel"}
+            />
           </div>
           <div className="add-course__submit">
             <Button

@@ -19,7 +19,7 @@ const PathwayDisplay = () => {
         <Link to="*">
           <img
             className="pathway-display__option"
-            id={border ? "grid-icon" : ""}
+            id={border && "grid-icon"}
             src={grid}
             alt="grid display option button"
             onClick={() => toggleDisplay(true)}
@@ -28,7 +28,7 @@ const PathwayDisplay = () => {
         <Link to="*">
           <img
             className="pathway-display__option"
-            id={border ? "" : "list-icon"}
+            id={!border && "list-icon"}
             src={hamburger}
             alt="list view option button"
             onClick={() => toggleDisplay(false)}
