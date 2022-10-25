@@ -5,7 +5,8 @@
   margin: 1rem;
   display: grid;
   width: min-content;
-  grid-template-areas: "input-texts media-upload";
+  grid-template-areas: "input-texts media-upload"
+  "input-texts media-upload";
 
   &__headings {
     margin-bottom: 2rem;

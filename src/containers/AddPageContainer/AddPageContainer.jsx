@@ -1,4 +1,4 @@
-import "./AddPage.scss";
+import "./AddPageContainer.scss";
 import { useState } from "react";
 import AddPage from "../../components/AddPage/AddPage";
 
@@ -10,6 +10,10 @@ const AddPathway = () => {
     shortInputTwo: "",
     freeTypeInputOne: "",
     freeTypeInputTwo: "",
+    freeTypeLabelTextOne: "",
+    reeTypeLabelTextTwo: "",
+    shortLabelTextOne: "",
+    shortLabelTextTwo: "",
   });
 
   const [errorMessage, setErrorMessage] = useState("");
@@ -18,22 +22,23 @@ const AddPathway = () => {
   const file= pageInfo.file
   const fileName= pageInfo.fileName
 
+
   const classNameInput =
     (pageInfo.freeTypeInputOne != "" &&
-    !freeTypeLabelTextOne.includes("optional") &&
+    !pageInfo.freeTypeLabelTextOne.includes("optional") &&
     !pageFirstOpened) ||
-    (pageFirstOpened && !freeTypeLabelTextOne.includes("optional")) ||
-    freeTypeLabelTextOne.includes("optional")
+    (pageFirstOpened && !pageInfo.freeTypeLabelTextOne.includes("optional")) ||
+    pageInfo.freeTypeLabelTextOne.includes("optional")
     ? "free-type__input"
     : "free-type__input--empty";
 
 
   const classNameInputTwo = 
     (pageInfo.shortInputTwo != "" &&
-    !shortLabelTextTwo.includes("optional") &&
+    !pageInfo.shortLabelTextTwo.includes("optional") &&
     !pageFirstOpened) ||
-    (pageFirstOpened && !shortLabelTextTwo.includes("optional")) ||
-    shortLabelTextTwo.includes("optional")
+    (pageFirstOpened && !pageInfo.shortLabelTextTwo.includes("optional")) ||
+    pageInfo.shortLabelTextTwo.includes("optional")
     ? "short__input"
     : "short__input--empty"
 
@@ -57,13 +62,13 @@ const AddPathway = () => {
     event.preventDefault();
     if (
       (pageInfo.shortInputOne == "" &&
-        !shortLabelTextOne.includes("optional")) ||
+        !pageInfo.shortLabelTextOne.includes("optional")) ||
       (pageInfo.freeTypeInputOne == "" &&
-        !freeTypeLabelTextOne.includes("optional")) ||
+        !pageInfo.freeTypeLabelTextOne.includes("optional")) ||
       (pageInfo.shortInputTwo == "" &&
-        !shortLabelTextTwo.includes("optional")) ||
+        !pageInfo.shortLabelTextTwo.includes("optional")) ||
       (pageInfo.freeTypeInputTwo == "" &&
-        !freeTypeLabelTextTwo.includes("optional"))
+        !pageInfo.freeTypeLabelTextTwo.includes("optional"))
     ) {
       setErrorMessage("Please enter the info needed in the empty red boxes");
     } else {
@@ -72,7 +77,6 @@ const AddPathway = () => {
   };
 
   const propsObject = {
-    uploadLabelName: uploadLabelName,
     handleFileChange: handleFileChange,
     handleChange: handleChange,
     storeInputs: storeInputs,
