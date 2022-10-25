@@ -16,7 +16,7 @@ const AddLessonContainer = ({
   const [inputs, setInputs] = useState("Lesson");
   const [data, setData] = useState([])
   const [additionalInfo, setAdditionalInfo] = useState({title: "", content: ""})
-  const [question, setQuestion] = useState({title: "", answers: []})
+  const [question] = useState({question: "", answers: []})
   
   const onChange = (event) => {
     if (event.target.value === "Lesson") {
@@ -32,7 +32,6 @@ const AddLessonContainer = ({
     shortInputOne: "",
     shortInputTwo: "",
   });
-
 
   const handleFileChange = (e) => {
     if (!pageInfo.file) setPageInfo({ fileName: e.target.files[0].name });
@@ -51,9 +50,18 @@ const AddLessonContainer = ({
   const handleDelete = (e) => {
     setData(data.filter(object => object.content != e.target.parentElement.parentElement.children[1].firstChild.data))
   }
-
   let array = [];
+  const addAnswers = (e) => {
+    array.push(e.target.parentElement.children[4][1].value)
+    array.push(e.target.parentElement.children[4][3].value)
+    array.push(e.target.parentElement.children[4][5].value)
+    array.push(e.target.parentElement.children[4][7].value)
+    setData([...data, {...question, question: e.target.parentElement.children[4][0].value, answers: array }])
 
+  }
+
+
+  
 
 
   return (
@@ -90,18 +98,17 @@ const AddLessonContainer = ({
           />
         ) : (
           <QuestionAnswer
-            handleShortValue={(e) => setQuestion({...question, title: e.target.value})}
-            // onSubmit={onSubmit}
-            handleCheckboxValue={(e)=> {
-
-              array.push(e.target.value);
-              console.log(array);
-            }}
+            // handleShortValue={(e) => setQuestion({...question, title: e.target.value})}
+            onSubmit={addAnswers}
+            // handleCheckboxValue={(e)=> {
+              // array.push(e.target.value);
+              // console.log(array);
+            // }}
             // handleClickCheckbox={handleClickCheckbox}
           />
         )}
         ;
-        <h5 className="lesson__add" onClick={addData}>
+        <h5 className="lesson__add" onClick={inputs == "Lesson" ? addData : addAnswers}>
           Add +
         </h5>
         <div className="lesson__buttons">
@@ -131,15 +138,12 @@ const AddLessonContainer = ({
       <div className="lesson__content">
         {inputs == "Lesson" ? (
           <LessonContentPreview
-        
             lessonsArray={data}
-            // handleEdit={handleEdit}
             handleDelete={handleDelete}
           />
         ) : (
           <QuestionContainer
             questionsArray={data}
-            // handleEdit={handleEdit}
             // handleDelete={handleDelete}
           />
         )}
