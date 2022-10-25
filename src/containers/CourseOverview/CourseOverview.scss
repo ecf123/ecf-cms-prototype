@@ -1,0 +1,30 @@
+@use "../../styles/main.scss" as *;
+@use "../../styles/variables" as *;
+
+.course-overview {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  height: 100%;
+  gap: 1.875rem;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 2rem;
+
+    &--drop {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+    margin-right: 0.625rem;
+    padding-top: 0.625rem;
+    background-color: $color-white-smoke;
+  }
+}

@@ -11,13 +11,11 @@ const Layout = ({ children, user }) => {
     setSelected(page);
   };
 
-const { image, name, role } = user || {};
- 
+  const { image, name, role } = user || {};
 
-  const toggle =()=>{
+  const toggle = () => {
     setDisplayed(!displayed);
     displayed?setArrowClass("header-profile__arrow"):setArrowClass("header-profile__down-arrow")
-    
   }
 
   return (
