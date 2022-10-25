@@ -1,47 +1,30 @@
-// .course-overview{
-//         // display: grid;
-//         // grid-template-columns: 2fr 1fr;
-//         // grid-template-rows: 1fr;
-//         // grid-column-gap: 0px;
-//         // grid-row-gap: 0px;
-//         &__main{
-//             display: grid;
-//             grid-template-columns: 1fr;
-//             grid-template-rows: 2fr 1fr 2fr;
-//             grid-column-gap: 0px;
-//             grid-row-gap: 0px;
-//         }
-
-//         &__side{
-//             display: grid;
-//             grid-template-columns: 1fr;
-//             grid-template-rows: repeat(3, 1fr);
-//             grid-column-gap: 10px;
-//             grid-row-gap: 10px;
-
-//         }
-        .pi { grid-area: pi;}
-.course-overview__main--poh { grid-area: poh;}
-.course-overview__main--dd { grid-area: dd;}
-.course-overview__side--mo { grid-area: mo;}
-.course-overview__side--si{ grid-area: si;}
-.course-overview__side--pc { grid-area: pc; }
+@use "../../styles/main.scss" as *;
+@use "../../styles/variables" as *;
 
 .course-overview {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    height: 100%;
-    grid-template-areas: 
-    "pi mo";
-    // "pi mo" ;
-    // ". ."
-    // "poh si"
-    // "dd si"
-    // "dd pc";
-    gap: 50px;
-    &__main{
-        display:flex;
-        justify-content: space-between;
-        flex-direction: column;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  height: 100%;
+  gap: 1.875rem;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 2rem;
+
+    &--drop {
+      display: flex;
+      flex-direction: column;
     }
+  }
+  &__side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+    margin-right: 0.625rem;
+    padding-top: 0.625rem;
+    background-color: $color-white-smoke;
+  }
 }

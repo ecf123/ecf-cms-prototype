@@ -1,29 +1,43 @@
-import React from 'react'
-import DropDown from '../../components/DropDown/DropDown'
-import MoreOptions from '../../components/MoreOptions/MoreOptions'
-import PathwayIntroduction from '../../components/PathwayIntroduction/PathwayIntroduction'
-import PotentialCareers from '../../components/PotentialCareers/PotentialCareers'
-import SalaryInfo from '../../components/SalaryInfo/SalaryInfo'
-import PathwayOverviewHeader from '../../components/PathwayOverviewHeader/PathwayOverviewHeader'
-import handleDelete from '../../components/MoreOptions/MoreOptions'
-import handleEdit from "../../components/MoreOptions/MoreOptions"
-import './CourseOverview.scss'
+import "./CourseOverview.scss";
+import DropDown from "../../components/DropDown/DropDown";
+import MoreOptions from "../../components/MoreOptions/MoreOptions";
+import PathwayIntroduction from "../../components/PathwayIntroduction/PathwayIntroduction";
+import PotentialCareers from "../../components/PotentialCareers/PotentialCareers";
+import SalaryInfo from "../../components/SalaryInfo/SalaryInfo";
+import PathwayOverviewHeader from "../../components/PathwayOverviewHeader/PathwayOverviewHeader";
+import handleDelete from "../../components/MoreOptions/MoreOptions";
+import handleEdit from "../../components/MoreOptions/MoreOptions";
+import image from '../../assets/money-growing-on-tree.svg'
 
-const CourseOverview = () => {
+const CourseOverview = ({dataJSON}) => {
   return (
-    <section className='course-overview'>
-        <div className="course-overview__main">
-        <PathwayIntroduction className="pi" image={"image"} description={"Lorem Ipsum"}/>
-        <PathwayOverviewHeader className="course-overview__main--poh"link={"link"}/>
-        <DropDown className="course-overview__main--dd"topicTitle={"Financial Forest"} lessonArr={["english", "maths", "physics"]}/>
+    <section className="course-overview">
+      <div className="course-overview__main">
+        <PathwayIntroduction image={image} description={"Lorem ipsum dolor sit amet. Ea nisi accusamus 33 Quis quidem ut quia obcaecati ex modi dolore 33 suscipit labore. Ut aliquid molestias aut voluptate incidunt nam assumenda quis et iste vero sit dolor dicta At iusto sunt suscipit nulla."} />
+        <PathwayOverviewHeader link={"link"} />
+        <div className="course-overview__main--drop">
+        {dataJSON.map((topic) => {
+          return (
+            <>
+             <DropDown topicTitle={topic.name} lessonArr={topic.lessons} />
+            </>
+          )
+        } )}
+        
         </div>
-        <div className='course-overview__side'>
-        <MoreOptions className='course-overview__side--mo'title="Financal Forest" description="Lorem ipsum" handleDelete={handleDelete} handleEdit={handleEdit}/>
-        <SalaryInfo className='course-overview__side--si'salariesObj={[1, 2, 3]}/>
-        <PotentialCareers className='course-overview__side--pc'potentialCareers={["doctor", "nurse", "developer"]}/>
-        </div>
+      </div>
+      <div className="course-overview__side">
+        <MoreOptions
+          title={"Financial Forest"}
+          description={"Lorem ipsum dolor sit amet. Ea nisi accusamus 33 Quis quidem ut quia obcaecati ex modi dolore 33 suscipit labore. Ut aliquid molestias aut voluptate incidunt nam assumenda quis et iste vero sit dolor dicta At iusto sunt suscipit nulla."}
+          handleDelete={handleDelete}
+          handleEdit={handleEdit}
+        />
+        <SalaryInfo salariesObj={[30000, 60000, 40000, 50000]} />
+        <PotentialCareers potentialCareers={["Financial Analyst", "Accountant", "Investment Analyst", "Stock Broker"]} />
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default CourseOverview
+export default CourseOverview;
