@@ -9,9 +9,6 @@ exports[`Should match the snapshot 1`] = `
       class="checkbox__input"
       type="text"
     />
-    <input
-      type="checkbox"
-    />
   </div>
 </div>
 `;

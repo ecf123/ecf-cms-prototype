@@ -1,12 +1,10 @@
 import "./AddQuestion.scss";
 import binIcon from "../../assets/bin-icon.svg";
-import penIcon from "../../assets/pen-icon.svg";
 
 const AddQuestion = ({
   question,
   answers,
   questionNumber,
-  handleEdit,
   handleDelete,
 }) => {
   let answerJSX = answers?.map((answer, index) => {
@@ -37,12 +35,6 @@ const AddQuestion = ({
           src={binIcon}
           alt="Delete Question"
           onClick={handleDelete}
-        />
-        <img
-          className="buttons__pen"
-          src={penIcon}
-          alt="Edit Question"
-          onClick={handleEdit}
         />
       </div>
     </div>

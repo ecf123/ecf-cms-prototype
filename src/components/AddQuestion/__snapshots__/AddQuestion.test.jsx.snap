@@ -75,11 +75,6 @@ exports[`Should match the snapshot, with the props 1`] = `
         class="buttons__bin"
         src="bin-icon.svg"
       />
-      <img
-        alt="Edit Question"
-        class="buttons__pen"
-        src="pen-icon.svg"
-      />
     </div>
   </div>
 </div>

@@ -6,7 +6,6 @@ const QuestionAnswer = ({
   handleShortValue,
   onSubmit,
   handleCheckboxValue,
-  handleClickCheckbox,
 }) => {
   return (
     <form className="form" onSubmit={onSubmit}>
@@ -19,19 +18,15 @@ const QuestionAnswer = ({
       <div className="form__answers">
         <CheckboxInput
           handleCheckboxValue={handleCheckboxValue}
-          handleClickCheckbox={handleClickCheckbox}
         />
         <CheckboxInput
           handleCheckboxValue={handleCheckboxValue}
-          handleClickCheckbox={handleClickCheckbox}
         />
         <CheckboxInput
           handleCheckboxValue={handleCheckboxValue}
-          handleClickCheckbox={handleClickCheckbox}
         />
         <CheckboxInput
           handleCheckboxValue={handleCheckboxValue}
-          handleClickCheckbox={handleClickCheckbox}
         />
       </div>
     </form>

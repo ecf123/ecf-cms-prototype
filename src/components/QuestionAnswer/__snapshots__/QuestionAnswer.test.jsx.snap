@@ -33,8 +33,13 @@ exports[`should render the question and answer form 1`] = `
           class="checkbox__input"
           type="text"
         />
+      </div>
+      <div
+        class="checkbox"
+      >
         <input
-          type="checkbox"
+          class="checkbox__input"
+          type="text"
         />
       </div>
       <div
@@ -44,9 +49,6 @@ exports[`should render the question and answer form 1`] = `
           class="checkbox__input"
           type="text"
         />
-        <input
-          type="checkbox"
-        />
       </div>
       <div
         class="checkbox"
@@ -54,20 +56,6 @@ exports[`should render the question and answer form 1`] = `
         <input
           class="checkbox__input"
           type="text"
-        />
-        <input
-          type="checkbox"
-        />
-      </div>
-      <div
-        class="checkbox"
-      >
-        <input
-          class="checkbox__input"
-          type="text"
-        />
-        <input
-          type="checkbox"
         />
       </div>
     </div>

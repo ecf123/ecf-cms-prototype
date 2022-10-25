@@ -1,7 +1,7 @@
 import AddQuestion from "../../components/AddQuestion/AddQuestion";
 import "./QuestionContainer.scss";
 
-const QuestionContainer = ({ questionsArray, handleEdit, handleDelete }) => {
+const QuestionContainer = ({ questionsArray, handleDelete }) => {
   const questionsArrayJSX = questionsArray?.map((question, index) => {
     return (
       <div key={index}>
@@ -9,7 +9,6 @@ const QuestionContainer = ({ questionsArray, handleEdit, handleDelete }) => {
           question={question.question}
           answers={question.answers}
           questionNumber={question.questionNumber}
-          handleEdit={handleEdit}
           handleDelete={handleDelete}
         />
         {index < questionsArray.length - 1 && (
