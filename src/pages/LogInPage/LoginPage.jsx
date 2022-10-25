@@ -5,7 +5,6 @@ import "./LoginPage.scss"
 
 
 
-
 const LoginPage = ({ setUser, setLogIn }) => {
 
     const [credential, setCredential] = useState({});
