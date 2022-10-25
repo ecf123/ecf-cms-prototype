@@ -29,11 +29,11 @@ const CourseOverview = ({dataJSON}) => {
       <div className="course-overview__side">
         <MoreOptions
           title={"Financial Forest"}
-          description={"Lorem ipsum dolor sit amet. Ea nisi accusamus 33 Quis quidem ut quia obcaecati ex modi dolore 33 suscipit labore. Ut aliquid molestias aut voluptate incidunt nam assumenda quis et iste vero sit dolor dicta At iusto sunt suscipit nulla."}
+          description={"Nam assumenda quis et iste vero sit dolor dicta At iusto sunt suscipit nulla."}
           handleDelete={handleDelete}
           handleEdit={handleEdit}
         />
-        <SalaryInfo salariesObj={[30000, 60000, 40000, 50000]} />
+        <SalaryInfo salariesObj={{["Fund Manager"] : 100000, ["Financial Analyst"] : 60000, ["Stock Broker"] : 5000}} />
         <PotentialCareers potentialCareers={["Financial Analyst", "Accountant", "Investment Analyst", "Stock Broker"]} />
       </div>
     </section>
