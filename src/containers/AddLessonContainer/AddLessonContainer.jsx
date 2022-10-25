@@ -15,9 +15,8 @@ const AddLessonContainer = ({
   handleCancel,
 }) => {
   const [inputs, setInputs] = useState("Lesson");
-  const [freeTypeValue, setFreeTypeValue] = useState("");
-  const [shortValue, setShortValue] = useState("");
   const [data, setData] = useState([])
+  const [question, setQuestion] = useState({title: "", content: ""})
 
   const onChange = (event) => {
     if (event.target.value === "Lesson") {
@@ -47,14 +46,8 @@ const AddLessonContainer = ({
   };
 
   const addData = () => {
-    setData([...data, {title: shortValue, content: freeTypeValue}])
-    resetValues()
+    setData([...data, question])
   };
-
-  const resetValues = () => {
-    setShortValue("")
-    setFreeTypeValue("")
-  }
 
   const handleDelete = (e) => {
     setData(data.filter(object => object.content != e.target.parentElement.parentElement.children[1].firstChild.data))
@@ -83,11 +76,9 @@ const AddLessonContainer = ({
         {inputs == "Lesson" ? (
           <AddLessonAdditionalBoxes
             handleFreeTypeValue={(e) => {
-              let a = e.target.value;
-              setFreeTypeValue(a)
-              // e.target.value = "";
+              setQuestion({...question, content: e.target.value})
             }}
-            handleShortValue={(e) => setShortValue(e.target.value)}
+            handleShortValue={(e) => setQuestion({...question, title: e.target.value})}
           />
         ) : (
           <QuestionAnswer
