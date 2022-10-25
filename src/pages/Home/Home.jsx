@@ -1,7 +1,9 @@
-import RegisterPage from "./../RegisterPage/RegisterPage"
-
+import Layout from "../../components/Layout/Layout";
 
 const Home = () => {
-  return <RegisterPage />
+  return (
+    <Layout>
+    </Layout>
+  );
 };
 export default Home;
