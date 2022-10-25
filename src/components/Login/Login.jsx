@@ -2,8 +2,10 @@ import "./Login.scss";
 import { useState } from "react";
 import Button from "../Button/Button";
 import LoginInputBox from "../LoginInputBox/LoginInputBox";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
-const Login = () => {
+const Login = ({ setCredential, setLogIn }) => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [hasError, setHasError] = useState(false);
 
@@ -13,14 +15,27 @@ const Login = () => {
     const email = e.target.elements[0].value;
     const password = e.target.elements[1].value;
 
-    if (!email || !password || !email.includes("@")) {
+    if (!email || !password) {
       setHasError(true);
       return;
     }
 
     setHasError(false);
+    setLogIn(true)
+
+    const user = {
+      email: email,
+      password: password
+    }
+    setCredential(user)
     setHasSubmitted(true);
   };
+
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate("/")
+  }, [hasSubmitted])
 
   return (
     <>
@@ -47,12 +62,14 @@ const Login = () => {
           </div>
           <div>
             <LoginInputBox
-              inputBoxStyle="input-box__input short"
               labelText="Email Address"
+              inputType="email"
+              labelId="email"
             />
             <LoginInputBox
-              inputBoxStyle="input-box__input short"
               labelText="Password"
+              inputType="password"
+              labelId="password"
             />
             {hasError && (
               <div>
@@ -61,7 +78,7 @@ const Login = () => {
             )}
           </div>
 
-          <Button
+          < Button
             style={"button login-black square-border"}
             textStyle={"text medium-text black"}
             buttonText={"Login"}

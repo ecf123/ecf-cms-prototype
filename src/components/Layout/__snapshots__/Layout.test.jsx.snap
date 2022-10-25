@@ -194,30 +194,31 @@ exports[`Should render layout with children 1`] = `
             Dashboard
           </h1>
           <div
-            class="header-profile"
+            class="dropdown"
           >
-            <img
-              alt="user avatar"
-              class="header-profile__image"
-            />
             <div
-              class="header-profile__text"
-            >
-              <h2
-                class="header-profile__name"
-              />
-              <p
-                class="header-profile__role"
-              />
-            </div>
-            <button
-              class="header-profile__arrow"
+              class="header-profile"
             >
               <img
+                alt="user avatar"
+                class="header-profile__image"
+              />
+              <div
+                class="header-profile__text"
+              >
+                <h2
+                  class="header-profile__name"
+                />
+                <p
+                  class="header-profile__role"
+                />
+              </div>
+              <img
                 alt="toggle"
+                class="header-profile__arrow"
                 src="upside-down-arrow-grey.svg"
               />
-            </button>
+            </div>
           </div>
         </div>
         <h1 />

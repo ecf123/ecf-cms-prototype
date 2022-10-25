@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the index card with all of props 1`] = `
+<div>
+  <div
+    class="index-card"
+  >
+    <video
+      class="index-card__video"
+      src="holding-card.svg"
+    />
+    <div
+      class="index-card__text-div"
+    >
+      <h3
+        class="index-card__title"
+      >
+        The Role Of Banking In The Financial System
+      </h3>
+      <div
+        class="index-card__duration-div"
+      >
+        <img
+          alt="clock icon"
+          class="index-card__clock"
+          src="clock-icon.svg"
+        />
+        <p
+          class="index-card__duration"
+        >
+          15 minutes
+        </p>
+      </div>
+      <p
+        class="index-card__paragraph"
+      >
+        Mattis duis sed leo quis justo, faucibus sit.
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -3,31 +3,31 @@
 exports[`Should render the HeaderProfile 1`] = `
 <div>
   <div
-    class="header-profile"
+    class="dropdown"
   >
-    <img
-      alt="user avatar"
-      class="header-profile__image"
-      src="[object Object]"
-    />
     <div
-      class="header-profile__text"
+      class="header-profile"
     >
-      <h2
-        class="header-profile__name"
+      <img
+        alt="user avatar"
+        class="header-profile__image"
+        src="[object Object]"
       />
-      <p
-        class="header-profile__role"
-      />
-    </div>
-    <button
-      class="header-profile__arrow"
-    >
+      <div
+        class="header-profile__text"
+      >
+        <h2
+          class="header-profile__name"
+        />
+        <p
+          class="header-profile__role"
+        />
+      </div>
       <img
         alt="toggle"
         src="upside-down-arrow-grey.svg"
       />
-    </button>
+    </div>
   </div>
 </div>
 `;
