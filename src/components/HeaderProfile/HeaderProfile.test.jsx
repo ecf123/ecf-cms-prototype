@@ -24,3 +24,9 @@ it("Should not display the alt text if the image is present", () => {
   const svgAltText = screen.queryByText("user avatar");
   expect(svgAltText).toBeFalsy();
 });
+
+it("should not show user options dropdown ", () => {
+  render(<HeaderProfile profileImg={Profile} />);
+  const role = screen.queryByText(/Log out/);
+  expect(role).toBeFalsy();
+});

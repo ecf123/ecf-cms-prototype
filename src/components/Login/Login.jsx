@@ -2,8 +2,10 @@ import "./Login.scss";
 import { useState } from "react";
 import Button from "../Button/Button";
 import LoginInputBox from "../LoginInputBox/LoginInputBox";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
-const Login = () => {
+const Login = ({ setCredential, setLogIn }) => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [hasError, setHasError] = useState(false);
 
@@ -19,8 +21,20 @@ const Login = () => {
     }
 
     setHasError(false);
+    setLogIn(true);
+
+    const user = {
+      email: email,
+      password: password,
+    };
+    setCredential(user);
     setHasSubmitted(true);
   };
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate("/");
+  }, [hasSubmitted]);
 
   return (
     <>
@@ -47,14 +61,14 @@ const Login = () => {
           </div>
           <div>
             <LoginInputBox
-              inputBoxStyle="input-box__input short"
               labelText="Email Address"
               inputType="email"
+              labelId="email"
             />
             <LoginInputBox
-              inputBoxStyle="input-box__input short"
               labelText="Password"
               inputType="password"
+              labelId="password"
             />
             {hasError && (
               <div>

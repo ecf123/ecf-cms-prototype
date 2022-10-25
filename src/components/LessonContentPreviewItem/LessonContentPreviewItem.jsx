@@ -1,10 +1,9 @@
-import "./LessonContentPreviewItem.scss"
-import binIcon from "../../assets/bin-icon.svg";  
-// import penIcon from "../../assets/pen-icon.svg";
+import "./LessonContentPreviewItem.scss";
+import binIcon from "../../assets/bin-icon.svg";
+import penIcon from "../../assets/pen-icon.svg";
 
-const LessonContentPreviewItem = ({lesson,handleDelete}) => {
-
-  const {title, content} = lesson ?? {};
+const LessonContentPreviewItem = ({ lesson, handleEdit, handleDelete }) => {
+  const { title, content } = lesson ?? {};
 
   return (
     <div className="lesson-content__item">
@@ -17,15 +16,15 @@ const LessonContentPreviewItem = ({lesson,handleDelete}) => {
           alt="Delete Question"
           onClick={handleDelete}
         />
-        {/* <img
+        <img
           className="buttons__pen"
           src={penIcon}
           alt="Edit Question"
           onClick={handleEdit}
-        /> */}
+        />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LessonContentPreviewItem
+export default LessonContentPreviewItem;

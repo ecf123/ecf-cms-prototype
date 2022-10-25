@@ -3,11 +3,13 @@ import { customRender } from "../../utils/testUtils";
 
 const lesson = {
   title: "Test title",
-  content: "Content"
-}
+  content: "Content",
+};
 
 it("Should render the preview item with props", () => {
-  const { container } = customRender(<LessonContentPreviewItem lesson={lesson} />);
+  const { container } = customRender(
+    <LessonContentPreviewItem lesson={lesson} />
+  );
   expect(container).toMatchSnapshot();
 });
 

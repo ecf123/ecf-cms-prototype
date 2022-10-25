@@ -1,17 +1,17 @@
 import { render, screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
 import userEvent from "@testing-library/user-event";
-import AddPage from "./AddPage";
+import AddPrize from "./AddPrize";
 
 it("Should match the snapshot, with the props", () => {
   const { container } = customRender(
-    <AddPage
+    <AddPrize
       shortLabelTextOne="Article Name"
       shortLabelTextTwo="Additional Subtitle(s) (optional)"
       shortPlaceHolderTextOne="e.g. Financial Forest"
       shortPlaceHolderTextTwo="e.g. Fund Manager"
       freeTypeLabelTextOne="Article Overview"
-      freeTypeLabelTextTwo="Additional Content (optional)"
+      shortLabelTextThree="Additional Content (optional)"
     />
   );
   expect(container).toMatchSnapshot();
@@ -19,11 +19,11 @@ it("Should match the snapshot, with the props", () => {
 
 it("Should display an error message above the buttons if the first short's label name does not contain the word optional and the input is empty", () => {
   render(
-    <AddPage
+    <AddPrize
       shortLabelTextOne="short text one"
       shortLabelTextTwo="optional"
       freeTypeLabelTextOne="optional"
-      freeTypeLabelTextTwo="optional"
+      shortLabelTextThree="optional"
     />
   );
 
@@ -44,11 +44,11 @@ it("Should display an error message above the buttons if the first short's label
 
 it("Should display an error message above the buttons if the second short's label name does not contain the word optional and the input is empty", () => {
   render(
-    <AddPage
+    <AddPrize
       shortLabelTextOne="optional"
       shortLabelTextTwo="short text two"
       freeTypeLabelTextOne="optional"
-      freeTypeLabelTextTwo="optional"
+      shortLabelTextThree="optional"
     />
   );
 
@@ -69,11 +69,11 @@ it("Should display an error message above the buttons if the second short's labe
 
 it("Should display an error message above the buttons if the first free type's label name does not contain the word optional and the input is empty", () => {
   render(
-    <AddPage
+    <AddPrize
       shortLabelTextOne="optional"
       shortLabelTextTwo="optional"
       freeTypeLabelTextOne="free type one"
-      freeTypeLabelTextTwo="optional"
+      shortLabelTextThree="optional"
     />
   );
 
@@ -94,18 +94,18 @@ it("Should display an error message above the buttons if the first free type's l
 
 it("Should display an error message above the buttons if the second free type's label name does not contain the word optional and the input is empty", () => {
   render(
-    <AddPage
+    <AddPrize
       shortLabelTextOne="optional"
       shortLabelTextTwo="optional"
       freeTypeLabelTextOne="optional"
-      freeTypeLabelTextTwo="free type two"
+      shortLabelTextThree="free type two"
     />
   );
 
-  const freeTypeTwoInput = screen.queryByRole("textbox", {
-    name: /free type two/i,
+  const freeTypeOneInput = screen.queryByRole("textbox", {
+    name: /free type one/i,
   });
-  userEvent.type(freeTypeTwoInput, "");
+  userEvent.type(freeTypeOneInput, "");
 
   const button = screen.getByRole("button", { name: /Submit/i });
   userEvent.click(button);
@@ -119,11 +119,11 @@ it("Should display an error message above the buttons if the second free type's 
 
 it("Should not display an error message above the buttons if the fields are empty when their label contains the word optional", () => {
   render(
-    <AddPage
+    <AddPrize
       shortLabelTextOne="optional"
       shortLabelTextTwo="optional"
       freeTypeLabelTextOne="optional"
-      freeTypeLabelTextTwo="optional"
+      shortLabelTextThree="optional"
     />
   );
 

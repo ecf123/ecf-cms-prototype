@@ -11,18 +11,18 @@ const MoreOptions = ({ title, description, handleDelete, handleEdit }) => {
       <div className="more-options__buttons">
         <Button
           onClick={handleEdit}
-          style={"button grey round-border small more-options__button"}
-          imgStyle={"small-img black-svg"}
-          textStyle={"text small-text grey"}
+          style={"button light-grey round-border medium"}
+          imgStyle={"medium-img black-svg"}
+          textStyle={"text medium-text light-grey"}
           buttonText={"Edit"}
         >
           <Pencil />
         </Button>
         <Button
           onClick={handleDelete}
-          style={"button red round-border small more-options__button"}
-          imgStyle={"small-img white-svg"}
-          textStyle={"text small-text red"}
+          style={"button red round-border medium"}
+          imgStyle={"medium-img white-svg"}
+          textStyle={"text medium-text red"}
           buttonText={"Delete"}
         >
           <Bin />

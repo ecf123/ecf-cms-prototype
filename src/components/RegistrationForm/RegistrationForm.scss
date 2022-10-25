@@ -1,0 +1,31 @@
+@use "../../styles/variables" as *;
+
+.registration-form {
+  width: 22.125rem;
+
+  &__header {
+    color: $color-black;
+    font-family: $font-secondary;
+    font-size: $font-size-extra-large;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__label {
+    display: block;
+    font-family: $font-secondary;
+    font-size: $font-size-extra-small;
+  }
+
+  &__button {
+    width: 100%;
+    background-color: $color-green;
+    height: 2.875rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: $font-size-small;
+    font-family: $font-secondary;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+}
