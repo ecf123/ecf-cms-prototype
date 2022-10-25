@@ -2,7 +2,7 @@
 @use "../../styles/_typography" as *;
 
 .course-container {
-  &__header{
+  &__header {
     border-bottom: 2px solid $color-grey-light;
     padding: 3rem 0;
   }
@@ -11,7 +11,7 @@
     padding-left: 3rem;
   }
 
-  &__body{
+  &__body {
     padding-left: 3rem;
     display: flex;
     justify-content: space-evenly;
@@ -23,20 +23,20 @@
     }
   }
 
-  &__curriculum{
-    &--header{
+  &__curriculum {
+    &--header {
       display: flex;
       justify-content: space-between;
       padding-right: 3rem;
       padding-bottom: 3rem;
     }
-    &--title{
+    &--title {
       color: $color-blue-navy-dark;
       font-family: $font-secondary;
     }
   }
 
-  &__line{
+  &__line {
     border-bottom: 2px solid $color-white-smoke;
     margin-bottom: 1rem;
   }
