@@ -1,0 +1,16 @@
+.index-container {
+    grid-template-areas: 
+    "gap index options";
+
+    &__left-column {
+        grid-area: "gap"
+    }
+
+    &__middle-column {
+        grid-area: "index"
+    }
+
+    &__right-column {
+        grid-area: "options"
+    }
+}
