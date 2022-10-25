@@ -17,6 +17,7 @@ exports[`Should match the snapshot, with the props 1`] = `
           Article Name
         </label>
         <input
+          class="short__input"
           name="shortInputOne"
           placeholder="e.g. Financial Forest"
           spellcheck="true"
@@ -32,6 +33,7 @@ exports[`Should match the snapshot, with the props 1`] = `
           Article Overview
         </label>
         <textarea
+          class="free-type__input"
           name="freeTypeInputOne"
           spellcheck="true"
           type="text"
@@ -46,6 +48,7 @@ exports[`Should match the snapshot, with the props 1`] = `
           Additional Subtitle(s) (optional)
         </label>
         <input
+          class="short__input"
           name="shortInputTwo"
           placeholder="e.g. Fund Manager"
           spellcheck="true"
@@ -53,17 +56,18 @@ exports[`Should match the snapshot, with the props 1`] = `
         />
       </div>
       <div
-        class="free-type"
+        class="short"
       >
         <label
-          class="free-type__label"
+          class="short__label"
         >
           Additional Content (optional)
         </label>
-        <textarea
-          name="freeTypeInputTwo"
+        <input
+          class="short__input"
+          name="shortInputThree"
           spellcheck="true"
-          type="text"
+          type="number"
         />
       </div>
       <p

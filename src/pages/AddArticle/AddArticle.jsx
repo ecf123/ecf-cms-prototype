@@ -1,17 +1,17 @@
-import { customRender } from "../../utils/testUtils";
-import AddPage from "./AddPage";
+import AddPageContainer from "../../containers/AddPageContainer/AddPageContainer";
 
-it("Should match the snapshot, with the props", () => {
-  const { container } = customRender(
-    <AddPage
+const AddArticle = () => {
+  return (
+    <AddPageContainer
       shortLabelTextOne="Article Name"
       shortLabelTextTwo="Additional Subtitle(s) (optional)"
       shortPlaceHolderTextOne="e.g. Financial Forest"
       shortPlaceHolderTextTwo="e.g. Fund Manager"
       freeTypeLabelTextOne="Article Overview"
       freeTypeLabelTextTwo="Additional Content (optional)"
+      uploadLabelName="Article Thumbnail"
     />
   );
-  expect(container).toMatchSnapshot();
-});
+};
 
+export default AddArticle;
