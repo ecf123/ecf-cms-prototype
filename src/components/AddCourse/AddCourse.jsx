@@ -12,18 +12,8 @@ const AddCourse = ({
   shortPlaceHolderTextThree,
   freeTypeLabelTextOne,
   uploadLabelNameTwo,
-  handleChange,
-  handleFileChange,
-  handleFileChange2,
-  storeInputs,
-  errorMessage,
-  classNameInput,
-  classNameInputTwo,
-  classNameInputThree,
-  file,
-  fileName,
-  fileTwo,
-  fileNameTwo,
+  uploadLabelName,
+  propsObject,
 }) => {
   return (
     <div className="add-course">
