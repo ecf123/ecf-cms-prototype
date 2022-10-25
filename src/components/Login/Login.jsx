@@ -21,21 +21,20 @@ const Login = ({ setCredential, setLogIn }) => {
     }
 
     setHasError(false);
-    setLogIn(true)
+    setLogIn(true);
 
     const user = {
       email: email,
-      password: password
-    }
-    setCredential(user)
+      password: password,
+    };
+    setCredential(user);
     setHasSubmitted(true);
   };
 
-
   const navigate = useNavigate();
   useEffect(() => {
-    navigate("/")
-  }, [hasSubmitted])
+    navigate("/");
+  }, [hasSubmitted]);
 
   return (
     <>
@@ -78,7 +77,7 @@ const Login = ({ setCredential, setLogIn }) => {
             )}
           </div>
 
-          < Button
+          <Button
             style={"button login-black square-border"}
             textStyle={"text medium-text black"}
             buttonText={"Login"}
