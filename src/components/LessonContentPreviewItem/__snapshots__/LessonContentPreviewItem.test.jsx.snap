@@ -23,6 +23,11 @@ exports[`Should render the preview item with props 1`] = `
         class="buttons__bin"
         src="bin-icon.svg"
       />
+      <img
+        alt="Edit Question"
+        class="buttons__pen"
+        src="pen-icon.svg"
+      />
     </div>
   </div>
 </div>
@@ -46,6 +51,11 @@ exports[`Should render the preview item without props 1`] = `
         alt="Delete Question"
         class="buttons__bin"
         src="bin-icon.svg"
+      />
+      <img
+        alt="Edit Question"
+        class="buttons__pen"
+        src="pen-icon.svg"
       />
     </div>
   </div>
