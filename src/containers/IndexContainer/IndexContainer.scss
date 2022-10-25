@@ -1,0 +1,19 @@
+.index-container {
+  &__grid {
+    display: grid;
+    grid-template-areas: ". .  index options";
+  }
+
+  &__left-column {
+    grid-area: "gap";
+  }
+
+  &__middle-column {
+    margin: auto;
+    grid-area: "index";
+  }
+
+  &__right-column {
+    grid-area: "options";
+  }
+}
