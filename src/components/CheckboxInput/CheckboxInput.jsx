@@ -1,6 +1,6 @@
 import "./CheckboxInput.scss";
 
-const CheckboxInput = ({ handleClickCheckbox, handleCheckboxValue }) => {
+const CheckboxInput = ({ handleCheckboxValue }) => {
   return (
     <div className="checkbox">
       <input
@@ -8,7 +8,7 @@ const CheckboxInput = ({ handleClickCheckbox, handleCheckboxValue }) => {
         type="text"
         className="checkbox__input"
       />
-      <input onClick={handleClickCheckbox} type="checkbox" />
+      {/* <input onClick={handleClickCheckbox} type="checkbox" /> */}
     </div>
   );
 };
