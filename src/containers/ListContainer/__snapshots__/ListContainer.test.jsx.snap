@@ -36,7 +36,7 @@ exports[`it should match the snapshot with props 1`] = `
           />
         </div>
         <a
-          href="/*"
+          href="/addarticle"
         >
           <button
             class="button black round-border large"
@@ -63,7 +63,7 @@ exports[`it should match the snapshot with props 1`] = `
           class="card"
         >
           <a
-            href="/*"
+            href="/Testtitleone"
           >
             <img
               class="card__image"
@@ -77,7 +77,7 @@ exports[`it should match the snapshot with props 1`] = `
           </p>
           <a
             class="card__header"
-            href="/*"
+            href="/Testtitleone"
           >
             <h2
               class="card__title"
@@ -109,7 +109,7 @@ exports[`it should match the snapshot with props 1`] = `
           class="card"
         >
           <a
-            href="/*"
+            href="/Testtitletwo"
           >
             <img
               class="card__image"
@@ -123,7 +123,7 @@ exports[`it should match the snapshot with props 1`] = `
           </p>
           <a
             class="card__header"
-            href="/*"
+            href="/Testtitletwo"
           >
             <h2
               class="card__title"
@@ -193,7 +193,7 @@ exports[`it should match the snapshot with props 2`] = `
           />
         </div>
         <a
-          href="/*"
+          href="/addprize"
         >
           <button
             class="button black round-border large"
@@ -220,7 +220,7 @@ exports[`it should match the snapshot with props 2`] = `
           class="card"
         >
           <a
-            href="/*"
+            href="/Earna£5AmazonVoucher"
           >
             <img
               class="card__image"
@@ -232,7 +232,7 @@ exports[`it should match the snapshot with props 2`] = `
           />
           <a
             class="card__header"
-            href="/*"
+            href="/Earna£5AmazonVoucher"
           >
             <h2
               class="card__title"
@@ -317,7 +317,7 @@ exports[`it should match the snapshot without props 1`] = `
           />
         </div>
         <a
-          href="/*"
+          href="/addprize"
         >
           <button
             class="button black round-border large"

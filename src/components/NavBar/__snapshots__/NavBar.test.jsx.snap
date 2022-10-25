@@ -13,7 +13,7 @@ exports[`renders the NavBar 1`] = `
       >
         <a
           class="link"
-          href="/*"
+          href="/"
         >
           <div
             class="logo"
@@ -66,7 +66,7 @@ exports[`renders the NavBar 1`] = `
         </a>
         <a
           class="link"
-          href="/"
+          href="/pathways"
         >
           <div
             class="nav-bar-item"
@@ -87,7 +87,7 @@ exports[`renders the NavBar 1`] = `
         </a>
         <a
           class="link"
-          href="/"
+          href="/articles"
         >
           <div
             class="nav-bar-item"
@@ -108,7 +108,7 @@ exports[`renders the NavBar 1`] = `
         </a>
         <a
           class="link"
-          href="/"
+          href="/marketplace"
         >
           <div
             class="nav-bar-item"
@@ -129,7 +129,7 @@ exports[`renders the NavBar 1`] = `
         </a>
         <a
           class="link"
-          href="/"
+          href="/users"
         >
           <div
             class="nav-bar-item"
@@ -151,7 +151,7 @@ exports[`renders the NavBar 1`] = `
       </ul>
       <a
         class="link"
-        href="/"
+        href="/settings"
       >
         <div
           class="nav-bar-item"

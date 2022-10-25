@@ -18,7 +18,7 @@ exports[`should render the form 1`] = `
       <p
         class="login__title--text"
       >
-        Feugiat magna viverra pellentesque habitant. Libero id amet nisl, tellus cras eleifend et in.
+        Log into your account to access the CMS for the ECF Future Hub App.
       </p>
     </div>
     <div>

@@ -44,7 +44,7 @@ exports[`Should render the card with props 1`] = `
     class="card"
   >
     <a
-      href="/*"
+      href="/Card"
     >
       <img
         class="card__image"
@@ -58,7 +58,7 @@ exports[`Should render the card with props 1`] = `
     </p>
     <a
       class="card__header"
-      href="/*"
+      href="/Card"
     >
       <h2
         class="card__title"
