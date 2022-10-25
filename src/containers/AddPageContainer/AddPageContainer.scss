@@ -1,0 +1,69 @@
+@use "../../styles/variables" as *;
+@use "../../styles/main.scss" as *;
+
+.add-pathway {
+  margin: 1rem;
+  display: grid;
+  gap: 2.0rem;
+  width: min-content;
+  grid-template-areas: "input-texts media-upload";
+
+  &__headings {
+    margin-bottom: 2rem;
+    grid-area: headings;
+    margin: 0rem 1rem;
+  }
+
+  &__main-header {
+    color: $color-blue-navy-dark;
+  }
+
+  &__sub-header {
+    color: $color-teal;
+    margin: 1rem 0rem;
+  }
+
+  &__input-texts {
+    grid-area: input-texts;
+    margin: 0rem 1rem;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  .short {
+    &__input {
+      margin-bottom: 1rem;
+      font-size: $font-size-small;
+      &--empty {
+        margin-bottom: 1rem;
+        font-size: $font-size-small;
+      }
+    }
+  }
+
+  .free-type {
+    &__input {
+      margin-bottom: 1rem;
+      font-size: $font-size-small;
+      &--empty {
+        margin-bottom: 1rem;
+        font-size: $font-size-small;
+      }
+    }
+  }
+
+  &__media-upload {
+    grid-area: media-upload;
+    
+  }
+
+  &__error-message {
+    color: $color-red-normal;
+  }
+
+  &__cancel {
+    margin-right: 0.56rem;
+  }
+}

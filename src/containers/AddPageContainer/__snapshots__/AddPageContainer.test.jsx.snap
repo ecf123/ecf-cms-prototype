@@ -1,147 +1,141 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`it should match the snapshot with props 1`] = `
+exports[`Should match the snapshot, with the props 1`] = `
 <div>
   <div
     class="add-pathway"
   >
     <div
-      class="add-pathway"
+      class="add-pathway__input-texts"
     >
       <div
-        class="add-pathway__input-texts"
+        class="short"
       >
-        <div
-          class="short"
+        <label
+          class="short__label"
         >
-          <label
-            class="short__label"
-          >
-            Pathway Name
-          </label>
-          <input
-            class="short__input"
-            name="shortInputOne"
-            placeholder=""
-            spellcheck="true"
-            type="text"
-          />
-        </div>
-        <div
-          class="free-type"
-        >
-          <label
-            class="free-type__label"
-          >
-            Pathway Overview
-          </label>
-          <textarea
-            class="free-type__input"
-            name="freeTypeInputOne"
-            spellcheck="true"
-            type="text"
-          />
-        </div>
-        <div
-          class="short"
-        >
-          <label
-            class="short__label"
-          >
-            Pathway Category(s)
-          </label>
-          <input
-            class="short__input"
-            name="shortInputTwo"
-            placeholder="Business"
-            spellcheck="true"
-            type="text"
-          />
-        </div>
-        <div
-          class="free-type"
-        >
-          <label
-            class="free-type__label"
-          >
-            Pathway Career Discription
-          </label>
-          <textarea
-            class="free-type__input"
-            name="freeTypeInputTwo"
-            spellcheck="true"
-            type="text"
-          />
-        </div>
-        <p
-          class="add-pathway__error-message"
+          Article Name
+        </label>
+        <input
+          class="short__input"
+          name="shortInputOne"
+          placeholder="e.g. Financial Forest"
+          spellcheck="true"
+          type="text"
         />
-        <div
-          class="add-pathway__buttons"
-        >
-          <div
-            class="add-pathway__cancel"
-          >
-            <button
-              class="button black round-border large"
-            >
-              <div />
-              <p
-                class="text large-text black"
-              >
-                Submit
-              </p>
-            </button>
-          </div>
-          <div
-            class="add-pathway__submit"
-          >
-            <button
-              class="button light-grey round-border large"
-            >
-              <div />
-              <p
-                class="text large-text light-grey"
-              >
-                Cancel
-              </p>
-            </button>
-          </div>
-        </div>
       </div>
       <div
-        class="add-pathway__media-upload"
+        class="free-type"
+      >
+        <label
+          class="free-type__label"
+        >
+          Article Overview
+        </label>
+        <textarea
+          class="free-type__input"
+          name="freeTypeInputOne"
+          spellcheck="true"
+          type="text"
+        />
+      </div>
+      <div
+        class="short"
+      >
+        <label
+          class="short__label"
+        >
+          Additional Subtitle(s) (optional)
+        </label>
+        <input
+          class="short__input"
+          name="shortInputTwo"
+          placeholder="e.g. Fund Manager"
+          spellcheck="true"
+          type="text"
+        />
+      </div>
+      <div
+        class="free-type"
+      >
+        <label
+          class="free-type__label"
+        >
+          Additional Content (optional)
+        </label>
+        <textarea
+          class="free-type__input"
+          name="freeTypeInputTwo"
+          spellcheck="true"
+          type="text"
+        />
+      </div>
+      <p
+        class="add-pathway__error-message"
+      />
+      <div
+        class="add-pathway__buttons"
       >
         <div
-          class="thumbnail"
+          class="add-pathway__cancel"
         >
-          <label
-            class="thumbnail__label"
+          <button
+            class="button black round-border large"
           >
-            Pathway Thumbnail
-          </label>
-          <div
-            class="thumbnail__container"
-          >
-            <div
-              class="thumbnail__btn--wrapper"
+            <div />
+            <p
+              class="text large-text black"
             >
-              <button
-                class="button light-grey round-border small"
+              Submit
+            </p>
+          </button>
+        </div>
+        <div
+          class="add-pathway__submit"
+        >
+          <button
+            class="button light-grey round-border large"
+          >
+            <div />
+            <p
+              class="text large-text light-grey"
+            >
+              Cancel
+            </p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="add-pathway__media-upload"
+    >
+      <div
+        class="thumbnail"
+      >
+        <label
+          class="thumbnail__label"
+        />
+        <div
+          class="thumbnail__container"
+        >
+          <div
+            class="thumbnail__btn--wrapper"
+          >
+            <button
+              class="button light-grey round-border small"
+            >
+              <div />
+              <p
+                class="text small-text light-grey"
               >
-                <div />
-                <p
-                  class="text small-text light-grey"
-                >
-                  Upload Image
-                </p>
-              </button>
-              <input
-                accept="image/*,video/*,audio/*,.txt"
-                class="thumbnail__btn--input"
-                type="file"
-              />
-            </div>
+                Upload Image
+              </p>
+            </button>
+            <input
+              accept="image/*,video/*,audio/*,.txt"
+              class="thumbnail__btn--input"
+              type="file"
+            />
           </div>
         </div>
       </div>

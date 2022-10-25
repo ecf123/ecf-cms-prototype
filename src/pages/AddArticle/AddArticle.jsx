@@ -1,10 +1,8 @@
-import Layout from "../../components/Layout/Layout.jsx";
-import AddPage from "../../containers/AddPage/AddPage";
+import AddPageContainer from "../../containers/AddPageContainer/AddPageContainer";
 
 const AddArticle = () => {
   return (
-    <Layout>
-      <AddPage
+      <AddPageContainer
         shortLabelTextOne="Article Name"
         shortLabelTextTwo="Additional Subtitle(s) (optional)"
         shortPlaceHolderTextOne="e.g. Financial Forest"
@@ -13,7 +11,6 @@ const AddArticle = () => {
         freeTypeLabelTextTwo="Additional Content (optional)"
         uploadLabelName="Article Thumbnail"
       />
-    </Layout>
   );
 };
 
