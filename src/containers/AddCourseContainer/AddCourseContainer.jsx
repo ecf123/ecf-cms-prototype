@@ -78,6 +78,21 @@ const AddCourseContainer = () => {
   const fileTwo = pageInfo.fileTwo
 
   const fileNameTwo = pageInfo.fileName
+
+  const propsObject = {
+    handleChange: handleChange,
+    handleFileChange: handleFileChange,
+    handleFileChange2: handleFileChange2,
+    storeInputs: storeInputs,
+    errorMessage: errorMessage,
+    file: file,
+    fileName: fileName,
+    fileTwo: fileTwo,
+    fileNameTwo: fileNameTwo,
+    classNameInput: classNameInput,
+    classNameInputTwo: classNameInputTwo,
+    classNameInputThree: classNameInputThree,
+  }
   
   return (
     <div className="add-course">
@@ -90,20 +105,8 @@ const AddCourseContainer = () => {
         shortPlaceHolderTextThree={"E.G Barclays"}
         uploadLabelName={"Course Thumbnail"}
         uploadLabelNameTwo={"Provider Logo"}
-        classNameInput={classNameInput}
-        classNameInputTwo={classNameInputTwo}
-        classNameInputThree={classNameInputThree}
-        handleChange={handleChange}
-        handleFileChange={handleFileChange}
-        handleFileChange2={handleFileChange2}
-        storeInputs={storeInputs}
-        errorMessage={errorMessage}
-        pageFirstOpened={pageFirstOpened}
-        file={file}
-        fileName={fileName}
-        fileTwo={fileTwo}
-        fileNameTwo={fileNameTwo}
-      />
+        propsObject={propsObject}
+/>
     </div>
   );
 };
