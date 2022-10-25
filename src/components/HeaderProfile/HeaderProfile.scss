@@ -1,4 +1,5 @@
-@use "../../styles/variables" as *;
+@use "../../styles/_variables.scss" as *;
+@use "../../styles/_typography.scss" as *;
 
 .header-profile {
   height: 4.25rem;
@@ -10,7 +11,7 @@
   align-items: center;
   border-radius: 4.375rem;
   background-color: $color-white;
-
+  cursor: pointer;
   &__image {
     height: 3.125rem;
     width: 3.125rem;
@@ -55,5 +56,57 @@
     align-items: center;
     border: none;
     background: none;
+  }
+  &__down-arrow {
+    height: 0.41375rem;
+    width: 0.6875rem;
+    margin-left: 2.781rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    transform: rotate(180deg);
+  }
+}
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+
+  &__items {
+    position: absolute;
+    width: 14.625rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: -1;
+    border-radius: 1.9rem;
+    background-color: $color-white-smoke;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__item {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: $color-blue-navy;
+  }
+
+  &__items :hover {
+    color: $color-green-light;
+    transition: all 150ms ease-in;
+  }
+
+  &__item-blank {
+    padding: 0;
+    margin: 0;
+    height: 4.25rem;
   }
 }
