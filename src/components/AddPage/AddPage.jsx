@@ -15,46 +15,36 @@ const AddPage = ({
   uploadLabelName
 }) => {
   return (
-    <div>
-        <div className="add-pathway__input-texts">
-          <Short
-            shortLabelText={shortLabelTextOne}
-            shortPlaceHolderText={shortPlaceHolderTextOne}
-            shortType="text"
-            name="shortInputOne"
-            inputClassName={{...propsObject}.classNameInputTwo}
-            handleShortValue={{...propsObject}.handleChange}
-          />
-          <FreeType
-            freeTypeLabelText={freeTypeLabelTextOne}
-            name="freeTypeInputOne"
-            inputClassName={{...propsObject}.classNameInput}
-            handleFreeTypeValue={{...propsObject}.handleChange}
-          />
-          <Short
-            shortLabelText={shortLabelTextTwo}
-            shortType="text"
-            shortPlaceHolderText={shortPlaceHolderTextTwo}
-            name="shortInputTwo"
-            inputClassName={{...propsObject}.classNameInputTwo}
-            handleShortValue={{...propsObject}.handleChange}
-          />
-          <FreeType
-            freeTypeLabelText={freeTypeLabelTextTwo}
-            name="freeTypeInputTwo"
-            inputClassName={{...propsObject}.classNameInput}
-            handleFreeTypeValue={{...propsObject}.handleChange}
-          />
-        
-        <div className="add-pathway__media-upload">
-          <MediaUploadBox
-            file={{...propsObject}.file}
-            handleFileChange={{...propsObject}.handleFileChange}
-            uploadLabelName={uploadLabelName}
-            uploadButtonText="Upload Image"
-            fileName={{...propsObject}.fileName}
-          />
-        </div>
+    <div className='add-pathway'>
+      <div className="add-pathway__input-texts">
+        <Short
+          shortLabelText={shortLabelTextOne}
+          shortPlaceHolderText={shortPlaceHolderTextOne}
+          shortType="text"
+          name="shortInputOne"
+          inputClassName={{...propsObject}.classNameInputTwo}
+          handleShortValue={{...propsObject}.handleChange}
+        />
+        <FreeType
+          freeTypeLabelText={freeTypeLabelTextOne}
+          name="freeTypeInputOne"
+          inputClassName={{...propsObject}.classNameInput}
+          handleFreeTypeValue={{...propsObject}.handleChange}
+        />
+        <Short
+          shortLabelText={shortLabelTextTwo}
+          shortType="text"
+          shortPlaceHolderText={shortPlaceHolderTextTwo}
+          name="shortInputTwo"
+          inputClassName={{...propsObject}.classNameInputTwo}
+          handleShortValue={{...propsObject}.handleChange}
+        />
+        <FreeType
+          freeTypeLabelText={freeTypeLabelTextTwo}
+          name="freeTypeInputTwo"
+          inputClassName={{...propsObject}.classNameInput}
+          handleFreeTypeValue={{...propsObject}.handleChange}
+        />
 
         <p className="add-pathway__error-message">{{...propsObject}.errorMessage}</p>
 
@@ -75,6 +65,16 @@ const AddPage = ({
             />
           </div>
         </div>
+      </div>
+
+      <div className="add-pathway__media-upload">
+        <MediaUploadBox
+          file={{...propsObject}.file}
+          handleFileChange={{...propsObject}.handleFileChange}
+          uploadLabelName={uploadLabelName}
+          uploadButtonText="Upload Image"
+          fileName={{...propsObject}.fileName}
+        />
       </div>
     </div>
   )

@@ -90,7 +90,7 @@ const AddPathway = () => {
 
   return (
     <div className="add-pathway">
-      <AddPage shortLabelTextOne={"Pathway Name"} shortLabelTextTwo={"Pathway Category(s)"} shortPlaceHolderTextOne={""} shortPlaceHolderTextTwo={"Business"} freeTypeLabelTextOne={"Pathway Overview"} freeTypeLabelTextTwo={"Pathway Career Discription"} propsObject={propsObject}/>
+      <AddPage shortLabelTextOne={"Pathway Name"} shortLabelTextTwo={"Pathway Category(s)"} shortPlaceHolderTextOne={""} shortPlaceHolderTextTwo={"Business"} freeTypeLabelTextOne={"Pathway Overview"} freeTypeLabelTextTwo={"Pathway Career Discription"} propsObject={propsObject} uploadLabelName={"Pathway Thumbnail"}/>
     </div>
   );
 };
