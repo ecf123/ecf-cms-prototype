@@ -3,11 +3,11 @@ import { useState } from "react";
 import Button from "../Button/Button";
 import LoginInputBox from "../LoginInputBox/LoginInputBox";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 const Login = ({ setCredential, setLogIn }) => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,12 +29,8 @@ const Login = ({ setCredential, setLogIn }) => {
     };
     setCredential(user);
     setHasSubmitted(true);
-  };
-
-  const navigate = useNavigate();
-  useEffect(() => {
     navigate("/");
-  }, [hasSubmitted]);
+  };
 
   return (
     <>

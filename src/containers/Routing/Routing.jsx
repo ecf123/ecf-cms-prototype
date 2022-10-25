@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import Home from "../../pages/Home/Home";
 import Layout from "../../components/Layout/Layout";
-import Pathways from "../../pages/tempPages/Pathways";
+import Pathways from "../../pages/Pathways/Pathways";
 import ArticleList from "../../pages/tempPages/ArticleList";
 import Marketplace from "../../pages/tempPages/Marketplace";
 import SingleArticle from "../../pages/tempPages/SingleArticle";
@@ -14,11 +14,11 @@ import SinglePathwayCourses from "../../pages/tempPages/SinglePathwayCourses";
 import Course from "../../pages/tempPages/Course";
 import CourseAddLesson from "../../pages/tempPages/CourseAddLesson";
 import CourseSingleLesson from "../../pages/tempPages/CourseSingleLesson";
-import List from "../../pages/tempPages/List";
 import LandingPageHeader from "../../components/LandingPageHeader/LandingPageHeader";
 import LandingPage from "../../pages/LandingPage/LandingPage";
 import LoginPage from "../../pages/LogInPage/LoginPage";
 import RegisterPage from "../../pages/RegisterPage/RegisterPage";
+import CourseList from "../../pages/CourseList/CourseList";
 
 const Routing = () => {
 
@@ -33,8 +33,8 @@ const Routing = () => {
             <LandingPageHeader/>
             <Routes>
               <Route path="/" element={<LandingPage/>}/>
-              <Route path="/sign-in" element={<LoginPage setLogIn={setLogIn} setUser={setUser} />}/>
               <Route path="/register" element={<RegisterPage setLogIn={setLogIn} setUser={setUser} />}/>
+              <Route path="/sign-in" element={<LoginPage setLogIn={setLogIn} setUser={setUser} />}/>
             </Routes>
           </>
         )
@@ -50,7 +50,7 @@ const Routing = () => {
               <Route path="/pathways/:pathwayName/courses" element={<SinglePathwayCourses />} />
               <Route
                 path="/pathways/:pathwayName/courses/list"
-                element={<List />}
+                element={<CourseList />}
               />
               <Route path="/:courseName" element={<Course />} />
               <Route path="/:courseName/addlesson" element={<CourseAddLesson />} />
