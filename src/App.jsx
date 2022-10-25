@@ -1,12 +1,11 @@
 import "./styles/main.scss";
 import { Route, Routes } from "react-router-dom";
 // import Home from "./pages/Home/Home";
-import AddArticle from "./pages/AddArticle/AddArticle.jsx";
-
+import AddPrizePage from "./pages/AddPrizePage/AddPrizePage";
 const App = () => {
   return (
     <Routes>
-      <Route path="*" element={<AddArticle />} />
+      <Route path="*" element={<AddPrizePage />} />
     </Routes>
   );
 };

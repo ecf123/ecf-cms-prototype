@@ -30,6 +30,3 @@ it("should not show user options dropdown ", () => {
   const role = screen.queryByText(/Log out/);
   expect(role).toBeFalsy();
 });
-
-
-

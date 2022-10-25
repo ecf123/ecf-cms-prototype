@@ -1,15 +1,11 @@
 @use "../../styles/variables" as *;
-@use "../../styles/typography" as *;
+@use "../../styles/main.scss" as *;
 
-.add-course {
+.add-pathway {
   margin: 1rem;
   display: grid;
   width: min-content;
   grid-template-areas: "input-texts media-upload";
-
-  &__uploadContainer {
-    margin-left: 2.93rem;
-  }
 
   &__headings {
     margin-bottom: 2rem;
@@ -58,9 +54,6 @@
   }
 
   &__media-upload {
-    grid-area: media-upload;
-  }
-  &__media-upload2 {
     grid-area: media-upload;
   }
 
