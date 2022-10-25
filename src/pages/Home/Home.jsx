@@ -1,11 +1,7 @@
 import Layout from "../../components/Layout/Layout";
-import IndexContainer from "../../containers/IndexContainer/IndexContainer";
 
 const Home = () => {
-  return (
-    <Layout>
-      <IndexContainer />
-    </Layout>
-  );
+  return <Layout></Layout>;
 };
+
 export default Home;

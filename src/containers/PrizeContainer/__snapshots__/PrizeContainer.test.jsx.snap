@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should match the snapshot 1`] = `
+<div>
+  <div
+    class="prize-container"
+  >
+    <div
+      class="prize-container__middle-column"
+    >
+      <div
+        class="card"
+      >
+        <a
+          href="/*"
+        >
+          <img
+            class="card__image"
+            src="https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/market-place%2Famazon-logo.png?alt=media&token=0c9914b9-b020-421c-acaa-e87ff25be8a0"
+          />
+        </a>
+        <p
+          class="card__date"
+        >
+          25-10-2022
+        </p>
+        <a
+          class="card__header"
+          href="/*"
+        >
+          <h2
+            class="card__title"
+          >
+            Earn a £5 Amazon Voucher
+          </h2>
+          <img
+            alt="Arrow Icon"
+            class="card__icon"
+            src="arrow-upper-right-black.svg"
+          />
+        </a>
+        <p
+          class="card__info"
+        >
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic placeat quis blanditiis. Debitis placeat sunt, sapiente, a iste repudiandae hic necessitatibus natus inventore maxime, perspiciatis sed distinctio praesentium blanditiis ipsa? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic placeat quis blanditiis. Debitis placeat sunt, sapiente, a iste repudiandae hic necessitatibus natus inventore maxime, perspiciatis sed distinctio praesentium blanditiis ipsa? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic placeat quis blanditiis. Debitis placeat sunt, sapiente, a iste repudiandae hic necessitatibus natus inventore maxime, perspiciatis sed distinctio praesentium blanditiis ipsa?
+        </p>
+        <ul
+          class="categories-menu"
+        >
+          <li
+            class="categories-menu__item--marketplace"
+          >
+            <img
+              alt="Icon"
+              class="categories-menu__item--icons"
+              src="going-up-graph-arrow-grey.svg"
+            />
+            400
+          </li>
+          <li
+            class="categories-menu__item--marketplace"
+          >
+            <img
+              alt="Icon"
+              class="categories-menu__item--icons"
+              src="trophy-icon-grey.svg"
+            />
+            1
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="prize-container__right-column"
+    >
+      <div
+        class="more-options"
+      >
+        <h3
+          class="more-options__title"
+        >
+          more options for article
+           Options
+        </h3>
+        <p
+          class="more-options__description"
+        />
+        <div
+          class="more-options__buttons"
+        >
+          <button
+            class="button light-grey round-border medium"
+          >
+            <div
+              class="medium-img black-svg"
+            >
+              <svg>
+                pen-icon.svg
+              </svg>
+            </div>
+            <p
+              class="text medium-text light-grey"
+            >
+              Edit
+            </p>
+          </button>
+          <button
+            class="button red round-border medium"
+          >
+            <div
+              class="medium-img white-svg"
+            >
+              <svg>
+                bin-icon.svg
+              </svg>
+            </div>
+            <p
+              class="text medium-text red"
+            >
+              Delete
+            </p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
