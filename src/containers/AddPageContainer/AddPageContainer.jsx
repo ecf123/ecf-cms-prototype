@@ -11,7 +11,7 @@ const AddPathway = () => {
     freeTypeInputOne: "",
     freeTypeInputTwo: "",
     freeTypeLabelTextOne: "",
-    reeTypeLabelTextTwo: "",
+    freeTypeLabelTextTwo: "",
     shortLabelTextOne: "",
     shortLabelTextTwo: "",
   });
