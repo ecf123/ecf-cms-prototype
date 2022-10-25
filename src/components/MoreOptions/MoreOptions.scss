@@ -7,10 +7,12 @@
   padding: 1.25rem;
   padding-right: 2.5rem;
   border-radius: 0.63rem;
-  border: 0.06rem solid $color-grey-light;
+  border: 0.06rem solid $color-white-smoke;
   &__buttons {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 12rem;
   }
   &__button {
     padding: 0.63rem 1.25rem;

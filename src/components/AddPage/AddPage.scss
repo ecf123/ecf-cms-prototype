@@ -4,6 +4,7 @@
 .add-pathway {
   margin: 1rem;
   display: grid;
+  gap: 2.0rem;
   width: min-content;
   grid-template-areas: "input-texts media-upload";
 
@@ -55,6 +56,7 @@
 
   &__media-upload {
     grid-area: media-upload;
+    
   }
 
   &__error-message {

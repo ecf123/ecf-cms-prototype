@@ -24,7 +24,6 @@ exports[`Should render Pathway Display 1`] = `
         <img
           alt="list view option button"
           class="pathway-display__option"
-          id=""
           src="hamburger-icon.svg"
         />
       </a>

@@ -8,7 +8,7 @@ const MediaUploadBox = ({
   uploadLabelName,
   uploadButtonText,
   fileName,
-  newId
+  newId,
 }) => {
   return (
     <div className="thumbnail">

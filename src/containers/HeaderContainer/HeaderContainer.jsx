@@ -11,7 +11,7 @@ const HeaderContainer = ({
   classNameSmall,
   classNameLarge,
   displayed,
-  arrowClass
+  arrowClass,
 }) => {
   return (
     <div className="header-container">
