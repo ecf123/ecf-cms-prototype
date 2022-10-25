@@ -1,14 +1,10 @@
 import "./HomePage.scss";
 import Button from "../../components/Button/Button";
 import logo from "../../assets/ECFP-company-logo.svg";
-import logoBackground from "../../assets/ecfc-logo-tag.svg";
 
 const HomePage = () => {
   return (
     <div className="homePage">
-      <div className="homePage__header">
-        <img src={logoBackground} alt="ECF-CMS logo" />
-      </div>
       <div className="homePage__container">
         <div>
           <div className="homePage__logo">

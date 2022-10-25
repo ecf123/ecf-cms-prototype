@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the home page 1`] = `
+<div>
+  <div
+    class="homePage"
+  >
+    <div
+      class="homePage__container"
+    >
+      <div>
+        <div
+          class="homePage__logo"
+        >
+          <img
+            alt="ECF-CMS logo"
+            class="homePage__image"
+            src="ECFP-company-logo.svg"
+          />
+          <div
+            class="homePage__tag"
+          >
+            <h2
+              class="homePage__tagText"
+            >
+              The
+              <br />
+              FUTURE HUB
+            </h2>
+          </div>
+        </div>
+      </div>
+      <h2
+        class="homePage__heading"
+      >
+        Welcome to the
+        <br />
+         ECF - CMS
+      </h2>
+      <p
+        class="homePage__tagline"
+      >
+        The Early Careers Foundation Content Management System
+      </p>
+      <div
+        class="homePage__buttons"
+      >
+        <button
+          class="button login-black rounded-square-border modal"
+        >
+          <div />
+          <p
+            class="text large-text black"
+          >
+            Create An Account
+          </p>
+        </button>
+      </div>
+      <button
+        class="button light-grey rounded-square-border modal"
+      >
+        <div />
+        <p
+          class="text medium-text light-grey"
+        >
+          Cancel
+        </p>
+      </button>
+    </div>
+  </div>
+</div>
+`;

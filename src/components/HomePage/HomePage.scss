@@ -2,12 +2,6 @@
 @use "../../styles/typography.scss" as *;
 
 .homePage {
-  &__header {
-    display: flex;
-    background-color: #3B3E49;
-    font-family: $font-secondary;
-  }
-
   &__heading {
     color: $color-blue-navy-dark;
     font-weight: $font-weight-regular;
