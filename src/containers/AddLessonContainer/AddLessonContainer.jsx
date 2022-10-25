@@ -17,6 +17,7 @@ const AddLessonContainer = ({
   const [inputs, setInputs] = useState("Lesson");
   const [freeTypeValue, setFreeTypeValue] = useState("");
   const [shortValue, setShortValue] = useState("");
+  const [data, setData] = useState([form])
 
   const onChange = (event) => {
     if (event.target.value === "Lesson") {
@@ -45,21 +46,16 @@ const AddLessonContainer = ({
         });
   };
 
-  let lessonsArray = []
-  let questionsArray = [];
 
-  const handleFreeTypeValue = (e) => {
-    setFreeTypeValue(e.target.value);
-  }
-  const handleShortValue = (e) => {
-    setShortValue(e.target.value);
-  }
+
+  let form = {title: "", content: ""};
+
+
 
   const addData = () => {
-    
-      lessonsArray.set({title : freeTypeValue, content : shortValue});
-      console.log(lessonsArray);
-   
+    form = {...data, [title]: shortValue, [content]: freeTypeValue}
+    setData(form);
+    console.log(data);
   };
 
   return (
@@ -69,7 +65,7 @@ const AddLessonContainer = ({
           shortLabelText="Lesson Name"
           shortType="text"
           // No placeholder needed
-          handleShortValue={handleShortValue}
+          // handleShortValue={handleShortValue}
           inputClassName="short__input"
           name="lesson name"
         />
@@ -78,14 +74,14 @@ const AddLessonContainer = ({
           shortLabelText="Estimated Completion Time"
           shortType="text"
           // No placeholder needed
-          handleShortValue={handleShortValue}
+          // handleShortValue={handleShortValue}
           inputClassName="short__input"
           name="estimated completion time"
         />
         {inputs == "Lesson" ? (
           <AddLessonAdditionalBoxes
-            handleFreeTypeValue={handleFreeTypeValue}
-            handleShortValue={handleShortValue}
+            handleFreeTypeValue={(e) => setFreeTypeValue(e.target.value)}
+            handleShortValue={(e) => setShortValue(e.target.value)}
           />
         ) : (
           <QuestionAnswer
@@ -127,7 +123,7 @@ const AddLessonContainer = ({
         {inputs == "Lesson" ? (
           <LessonContentPreview
         
-            lessonsArray={lessonsArray}
+            lessonsArray={data}
             // handleEdit={handleEdit}
             // handleDelete={handleDelete}
           />
