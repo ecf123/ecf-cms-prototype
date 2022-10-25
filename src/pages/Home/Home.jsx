@@ -1,7 +1,7 @@
-// import Layout from "../../components/Layout/Layout";
-import LoginPage from "../LogInPage/LoginPage";
+import RegisterPage from "./../RegisterPage/RegisterPage"
+
 
 const Home = () => {
-  return <LoginPage />
+  return <RegisterPage />
 };
 export default Home;
