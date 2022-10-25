@@ -22,7 +22,9 @@ const HomePage = () => {
         <h2 className="homePage__heading">
           Welcome to the<br></br> ECF - CMS
         </h2>
-        <p className="homePage__tagline">The Early Careers Foundation Content Management System</p>
+        <p className="homePage__tagline">
+          The Early Careers Foundation Content Management System
+        </p>
         <div className="homePage__buttons">
           <Link to="/register">
             <Button style={"button login-black rounded-square-border modal"} textStyle={"text medium-text black"} buttonText={"Create An Account"} />

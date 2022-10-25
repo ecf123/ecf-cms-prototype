@@ -15,8 +15,10 @@ const Layout = ({ children, user }) => {
 
   const toggle = () => {
     setDisplayed(!displayed);
-    displayed?setArrowClass("header-profile__arrow"):setArrowClass("header-profile__down-arrow")
-  }
+    displayed
+      ? setArrowClass("header-profile__arrow")
+      : setArrowClass("header-profile__down-arrow");
+  };
 
   return (
     <div className="layout">
