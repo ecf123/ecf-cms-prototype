@@ -1,12 +1,12 @@
 import "./styles/main.scss";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home/Home";
+import AddLesson from "./pages/AddLesson/AddLesson";
 
 
 const App = () => {
   return (
     <Routes>
-      <Route path="*" element={<Home />} />
+      <Route path="*" element={<AddLesson />} />
     </Routes>
   );
 };

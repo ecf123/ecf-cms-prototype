@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should match the snapshot 1`] = `
+<div>
+  <div
+    class="lesson__header"
+  >
+    <h1
+      class="lesson__title page-title"
+    >
+      Add Lesson
+    </h1>
+  </div>
+  <div
+    class="lesson"
+  >
+    <div
+      class="lesson__container"
+    >
+      <div
+        class="short"
+      >
+        <label
+          class="short__label"
+        >
+          Lesson Name
+        </label>
+        <input
+          class="short__input"
+          name="lesson name"
+          spellcheck="true"
+          type="text"
+        />
+      </div>
+      <div>
+        <label
+          class="select__label"
+        >
+          Lesson Type
+        </label>
+        <div
+          class="select"
+        >
+          <select
+            class="select__dropdown"
+            src="upside-down-arrow-grey.svg"
+          >
+            <option
+              class="select__dropdownoption"
+            >
+              Lesson
+            </option>
+            <option
+              class="select__dropdownoption"
+            >
+              Assessment Quiz
+            </option>
+          </select>
+        </div>
+      </div>
+      <div
+        class="short"
+      >
+        <label
+          class="short__label"
+        >
+          Estimated Completion Time
+        </label>
+        <input
+          class="short__input"
+          name="estimated completion time"
+          spellcheck="true"
+          type="text"
+        />
+      </div>
+      <div
+        class="add-lesson"
+      >
+        <div
+          class="short"
+        >
+          <label
+            class="short__label"
+          >
+            Additional Subtitle(s) (optional)
+          </label>
+          <input
+            class="short__input"
+            name="input-one"
+            placeholder="e.g. Fund Manager"
+            spellcheck="true"
+            type="text"
+          />
+        </div>
+        <div
+          class="free-type"
+        >
+          <label
+            class="free-type__label"
+          >
+            Additional Content (optional)
+          </label>
+          <textarea
+            class="free-type__input"
+            name="input-two"
+            spellcheck="true"
+            type="text"
+          />
+        </div>
+      </div>
+      ;
+      <h5
+        class="lesson__add"
+      >
+        Add +
+      </h5>
+      <div
+        class="lesson__buttons"
+      >
+        <button
+          class="button light-grey round-border large"
+        >
+          <div />
+          <p
+            class="text large-text light-grey"
+          >
+            Cancel
+          </p>
+        </button>
+        <button
+          class="button black round-border large"
+        >
+          <div />
+          <p
+            class="text large-text black"
+          >
+            Submit
+          </p>
+        </button>
+      </div>
+    </div>
+    <div
+      class="add-lesson__upload"
+    >
+      <div
+        class="thumbnail"
+      >
+        <label
+          class="thumbnail__label"
+        >
+          Lesson Upload
+        </label>
+        <div
+          class="thumbnail__container"
+        >
+          <div
+            class="thumbnail__btn--wrapper"
+          >
+            <button
+              class="button light-grey round-border small"
+            >
+              <div />
+              <p
+                class="text small-text light-grey"
+              >
+                Media Upload
+              </p>
+            </button>
+            <input
+              accept="image/*,video/*,audio/*,.txt"
+              class="thumbnail__btn--input"
+              type="file"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="lesson__content"
+    >
+      <div
+        class="lesson-preview"
+      />
+      <button
+        class="lesson__add-button"
+      >
+        Confirm data
+      </button>
+    </div>
+  </div>
+</div>
+`;
