@@ -1,11 +1,10 @@
-import React from 'react'
 import "./RegisterPage.scss"
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm'
 
 
 const RegisterPage = () => {
     return (
-        <div className="registrationPage">
+        <div className="registration-page">
             <RegistrationForm />
         </div>
     )
