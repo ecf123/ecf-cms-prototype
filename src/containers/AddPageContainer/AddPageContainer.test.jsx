@@ -14,5 +14,3 @@ it("Should match the snapshot, with the props", () => {
   );
   expect(container).toMatchSnapshot();
 });
-
-

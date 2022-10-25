@@ -21,11 +21,21 @@ const HomePage = () => {
         <h2 className="homePage__heading">
           Welcome to the<br></br> ECF - CMS
         </h2>
-        <p className="homePage__tagline">The Early Careers Foundation Content Management System</p>
+        <p className="homePage__tagline">
+          The Early Careers Foundation Content Management System
+        </p>
         <div className="homePage__buttons">
-          <Button style={"button login-black rounded-square-border modal"} textStyle={"text medium-text black"} buttonText={"Create An Account"} />
+          <Button
+            style={"button login-black rounded-square-border modal"}
+            textStyle={"text medium-text black"}
+            buttonText={"Create An Account"}
+          />
         </div>
-        <Button style={"button light-grey rounded-square-border modal"} textStyle={"text medium-text light-grey"} buttonText={"Cancel"} />
+        <Button
+          style={"button light-grey rounded-square-border modal"}
+          textStyle={"text medium-text light-grey"}
+          buttonText={"Cancel"}
+        />
       </div>
     </div>
   );
