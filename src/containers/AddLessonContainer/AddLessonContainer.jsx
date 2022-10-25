@@ -8,13 +8,16 @@ import AddLessonAdditionalBoxes from "../../components/AddLessonAdditionalBoxes/
 import QuestionAnswer from "../../components/QuestionAnswer/QuestionAnswer";
 import QuestionContainer from "../../containers/QuestionContainer/QuestionContainer";
 import LessonContentPreview from "../../components/LessonContentPreview/LessonContentPreview";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import PageTitle from "../../components/PageTitle/PageTitle";
 
 const AddLessonContainer = () => {
   const [inputs, setInputs] = useState(true);
   const [data, setData] = useState([]);
   let navigate = useNavigate();
+  const location = useLocation();
+  const course = location.pathname.split("/").slice(0,-1).join("/");
+  console.log(course);
   const [additionalInfo, setAdditionalInfo] = useState({
     title: "",
     content: "",
@@ -81,11 +84,11 @@ const AddLessonContainer = () => {
 
   const handleSubmit = () => {
     console.log(pageInfo)
-    navigate("/asd") // back to lessons
+    navigate(course) // back to lessons
   }
 
   const handleCancel = () => {
-    navigate("/xczc") // back to lessons
+    navigate(course) // back to lessons
   }
 
   return (<>
