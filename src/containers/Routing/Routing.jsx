@@ -3,11 +3,9 @@ import { useState } from "react";
 import Home from "../../pages/Home/Home";
 import Layout from "../../components/Layout/Layout";
 import Pathways from "../../pages/Pathways/Pathways";
-import ArticleList from "../../pages/tempPages/ArticleList";
-import Marketplace from "../../pages/tempPages/Marketplace";
+import Marketplace from "../../pages/Marketplace/Marketplace";
 import SingleArticle from "../../pages/tempPages/SingleArticle";
-import AddArticle from "../../pages/tempPages/AddArticle";
-import AddPrize from "../../pages/tempPages/AddPrize";
+import AddArticle from "../../pages/AddArticle/AddArticle";
 import SingleItem from "../../pages/tempPages/SingleItem";
 import SinglePathway from "../../pages/SinglePathway/SinglePathway";
 import SinglePathwayCourses from "../../pages/tempPages/SinglePathwayCourses";
@@ -19,6 +17,9 @@ import LoginPage from "../../pages/LogInPage/LoginPage";
 import RegisterPage from "../../pages/RegisterPage/RegisterPage";
 import CourseList from "../../pages/CourseList/CourseList";
 import CoursePage from "../../pages/CoursePage/CoursePage";
+import AddPrizePage from "../../pages/AddPrizePage/AddPrizePage";
+import Articles from "../../pages/Articles/Articles";
+import SignOut from "../../pages/SignOut/SignOut";
 
 const Routing = () => {
 
@@ -54,22 +55,24 @@ const Routing = () => {
               />
               <Route path="/:courseName" element={<CoursePage />} />
               <Route path="/:courseName/addlesson" element={<CourseAddLesson />} />
+              <Route path="/:courseName/addquiz" element={<CourseAddLesson />} />
               <Route
                 path="/:courseName/:lessonTitle"
                 element={<CourseSingleLesson />}
               />
 
-              <Route path="/articles" element={<ArticleList />} />
+              <Route path="/articles" element={<Articles />} />
               <Route path="/articles/:articleTitle" element={<SingleArticle />} />
 
               <Route path="/addarticle" element={<AddArticle />} />
 
               <Route path="/marketplace" element={<Marketplace />} />
-              <Route path="/addprize" element={<AddPrize />} />
+              <Route path="/addprize" element={<AddPrizePage />} />
               <Route path="/marketplace/:prizeName" element={<SingleItem />} />
 
               <Route path="/users" element={<p>Users</p>} />
               <Route path="/settings" element={<p>Settings</p>} />
+              <Route path="/sign-out" element={<SignOut setLogIn={setLogIn} setUser={setUser}/>}/>
               <Route path="/" element={<Home />} />
             </Routes>
           </Layout>

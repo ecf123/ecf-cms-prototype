@@ -30,7 +30,7 @@ const HeaderProfile = ({
           <Link className="dropdown__link" to={"/*"}>
             <p className="dropdown__item">Change profile</p>
           </Link>
-          <Link className="dropdown__link" to={"/*2"}>
+          <Link className="dropdown__link" to={"/sign-out"}>
             <p className="dropdown__item">Log out</p>
           </Link>
         </div>

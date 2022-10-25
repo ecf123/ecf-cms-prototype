@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import ListContainer from '../../containers/ListContainer/ListContainer'
 
 const Marketplace = () => {
@@ -15,17 +14,11 @@ const Marketplace = () => {
             "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic placeat quis blanditiis. Debitis placeat sunt, sapiente, a iste repudiandae hic necessitatibus natus inventore maxime, perspiciatis sed distinctio praesentium blanditiis ipsa? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic placeat quis blanditiis. Debitis placeat sunt, sapiente, a iste repudiandae hic necessitatibus natus inventore maxime, perspiciatis sed distinctio praesentium blanditiis ipsa? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic placeat quis blanditiis. Debitis placeat sunt, sapiente, a iste repudiandae hic necessitatibus natus inventore maxime, perspiciatis sed distinctio praesentium blanditiis ipsa?",
           skillPoints: 400,
           trophies: 1,
-        },
+        }
       ];
 
     return (
-        <div>
-            <ListContainer title="Marketplace" data={data} />
-            
-            Marketplace<br/>
-            <Link to="/addprize">Add prize</Link><br/>
-            <Link to="singleitem" >SingleItem</Link>
-        </div>
+      <ListContainer title="Marketplace" data={data} />
     )
 }
 

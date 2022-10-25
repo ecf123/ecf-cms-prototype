@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Login from "../../components/Login/Login";
 import profile from "../../assets/profile-picture.svg";
 import "./LoginPage.scss";
@@ -6,14 +6,15 @@ import "./LoginPage.scss";
 const LoginPage = ({ setUser, setLogIn }) => {
   const [credential, setCredential] = useState({});
 
-  if (Object.keys(credential).length != 0) {
+  useEffect(() => {
     const user = {
-      image: profile,
-      name: "Brett Zieme",
-      role: "Admin",
+        image: profile,
+        name: "Brett Zieme",
+        role: "Admin",
     };
     setUser(user);
-  }
+  }, [credential])
+  
 
   return (
     <div className="loginPage">

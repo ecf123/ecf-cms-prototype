@@ -5,12 +5,13 @@ import clock from "../../assets/clock-icon.svg";
 import { Link } from "react-router-dom";
 
 export const LessonLink = ({ courseTitle, courseDuration }) => {
+  const link = courseTitle.split(" ").join("");
   return (
     <div className="container">
       <div className="container__course-info">
         <div className="container__title">
           <img src={playfiles} alt="play files icon" />
-          <Link style={{ textDecoration: "none" }} to={""}>
+          <Link style={{ textDecoration: "none" }} to={link}>
             <h5 className="container__title-header">{courseTitle}</h5>
           </Link>
         </div>
@@ -19,7 +20,7 @@ export const LessonLink = ({ courseTitle, courseDuration }) => {
           <h6 className="container__time-header">{courseDuration}</h6>
         </div>
       </div>
-      <Link to={""}>
+      <Link to={link}>
         <div className="container__arrow">
           <img
             className="container-arrow-image"

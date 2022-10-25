@@ -44,6 +44,8 @@ const ListContainer = ({ title, data }) => {
 
   const condition = title == "Article" ? false : true;
 
+  const addLink = condition ? "/addprize" : "/addarticle";
+
   const handleSearchInput = (event) => {
     setSearchTerm(event.target.value);
   };
@@ -67,7 +69,7 @@ const ListContainer = ({ title, data }) => {
             handleSearchInput={handleSearchInput}
             value={searchTerm}
           />
-          <Link to="/">
+          <Link to={addLink}>
             <Button
               style={"button black round-border large"}
               imgStyle={"medium-img white-svg"}
