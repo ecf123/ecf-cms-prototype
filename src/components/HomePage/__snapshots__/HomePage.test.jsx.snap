@@ -12,18 +12,22 @@ exports[`Should render the home page 1`] = `
         <div
           class="homePage__logo"
         >
-          <img
-            alt="ECF-CMS logo"
-            class="homePage__image"
-            src="ECFP-company-logo.svg"
-          />
           <div
             class="homePage__tag"
           >
+            <img
+              alt="ECF-CMS logo"
+              class="homePage__image"
+              src="ECFP-company-logo.svg"
+            />
             <h2
               class="homePage__tagText"
             >
-              The
+              <span
+                class="homePage__span"
+              >
+                THE
+              </span>
               <br />
               FUTURE HUB
             </h2>
@@ -50,7 +54,7 @@ exports[`Should render the home page 1`] = `
         >
           <div />
           <p
-            class="text large-text black"
+            class="text medium-text black"
           >
             Create An Account
           </p>
