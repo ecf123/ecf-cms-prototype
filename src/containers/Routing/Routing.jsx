@@ -20,6 +20,7 @@ import CoursePage from "../../pages/CoursePage/CoursePage";
 import AddPrizePage from "../../pages/AddPrizePage/AddPrizePage";
 import Articles from "../../pages/Articles/Articles";
 import SignOut from "../../pages/SignOut/SignOut";
+import AddLesson from "../../pages/AddLesson/AddLesson";
 
 const Routing = () => {
 
@@ -54,7 +55,7 @@ const Routing = () => {
                 element={<CourseList />}
               />
               <Route path="/:courseName" element={<CoursePage />} />
-              <Route path="/:courseName/addlesson" element={<CourseAddLesson />} />
+              <Route path="/:courseName/addlesson" element={<AddLesson />} />
               <Route path="/:courseName/addquiz" element={<CourseAddLesson />} />
               <Route
                 path="/:courseName/:lessonTitle"
