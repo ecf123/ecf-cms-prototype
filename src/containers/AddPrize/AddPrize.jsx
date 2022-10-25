@@ -1,4 +1,4 @@
-import "./AddPageContainer.scss";
+import "./AddPrize.scss";
 import { useState } from "react";
 
 import Button from "../../components/Button/Button";
@@ -12,7 +12,8 @@ const AddPathway = ({
   shortPlaceHolderTextOne,
   shortPlaceHolderTextTwo,
   freeTypeLabelTextOne,
-  freeTypeLabelTextTwo,
+  shortLabelTextThree,
+  shortPlaceHolderTextThree,
   uploadLabelName,
 }) => {
   const [pageInfo, setPageInfo] = useState({
@@ -21,7 +22,7 @@ const AddPathway = ({
     shortInputOne: "",
     shortInputTwo: "",
     freeTypeInputOne: "",
-    freeTypeInputTwo: "",
+    shortInputThree: "",
   });
 
   const [errorMessage, setErrorMessage] = useState("");
@@ -52,8 +53,8 @@ const AddPathway = ({
         !freeTypeLabelTextOne.includes("optional")) ||
       (pageInfo.shortInputTwo == "" &&
         !shortLabelTextTwo.includes("optional")) ||
-      (pageInfo.freeTypeInputTwo == "" &&
-        !freeTypeLabelTextTwo.includes("optional"))
+      (pageInfo.shortInputThree == "" &&
+        !shortLabelTextThree.includes("optional"))
     ) {
       setErrorMessage("Please enter the info needed in the empty red boxes");
     } else {
@@ -110,19 +111,21 @@ const AddPathway = ({
           }
           handleShortValue={handleChange}
         />
-        <FreeType
-          freeTypeLabelText={freeTypeLabelTextTwo}
-          name="freeTypeInputTwo"
+        <Short
+          shortLabelText={shortLabelTextThree}
+          shortType="number"
+          shortPlaceHolderText={shortPlaceHolderTextThree}
+          name="shortInputThree"
           inputClassName={
-            (pageInfo.freeTypeInputTwo != "" &&
-              !freeTypeLabelTextTwo.includes("optional") &&
+            (pageInfo.shortInputThree != "" &&
+              !shortLabelTextThree.includes("optional") &&
               !pageFirstOpened) ||
-            (pageFirstOpened && !freeTypeLabelTextTwo.includes("optional")) ||
-            freeTypeLabelTextTwo.includes("optional")
-              ? "free-type__input"
-              : "free-type__input--empty"
+            (pageFirstOpened && !shortLabelTextThree.includes("optional")) ||
+            shortLabelTextThree.includes("optional")
+              ? "short__input"
+              : "short__input--empty"
           }
-          handleFreeTypeValue={handleChange}
+          handleShortValue={handleChange}
         />
 
         <p className="add-pathway__error-message">{errorMessage}</p>

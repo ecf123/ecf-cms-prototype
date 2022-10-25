@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should match the snapshot with props 1`] = `
+<div>
+  <div
+    class="course-container"
+  >
+    <div
+      class="course-container__header"
+    >
+      <h1
+        class="page-title course-container__title"
+      >
+        Commercial Banking
+      </h1>
+    </div>
+    <div
+      class="course-container__body"
+    >
+      <div
+        class="course-container__body--left"
+      >
+        <div
+          class="heading"
+        >
+          <img
+            class="heading__icon"
+            src="barclays-icon-white-background.svg"
+          />
+          <img
+            alt="Commercial Banking with Barclay's"
+            class="heading__image"
+            src="mobile-payment.svg"
+          />
+          <h1
+            class="heading__title"
+          >
+            Commercial Banking with Barclay's
+          </h1>
+          <ul
+            class="categories-menu"
+          >
+            <li
+              class="categories-menu__item categories-menu__item--purple"
+            >
+              Finance
+            </li>
+            <li
+              class="categories-menu__item categories-menu__item--darkpurple"
+            >
+              Investing
+            </li>
+          </ul>
+        </div>
+        <div
+          class="course-container__line"
+        />
+        <div
+          class="overview"
+        >
+          <h2
+            class="overview__header"
+          >
+            Course Overview
+          </h2>
+          <p
+            class="overview__text"
+          >
+            Lorem ipsum dolor sit amet. Ea nisi accusamus 33 Quis quidem ut quia obcaecati ex modi dolore 33 suscipit labore. Ut aliquid molestias aut voluptate incidunt nam assumenda quis et iste vero sit dolor dicta At iusto sunt suscipit nulla.
+          </p>
+        </div>
+        <div
+          class="course-container__curriculum"
+        >
+          <div
+            class="course-container__curriculum--header"
+          >
+            <h2
+              class="course-container__curriculum--title"
+            >
+              Course Curriculum
+            </h2>
+            <button
+              class="button black round-border medium"
+            >
+              <div
+                class="large-img"
+              >
+                <svg>
+                  circular-plus-icon.svg
+                </svg>
+              </div>
+              <p
+                class="text large-text black"
+              >
+                Add Lesson
+              </p>
+            </button>
+          </div>
+          <div
+            class="container"
+          >
+            <div
+              class="container__course-info"
+            >
+              <div
+                class="container__title"
+              >
+                <img
+                  alt="play files icon"
+                  src="play-files-icon.svg"
+                />
+                <a
+                  href="/"
+                  style="text-decoration: none;"
+                >
+                  <h5
+                    class="container__title-header"
+                  >
+                    The Role of Banking and the Financial System
+                  </h5>
+                </a>
+              </div>
+              <div
+                class="container__time"
+              >
+                <img
+                  alt="clock icon"
+                  src="clock-icon.svg"
+                />
+                <h6
+                  class="container__time-header"
+                >
+                  15 minutes
+                </h6>
+              </div>
+            </div>
+            <a
+              href="/"
+            >
+              <div
+                class="container__arrow"
+              >
+                <img
+                  alt="course arrow"
+                  class="container-arrow-image"
+                  src="arrow-pointing-right-icon.svg"
+                />
+              </div>
+            </a>
+          </div>
+          <div
+            class="course-container__line"
+          />
+          <div
+            class="container"
+          >
+            <div
+              class="container__course-info"
+            >
+              <div
+                class="container__title"
+              >
+                <img
+                  alt="play files icon"
+                  src="play-files-icon.svg"
+                />
+                <a
+                  href="/"
+                  style="text-decoration: none;"
+                >
+                  <h5
+                    class="container__title-header"
+                  >
+                    Currency Risk Management
+                  </h5>
+                </a>
+              </div>
+              <div
+                class="container__time"
+              >
+                <img
+                  alt="clock icon"
+                  src="clock-icon.svg"
+                />
+                <h6
+                  class="container__time-header"
+                >
+                  10 minutes
+                </h6>
+              </div>
+            </div>
+            <a
+              href="/"
+            >
+              <div
+                class="container__arrow"
+              >
+                <img
+                  alt="course arrow"
+                  class="container-arrow-image"
+                  src="arrow-pointing-right-icon.svg"
+                />
+              </div>
+            </a>
+          </div>
+          <div
+            class="course-container__line"
+          />
+        </div>
+      </div>
+      <div
+        class="course-container__body--right"
+      >
+        <div
+          class="more-options"
+        >
+          <h3
+            class="more-options__title"
+          >
+            Course 
+             Options
+          </h3>
+          <p
+            class="more-options__description"
+          >
+            Edit this course or delete it
+          </p>
+          <div
+            class="more-options__buttons"
+          >
+            <button
+              class="button light-grey round-border medium"
+            >
+              <div
+                class="medium-img black-svg"
+              >
+                <svg>
+                  pen-icon.svg
+                </svg>
+              </div>
+              <p
+                class="text medium-text light-grey"
+              >
+                Edit
+              </p>
+            </button>
+            <button
+              class="button red round-border medium"
+            >
+              <div
+                class="medium-img white-svg"
+              >
+                <svg>
+                  bin-icon.svg
+                </svg>
+              </div>
+              <p
+                class="text medium-text red"
+              >
+                Delete
+              </p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

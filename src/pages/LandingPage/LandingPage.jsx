@@ -1,11 +1,11 @@
-import HomePage from "../../components/HomePage/HomePage"
+import HomePage from "../../components/HomePage/HomePage";
 
 const LandingPage = () => {
-    return (
-        <div>
-            <HomePage />
-        </div>
-    )
-}
+  return (
+    <div>
+      <HomePage />
+    </div>
+  );
+};
 
-export default LandingPage
+export default LandingPage;
