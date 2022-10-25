@@ -17,7 +17,7 @@ const AddLessonContainer = ({
   const [inputs, setInputs] = useState("Lesson");
   const [freeTypeValue, setFreeTypeValue] = useState("");
   const [shortValue, setShortValue] = useState("");
-  const [data, setData] = useState([form])
+  const [data, setData] = useState([])
 
   const onChange = (event) => {
     if (event.target.value === "Lesson") {
@@ -46,17 +46,19 @@ const AddLessonContainer = ({
         });
   };
 
-
-
-  let form = {title: "", content: ""};
-
-
-
   const addData = () => {
-    form = {...data, [title]: shortValue, [content]: freeTypeValue}
-    setData(form);
-    console.log(data);
+    setData([...data, {title: shortValue, content: freeTypeValue}])
+    resetValues()
   };
+
+  const resetValues = () => {
+    setShortValue("")
+    setFreeTypeValue("")
+  }
+
+  const handleDelete = (e) => {
+    setData(data.filter(object => object.content != e.target.parentElement.parentElement.children[1].firstChild.data))
+  }
 
   return (
     <div className="lesson">
@@ -80,7 +82,11 @@ const AddLessonContainer = ({
         />
         {inputs == "Lesson" ? (
           <AddLessonAdditionalBoxes
-            handleFreeTypeValue={(e) => setFreeTypeValue(e.target.value)}
+            handleFreeTypeValue={(e) => {
+              let a = e.target.value;
+              setFreeTypeValue(a)
+              // e.target.value = "";
+            }}
             handleShortValue={(e) => setShortValue(e.target.value)}
           />
         ) : (
@@ -125,11 +131,11 @@ const AddLessonContainer = ({
         
             lessonsArray={data}
             // handleEdit={handleEdit}
-            // handleDelete={handleDelete}
+            handleDelete={handleDelete}
           />
         ) : (
           <QuestionContainer
-            questionsArray={questionsArray}
+            questionsArray={data}
             // handleEdit={handleEdit}
             // handleDelete={handleDelete}
           />

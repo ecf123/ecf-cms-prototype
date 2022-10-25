@@ -1,8 +1,8 @@
 import "./LessonContentPreviewItem.scss"
 import binIcon from "../../assets/bin-icon.svg";  
-import penIcon from "../../assets/pen-icon.svg";
+// import penIcon from "../../assets/pen-icon.svg";
 
-const LessonContentPreviewItem = ({lesson,handleEdit,handleDelete}) => {
+const LessonContentPreviewItem = ({lesson,handleDelete}) => {
 
   const {title, content} = lesson ?? {};
 
@@ -17,12 +17,12 @@ const LessonContentPreviewItem = ({lesson,handleEdit,handleDelete}) => {
           alt="Delete Question"
           onClick={handleDelete}
         />
-        <img
+        {/* <img
           className="buttons__pen"
           src={penIcon}
           alt="Edit Question"
           onClick={handleEdit}
-        />
+        /> */}
       </div>
     </div>
   )
