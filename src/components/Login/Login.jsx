@@ -29,7 +29,7 @@ const Login = ({ setCredential, setLogIn }) => {
     };
     setCredential(user);
     setHasSubmitted(true);
-    navigate("/");
+    navigate("/pathways");
   };
 
   return (

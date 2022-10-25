@@ -1,7 +1,5 @@
-import Layout from "../../components/Layout/Layout.jsx";
 import ViewOptions from "../../components/ViewOptions/ViewOptions.jsx";
 import CourseOverview from "../../containers/CourseOverview/CourseOverview.jsx";
-import profile from "../../assets/profile-picture.svg"
 import "./SinglePathway.scss";
 
 const SinglePathway = () => {
@@ -316,18 +314,11 @@ const SinglePathway = () => {
         },
       ];
 
-      const user = {
-        image: profile,
-        name: "Brett Zieme",
-        role: "Admin",
-      };
   return (
     <div>
-        <Layout user={user}>
         <h1 className="title">Financial Forest</h1>
         <ViewOptions selectedOption={"Overview"} />
         <CourseOverview dataJSON={coursesCollection}/>
-        </Layout>
     </div>
   )
 }

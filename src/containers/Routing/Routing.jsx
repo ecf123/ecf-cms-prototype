@@ -9,9 +9,8 @@ import SingleArticle from "../../pages/tempPages/SingleArticle";
 import AddArticle from "../../pages/tempPages/AddArticle";
 import AddPrize from "../../pages/tempPages/AddPrize";
 import SingleItem from "../../pages/tempPages/SingleItem";
-import SinglePathway from "../../pages/tempPages/SinglePathway";
+import SinglePathway from "../../pages/SinglePathway/SinglePathway";
 import SinglePathwayCourses from "../../pages/tempPages/SinglePathwayCourses";
-import Course from "../../pages/tempPages/Course";
 import CourseAddLesson from "../../pages/tempPages/CourseAddLesson";
 import CourseSingleLesson from "../../pages/tempPages/CourseSingleLesson";
 import LandingPageHeader from "../../components/LandingPageHeader/LandingPageHeader";
@@ -19,6 +18,7 @@ import LandingPage from "../../pages/LandingPage/LandingPage";
 import LoginPage from "../../pages/LogInPage/LoginPage";
 import RegisterPage from "../../pages/RegisterPage/RegisterPage";
 import CourseList from "../../pages/CourseList/CourseList";
+import CoursePage from "../../pages/CoursePage/CoursePage";
 
 const Routing = () => {
 
@@ -52,7 +52,7 @@ const Routing = () => {
                 path="/pathways/:pathwayName/courses/list"
                 element={<CourseList />}
               />
-              <Route path="/:courseName" element={<Course />} />
+              <Route path="/:courseName" element={<CoursePage />} />
               <Route path="/:courseName/addlesson" element={<CourseAddLesson />} />
               <Route
                 path="/:courseName/:lessonTitle"

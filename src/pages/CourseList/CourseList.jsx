@@ -59,7 +59,7 @@ const CourseList = () => {
         },
       ],
       title: "Barclays",
-      name: "Barclays as provider",
+      name: "Commercial Banking",
     },
   ];
   return (

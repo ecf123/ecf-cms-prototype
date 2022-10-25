@@ -22,7 +22,7 @@ const ViewOptions = ({ selectedOption }) => {
         Overview
       </Link>
       <Link
-        to="*"
+        to="courses/list"
         onClick={() => selectionChange("Courses")}
         className={setClassName("Courses")}
       >

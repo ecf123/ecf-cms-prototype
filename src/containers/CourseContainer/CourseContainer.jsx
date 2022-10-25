@@ -7,6 +7,8 @@ import barclaysIcon from "../../assets/barclays-icon-white-background.svg";
 import { ReactComponent as Plus } from "../../assets/circular-plus-icon.svg";
 import "./CourseContainer.scss";
 import LessonLink from "../../components/LessonLink/LessonLink";
+import { Link } from "react-router-dom";
+
 
 const CourseContainer = ({ data }) => {
   const { name, title, image, description, categories, provider, lessons } =
@@ -53,6 +55,7 @@ const CourseContainer = ({ data }) => {
               <h2 className="course-container__curriculum--title">
                 Course Curriculum
               </h2>
+              <Link to="addlesson">
               <Button
                 style={"button black round-border medium"}
                 imgStyle={"large-img"}
@@ -61,6 +64,7 @@ const CourseContainer = ({ data }) => {
               >
                 <Plus />
               </Button>
+              </Link>
             </div>
             {lessonsJSX}
           </div>
