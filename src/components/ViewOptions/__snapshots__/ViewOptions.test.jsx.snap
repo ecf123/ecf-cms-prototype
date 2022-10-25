@@ -7,13 +7,13 @@ exports[`Should render the view options component 1`] = `
   >
     <a
       class="view-options__overview"
-      href="/*"
+      href="/"
     >
       Overview
     </a>
     <a
       class="view-options__overview"
-      href="/*"
+      href="/courses/list"
     >
       Courses
     </a>

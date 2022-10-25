@@ -1,12 +1,10 @@
 @use "../../styles/_variables.scss" as *;
 
-
-
-.title{
-    font-weight:$font-weight-regular;
-    font-size: 4rem;
-    margin-left:2rem;
-    color: $color-blue-navy-dark;
-    font-family: $font-secondary;
-    margin-bottom: 1rem;
+.title {
+  font-weight: $font-weight-regular;
+  font-size: 4rem;
+  margin-left: 2rem;
+  color: $color-blue-navy-dark;
+  font-family: $font-secondary;
+  margin-bottom: 1rem;
 }

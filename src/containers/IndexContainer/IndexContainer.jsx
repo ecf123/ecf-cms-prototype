@@ -8,9 +8,8 @@ const IndexContainer = ({
   optionsData,
   handleEdit,
   handleDelete,
-  title
+  title,
 }) => {
-
   return (
     <>
       <div className="index-container__header">
@@ -19,26 +18,26 @@ const IndexContainer = ({
           title={title}
         />
       </div>
-    <div className="index-container">
-      <div className="index-container__middle-column">
-        <Card
-          title={data.heading}
-          img={data.image}
-          dateOrTime={data.date}
-          cardInfo={data.overview}
-          links={ data.skillPoints}
-          condition={data.isLocked}
-        />
+      <div className="index-container">
+        <div className="index-container__middle-column">
+          <Card
+            title={data.heading}
+            img={data.image}
+            dateOrTime={data.date}
+            cardInfo={data.overview}
+            links={data.skillPoints}
+            condition={data.isLocked}
+          />
+        </div>
+        <div className="index-container__right-column">
+          <MoreOptions
+            title={optionsData.title}
+            description={optionsData.description}
+            handleDelete={handleDelete}
+            handleEdit={handleEdit}
+          />
+        </div>
       </div>
-      <div className="index-container__right-column">
-        <MoreOptions
-          title={optionsData.title}
-          description={optionsData.description}
-          handleDelete={handleDelete}
-          handleEdit={handleEdit}
-        />
-      </div>
-    </div>
     </>
   );
 };

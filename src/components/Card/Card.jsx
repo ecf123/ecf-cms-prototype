@@ -12,13 +12,14 @@ const Card = ({
   imgDescription,
   condition,
 }) => {
+  const link = title?.split(" ").join("");
   return (
     <div className="card">
-      <Link to="*">
+      <Link to={link}>
         <img className="card__image" src={img} alt={imgDescription} />
       </Link>
       <p className="card__date">{dateOrTime}</p>
-      <Link to="*" className="card__header">
+      <Link to={link} className="card__header">
         <h2 className="card__title">{title}</h2>
         <img className="card__icon" src={iconArrow} alt="Arrow Icon" />
       </Link>

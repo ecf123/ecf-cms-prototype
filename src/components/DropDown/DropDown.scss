@@ -47,22 +47,21 @@
   &__image {
     margin-right: 1.25rem;
   }
-}
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+  }
 
-input {
-  position: absolute;
-  opacity: 0;
-  height: 0;
-}
+  input ~ label span .drop-down__arrow {
+    transition: all ease-in-out 0.3s;
+  }
 
-input ~ label span .drop-down__arrow {
-  transition: all ease-in-out 0.3s;
-}
+  input:checked ~ label span .drop-down__arrow {
+    transform: rotate(180deg);
+  }
 
-input:checked ~ label span .drop-down__arrow {
-  transform: rotate(180deg);
-}
-
-input:checked ~ .drop-down__list {
-  height: auto;
+  input:checked ~ .drop-down__list {
+    height: auto;
+  }
 }

@@ -1,14 +1,8 @@
+import Routing from "./containers/Routing/Routing";
 import "./styles/main.scss";
-import { Route, Routes } from "react-router-dom";
-import AddLesson from "./pages/AddLesson/AddLesson";
-
 
 const App = () => {
-  return (
-    <Routes>
-      <Route path="*" element={<AddLesson />} />
-    </Routes>
-  );
+  return <Routing />;
 };
 
 export default App;

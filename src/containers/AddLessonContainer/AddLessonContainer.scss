@@ -1,57 +1,53 @@
 @use "../../styles/_variables.scss" as *;
 
 .lesson {
+  display: flex;
+  gap: 2.18rem;
+  margin-top: 3rem;
+  margin-left: 3rem;
+
+  &__buttons {
     display: flex;
-    gap: 2.18rem;
-    margin-top: 3rem;
-    margin-left: 3rem;
+    flex-direction: row;
+    gap: 0.56rem;
+    margin-top: 1rem;
+  }
+  &__add {
+    text-decoration: underline dotted;
+    text-underline-offset: 0.25rem;
+    color: $color-blue-navy-dark;
+    font-family: $font-secondary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.68rem;
+  }
+  &__content {
+    height: 684px;
+    width: 430px;
+  }
 
-    &__buttons {
-        display: flex;
-        flex-direction: row;
-        gap: 0.56rem;
-        margin-top: 1rem;
+  &__add-button {
+    color: $color-white;
+    margin-top: 2.5rem;
+    padding: 1rem 2.5rem;
+    background: #2d303a;
+    border: none;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    &:active {
+      opacity: 0.8;
     }
-    &__add {
-        text-decoration: underline dotted;
-        text-underline-offset: 0.25rem;
-        color: $color-blue-navy-dark;
-        font-family: $font-secondary;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 0.8rem;
-        cursor: pointer;
-    }
-    &__container {
-        display: flex;
-        flex-direction: column;
-        gap: 1.68rem;
-    }
-    &__content {
-        height: 684px;
-        width: 430px;
-    }
+  }
 
-    &__add-button {
-        margin-top: 2.5rem;
-        padding: 1rem 2.5rem;
-        background: #2D303A;
-        border: none;
-        border-radius: 2.5rem;
-        cursor: pointer;
-        &:active {
-            opacity: 0.8;
-        }
-    }
-
-    &__header {
-        padding: 0 3rem 3rem 3rem;
-        border-bottom: 2px $color-grey-light solid;
-        display: block;
-      }
+  &__header {
+    padding: 0 3rem 3rem 3rem;
+    border-bottom: 2px $color-grey-light solid;
+    display: block;
+  }
 }
-
-
-
-
-

@@ -69,7 +69,7 @@ const PathwaysListContainer = ({ dataJSON }) => {
           handleSearchInput={handleSearchInput}
           value={searchTerm}
         />
-        <Link to="*">
+        <Link to="/addpathway">
           <Button
             style={"button black round-border large"}
             imgStyle={"medium-img white-svg"}

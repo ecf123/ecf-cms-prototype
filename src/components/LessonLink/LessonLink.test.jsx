@@ -15,7 +15,13 @@ describe("LessonLink component", () => {
   });
 
   it("should render all images", () => {
-    render(<LessonLink />, { wrapper: BrowserRouter });
+    customRender(
+      <LessonLink
+        courseTitle="How to win a million dollars"
+        courseDuration="10 min"
+      />,
+      { wrapper: BrowserRouter }
+    );
     const images = screen.getAllByRole("img");
     expect(images).toBeTruthy();
   });

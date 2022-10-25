@@ -49,27 +49,35 @@ exports[`Should render the home page 1`] = `
       <div
         class="homePage__buttons"
       >
+        <a
+          href="/register"
+        >
+          <button
+            class="button login-black rounded-square-border modal"
+          >
+            <div />
+            <p
+              class="text medium-text black"
+            >
+              Create An Account
+            </p>
+          </button>
+        </a>
+      </div>
+      <a
+        href="/sign-in"
+      >
         <button
-          class="button login-black rounded-square-border modal"
+          class="button light-grey rounded-square-border modal"
         >
           <div />
           <p
-            class="text medium-text black"
+            class="text medium-text light-grey"
           >
-            Create An Account
+            Sign In
           </p>
         </button>
-      </div>
-      <button
-        class="button light-grey rounded-square-border modal"
-      >
-        <div />
-        <p
-          class="text medium-text light-grey"
-        >
-          Cancel
-        </p>
-      </button>
+      </a>
     </div>
   </div>
 </div>

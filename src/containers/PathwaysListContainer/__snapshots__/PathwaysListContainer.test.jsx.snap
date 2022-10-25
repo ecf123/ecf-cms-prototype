@@ -33,7 +33,7 @@ exports[`it should match the snapshot with props 1`] = `
         />
       </div>
       <a
-        href="/*"
+        href="/addpathway"
       >
         <button
           class="button black round-border large"

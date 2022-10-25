@@ -1,6 +1,7 @@
 import "./HomePage.scss";
 import Button from "../../components/Button/Button";
 import logo from "../../assets/ECFP-company-logo.svg";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -25,17 +26,21 @@ const HomePage = () => {
           The Early Careers Foundation Content Management System
         </p>
         <div className="homePage__buttons">
-          <Button
-            style={"button login-black rounded-square-border modal"}
-            textStyle={"text medium-text black"}
-            buttonText={"Create An Account"}
-          />
+          <Link to="/register">
+            <Button
+              style={"button login-black rounded-square-border modal"}
+              textStyle={"text medium-text black"}
+              buttonText={"Create An Account"}
+            />
+          </Link>
         </div>
-        <Button
-          style={"button light-grey rounded-square-border modal"}
-          textStyle={"text medium-text light-grey"}
-          buttonText={"Cancel"}
-        />
+        <Link to="/sign-in">
+          <Button
+            style={"button light-grey rounded-square-border modal"}
+            textStyle={"text medium-text light-grey"}
+            buttonText={"Sign In"}
+          />
+        </Link>
       </div>
     </div>
   );

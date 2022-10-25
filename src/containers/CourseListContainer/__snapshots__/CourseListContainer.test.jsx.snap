@@ -18,13 +18,13 @@ exports[`it should match the snapshot with props 1`] = `
       >
         <a
           class="view-options__overview"
-          href="/*"
+          href="/"
         >
           Overview
         </a>
         <a
           class="view-options__overview--clicked"
-          href="/*"
+          href="/courses/list"
         >
           Courses
         </a>

@@ -108,7 +108,6 @@ exports[`it should match the snapshot 1`] = `
           />
         </div>
       </div>
-      ;
       <h5
         class="lesson__add"
       >

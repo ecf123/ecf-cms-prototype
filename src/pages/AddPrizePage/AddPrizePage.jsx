@@ -10,7 +10,7 @@ const AddPrizePage = () => {
       freeTypeLabelTextOne="Prize Description"
       shortLabelTextThree="Pathways Required"
       shortPlaceHolderTextThree=""
-      uploadLabelName="Pathway Thumbnail"
+      uploadLabelName="Prize Thumbnail"
     />
   );
 };

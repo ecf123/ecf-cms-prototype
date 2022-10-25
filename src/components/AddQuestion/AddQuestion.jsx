@@ -1,12 +1,7 @@
 import "./AddQuestion.scss";
 import binIcon from "../../assets/bin-icon.svg";
 
-const AddQuestion = ({
-  question,
-  answers,
-  questionNumber,
-  handleDelete,
-}) => {
+const AddQuestion = ({ question, answers, questionNumber, handleDelete }) => {
   let answerJSX = answers?.map((answer, index) => {
     return answer.includes("*") ? (
       <li key={index} className="question__each-answer">

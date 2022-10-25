@@ -16,18 +16,10 @@ const QuestionAnswer = ({
       />
       <p className="form__answers__heading">Answers</p>
       <div className="form__answers">
-        <CheckboxInput
-          handleCheckboxValue={handleCheckboxValue}
-        />
-        <CheckboxInput
-          handleCheckboxValue={handleCheckboxValue}
-        />
-        <CheckboxInput
-          handleCheckboxValue={handleCheckboxValue}
-        />
-        <CheckboxInput
-          handleCheckboxValue={handleCheckboxValue}
-        />
+        <CheckboxInput handleCheckboxValue={handleCheckboxValue} />
+        <CheckboxInput handleCheckboxValue={handleCheckboxValue} />
+        <CheckboxInput handleCheckboxValue={handleCheckboxValue} />
+        <CheckboxInput handleCheckboxValue={handleCheckboxValue} />
       </div>
     </form>
   );

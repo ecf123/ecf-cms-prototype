@@ -80,70 +80,74 @@ exports[`it should match the snapshot with props 1`] = `
             >
               Course Curriculum
             </h2>
-            <button
-              class="button black round-border medium"
+            <a
+              href="/addlesson"
             >
-              <div
-                class="large-img"
+              <button
+                class="button black round-border medium"
               >
-                <svg>
-                  circular-plus-icon.svg
-                </svg>
-              </div>
-              <p
-                class="text large-text black"
-              >
-                Add Lesson
-              </p>
-            </button>
+                <div
+                  class="large-img"
+                >
+                  <svg>
+                    circular-plus-icon.svg
+                  </svg>
+                </div>
+                <p
+                  class="text large-text black"
+                >
+                  Add Lesson
+                </p>
+              </button>
+            </a>
           </div>
           <div
-            class="container"
+            class="lesson-link-container"
           >
             <div
-              class="container__course-info"
+              class="lesson-link-container__course-info"
             >
               <div
-                class="container__title"
+                class="lesson-link-container__title"
               >
                 <img
                   alt="play files icon"
                   src="play-files-icon.svg"
                 />
                 <a
-                  href="/"
+                  href="/TheRoleofBankingandtheFinancialSystem"
                   style="text-decoration: none;"
                 >
                   <h5
-                    class="container__title-header"
+                    class="lesson-link-container__title-header"
                   >
                     The Role of Banking and the Financial System
                   </h5>
                 </a>
               </div>
               <div
-                class="container__time"
+                class="lesson-link-container__time"
               >
                 <img
                   alt="clock icon"
                   src="clock-icon.svg"
                 />
                 <h6
-                  class="container__time-header"
+                  class="lesson-link-container__time-header"
                 >
                   15 minutes
                 </h6>
               </div>
             </div>
             <a
-              href="/"
+              href="/TheRoleofBankingandtheFinancialSystem"
             >
               <div
-                class="container__arrow"
+                class="lesson-link-container__arrow"
               >
                 <img
                   alt="course arrow"
-                  class="container-arrow-image"
+                  class="lesson-link-container-arrow-image"
                   src="arrow-pointing-right-icon.svg"
                 />
               </div>
@@ -153,52 +157,52 @@ exports[`it should match the snapshot with props 1`] = `
             class="course-container__line"
           />
           <div
-            class="container"
+            class="lesson-link-container"
           >
             <div
-              class="container__course-info"
+              class="lesson-link-container__course-info"
             >
               <div
-                class="container__title"
+                class="lesson-link-container__title"
               >
                 <img
                   alt="play files icon"
                   src="play-files-icon.svg"
                 />
                 <a
-                  href="/"
+                  href="/CurrencyRiskManagement"
                   style="text-decoration: none;"
                 >
                   <h5
-                    class="container__title-header"
+                    class="lesson-link-container__title-header"
                   >
                     Currency Risk Management
                   </h5>
                 </a>
               </div>
               <div
-                class="container__time"
+                class="lesson-link-container__time"
               >
                 <img
                   alt="clock icon"
                   src="clock-icon.svg"
                 />
                 <h6
-                  class="container__time-header"
+                  class="lesson-link-container__time-header"
                 >
                   10 minutes
                 </h6>
               </div>
             </div>
             <a
-              href="/"
+              href="/CurrencyRiskManagement"
             >
               <div
-                class="container__arrow"
+                class="lesson-link-container__arrow"
               >
                 <img
                   alt="course arrow"
-                  class="container-arrow-image"
+                  class="lesson-link-container-arrow-image"
                   src="arrow-pointing-right-icon.svg"
                 />
               </div>
