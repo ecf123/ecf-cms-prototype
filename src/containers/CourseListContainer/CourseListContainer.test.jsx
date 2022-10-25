@@ -14,75 +14,77 @@ window.matchMedia =
   };
 
 const dataJSON = [
-    {
-      id: "kjsvswkvfsihvds",
-      challenges: [
-        {
-          duration: "15 minutes",
-          type: "assignment",
-        },
-        {
-          duration: "1 hrs",
-          type: "assignment",
-        },
-      ],
-      lessons: [
-        {
-          duration: "15 minutes",
-          type: "Video",
-        },
-        {
-          duration: "10 minutes",
-          type: "Video",
-        },
-        {
-          duration: "15 minutes",
-          type: "Video",
-        },
-      ],
-      provider: "Halifax",
-      name: "Halifax as provider",
-    },
-    {
-      id: "fsdfsdfdghsfghs",
-      challenges: [
-        {
-          duration: "30 minutes",
-          type: "assignment",
-        },
-        {
-          duration: "2 hrs 20 minutes",
-          type: "assignment",
-        },
-      ],
-      lessons: [
-        {
-          duration: "25 minutes",
-          type: "Video",
-        },
-        {
-          duration: "10 minutes",
-          type: "Video",
-        },
-        {
-          duration: "15 minutes",
-          type: "Video",
-        },
-      ],
-      provider: "Barclays",
-      name: "Barclays as provider",
-    },
-  ];
+  {
+    id: "kjsvswkvfsihvds",
+    challenges: [
+      {
+        duration: "15 minutes",
+        type: "assignment",
+      },
+      {
+        duration: "1 hrs",
+        type: "assignment",
+      },
+    ],
+    lessons: [
+      {
+        duration: "15 minutes",
+        type: "Video",
+      },
+      {
+        duration: "10 minutes",
+        type: "Video",
+      },
+      {
+        duration: "15 minutes",
+        type: "Video",
+      },
+    ],
+    provider: "Halifax",
+    name: "Halifax as provider",
+  },
+  {
+    id: "fsdfsdfdghsfghs",
+    challenges: [
+      {
+        duration: "30 minutes",
+        type: "assignment",
+      },
+      {
+        duration: "2 hrs 20 minutes",
+        type: "assignment",
+      },
+    ],
+    lessons: [
+      {
+        duration: "25 minutes",
+        type: "Video",
+      },
+      {
+        duration: "10 minutes",
+        type: "Video",
+      },
+      {
+        duration: "15 minutes",
+        type: "Video",
+      },
+    ],
+    provider: "Barclays",
+    name: "Barclays as provider",
+  },
+];
 
 it("it should match the snapshot with props", () => {
   const { container } = customRender(
-    <CourseListContainer dataJSON={dataJSON}/>
+    <CourseListContainer dataJSON={dataJSON} />
   );
   expect(container).toMatchSnapshot();
 });
 
 it("Should render the first row", () => {
-  render(<CourseListContainer dataJSON={dataJSON} />, {wrapper: BrowserRouter});
+  render(<CourseListContainer dataJSON={dataJSON} />, {
+    wrapper: BrowserRouter,
+  });
   const courseDuration = screen.getByText("115");
   const courseProvider = screen.getByText("Halifax");
   expect(courseDuration).toBeInTheDocument();
@@ -90,9 +92,11 @@ it("Should render the first row", () => {
 });
 
 it("Should render the second row", () => {
-    render(<CourseListContainer dataJSON={dataJSON} />, {wrapper: BrowserRouter});
-    const courseDuration = screen.getByText("220");
-    const courseProvider = screen.getByText("Barclays");
-    expect(courseDuration).toBeInTheDocument();
-    expect(courseProvider).toBeInTheDocument();
+  render(<CourseListContainer dataJSON={dataJSON} />, {
+    wrapper: BrowserRouter,
   });
+  const courseDuration = screen.getByText("220");
+  const courseProvider = screen.getByText("Barclays");
+  expect(courseDuration).toBeInTheDocument();
+  expect(courseProvider).toBeInTheDocument();
+});

@@ -24,7 +24,7 @@ exports[`Should render the course overview container 1`] = `
         <p
           class="pathway-introduction__description"
         >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto recusandae ratione voluptatibus voluptatem, eos id. Dicta assumenda tenetur voluptas laborum animi voluptatibus deserunt, magnam quae fuga dolor eaque! Accusamus, nihil.Lorem ipsum dolor
+          Lorem ipsum dolor sit amet. Ea nisi accusamus 33 Quis quidem ut quia obcaecati ex modi dolore 33 suscipit labore. Ut aliquid molestias aut voluptate incidunt nam assumenda quis et iste vero sit dolor dicta At iusto sunt suscipit nulla.
         </p>
       </div>
       <div
@@ -64,16 +64,16 @@ exports[`Should render the course overview container 1`] = `
           class="drop-down"
         >
           <input
-            id="Financial Forest"
+            id="An Introduction to Interest"
             type="checkbox"
           />
           <label
-            for="Financial Forest"
+            for="An Introduction to Interest"
           >
             <span
               class="drop-down__title"
             >
-              Financial Forest
+              An Introduction to Interest
               <img
                 alt="Topic Arrow"
                 class="drop-down__arrow"
@@ -90,7 +90,9 @@ exports[`Should render the course overview container 1`] = `
               >
                 <p
                   class="drop-down__content"
-                />
+                >
+                  The Role of Banking and the Financial System
+                </p>
               </a>
             </li>
             <li>
@@ -99,7 +101,9 @@ exports[`Should render the course overview container 1`] = `
               >
                 <p
                   class="drop-down__content"
-                />
+                >
+                  Currency Risk Management
+                </p>
               </a>
             </li>
             <li>
@@ -108,7 +112,9 @@ exports[`Should render the course overview container 1`] = `
               >
                 <p
                   class="drop-down__content"
-                />
+                >
+                  Equity, Assets & Liabilities
+                </p>
               </a>
             </li>
           </ul>
@@ -117,16 +123,16 @@ exports[`Should render the course overview container 1`] = `
           class="drop-down"
         >
           <input
-            id="Glasgow"
+            id="Commercial Banking"
             type="checkbox"
           />
           <label
-            for="Glasgow"
+            for="Commercial Banking"
           >
             <span
               class="drop-down__title"
             >
-              Glasgow
+              Commercial Banking
               <img
                 alt="Topic Arrow"
                 class="drop-down__arrow"
@@ -143,7 +149,9 @@ exports[`Should render the course overview container 1`] = `
               >
                 <p
                   class="drop-down__content"
-                />
+                >
+                  The Role of Banking and the Financial System
+                </p>
               </a>
             </li>
             <li>
@@ -152,7 +160,9 @@ exports[`Should render the course overview container 1`] = `
               >
                 <p
                   class="drop-down__content"
-                />
+                >
+                  Currency Risk Management
+                </p>
               </a>
             </li>
             <li>
@@ -161,7 +171,304 @@ exports[`Should render the course overview container 1`] = `
               >
                 <p
                   class="drop-down__content"
-                />
+                >
+                  Equity, Assets & Liabilities
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav
+          class="drop-down"
+        >
+          <input
+            id="An Introduction to Investing"
+            type="checkbox"
+          />
+          <label
+            for="An Introduction to Investing"
+          >
+            <span
+              class="drop-down__title"
+            >
+              An Introduction to Investing
+              <img
+                alt="Topic Arrow"
+                class="drop-down__arrow"
+                src="upside-down-arrow-grey.svg"
+              />
+            </span>
+          </label>
+          <ul
+            class="drop-down__list"
+          >
+            <li>
+              <a
+                href="#"
+              >
+                <p
+                  class="drop-down__content"
+                >
+                  The Role of Banking and the Financial System
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                <p
+                  class="drop-down__content"
+                >
+                  Currency Risk Management
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                <p
+                  class="drop-down__content"
+                >
+                  Equity, Assets & Liabilities
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav
+          class="drop-down"
+        >
+          <input
+            id="An Introduction to Capital"
+            type="checkbox"
+          />
+          <label
+            for="An Introduction to Capital"
+          >
+            <span
+              class="drop-down__title"
+            >
+              An Introduction to Capital
+              <img
+                alt="Topic Arrow"
+                class="drop-down__arrow"
+                src="upside-down-arrow-grey.svg"
+              />
+            </span>
+          </label>
+          <ul
+            class="drop-down__list"
+          >
+            <li>
+              <a
+                href="#"
+              >
+                <p
+                  class="drop-down__content"
+                >
+                  The Role of Banking and the Financial System
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                <p
+                  class="drop-down__content"
+                >
+                  Currency Risk Management
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                <p
+                  class="drop-down__content"
+                >
+                  Equity, Assets & Liabilities
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav
+          class="drop-down"
+        >
+          <input
+            id="An Introduction to Accounting"
+            type="checkbox"
+          />
+          <label
+            for="An Introduction to Accounting"
+          >
+            <span
+              class="drop-down__title"
+            >
+              An Introduction to Accounting
+              <img
+                alt="Topic Arrow"
+                class="drop-down__arrow"
+                src="upside-down-arrow-grey.svg"
+              />
+            </span>
+          </label>
+          <ul
+            class="drop-down__list"
+          >
+            <li>
+              <a
+                href="#"
+              >
+                <p
+                  class="drop-down__content"
+                >
+                  The Role of Banking and the Financial System
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                <p
+                  class="drop-down__content"
+                >
+                  Currency Risk Management
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                <p
+                  class="drop-down__content"
+                >
+                  Equity, Assets & Liabilities
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav
+          class="drop-down"
+        >
+          <input
+            id="Welcome to HSBC"
+            type="checkbox"
+          />
+          <label
+            for="Welcome to HSBC"
+          >
+            <span
+              class="drop-down__title"
+            >
+              Welcome to HSBC
+              <img
+                alt="Topic Arrow"
+                class="drop-down__arrow"
+                src="upside-down-arrow-grey.svg"
+              />
+            </span>
+          </label>
+          <ul
+            class="drop-down__list"
+          >
+            <li>
+              <a
+                href="#"
+              >
+                <p
+                  class="drop-down__content"
+                >
+                  The Role of Banking and the Financial System
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                <p
+                  class="drop-down__content"
+                >
+                  Currency Risk Management
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                <p
+                  class="drop-down__content"
+                >
+                  Equity, Assets & Liabilities
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav
+          class="drop-down"
+        >
+          <input
+            id="An Introduction to E.C.F."
+            type="checkbox"
+          />
+          <label
+            for="An Introduction to E.C.F."
+          >
+            <span
+              class="drop-down__title"
+            >
+              An Introduction to E.C.F.
+              <img
+                alt="Topic Arrow"
+                class="drop-down__arrow"
+                src="upside-down-arrow-grey.svg"
+              />
+            </span>
+          </label>
+          <ul
+            class="drop-down__list"
+          >
+            <li>
+              <a
+                href="#"
+              >
+                <p
+                  class="drop-down__content"
+                >
+                  The Role of Banking and the Financial System
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                <p
+                  class="drop-down__content"
+                >
+                  Currency Risk Management
+                </p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                <p
+                  class="drop-down__content"
+                >
+                  Equity, Assets & Liabilities
+                </p>
               </a>
             </li>
           </ul>
@@ -177,13 +484,13 @@ exports[`Should render the course overview container 1`] = `
         <h3
           class="more-options__title"
         >
-          Financal Forest
+          Financial Forest
            Options
         </h3>
         <p
           class="more-options__description"
         >
-          Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto recusandae ratione
+          Nam assumenda quis et iste vero sit dolor dicta At iusto sunt suscipit nulla.
         </p>
         <div
           class="more-options__buttons"
@@ -234,7 +541,7 @@ exports[`Should render the course overview container 1`] = `
           class="salary__number"
         >
           £
-          2
+          70,000
         </h5>
         <span
           class="salary__line"
@@ -248,17 +555,17 @@ exports[`Should render the course overview container 1`] = `
             <h6
               class="salary__title"
             >
-              0
+              Fund Manager
             </h6>
             <h6
               class="salary__title"
             >
-              1
+              Financial Analyst
             </h6>
             <h6
               class="salary__title"
             >
-              2
+              Stock Broker
             </h6>
           </div>
           <div
@@ -268,19 +575,19 @@ exports[`Should render the course overview container 1`] = `
               class="salary__pay"
             >
               £
-              1
+              100,000
             </h6>
             <h6
               class="salary__pay"
             >
               £
-              2
+              60,000
             </h6>
             <h6
               class="salary__pay"
             >
               £
-              3
+              50,000
             </h6>
           </div>
         </div>
@@ -299,17 +606,22 @@ exports[`Should render the course overview container 1`] = `
           <li
             class="career__item"
           >
-            doctor
+            Financial Analyst
           </li>
           <li
             class="career__item"
           >
-            nurse
+            Accountant
           </li>
           <li
             class="career__item"
           >
-            developer
+            Investment Analyst
+          </li>
+          <li
+            class="career__item"
+          >
+            Stock Broker
           </li>
         </ul>
       </div>

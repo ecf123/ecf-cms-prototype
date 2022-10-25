@@ -14,7 +14,14 @@ const ListComponentUniversal = ({ data }) => {
             dataIndex: header,
             className: "table__cell",
             render: (text) => (
-              <Link to={header.includes("pathway") ? `/pathways/${text.split(" ").join("")}` : `/${text.split(" ").join("")}`} className="table__name">
+              <Link
+                to={
+                  header.includes("pathway")
+                    ? `/pathways/${text.split(" ").join("")}`
+                    : `/${text.split(" ").join("")}`
+                }
+                className="table__name"
+              >
                 {text}
               </Link>
             ),
