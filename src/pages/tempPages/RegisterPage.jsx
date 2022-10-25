@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import profile from "../../assets/profile-picture.svg"
 
-const RegisterPage = ({setLoggedIn, setUser}) => {
+const RegisterPage = ({setLogIn, setUser}) => {
   const navigate = useNavigate();
   const user = {
     image: profile,
@@ -10,7 +10,7 @@ const RegisterPage = ({setLoggedIn, setUser}) => {
     role: "Admin",
   };
   const handleClick = () => {
-    setLoggedIn(true);
+    setLogIn(true);
     setUser(user)
     navigate("/")
   }
