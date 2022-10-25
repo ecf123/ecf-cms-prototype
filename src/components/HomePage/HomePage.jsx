@@ -8,10 +8,10 @@ const HomePage = () => {
       <div className="homePage__container">
         <div>
           <div className="homePage__logo">
-            <img src={logo} alt="ECF-CMS logo" className="homePage__image" />
             <div className="homePage__tag">
+              <img src={logo} alt="ECF-CMS logo" className="homePage__image" />
               <h2 className="homePage__tagText">
-                The
+                <span className="homePage__span">THE</span>
                 <br />
                 FUTURE HUB
               </h2>
@@ -23,9 +23,9 @@ const HomePage = () => {
         </h2>
         <p className="homePage__tagline">The Early Careers Foundation Content Management System</p>
         <div className="homePage__buttons">
-          <Button style={"button login-black rounded-square-border modal"} textStyle={"text large-text black"} buttonText={"Create An Account"} />
+          <Button style={"button login-black rounded-square-border modal"} textStyle={"text medium-text black"} buttonText={"Create An Account"} />
         </div>
-          <Button style={"button light-grey rounded-square-border modal"} textStyle={"text medium-text light-grey"} buttonText={"Cancel"} />
+        <Button style={"button light-grey rounded-square-border modal"} textStyle={"text medium-text light-grey"} buttonText={"Cancel"} />
       </div>
     </div>
   );

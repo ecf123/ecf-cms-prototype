@@ -13,12 +13,22 @@
   &__logo {
     display: flex;
     margin-bottom: 4rem;
+    margin-right: 1rem;
   }
   &__tag {
+    display: flex;
+    text-align: left;
     margin-top: 4rem;
   }
   &__tagText {
+    margin: auto;
+    font-size: $font-size-medium;
     color: $color-blue-navy-dark;
+  }
+
+  &__span {
+    color: $color-blue-navy-dark;
+    font-weight: $font-weight-regular;
   }
   &__container {
     margin: auto;
