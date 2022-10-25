@@ -1,43 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render the card with no props 1`] = `
-<div>
-  <div
-    class="card"
-  >
-    <a
-      href="/*"
-    >
-      <img
-        class="card__image"
-      />
-    </a>
-    <p
-      class="card__date"
-    />
-    <a
-      class="card__header"
-      href="/*"
-    >
-      <h2
-        class="card__title"
-      />
-      <img
-        alt="Arrow Icon"
-        class="card__icon"
-        src="arrow-upper-right-black.svg"
-      />
-    </a>
-    <p
-      class="card__info"
-    />
-    <ul
-      class="categories-menu"
-    />
-  </div>
-</div>
-`;
-
 exports[`Should render the card with props 1`] = `
 <div>
   <div

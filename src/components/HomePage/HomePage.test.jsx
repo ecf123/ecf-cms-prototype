@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
 import HomePage from "./HomePage";
 
@@ -8,7 +8,7 @@ it("Should render the home page", () => {
 });
 
 it("Should render two buttons", () => {
-  render(<HomePage />);
+  customRender(<HomePage />);
 
   const buttons = screen.getAllByRole("button");
   expect(buttons.length).toBe(2);

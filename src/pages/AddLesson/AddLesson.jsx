@@ -6,7 +6,7 @@ const AddLesson = () => {
     <div>
       <AddLessonContainer />
     </div>
-  )
-}
+  );
+};
 
-export default AddLesson
+export default AddLesson;

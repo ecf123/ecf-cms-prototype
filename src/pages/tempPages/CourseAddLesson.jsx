@@ -1,10 +1,8 @@
-import React from 'react'
-import AddLessonContainer from '../../containers/AddLessonContainer/AddLessonContainer'
+import React from "react";
+import AddLessonContainer from "../../containers/AddLessonContainer/AddLessonContainer";
 
 const CourseAddLesson = () => {
-    return (
-        <AddLessonContainer />
-    )
-}
+  return <AddLessonContainer />;
+};
 
-export default CourseAddLesson
+export default CourseAddLesson;

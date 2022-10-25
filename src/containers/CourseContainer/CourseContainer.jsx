@@ -9,7 +9,6 @@ import "./CourseContainer.scss";
 import LessonLink from "../../components/LessonLink/LessonLink";
 import { Link } from "react-router-dom";
 
-
 const CourseContainer = ({ data }) => {
   const { name, title, image, description, categories, provider, lessons } =
     data;
@@ -56,14 +55,14 @@ const CourseContainer = ({ data }) => {
                 Course Curriculum
               </h2>
               <Link to="addlesson">
-              <Button
-                style={"button black round-border medium"}
-                imgStyle={"large-img"}
-                textStyle={"text large-text black"}
-                buttonText={"Add Lesson"}
-              >
-                <Plus />
-              </Button>
+                <Button
+                  style={"button black round-border medium"}
+                  imgStyle={"large-img"}
+                  textStyle={"text large-text black"}
+                  buttonText={"Add Lesson"}
+                >
+                  <Plus />
+                </Button>
               </Link>
             </div>
             {lessonsJSX}

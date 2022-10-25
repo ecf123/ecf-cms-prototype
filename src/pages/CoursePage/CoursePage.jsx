@@ -1,6 +1,5 @@
-import CourseContainer from "../../containers/CourseContainer/CourseContainer"
+import CourseContainer from "../../containers/CourseContainer/CourseContainer";
 import mobilePayment from "../../assets/mobile-payment.svg";
-
 
 const CoursePage = () => {
   const data = {
@@ -22,9 +21,7 @@ const CoursePage = () => {
       },
     ],
   };
-  return (
-    <CourseContainer data={data} />
-  )
-}
+  return <CourseContainer data={data} />;
+};
 
-export default CoursePage
+export default CoursePage;

@@ -24,63 +24,68 @@ import ArticleIndex from "../../pages/ArticleIndex/ArticleIndex";
 import PrizeIndex from "../../pages/PrizeIndex/PrizeIndex";
 
 const Routing = () => {
-
   const [logIn, setLogIn] = useState(false);
   const [user, setUser] = useState({});
 
   return (
     <>
-      {!logIn && 
-        (
-          <>
-            <LandingPageHeader/>
-            <Routes>
-              <Route path="/" element={<LandingPage/>}/>
-              <Route path="/register" element={<RegisterPage setLogIn={setLogIn} setUser={setUser} />}/>
-              <Route path="/sign-in" element={<LoginPage setLogIn={setLogIn} setUser={setUser} />}/>
-            </Routes>
-          </>
-        )
-      }
-      {
-        logIn &&
-        (
-          <Layout user={user}>
-            <Routes>
+      {!logIn && (
+        <>
+          <LandingPageHeader />
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route
+              path="/register"
+              element={<RegisterPage setLogIn={setLogIn} setUser={setUser} />}
+            />
+            <Route
+              path="/sign-in"
+              element={<LoginPage setLogIn={setLogIn} setUser={setUser} />}
+            />
+          </Routes>
+        </>
+      )}
+      {logIn && (
+        <Layout user={user}>
+          <Routes>
+            <Route path="/pathways" element={<Pathways />} />
+            <Route path="/pathways/:pathwayName" element={<SinglePathway />} />
+            <Route
+              path="/pathways/:pathwayName/courses"
+              element={<SinglePathwayCourses />}
+            />
+            <Route
+              path="/pathways/:pathwayName/courses/list"
+              element={<CourseList />}
+            />
+            <Route path="/:courseName" element={<CoursePage />} />
+            <Route path="/:courseName/addlesson" element={<AddLesson />} />
+            <Route path="/:courseName/addquiz" element={<CourseAddLesson />} />
+            <Route
+              path="/:courseName/:lessonTitle"
+              element={<CourseSingleLesson />}
+            />
+            <Route path="/addpathway" element={<AddPathway />} />
 
-              <Route path="/pathways" element={<Pathways />} />
-              <Route path="/pathways/:pathwayName" element={<SinglePathway />} />
-              <Route path="/pathways/:pathwayName/courses" element={<SinglePathwayCourses />} />
-              <Route
-                path="/pathways/:pathwayName/courses/list"
-                element={<CourseList />}
-              />
-              <Route path="/:courseName" element={<CoursePage />} />
-              <Route path="/:courseName/addlesson" element={<AddLesson />} />
-              <Route path="/:courseName/addquiz" element={<CourseAddLesson />} />
-              <Route
-                path="/:courseName/:lessonTitle"
-                element={<CourseSingleLesson />}
-              />
-              <Route path="/addpathway" element={<AddPathway/>}/>
+            <Route path="/articles" element={<Articles />} />
+            <Route path="/articles/:articleTitle" element={<ArticleIndex />} />
 
-              <Route path="/articles" element={<Articles />} />
-              <Route path="/articles/:articleTitle" element={<ArticleIndex />} />
+            <Route path="/addarticle" element={<AddArticle />} />
 
-              <Route path="/addarticle" element={<AddArticle />} />
+            <Route path="/marketplace" element={<Marketplace />} />
+            <Route path="/addprize" element={<AddPrizePage />} />
+            <Route path="/marketplace/:prizeName" element={<PrizeIndex />} />
 
-              <Route path="/marketplace" element={<Marketplace />} />
-              <Route path="/addprize" element={<AddPrizePage />} />
-              <Route path="/marketplace/:prizeName" element={<PrizeIndex />} />
-
-              <Route path="/users" element={<p>Users</p>} />
-              <Route path="/settings" element={<p>Settings</p>} />
-              <Route path="/sign-out" element={<SignOut setLogIn={setLogIn} setUser={setUser}/>}/>
-              <Route path="/" element={<Home />} />
-            </Routes>
-          </Layout>
-        )
-      }
+            <Route path="/users" element={<p>Users</p>} />
+            <Route path="/settings" element={<p>Settings</p>} />
+            <Route
+              path="/sign-out"
+              element={<SignOut setLogIn={setLogIn} setUser={setUser} />}
+            />
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </Layout>
+      )}
     </>
   );
 };

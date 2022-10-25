@@ -8,13 +8,12 @@ const LoginPage = ({ setUser, setLogIn }) => {
 
   useEffect(() => {
     const user = {
-        image: profile,
-        name: "Brett Zieme",
-        role: "Admin",
+      image: profile,
+      name: "Brett Zieme",
+      role: "Admin",
     };
     setUser(user);
-  }, [credential])
-  
+  }, [credential]);
 
   return (
     <div className="loginPage">

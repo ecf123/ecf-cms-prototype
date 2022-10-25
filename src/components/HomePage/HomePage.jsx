@@ -27,11 +27,19 @@ const HomePage = () => {
         </p>
         <div className="homePage__buttons">
           <Link to="/register">
-            <Button style={"button login-black rounded-square-border modal"} textStyle={"text medium-text black"} buttonText={"Create An Account"} />
+            <Button
+              style={"button login-black rounded-square-border modal"}
+              textStyle={"text medium-text black"}
+              buttonText={"Create An Account"}
+            />
           </Link>
         </div>
         <Link to="/sign-in">
-          <Button style={"button light-grey rounded-square-border modal"} textStyle={"text medium-text light-grey"} buttonText={"Sign In"} />
+          <Button
+            style={"button light-grey rounded-square-border modal"}
+            textStyle={"text medium-text light-grey"}
+            buttonText={"Sign In"}
+          />
         </Link>
       </div>
     </div>

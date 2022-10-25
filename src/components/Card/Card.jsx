@@ -12,8 +12,7 @@ const Card = ({
   imgDescription,
   condition,
 }) => {
-
-  const link = title.split(" ").join("");
+  const link = title?.split(" ").join("");
   return (
     <div className="card">
       <Link to={link}>

@@ -51,7 +51,8 @@ const Login = ({ setCredential, setLogIn }) => {
           <div className="login__title">
             <h1 className="login__title--heading">Welcome Back</h1>
             <p className="login__title--text">
-              Log into your account to access the CMS for the ECF Future Hub App.
+              Log into your account to access the CMS for the ECF Future Hub
+              App.
             </p>
           </div>
           <div>

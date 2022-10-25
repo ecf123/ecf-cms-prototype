@@ -1,18 +1,16 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
-const SignOut = ({setLogIn, setUser}) => {
+const SignOut = ({ setLogIn, setUser }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
     setLogIn(false);
-    setUser({})
-    navigate("/")
-  }, [])
-  
-  return (
-    <></>
-  )
-}
+    setUser({});
+    navigate("/");
+  }, []);
 
-export default SignOut
+  return <></>;
+};
+
+export default SignOut;

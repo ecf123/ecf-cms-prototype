@@ -1,10 +1,9 @@
-import ListContainer from '../../containers/ListContainer/ListContainer'
+import ListContainer from "../../containers/ListContainer/ListContainer";
 import forHire from "../../assets/for-hire-image.svg";
 import manInSuit from "../../assets/man-in-suit.svg";
 import laptop from "../../assets/laptop-with-code.svg";
 
 const Articles = () => {
-
   const data = [
     {
       articleContent: [
@@ -47,7 +46,8 @@ const Articles = () => {
       readTime: "5 mins",
       thumbnail: manInSuit,
       title: "5 most in-demand jobs in 2022",
-    },{
+    },
+    {
       articleContent: [
         {
           heading: "Heading 1",
@@ -67,13 +67,10 @@ const Articles = () => {
       readTime: "5 mins",
       thumbnail: laptop,
       title: "My journey from a Future Hub user to Web Developer",
-    }
+    },
   ];
 
+  return <ListContainer title="Article" data={data} />;
+};
 
-  return (
-    <ListContainer title="Article" data={data} />
-  )
-}
-
-export default Articles
+export default Articles;

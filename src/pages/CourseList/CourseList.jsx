@@ -1,6 +1,5 @@
 import CourseListContainer from "../../containers/CourseListContainer/CourseListContainer";
 
-
 const CourseList = () => {
   const dataJSON = [
     {
@@ -31,7 +30,7 @@ const CourseList = () => {
       ],
       title: "Halifax",
       name: "Halifax as provider",
-      provider: "Halifax"
+      provider: "Halifax",
     },
     {
       id: "fsdfsdfdghsfghs",
@@ -61,13 +60,10 @@ const CourseList = () => {
       ],
       title: "Barclays",
       name: "Commercial Banking",
-      provider: "Barclays"
-
+      provider: "Barclays",
     },
   ];
-  return (
-    <CourseListContainer dataJSON={dataJSON} />
-  )
-}
+  return <CourseListContainer dataJSON={dataJSON} />;
+};
 
-export default CourseList
+export default CourseList;

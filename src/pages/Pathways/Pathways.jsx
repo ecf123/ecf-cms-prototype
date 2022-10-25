@@ -1,8 +1,7 @@
-import React from 'react'
+import React from "react";
 import PathwaysListContainer from "../../containers/PathwaysListContainer/PathwaysListContainer";
 
 const Pathways = () => {
-    
   let collection = [
     {
       id: `kjsvswkvfsihvds`,
@@ -83,12 +82,13 @@ const Pathways = () => {
           },
         ],
       },
-    }]
-    return (
-        <div>
-            <PathwaysListContainer dataJSON={collection}/>
-        </div>
-    )
-}
+    },
+  ];
+  return (
+    <div>
+      <PathwaysListContainer dataJSON={collection} />
+    </div>
+  );
+};
 
-export default Pathways
+export default Pathways;

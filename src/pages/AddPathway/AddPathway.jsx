@@ -1,4 +1,4 @@
-import AddPageContainer from "../../containers/AddPageContainer/AddPageContainer"
+import AddPageContainer from "../../containers/AddPageContainer/AddPageContainer";
 
 const AddPathway = () => {
   return (
@@ -11,7 +11,7 @@ const AddPathway = () => {
       freeTypeLabelTextTwo="Pathway Career Description"
       uploadLabelName="Pathway Thumbnail"
     />
-  )
-}
+  );
+};
 
-export default AddPathway
+export default AddPathway;
