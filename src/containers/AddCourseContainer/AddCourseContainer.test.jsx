@@ -1,8 +1,8 @@
 import { customRender } from "../../utils/testUtils";
 import AddCourseContainer from "./AddCourseContainer";
 
-it("it should match the snapshot with props", () => {
-    const { container } = customRender(<AddCourseContainer shortLabelTextOne={"Course Name"}/>);
+it("it should match the snapshot", () => {
+    const { container } = customRender(<AddCourseContainer/>);
     expect(container).toMatchSnapshot();
 });
 
