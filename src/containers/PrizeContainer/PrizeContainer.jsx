@@ -8,31 +8,23 @@ const PrizeContainer = ({
   handleEdit,
   handleDelete,
 }) => {
-  const prizeHeading = prizeData.heading;
-  const prizeImage = prizeData.image;
-  const prizeOverview = prizeData.overview;
-  const prizeSkills = prizeData.skillPoints;
-  const prizeDate = prizeData.date;
-  const prizeCondition = prizeData.isLocked;
-  const optionTitle = optionsData.title;
-  const optionDesc = optionsData.desc;
 
   return (
     <div className="prize-container">
       <div className="prize-container__middle-column">
         <Card
-          title={prizeHeading}
-          img={prizeImage}
-          dateOrTime={prizeDate}
-          cardInfo={prizeOverview}
-          links={prizeSkills}
-          condition={prizeCondition}
+          title={prizeData.heading}
+          img={prizeData.image}
+          dateOrTime={prizeData.date}
+          cardInfo={prizeData.overview}
+          links={ prizeData.skillPoints}
+          condition={prizeData.isLocked}
         />
       </div>
       <div className="prize-container__right-column">
         <MoreOptions
-          title={optionTitle}
-          description={optionDesc}
+          title={optionsData.title}
+          description={optionsData.description}
           handleDelete={handleDelete}
           handleEdit={handleEdit}
         />
