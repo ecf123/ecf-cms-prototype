@@ -1,25 +1,22 @@
-import "./IndexContainer.scss"
-import MoreOptions from "../../components/MoreOptions/MoreOptions"
-import Card from "../../components/Card/Card"
-
+import "./IndexContainer.scss";
+import MoreOptions from "../../components/MoreOptions/MoreOptions";
+import Card from "../../components/Card/Card";
 
 const IndexContainer = () => {
-
   const handleDelete = () => {
     console.log("deleeet");
-  }
+  };
 
   const handleEdit = () => {
     console.log("idit");
-  }
-  
+  };
+
   const optionsData = {
     title: "more options for article",
     desc: "description for options",
     optionDelete: handleDelete,
-    edit: handleEdit
-  }
-
+    edit: handleEdit,
+  };
 
   const articleData = {
     title: "Want a winning CV? Folow these 8 tips",
@@ -29,33 +26,43 @@ const IndexContainer = () => {
     links: "Engineering",
     imgDesc: "this is an image fr",
     condition: true,
-  }
+  };
 
-const optionTitle = optionsData.title;
-const optionDesc = optionsData.desc;
-const optionDelete = optionsData.optionDelete;
-const optionEdit = optionsData.edit;
+  const optionTitle = optionsData.title;
+  const optionDesc = optionsData.desc;
+  const optionDelete = optionsData.optionDelete;
+  const optionEdit = optionsData.edit;
 
-const articleTitle = articleData.title;
-const articleImg = articleData.img;
-const articleDate = articleData.date;
-const articleInfo = articleData.info;
-const articleLinks = articleData.links;
-const articleImgDesc = articleData.imgDesc;
-const articleCondition = articleData.condition;
-
+  const articleTitle = articleData.title;
+  const articleImg = articleData.img;
+  const articleDate = articleData.date;
+  const articleInfo = articleData.info;
+  const articleLinks = articleData.links;
+  const articleImgDesc = articleData.imgDesc;
+  const articleCondition = articleData.condition;
 
   return (
     <div className="index-container">
-        <div className="index-container__left-column"/>
+      <div className="index-container__grid">
+        <div className="index-container__left-column" />
+        <div className="index-container__left-column" />
         <div className="index-container__middle-column">
-        <Card title={articleTitle} img={articleImg} dateOrTime={articleDate} cardInfo={articleInfo} links={articleLinks} imgDescription={articleImgDesc} condition={articleCondition}/>
+          <Card
+            title={articleTitle}
+            img={articleImg}
+            dateOrTime={articleDate}
+            cardInfo={articleInfo}
+            links={articleLinks}
+            imgDescription={articleImgDesc}
+            condition={articleCondition}
+          />
         </div>
         <div className="index-container__right-column">
-        <MoreOptions title={optionTitle} description={optionDesc} handleDelete={optionDelete} handleEdit={optionEdit}/>
+          <MoreOptions title={optionTitle} description={optionDesc} handleDelete={optionDelete} handleEdit={optionEdit} />
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default IndexContainer
+export default IndexContainer;
