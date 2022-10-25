@@ -1,43 +1,45 @@
 import "./IndexContainer.scss";
 import MoreOptions from "../../components/MoreOptions/MoreOptions";
 import Card from "../../components/Card/Card";
+import PageTitle from "../../components/PageTitle/PageTitle";
 
-const IndexContainer = ({articleData, optionsData, handleEdit, handleDelete}) => {
- 
-
-  const optionTitle = optionsData.title;
-  const optionDesc = optionsData.desc;
-
-  const articleTitle = articleData.title;
-  const articleImg = articleData.img;
-  const articleDate = articleData.date;
-  const articleInfo = articleData.info;
-  const articleLinks = articleData.links;
-  const articleImgDesc = articleData.imgDesc;
-  const articleCondition = articleData.condition;
+const IndexContainer = ({
+  data,
+  optionsData,
+  handleEdit,
+  handleDelete,
+  title
+}) => {
 
   return (
+    <>
+      <div className="index-container__header">
+        <PageTitle
+          className="index-container__title page-title"
+          title={title}
+        />
+      </div>
     <div className="index-container">
-      <div className="index-container__grid">
-        <div className="index-container__left-column" />
-        <div className="index-container__left-column" />
-        <div className="index-container__middle-column">
-          <Card
-            title={articleTitle}
-            img={articleImg}
-            dateOrTime={articleDate}
-            cardInfo={articleInfo}
-            links={articleLinks}
-            imgDescription={articleImgDesc}
-            condition={articleCondition}
-          />
-        </div>
-        <div className="index-container__right-column">
-          <MoreOptions title={optionTitle} description={optionDesc} handleDelete={handleDelete} handleEdit={handleEdit} />
-        </div>
+      <div className="index-container__middle-column">
+        <Card
+          title={data.heading}
+          img={data.image}
+          dateOrTime={data.date}
+          cardInfo={data.overview}
+          links={ data.skillPoints}
+          condition={data.isLocked}
+        />
+      </div>
+      <div className="index-container__right-column">
+        <MoreOptions
+          title={optionsData.title}
+          description={optionsData.description}
+          handleDelete={handleDelete}
+          handleEdit={handleEdit}
+        />
       </div>
     </div>
+    </>
   );
 };
-
 export default IndexContainer;
