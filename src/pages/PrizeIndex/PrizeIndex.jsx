@@ -1,4 +1,3 @@
-import "./PrizeIndex.scss";
 import IndexContainer from "../../containers/IndexContainer/IndexContainer";
 
 const PrizeIndex = () => {
