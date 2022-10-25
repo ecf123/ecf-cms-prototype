@@ -22,25 +22,25 @@ import LandingPageHeader from "../../components/LandingPageHeader/LandingPageHea
 
 const Routing = () => {
 
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [logIn, setLogIn] = useState(false);
   const [user, setUser] = useState({});
 
   return (
     <>
-      {!loggedIn && 
+      {!logIn && 
         (
           <>
             <LandingPageHeader/>
             <Routes>
               <Route path="/" element={<Welcome />}/>
-              <Route path="/sign-in" element={<LoginPage setLoggedIn={setLoggedIn} setUser={setUser} />}/>
-              <Route path="/register" element={<RegisterPage setLoggedIn={setLoggedIn} setUser={setUser} />}/>
+              <Route path="/sign-in" element={<LoginPage setLogIn={setLogIn} setUser={setUser} />}/>
+              <Route path="/register" element={<RegisterPage setLogIn={setLogIn} setUser={setUser} />}/>
             </Routes>
           </>
         )
       }
       {
-        loggedIn &&
+        logIn &&
         (
           <Layout user={user}>
             <Routes>
