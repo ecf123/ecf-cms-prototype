@@ -10,14 +10,14 @@ import QuestionContainer from "../../containers/QuestionContainer/QuestionContai
 import LessonContentPreview from "../../components/LessonContentPreview/LessonContentPreview";
 
 const AddLessonContainer = ({
-  
   handleSubmit,
   handleCancel,
 }) => {
   const [inputs, setInputs] = useState("Lesson");
   const [data, setData] = useState([])
-  const [question, setQuestion] = useState({title: "", content: ""})
-
+  const [additionalInfo, setAdditionalInfo] = useState({title: "", content: ""})
+  const [question, setQuestion] = useState({title: "", answers: []})
+  
   const onChange = (event) => {
     if (event.target.value === "Lesson") {
       setInputs("Lesson");
@@ -31,9 +31,8 @@ const AddLessonContainer = ({
     fileName: "",
     shortInputOne: "",
     shortInputTwo: "",
-    freeTypeInputOne: "",
-    freeTypeInputTwo: "",
   });
+
 
   const handleFileChange = (e) => {
     if (!pageInfo.file) setPageInfo({ fileName: e.target.files[0].name });
@@ -46,45 +45,58 @@ const AddLessonContainer = ({
   };
 
   const addData = () => {
-    setData([...data, question])
+    setData([...data, additionalInfo])
   };
 
   const handleDelete = (e) => {
     setData(data.filter(object => object.content != e.target.parentElement.parentElement.children[1].firstChild.data))
   }
 
+  let array = [];
+
+
+
   return (
     <div className="lesson">
       <div className="lesson__container">
+        <button onClick={()=> {
+          console.log(question)
+        }}
+        >Info</button>
         <Short
           shortLabelText="Lesson Name"
           shortType="text"
           // No placeholder needed
-          // handleShortValue={handleShortValue}
+          handleShortValue={(e) => setPageInfo({...pageInfo, shortInputOne: e.target.value})}
           inputClassName="short__input"
           name="lesson name"
+
         />
         <SelectComponent className="lesson__select" onChange={onChange} />
         <Short
           shortLabelText="Estimated Completion Time"
           shortType="text"
           // No placeholder needed
-          // handleShortValue={handleShortValue}
+          handleShortValue={(e) => setPageInfo({...pageInfo, shortInputTwo: e.target.value})}
           inputClassName="short__input"
           name="estimated completion time"
         />
         {inputs == "Lesson" ? (
           <AddLessonAdditionalBoxes
             handleFreeTypeValue={(e) => {
-              setQuestion({...question, content: e.target.value})
+              setAdditionalInfo({...additionalInfo, content: e.target.value})
             }}
-            handleShortValue={(e) => setQuestion({...question, title: e.target.value})}
+            handleShortValue={(e) => setAdditionalInfo({...additionalInfo, title: e.target.value})}
           />
         ) : (
           <QuestionAnswer
-            // handleShortValue={handleShortValue}
+            handleShortValue={(e) => setQuestion({...question, title: e.target.value})}
             // onSubmit={onSubmit}
-            // handleCheckboxValue={handleCheckboxValue}
+            handleCheckboxValue={(e)=> {
+
+              array.push(e.target.value);
+              console.log(array);
+            }}
             // handleClickCheckbox={handleClickCheckbox}
           />
         )}
