@@ -17,7 +17,6 @@ const { image, name, role } = user || {};
   const toggle =()=>{
     setDisplayed(!displayed);
     displayed?setArrowClass("header-profile__arrow"):setArrowClass("header-profile__down-arrow")
-    
   }
 
   return (
